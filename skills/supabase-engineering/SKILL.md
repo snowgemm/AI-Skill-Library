@@ -1,6 +1,6 @@
 ---
 name: supabase-engineering
-description: Design, implement, secure, migrate, debug, and verify Supabase projects involving Postgres, Auth, RLS, Storage, Edge Functions, Realtime, CLI, and MCP.
+description: Build and secure Supabase apps with Postgres, Auth, RLS, Storage, Edge Functions, Realtime, migrations, and current CLI workflows.
 license: MIT
 metadata:
   author: AI-Skill-Library contributors
