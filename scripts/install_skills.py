@@ -57,6 +57,11 @@ def main() -> int:
     conflicts: list[Path] = []
     for host in hosts:
         destination_root = target / HOST_DIRECTORIES[host]
+        parent = destination_root
+        while parent != target and parent != parent.parent:
+            if parent.is_symlink():
+                conflicts.append(parent)
+            parent = parent.parent
         for skill_id in SKILL_IDS:
             source = SKILLS_ROOT / skill_id
             destination = destination_root / skill_id
@@ -65,7 +70,7 @@ def main() -> int:
                 conflicts.append(destination)
 
     if conflicts:
-        print("Refusing to overwrite existing skill directories:", file=sys.stderr)
+        print("Refusing existing skill paths or symlinked destination parents:", file=sys.stderr)
         for path in conflicts:
             print(f"  - {path}", file=sys.stderr)
         print("No files were copied. Review and merge manually.", file=sys.stderr)
