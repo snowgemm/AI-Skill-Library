@@ -1,6 +1,6 @@
 ---
 name: android-compose-engineering
-description: Build, debug, optimize, and test native Android applications using Kotlin, Jetpack Compose, lifecycle-aware state, coroutines, and modern Android architecture.
+description: Build, debug, and test Android apps with Kotlin, Jetpack Compose, lifecycle-aware state, coroutines, architecture, and performance practices.
 license: Apache-2.0
 metadata:
   author: AI-Skill-Library contributors
