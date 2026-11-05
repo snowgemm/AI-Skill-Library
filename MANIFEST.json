@@ -1,6 +1,6 @@
 {
   "name": "AI-Skill-Library",
-  "version": "0.1.0-research-snapshot",
+  "version": "0.2.0-portable-phase-1",
   "snapshot_date": "2026-11-05",
   "purpose": "Portable, provenance-first inventory and governance scaffold for AI agent skills.",
   "counts": {
@@ -10,8 +10,9 @@
     "external_repositories_reviewed": 11,
     "external_repositories_commit_pinned": 11,
     "portable_upstream_skill_bodies_copied": 0,
-    "custom_skill_bodies_created": 0,
-    "platforms_documented_or_tracked": 7
+    "custom_skill_bodies_created": 5,
+    "platforms_documented_or_tracked": 7,
+    "portable_skill_adaptations": 5
   },
   "catalog_group_counts": {
     "data": 21,
@@ -46,11 +47,11 @@
     "other": 16,
     "vercel-ai-agent": 33
   },
-  "status": "published_research_and_metadata_inventory_only",
+  "status": "published_with_portable_skill_adaptations_phase_1",
   "not_done": [
-    "No upstream skill bodies were copied.",
-    "No skills were installed into another agent.",
-    "No automated evaluation or security scan was run against the upstream skill collections as a whole."
+    "No skills have been installed into another agent host or validated end-to-end across Codex, Claude, Gemini, Copilot, or Grok.",
+    "Upstream executable scripts, scaffolds, and reference bundles have not been imported.",
+    "No comprehensive automated security scan has been run across every upstream repository or imported adaptation."
   ],
   "principles": [
     "Do not redistribute proprietary/plugin-hosted skill bodies without rights.",
@@ -63,7 +64,9 @@
   ],
   "catalog_file": "catalog/chatgpt-installed-skills-125.json",
   "source_registry_file": "catalog/external-sources.json",
-  "validation_status": "repository_tree_verified;catalog_json_parse_verified;published_file_hashes_recorded_as_git_blob_sha1",
+  "validation_status": "phase_1_skill_frontmatter_and_provenance_reviewed;upstream_pins_checked;cross_host_execution_not_yet_tested",
   "published_repository": "https://github.com/snowgemm/AI-Skill-Library",
-  "published_branch": "main"
+  "published_branch": "main",
+  "portable_skill_catalog_file": "catalog/portable-skills-phase-1.json",
+  "upstream_monitor_workflow": ".github/workflows/upstream-registry.yml"
 }
