@@ -28,4 +28,4 @@ eb9e8c40f4595e4cdc0b56e60b8c43e595652cb6  .github/workflows/upstream-registry.ym
 4f5345faadf4e11e007c61ce4fd05f4122118666  catalog/external-sources.json
 142e66bd2ed50cd08eaa93e1e584581b52a9fd00  adapters/HOST-COMPATIBILITY.md
 dc4065b16b5ae6a26e4a241540c14a6cebddd66e  adapters/host-adapters.json
-9742c0d01d810bca5c5899e919a5306226386bb8  scripts/install_skills.py
+96211dc8dc022ad0e51c664b865d5b58d285632d  scripts/install_skills.py
