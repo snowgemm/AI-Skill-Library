@@ -1,8 +1,9 @@
 {
   "name": "AI-Skill-Library",
-  "version": "0.1.0-research-snapshot",
+  "version": "0.3.0-commercial-hardening-proposal",
   "snapshot_date": "2026-11-05",
   "purpose": "Portable, provenance-first inventory and governance scaffold for AI agent skills.",
+  "release_status": "pre_release_not_approved_for_commercial_distribution",
   "counts": {
     "chatgpt_catalog_items": 125,
     "historical_base_items": 120,
@@ -10,47 +11,17 @@
     "external_repositories_reviewed": 11,
     "external_repositories_commit_pinned": 11,
     "portable_upstream_skill_bodies_copied": 0,
-    "custom_skill_bodies_created": 0,
-    "platforms_documented_or_tracked": 7
+    "custom_skill_bodies_created": 5,
+    "platforms_documented_or_tracked": 7,
+    "portable_skill_adaptations": 5
   },
-  "catalog_group_counts": {
-    "data": 21,
-    "vibecoder": 25,
-    "biohub-esm": 5,
-    "gh-review-loop": 1,
-    "gina-coderabbit-learnings-curator": 1,
-    "codex-coordinator": 1,
-    "codex-dev-workflows": 12,
-    "codex-material-themes": 1,
-    "codex-cost": 1,
-    "codex-sdlc": 8,
-    "ai-codex-usage": 1,
-    "codex-usage": 1,
-    "usage-checker": 1,
-    "app-6a9e2447eaf48191b9019af0c0ca8332": 1,
-    "cache-stats": 1,
-    "token-tally": 2,
-    "game-development-studio": 5,
-    "supabase": 2,
-    "plugin-management": 1,
-    "vercel": 33,
-    "coderabbit": 1
-  },
-  "legacy_group_counts": {
-    "data": 21,
-    "vibecoder": 25,
-    "biohub-esm": 5,
-    "added_after_legacy_120": 5,
-    "codex-development": 12,
-    "sdlc": 8,
-    "other": 16,
-    "vercel-ai-agent": 33
-  },
-  "status": "published_research_and_metadata_inventory_only",
   "not_done": [
-    "No upstream skill bodies were copied.",
-    "No skills were installed into another agent.",
-    "No automated evaluation or security scan was run against the upstream skill collections as a whole."
+    "GitHub Actions results for the latest proposal commit, including zizmor audit findings.",
+    "Host-specific CLI discovery, activation, invocation and evaluation tests have not been run.",
+    "No project-wide license has been selected for original repository material.",
+    "No comprehensive skill-level static and dynamic security assessment has been completed.",
+    "No matched baseline-versus-skill evaluation report exists across the five skills and five hosts.",
+    "No versioned release package, SBOM, build provenance attestation or signature-verification procedure has been published."
   ],
   "principles": [
     "Do not redistribute proprietary/plugin-hosted skill bodies without rights.",
@@ -58,12 +29,31 @@
     "Review each license at file/subtree level.",
     "Scan and manually inspect before execution.",
     "SkillSpector is not a sandbox.",
-    "Measure skill lift against a baseline.",
-    "Use host adapters rather than forking canonical content."
+    "Measure skill lift against a matched baseline.",
+    "Use host adapters rather than forking canonical content.",
+    "Distinguish format validation from host runtime compatibility and task evaluation.",
+    "Do not declare commercial readiness while a release gate remains blocked."
   ],
   "catalog_file": "catalog/chatgpt-installed-skills-125.json",
   "source_registry_file": "catalog/external-sources.json",
-  "validation_status": "repository_tree_verified;catalog_json_parse_verified;published_file_hashes_recorded_as_git_blob_sha1",
+  "portable_skill_catalog_file": "catalog/portable-skills-phase-1.json",
+  "upstream_monitor_workflow": ".github/workflows/upstream-registry.yml",
+  "quality_workflow": ".github/workflows/quality.yml",
+  "platform_adapters": ["codex", "claude", "gemini", "github-copilot", "grok"],
+  "adapter_guide": "adapters/HOST-COMPATIBILITY.md",
+  "adapter_map": "adapters/host-adapters.json",
+  "project_installer": "scripts/install_skills.py",
+  "skill_validator": "scripts/validate_skills.py",
+  "repository_validator": "scripts/validate_repository.py",
+  "workflow_security_validator": "scripts/validate_workflow_security.py",
+  "checksum_generator": "scripts/update_checksums.py",
+  "test_directory": "tests",
+  "licensing_boundary": "LICENSING.md",
+  "security_policy": "SECURITY.md",
+  "commercial_readiness": "COMMERCIAL-READINESS.md",
+  "change_log": "CHANGELOG.md",
   "published_repository": "https://github.com/snowgemm/AI-Skill-Library",
-  "published_branch": "main"
+  "base_published_branch": "main",
+  "working_branch": "compat/all-host-adapters-2026-11",
+  "validation_status": "previous_commit_ci_passed;latest_commit_ci_pending;host_runtime_not_tested;commercial_distribution_blocked"
 }

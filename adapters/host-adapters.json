@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.1.0",
+  "canonical_root": "skills",
+  "distribution_scope": "project_only",
+  "hosts": {
+    "codex": {
+      "directory": ".agents/skills",
+      "mode": "native_agent_skills",
+      "documentation": "https://learn.chatgpt.com/docs/build-skills",
+      "runtime_tested": false
+    },
+    "claude": {
+      "directory": ".claude/skills",
+      "mode": "native_agent_skills",
+      "documentation": "https://code.claude.com/docs/en/skills",
+      "runtime_tested": false
+    },
+    "gemini": {
+      "directory": ".gemini/skills",
+      "alternate_directory": ".agents/skills",
+      "alternate_precedence": "higher_when_names_collide",
+      "mode": "native_agent_skills",
+      "documentation": "https://geminicli.com/docs/cli/skills/",
+      "workspace_trust_required": true,
+      "runtime_tested": false
+    },
+    "copilot": {
+      "directory": ".github/skills",
+      "alternate_directories": [".claude/skills", ".agents/skills"],
+      "mode": "native_agent_skills",
+      "documentation": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills",
+      "runtime_tested": false
+    },
+    "grok": {
+      "directory": ".grok/skills",
+      "compatible_claude_directory": ".claude/skills",
+      "mode": "native_skill_folder_agent_skills_compatible",
+      "documentation": "https://docs.x.ai/build/features/skills-plugins-marketplaces",
+      "runtime_tested": false
+    }
+  },
+  "skills": [
+    "android-compose-engineering",
+    "minecraft-bedrock-addon",
+    "threejs-game-engineering",
+    "superpowers-engineering-workflow",
+    "supabase-engineering"
+  ],
+  "policy": {
+    "single_canonical_copy": true,
+    "project_scope_only": true,
+    "overwrite_existing": false,
+    "stage_before_copy": true,
+    "rollback_on_failure": true,
+    "execute_skill_scripts": false,
+    "copy_minecraft_vanilla_assets": false,
+    "host_runtime_tested": false
+  }
+}
