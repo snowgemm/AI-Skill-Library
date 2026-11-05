@@ -1,6 +1,6 @@
 ---
 name: superpowers-engineering-workflow
-description: Apply disciplined software engineering workflows for planning, test-driven development, systematic debugging, code review, and evidence-based completion.
+description: Plan and deliver software changes with test-driven development, systematic debugging, code review, and evidence-based verification.
 license: MIT
 metadata:
   author: AI-Skill-Library contributors
