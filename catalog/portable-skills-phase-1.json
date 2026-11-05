@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_date": "2026-11-05",
+  "phase": "portable-skill-recovery-1",
+  "policy": "Only original or license-compliant adapted skill content is included. Each upstream source and license is preserved; upstream tracking is separate from pinned import provenance.",
+  "skills": [
+    {
+      "id": "android-compose-engineering",
+      "domain": "Android",
+      "path": "skills/android-compose-engineering/SKILL.md",
+      "status": "portable_adaptation",
+      "license": "Apache-2.0",
+      "upstream": "android/skills",
+      "upstream_commit": "bf68e2d66a992a1e6aeb7e9263293cc23fcbf475",
+      "upstream_skill_examples": [
+        "jetpack-compose/jetpack-compose-performance/SKILL.md",
+        "testing/testing-setup/SKILL.md"
+      ],
+      "license_file": "licenses/upstream/android-LICENSE.txt",
+      "notes": "Independent adaptation; no verbatim upstream skill body or bundled references."
+    },
+    {
+      "id": "minecraft-bedrock-addon",
+      "domain": "Minecraft Bedrock",
+      "path": "skills/minecraft-bedrock-addon/SKILL.md",
+      "status": "portable_adaptation",
+      "license": "MIT with EULA asset carve-out",
+      "upstream": "Mojang/minecraft-creator-tools",
+      "upstream_commit": "a8f2cd2fc7aa7e7e075dbf54a4597319aa8b71e1",
+      "upstream_skill_examples": [
+        "plugins/minecraft/skills/debug-addon/SKILL.md",
+        "plugins/minecraft/skills/creator-tools-cli/SKILL.md"
+      ],
+      "license_file": "licenses/upstream/mojang-LICENSE.md",
+      "notes": "No vanilla assets or res/latest/van resources copied; user must accept EULA themselves where applicable."
+    },
+    {
+      "id": "threejs-game-engineering",
+      "domain": "Three.js",
+      "path": "skills/threejs-game-engineering/SKILL.md",
+      "status": "portable_adaptation",
+      "license": "MIT",
+      "upstream": "majidmanzarpour/threejs-game-skills",
+      "upstream_commit": "8286774b22a2566bf894dbc825825c16921866af",
+      "upstream_skill_examples": [
+        "skills/threejs-debug-profiler/SKILL.md",
+        "skills/threejs-qa-release/SKILL.md"
+      ],
+      "license_file": "licenses/upstream/threejs-LICENSE",
+      "notes": "Independent adaptation; upstream install scripts, scaffolds, generated assets and dependencies are excluded."
+    },
+    {
+      "id": "superpowers-engineering-workflow",
+      "domain": "Software engineering methodology",
+      "path": "skills/superpowers-engineering-workflow/SKILL.md",
+      "status": "portable_adaptation",
+      "license": "MIT",
+      "upstream": "obra/superpowers",
+      "upstream_commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "upstream_skill_examples": [
+        "skills/test-driven-development/SKILL.md",
+        "skills/systematic-debugging/SKILL.md",
+        "skills/verification-before-completion/SKILL.md"
+      ],
+      "license_file": "licenses/upstream/superpowers-LICENSE",
+      "notes": "Independent adaptation; TDD is conditional on task type and testability."
+    },
+    {
+      "id": "supabase-engineering",
+      "domain": "Supabase and PostgreSQL",
+      "path": "skills/supabase-engineering/SKILL.md",
+      "status": "portable_adaptation",
+      "license": "MIT",
+      "upstream": "supabase/agent-skills",
+      "upstream_commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+      "upstream_skill_examples": [
+        "skills/supabase/SKILL.md",
+        "skills/supabase-postgres-best-practices/SKILL.md"
+      ],
+      "license_file": "licenses/upstream/supabase-LICENSE",
+      "notes": "Independent adaptation; current docs/changelog required before version-sensitive implementation."
+    }
+  ]
+}
