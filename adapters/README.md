@@ -1,14 +1,24 @@
 # Platform adapters
 
-Keep a single canonical skill source and add only the host-specific metadata needed for discovery. The platform matrix is in `../catalog/platform-compatibility.json`.
+Canonical skill bodies live only in `../skills/<skill-id>/SKILL.md`. Host adapters map them into documented project-scope discovery folders without maintaining divergent copies.
 
-## Current adapter guidance
+See [HOST-COMPATIBILITY.md](HOST-COMPATIBILITY.md) for the five-host matrix, official documentation and safety policy. Machine-readable mappings are in [host-adapters.json](host-adapters.json).
 
-- **Grok Build:** `.grok/skills/` at project or user scope. Verify current build and sandbox settings; `allowed-tools` is not enforcement.
-- **Codex:** use supported skill/plugin conventions; plugin manifests belong in the adapter package, not the canonical skill directory.
-- **Claude Code:** `.claude/skills/` or plugin marketplace structure.
-- **Gemini CLI:** use supported `.agents/skills/` or `.gemini/skills/` discovery, then verify version-specific behavior.
-- **GitHub Copilot:** use supported `.github/skills/` or `.agents/skills/` conventions.
-- **Cursor:** check current project/user skill discovery and version before install.
+## Install into a project sandbox
 
-Do not treat the GitHub CLI `gh skill` preview feature as the source of truth or a security scanner. Preview, pin and inspect before install.
+From a clone of this repository:
+
+```bash
+python3 scripts/install_skills.py --target /path/to/project --host all --dry-run
+python3 scripts/install_skills.py --target /path/to/project --host all
+```
+
+Use `--host codex`, `claude`, `gemini`, `copilot`, or `grok` for one host. The installer is project-scope only, does not write to user-home directories, does not execute scripts, and refuses to overwrite existing skill folders.
+
+## Design rules
+
+- One canonical source; adapters contain only host-specific discovery metadata.
+- Format support is not proof of runtime behavior or automatic activation.
+- No secrets, credentials, production configuration, EULA acceptance, or network downloads.
+- Preserve the Minecraft EULA carve-out: no `res/latest/van` assets.
+- Re-check official host docs before each compatibility release.
