@@ -9,15 +9,18 @@ All notable repository changes are documented here. A version is not considered 
 - Repository consistency, provenance, immutable GitHub Actions pin and Git blob checksum validation.
 - Failure-path tests for installer rollback and malformed skill metadata.
 - Least-privilege quality CI for Python 3.12 and 3.13.
-- Commercial readiness, security and per-component licensing boundary documents.
+- Pinned zizmor workflow security analysis and explicit workflow-permission/automation invariants.
+- Commercial readiness, per-component licensing, security, evaluation and compatibility documentation.
 
 ### Changed
-- Installer requires an existing project directory, stages all skills before installation, rejects symlink paths and attempts rollback on failure.
-- Upstream monitor checks only sources mapped to portable imported skills and fails closed when any check is incomplete.
-- Host claims distinguish format compatibility, discovery, invocation and evaluation evidence.
+- Installer requires an existing project directory, stages all skills before installation, refuses symlink paths and attempts rollback on failure.
+- Upstream monitor checks only sources mapped to imported portable skills and fails closed if any monitored source cannot be checked.
+- Upstream metadata PRs refresh the corresponding Git blob checksum and explicitly dispatch read-only quality CI; imported skill bodies and pinned commits remain unchanged.
+- GitHub Actions are pinned to the verified commit behind their exact release tags.
+- Host-support claims distinguish format compatibility, discovery, invocation and evaluation evidence.
 
 ### Not yet verified
-- GitHub Actions result for this proposal commit.
-- Real host discovery and invocation on all advertised platforms.
-- Comprehensive security assessment and skill-effectiveness benchmark.
-- SBOM, build provenance, signing and project-wide licensing decision.
+- GitHub Actions result for the latest proposal commit, including zizmor findings.
+- Real host discovery and invocation for every advertised host/version.
+- Comprehensive security assessment and matched skill-effectiveness benchmark.
+- SBOM, build provenance, signing and signature-verification process.

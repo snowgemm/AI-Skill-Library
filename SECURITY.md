@@ -8,6 +8,16 @@ This repository distributes agent instructions and project-scope installation to
 
 Do not publish credentials, private customer data, exploit details or other sensitive vulnerability information in a public issue or pull request. Use GitHub's private vulnerability reporting flow when enabled. If it is unavailable, contact the maintainer through a private channel before sharing sensitive details. Public issues are appropriate for non-sensitive bugs and documentation problems.
 
+## Automated checks
+
+The quality workflow performs:
+- Unit and failure-path tests on supported Python CI versions.
+- Agent Skills format validation.
+- Repository, provenance and checksum validation.
+- Static GitHub Actions workflow analysis using a pinned zizmor action and pinned scanner version.
+
+The workflow analysis covers GitHub Actions configuration; it does not scan all skill semantics or prove that a skill is safe at runtime. Findings must be reviewed and dispositioned. Passing static analysis is not a security certification.
+
 ## Safe handling
 
 - Never put secrets, production credentials, private keys or personal data into skills, tests, prompts, benchmark fixtures or logs.

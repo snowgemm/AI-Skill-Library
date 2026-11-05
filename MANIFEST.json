@@ -16,10 +16,10 @@
     "portable_skill_adaptations": 5
   },
   "not_done": [
-    "GitHub quality workflow has not yet reported a result for this proposal commit.",
+    "GitHub Actions results for the latest proposal commit, including zizmor audit findings.",
     "Host-specific CLI discovery, activation, invocation and evaluation tests have not been run.",
     "No project-wide license has been selected for original repository material.",
-    "No comprehensive static and dynamic security assessment has been completed.",
+    "No comprehensive skill-level static and dynamic security assessment has been completed.",
     "No matched baseline-versus-skill evaluation report exists across the five skills and five hosts.",
     "No versioned release package, SBOM, build provenance attestation or signature-verification procedure has been published."
   ],
@@ -45,6 +45,7 @@
   "project_installer": "scripts/install_skills.py",
   "skill_validator": "scripts/validate_skills.py",
   "repository_validator": "scripts/validate_repository.py",
+  "workflow_security_validator": "scripts/validate_workflow_security.py",
   "checksum_generator": "scripts/update_checksums.py",
   "test_directory": "tests",
   "licensing_boundary": "LICENSING.md",
@@ -54,5 +55,5 @@
   "published_repository": "https://github.com/snowgemm/AI-Skill-Library",
   "base_published_branch": "main",
   "working_branch": "compat/all-host-adapters-2026-11",
-  "validation_status": "local_unit_tests_passed;github_ci_pending;host_runtime_not_tested;commercial_distribution_blocked"
+  "validation_status": "previous_commit_ci_passed;latest_commit_ci_pending;host_runtime_not_tested;commercial_distribution_blocked"
 }

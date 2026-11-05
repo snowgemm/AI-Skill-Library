@@ -10,7 +10,7 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 - 11 external repositories registered with commit pins and source/license metadata.
 - Five portable skill adaptations for Android Compose, Minecraft Bedrock, Three.js, software engineering methodology and Supabase.
 - Project-scope discovery adapters documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI and Grok Build.
-- A project-scope installer, Agent Skills format validator, repository-integrity checks and release-readiness policy are included in this proposal branch.
+- A project-scope installer, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included in this proposal branch.
 
 ## Important limitations
 
@@ -31,10 +31,11 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 - \`scripts/install_skills.py\` — safe project-scope installer.
 - \`scripts/validate_skills.py\` — Agent Skills format validator.
 - \`scripts/validate_repository.py\` — catalogue, provenance, workflow and checksum validator.
+- \`scripts/validate_workflow_security.py\` — permission, action-pin and automation hand-off invariant checks.
 - \`scripts/update_checksums.py\` — Git blob SHA-1 inventory generator.
 - \`tests/\` — unit and failure-path regression tests.
-- \`.github/workflows/quality.yml\` — least-privilege quality checks.
-- \`.github/workflows/upstream-registry.yml\` — fail-closed upstream metadata monitor.
+- \`.github/workflows/quality.yml\` — test matrix and pinned zizmor workflow security analysis.
+- \`.github/workflows/upstream-registry.yml\` — fail-closed upstream metadata monitor with checksum refresh and explicit quality dispatch.
 - \`LICENSING.md\`, \`SECURITY.md\`, \`COMMERCIAL-READINESS.md\` — rights, security and release gates.
 
 ## Local validation
@@ -44,6 +45,7 @@ python3 -m pip install -r requirements-dev.txt
 python3 -m unittest discover --start-directory tests --verbose
 python3 scripts/validate_skills.py
 python3 scripts/validate_repository.py
+python3 scripts/validate_workflow_security.py
 \`\`\`
 
 Regenerate the Git blob checksum inventory after staging changes:

@@ -111,10 +111,11 @@ jobs:
     if: needs.detect.outputs.has_updates == 'true'
     runs-on: ubuntu-latest
     permissions:
+      actions: write
       contents: write
       pull-requests: write
     steps:
-      - name: Open a review PR without changing skill content or import pins
+      - name: Open review PR, refresh checksum and dispatch read-only CI
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           REGISTRY_JSON: ${{ needs.detect.outputs.registry_json }}
@@ -125,10 +126,12 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const base = "main";
-            const path = "catalog/external-sources.json";
+            const registryPath = "catalog/external-sources.json";
+            const checksumPath = "checksums.git-blob-sha1.txt";
             const branch = "bot/upstream-registry-" + process.env.BRANCH_SUFFIX;
             const registry = JSON.parse(process.env.REGISTRY_JSON);
             const summary = process.env.CHANGE_SUMMARY || "Upstream tracking metadata changed.";
+
             try {
               await github.rest.git.getRef({ owner, repo, ref: "heads/" + branch });
             } catch (error) {
@@ -138,26 +141,65 @@ jobs:
                 owner, repo, ref: "refs/heads/" + branch, sha: mainRef.data.object.sha
               });
             }
-            const branchFile = await github.rest.repos.getContent({ owner, repo, path, ref: branch });
-            if (Array.isArray(branchFile.data) || branchFile.data.type !== "file") {
-              throw new Error(path + " is not a regular file on " + branch);
-            }
-            await github.rest.repos.createOrUpdateFileContents({
-              owner, repo, path, branch,
-              message: "chore(registry): record upstream tracking metadata",
-              sha: branchFile.data.sha,
-              content: Buffer.from(JSON.stringify(registry, null, 2) + "\n").toString("base64")
+
+            const registryFile = await github.rest.repos.getContent({
+              owner, repo, path: registryPath, ref: branch
             });
+            if (Array.isArray(registryFile.data) || registryFile.data.type !== "file") {
+              throw new Error(registryPath + " is not a regular file on " + branch);
+            }
+            const registryBytes = Buffer.from(JSON.stringify(registry, null, 2) + "\n", "utf8");
+            const registryBlob = Buffer.concat([
+              Buffer.from("blob " + registryBytes.length + "\0", "ascii"),
+              registryBytes
+            ]);
+            const registryDigestBytes = new Uint8Array(await crypto.subtle.digest("SHA-1", registryBlob));
+            const registryDigest = Array.from(registryDigestBytes)
+              .map(value => value.toString(16).padStart(2, "0")).join("");
+
+            await github.rest.repos.createOrUpdateFileContents({
+              owner, repo, path: registryPath, branch,
+              message: "chore(registry): record upstream tracking metadata",
+              sha: registryFile.data.sha,
+              content: registryBytes.toString("base64")
+            });
+
+            const checksumFile = await github.rest.repos.getContent({
+              owner, repo, path: checksumPath, ref: branch
+            });
+            if (Array.isArray(checksumFile.data) || checksumFile.data.type !== "file") {
+              throw new Error(checksumPath + " is not a regular file on " + branch);
+            }
+            const checksumText = Buffer.from(checksumFile.data.content, "base64").toString("utf8");
+            const checksumLines = checksumText.split(/\r?\n/);
+            const matching = [];
+            for (let index = 0; index < checksumLines.length; index++) {
+              if (checksumLines[index].endsWith("  " + registryPath)) matching.push(index);
+            }
+            if (matching.length !== 1) {
+              throw new Error("Expected exactly one checksum row for " + registryPath);
+            }
+            checksumLines[matching[0]] = registryDigest + "  " + registryPath;
+            const updatedChecksums = checksumLines.filter((line, index) =>
+              line.length > 0 || index < checksumLines.length - 1
+            ).join("\n") + "\n";
+            await github.rest.repos.createOrUpdateFileContents({
+              owner, repo, path: checksumPath, branch,
+              message: "chore(registry): refresh Git blob checksum",
+              sha: checksumFile.data.sha,
+              content: Buffer.from(updatedChecksums, "utf8").toString("base64")
+            });
+
             const pulls = await github.rest.pulls.list({
               owner, repo, state: "all", base, head: owner + ":" + branch, per_page: 100
             });
-            const existing = pulls.data.find(pr => !pr.merged_at);
-            if (existing) {
-              if (existing.state === "closed") {
-                await github.rest.pulls.update({ owner, repo, pull_number: existing.number, state: "open" });
-              }
-            } else {
-              await github.rest.pulls.create({
+            let pull = pulls.data.find(pr => !pr.merged_at);
+            if (pull && pull.state === "closed") {
+              pull = (await github.rest.pulls.update({
+                owner, repo, pull_number: pull.number, state: "open"
+              })).data;
+            } else if (!pull) {
+              pull = (await github.rest.pulls.create({
                 owner, repo, head: branch, base,
                 title: "chore(registry): upstream skill changes detected",
                 body: [
@@ -165,10 +207,17 @@ jobs:
                   "",
                   summary,
                   "",
-                  "This PR changes tracking metadata only. It does not modify skill bodies or pinned import commits.",
+                  "This PR changes source-tracking metadata and the corresponding Git blob checksum only.",
+                  "It does not modify skill bodies or pinned import commits.",
                   "Review upstream diffs, file-level licensing, references, scripts and security before accepting any content update.",
-                  "An incomplete upstream scan never creates an update PR."
+                  "The workflow fails closed if any monitored source cannot be checked."
                 ].join("\n")
-              });
+              })).data;
             }
-            core.info("Prepared metadata-only review branch " + branch + "; imported skills and pins were not changed.");
+
+            // GITHUB_TOKEN-created pull_request runs require maintainer approval.
+            // workflow_dispatch is an explicit exception and runs read-only quality checks on this PR head.
+            await github.rest.actions.createWorkflowDispatch({
+              owner, repo, workflow_id: "quality.yml", ref: branch
+            });
+            core.info("Opened/updated PR #" + pull.number + " and dispatched quality.yml for " + branch + ".");
