@@ -38,7 +38,14 @@
         "Examples cover Compose performance, R8, intent security, and test setup.",
         "Some skills have references/ and scripts/; test dependencies and commands must be checked per skill."
       ],
-      "import_decision": "high_priority_selective_import_after_file_and_license_review"
+      "import_decision": "high_priority_selective_import_after_file_and_license_review",
+      "upstream_latest_commit": "bf68e2d66a992a1e6aeb7e9263293cc23fcbf475",
+      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
+      "upstream_update_available": false,
+      "portable_skill_path": "skills/android-compose-engineering/SKILL.md",
+      "portable_skill_type": "independently_edited_adaptation",
+      "redistribution_license": "Apache-2.0",
+      "redistribution_license_file": "licenses/upstream/android-LICENSE.txt"
     },
     {
       "id": "chrisbanes-android",
@@ -87,7 +94,14 @@
         "The license file states resources under res/latest/van are subject to Minecraft EULA; do not treat all assets as covered by MIT.",
         "Commands may use npx @minecraft/creator-tools@latest; pin versions for reproducible runs."
       ],
-      "import_decision": "top_priority_for_bedrock_after_asset_and_dependency_review"
+      "import_decision": "top_priority_for_bedrock_after_asset_and_dependency_review",
+      "upstream_latest_commit": "a8f2cd2fc7aa7e7e075dbf54a4597319aa8b71e1",
+      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
+      "upstream_update_available": false,
+      "portable_skill_path": "skills/minecraft-bedrock-addon/SKILL.md",
+      "portable_skill_type": "independently_edited_adaptation",
+      "redistribution_license": "MIT; Minecraft EULA carve-out applies to res/latest/van assets",
+      "redistribution_license_file": "licenses/upstream/mojang-LICENSE.md"
     },
     {
       "id": "threejs-game-skills",
@@ -115,7 +129,14 @@
         "QA skill requests active gameplay, mobile viewport, input, audio lifecycle and visual evidence—not screenshots alone.",
         "An install.sh script is present; review it before execution, even with an MIT license."
       ],
-      "import_decision": "high_priority_selective_import_after_install_script_review"
+      "import_decision": "high_priority_selective_import_after_install_script_review",
+      "upstream_latest_commit": "8286774b22a2566bf894dbc825825c16921866af",
+      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
+      "upstream_update_available": false,
+      "portable_skill_path": "skills/threejs-game-engineering/SKILL.md",
+      "portable_skill_type": "independently_edited_adaptation",
+      "redistribution_license": "MIT",
+      "redistribution_license_file": "licenses/upstream/threejs-LICENSE"
     },
     {
       "id": "superpowers",
@@ -136,7 +157,14 @@
         "README includes Grok Build CLI as one installation target.",
         "Apply strict workflows only to matching task types; do not force TDD for documentation or throwaway prototypes."
       ],
-      "import_decision": "high_priority_adapt_workflow_and_test_host_compatibility"
+      "import_decision": "high_priority_adapt_workflow_and_test_host_compatibility",
+      "upstream_latest_commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
+      "upstream_update_available": false,
+      "portable_skill_path": "skills/superpowers-engineering-workflow/SKILL.md",
+      "portable_skill_type": "independently_edited_adaptation",
+      "redistribution_license": "MIT",
+      "redistribution_license_file": "licenses/upstream/superpowers-LICENSE"
     },
     {
       "id": "trailofbits-skills",
@@ -201,7 +229,14 @@
         "Postgres skill covers query performance, connection management, RLS, schema, locking and diagnostics.",
         "The repo also contains MCP and release tooling; review only relevant files."
       ],
-      "import_decision": "high_priority_if_supabase_is_in_project_stack"
+      "import_decision": "high_priority_if_supabase_is_in_project_stack",
+      "upstream_latest_commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
+      "upstream_update_available": false,
+      "portable_skill_path": "skills/supabase-engineering/SKILL.md",
+      "portable_skill_type": "independently_edited_adaptation",
+      "redistribution_license": "MIT",
+      "redistribution_license_file": "licenses/upstream/supabase-LICENSE"
     },
     {
       "id": "nvidia-skillspector",
@@ -236,5 +271,11 @@
       ],
       "import_decision": "reference_only_until_per_skill_license_review"
     }
-  ]
+  ],
+  "upstream_tracking": {
+    "policy": "Track upstream default-branch HEAD separately from the pinned source commit used for imported content. Automated checks open a review PR; they never overwrite imported skill files.",
+    "checked_sources": 5,
+    "checked_at": "2026-11-05T18:58:00+07:00",
+    "next_check": "Weekly via .github/workflows/upstream-registry.yml"
+  }
 }
