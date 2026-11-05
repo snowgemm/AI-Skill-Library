@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Compare only imported portable skill sources
         id: scan
-        uses: actions/github-script@ff4b64fc288a21d5291396a384c1273f032e6333 # v9.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             const owner = context.repo.owner;
@@ -115,7 +115,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Open a review PR without changing skill content or import pins
-        uses: actions/github-script@ff4b64fc288a21d5291396a384c1273f032e6333 # v9.0.0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           REGISTRY_JSON: ${{ needs.detect.outputs.registry_json }}
           CHANGE_SUMMARY: ${{ needs.detect.outputs.summary }}

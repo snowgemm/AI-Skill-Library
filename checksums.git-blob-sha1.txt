@@ -1,5 +1,5 @@
-a2421b176200f4c14c3e2808027be27fc3d9ae83  .github/workflows/quality.yml
-a3fbb3fcf440e84ca850978fe22ce5d05a7dd6c8  .github/workflows/upstream-registry.yml
+cf0552daeb48644a7cf27e5b9a22862b9121b2d2  .github/workflows/quality.yml
+f549792b7f24a467f255d6b315ad66fd6aba0fb9  .github/workflows/upstream-registry.yml
 48064354a48b02dd0b4e755dfb96348e66f74a75  .gitignore
 8ccb589d65dff09f391ef709b2ce90fc2dccd7b4  adapters/host-adapters.json
 52553daa3f98d03aa30b774a3d263069814bb5e9  adapters/HOST-COMPATIBILITY.md
@@ -17,7 +17,7 @@ b444a656c16a46611ab0086a6bad755fed3853e0  licenses/README.md
 7a4a3ea2424c09fbe48d455aed1eaa94d9124835  licenses/upstream/android-LICENSE.txt
 9ad8c583ee786c48bc52bcd72c9c960230ff38b3  licenses/upstream/mojang-LICENSE.md
 d3c9e94fbc6c28f66ecb5a01407d543c99c811b6  licenses/upstream/supabase-LICENSE
-abf0390320aa14406af7a520b9b0739fdda9bf08  licenses/upstream/superpowers-LICENSE
+abf0390320aa14406af7a5209b9b0739fdda9bf08  licenses/upstream/superpowers-LICENSE
 0e7cfcfa43d5da2dc6a31768afcd95525fd3000c  licenses/upstream/threejs-LICENSE
 223f61565beef7da8a2720f205f6bda651b22c10  LICENSING.md
 df52db3d46a909454d882356f79d695b11f592d9  MANIFEST.json
