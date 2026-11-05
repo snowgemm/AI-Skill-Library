@@ -42,6 +42,9 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     target = args.target.expanduser().resolve()
+    if target == Path.home().resolve() or target == Path(target.anchor):
+        print("Refusing a home-directory or filesystem-root target; choose a project directory.", file=sys.stderr)
+        return 2
     hosts = tuple(HOST_DIRECTORIES) if args.host == "all" else (args.host,)
 
     missing = [skill_id for skill_id in SKILL_IDS
