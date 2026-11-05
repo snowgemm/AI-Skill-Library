@@ -1,6 +1,6 @@
 {
   "name": "AI-Skill-Library",
-  "version": "0.2.0-portable-phase-1",
+  "version": "0.3.0-multi-host-adapters",
   "snapshot_date": "2026-11-05",
   "purpose": "Portable, provenance-first inventory and governance scaffold for AI agent skills.",
   "counts": {
@@ -47,10 +47,10 @@
     "other": 16,
     "vercel-ai-agent": 33
   },
-  "status": "published_with_portable_skill_adaptations_phase_1",
+  "status": "portable_skills_with_five_host_adapters",
   "not_done": [
-    "No skills have been installed into another agent host or validated end-to-end across Codex, Claude, Gemini, Copilot, or Grok.",
-    "Upstream executable scripts, scaffolds, and reference bundles have not been imported.",
+    "Host-specific CLI runtime and automatic activation tests have not been run.",
+    "Skills have not been installed into any user account or production environment.",
     "No comprehensive automated security scan has been run across every upstream repository or imported adaptation."
   ],
   "principles": [
@@ -64,9 +64,19 @@
   ],
   "catalog_file": "catalog/chatgpt-installed-skills-125.json",
   "source_registry_file": "catalog/external-sources.json",
-  "validation_status": "phase_1_skill_frontmatter_and_provenance_reviewed;upstream_pins_checked;cross_host_execution_not_yet_tested",
+  "validation_status": "canonical_skill_frontmatter_checked;five_host_project_adapters_documented;safe_installer_added;runtime_not_tested",
   "published_repository": "https://github.com/snowgemm/AI-Skill-Library",
   "published_branch": "main",
   "portable_skill_catalog_file": "catalog/portable-skills-phase-1.json",
-  "upstream_monitor_workflow": ".github/workflows/upstream-registry.yml"
+  "upstream_monitor_workflow": ".github/workflows/upstream-registry.yml",
+  "platform_adapters": [
+    "codex",
+    "claude",
+    "gemini",
+    "github-copilot",
+    "grok"
+  ],
+  "adapter_guide": "adapters/HOST-COMPATIBILITY.md",
+  "adapter_map": "adapters/host-adapters.json",
+  "project_installer": "scripts/install_skills.py"
 }
