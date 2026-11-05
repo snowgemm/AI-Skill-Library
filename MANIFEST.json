@@ -1,0 +1,68 @@
+{
+  "name": "AI-Skill-Library",
+  "version": "0.1.0-research-snapshot",
+  "snapshot_date": "2026-11-05",
+  "purpose": "Portable, provenance-first inventory and governance scaffold for AI agent skills.",
+  "counts": {
+    "chatgpt_catalog_items": 125,
+    "historical_base_items": 120,
+    "post_inventory_additions": 5,
+    "external_repositories_reviewed": 11,
+    "external_repositories_commit_pinned": 11,
+    "portable_upstream_skill_bodies_copied": 0,
+    "custom_skill_bodies_created": 0,
+    "platforms_documented_or_tracked": 7
+  },
+  "catalog_group_counts": {
+    "data": 21,
+    "vibecoder": 25,
+    "biohub-esm": 5,
+    "gh-review-loop": 1,
+    "gina-coderabbit-learnings-curator": 1,
+    "codex-coordinator": 1,
+    "codex-dev-workflows": 12,
+    "codex-material-themes": 1,
+    "codex-cost": 1,
+    "codex-sdlc": 8,
+    "ai-codex-usage": 1,
+    "codex-usage": 1,
+    "usage-checker": 1,
+    "app-6a9e2447eaf48191b9019af0c0ca8332": 1,
+    "cache-stats": 1,
+    "token-tally": 2,
+    "game-development-studio": 5,
+    "supabase": 2,
+    "plugin-management": 1,
+    "vercel": 33,
+    "coderabbit": 1
+  },
+  "legacy_group_counts": {
+    "data": 21,
+    "vibecoder": 25,
+    "biohub-esm": 5,
+    "added_after_legacy_120": 5,
+    "codex-development": 12,
+    "sdlc": 8,
+    "other": 16,
+    "vercel-ai-agent": 33
+  },
+  "status": "research_and_metadata_inventory_only",
+  "not_done": [
+    "No GitHub repository created.",
+    "No upstream skill bodies were copied.",
+    "No skills were installed into another agent.",
+    "No automated evaluation or security scan was run against the upstream skill collections as a whole."
+  ],
+  "principles": [
+    "Do not redistribute proprietary/plugin-hosted skill bodies without rights.",
+    "Pin commits and checksums.",
+    "Review each license at file/subtree level.",
+    "Scan and manually inspect before execution.",
+    "SkillSpector is not a sandbox.",
+    "Measure skill lift against a baseline.",
+    "Use host adapters rather than forking canonical content."
+  ],
+  "catalog_file": "catalog/chatgpt-installed-skills-125.json",
+  "source_registry_file": "catalog/external-sources.json",
+  "validation_status": "pending_local_validation"
+}

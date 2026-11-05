@@ -1,0 +1,240 @@
+{
+  "snapshot_date": "2026-11-05",
+  "sources": [
+    {
+      "id": "agentskills-spec",
+      "repository": "agentskills/agentskills",
+      "url": "https://github.com/agentskills/agentskills",
+      "commit": "83021e2be457a9b6679148719c1f6074f0ad975e",
+      "commit_date": "2026-11-04T19:47:24Z",
+      "license": "Apache-2.0",
+      "role": "format_standard",
+      "verification": "repo metadata + specification.mdx read",
+      "findings": [
+        "SKILL.md with YAML frontmatter is required.",
+        "Optional scripts/, references/ and assets/ are supported.",
+        "name and description are required; name has strict slug constraints.",
+        "allowed-tools is experimental and host support can vary."
+      ],
+      "import_decision": "adopt_as_core_format_reference"
+    },
+    {
+      "id": "google-android-skills",
+      "repository": "android/skills",
+      "url": "https://github.com/android/skills",
+      "commit": "bf68e2d66a992a1e6aeb7e9263293cc23fcbf475",
+      "commit_date": "2026-11-04T10:44:04Z",
+      "license": "Apache-2.0",
+      "role": "official_android_skills",
+      "verification": "repo README + group directories + four SKILL.md files read",
+      "inspected_paths": [
+        "jetpack-compose/jetpack-compose-performance/SKILL.md",
+        "performance/r8-analyzer/SKILL.md",
+        "security/android-intent-security/SKILL.md",
+        "testing/testing-setup/SKILL.md"
+      ],
+      "findings": [
+        "Official Android-focused AI instructions; aimed at workflows where evaluations show model weaknesses.",
+        "Examples cover Compose performance, R8, intent security, and test setup.",
+        "Some skills have references/ and scripts/; test dependencies and commands must be checked per skill."
+      ],
+      "import_decision": "high_priority_selective_import_after_file_and_license_review"
+    },
+    {
+      "id": "chrisbanes-android",
+      "repository": "chrisbanes/skills",
+      "url": "https://github.com/chrisbanes/skills",
+      "commit": "72628aea92c9081df0ba96600f24af3f07f4a87a",
+      "commit_date": "2026-11-05T06:48:41Z",
+      "license": "Apache-2.0",
+      "role": "community_android_kotlin_compose",
+      "verification": "repo directory + LICENSE + four SKILL.md files read",
+      "skill_count": 21,
+      "inspected_paths": [
+        "skills/compose-performance/SKILL.md",
+        "skills/compose-state-and-effects/SKILL.md",
+        "skills/kotlin-concurrency-and-flow/SKILL.md",
+        "skills/compose-ui-testing-patterns/SKILL.md"
+      ],
+      "findings": [
+        "Includes Compose state/effects, performance, Kotlin concurrency/Flow, UI tests, Gradle, API design and release workflows.",
+        "Skills emphasize evidence, lifecycle ownership, state contracts, and focused references.",
+        "Repo contains agent-specific plugin metadata; prefer portable skill files and avoid copying host-specific wrappers."
+      ],
+      "import_decision": "high_priority_selective_import_with_attribution"
+    },
+    {
+      "id": "mojang-creator-tools",
+      "repository": "Mojang/minecraft-creator-tools",
+      "url": "https://github.com/Mojang/minecraft-creator-tools",
+      "commit": "a8f2cd2fc7aa7e7e075dbf54a4597319aa8b71e1",
+      "commit_date": "2026-10-06T18:26:01Z",
+      "license": "MIT (LICENSE.md); API metadata reported NOASSERTION",
+      "role": "official_minecraft_bedrock_creator_tools",
+      "verification": "repo tree + LICENSE.md + debug-addon and creator-tools-cli SKILL.md + validation script read",
+      "skill_count": 6,
+      "skill_paths": [
+        "create-block",
+        "create-item",
+        "create-mob",
+        "creator-tools-cli",
+        "debug-addon",
+        "design-model"
+      ],
+      "findings": [
+        "debug-addon uses CLI validation, temporary report output, deduplication, dependency cross-checks and a runtime fallback path.",
+        "creator-tools-cli distinguishes MCP tools from CLI tasks and warns against silently accepting the Minecraft EULA.",
+        "The license file states resources under res/latest/van are subject to Minecraft EULA; do not treat all assets as covered by MIT.",
+        "Commands may use npx @minecraft/creator-tools@latest; pin versions for reproducible runs."
+      ],
+      "import_decision": "top_priority_for_bedrock_after_asset_and_dependency_review"
+    },
+    {
+      "id": "threejs-game-skills",
+      "repository": "majidmanzarpour/threejs-game-skills",
+      "url": "https://github.com/majidmanzarpour/threejs-game-skills",
+      "commit": "8286774b22a2566bf894dbc825825c16921866af",
+      "commit_date": "2026-09-28T03:23:17Z",
+      "license": "MIT",
+      "role": "community_threejs_game_workflows",
+      "verification": "root README + LICENSE + selected SKILL.md files and install.sh presence checked",
+      "skill_count": 9,
+      "skill_paths": [
+        "threejs-3d-generator",
+        "threejs-aaa-graphics-builder",
+        "threejs-audio-generator",
+        "threejs-debug-profiler",
+        "threejs-game-director",
+        "threejs-game-ui-designer",
+        "threejs-gameplay-systems",
+        "threejs-image-generator",
+        "threejs-qa-release"
+      ],
+      "findings": [
+        "Includes gameplay, performance profiling, graphics, QA/release, audio and UI workflows.",
+        "QA skill requests active gameplay, mobile viewport, input, audio lifecycle and visual evidence—not screenshots alone.",
+        "An install.sh script is present; review it before execution, even with an MIT license."
+      ],
+      "import_decision": "high_priority_selective_import_after_install_script_review"
+    },
+    {
+      "id": "superpowers",
+      "repository": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "commit_date": "2026-11-03T22:17:07Z",
+      "license": "MIT",
+      "role": "software_development_methodology",
+      "verification": "README + LICENSE + TDD, systematic-debugging and verification SKILL.md files read",
+      "inspected_paths": [
+        "skills/test-driven-development/SKILL.md",
+        "skills/systematic-debugging/SKILL.md",
+        "skills/verification-before-completion/SKILL.md"
+      ],
+      "findings": [
+        "Covers planning, TDD, debugging, branch completion, code review and agent delegation.",
+        "README includes Grok Build CLI as one installation target.",
+        "Apply strict workflows only to matching task types; do not force TDD for documentation or throwaway prototypes."
+      ],
+      "import_decision": "high_priority_adapt_workflow_and_test_host_compatibility"
+    },
+    {
+      "id": "trailofbits-skills",
+      "repository": "trailofbits/skills",
+      "url": "https://github.com/trailofbits/skills",
+      "commit": "470419e16f97e112d01fc32f4898aea1755015d9",
+      "commit_date": "2026-11-04T17:07:05Z",
+      "license": "CC-BY-SA-4.0",
+      "role": "security_audit_and_validation",
+      "verification": "repo tree + README + three SKILL.md files + license metadata read",
+      "inspected_paths": [
+        "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+        "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
+        "plugins/post-patch-validation/skills/post-patch-validation/SKILL.md"
+      ],
+      "findings": [
+        "Audit-context workflow separates codebase orientation from vulnerability hunting.",
+        "Supply-chain workflow distinguishes assessed-clean, assessed-flagged and unassessable; missing measurement is not a clean result.",
+        "Post-patch validation checks baseline vs patched behavior and regression paths.",
+        "CC BY-SA obligations require attribution and share-alike review for derivative redistribution."
+      ],
+      "import_decision": "reference_first_or_import_only_with_sharealike_compliance"
+    },
+    {
+      "id": "vercel-agent-skills",
+      "repository": "vercel-labs/agent-skills",
+      "url": "https://github.com/vercel-labs/agent-skills",
+      "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "commit_date": "2026-10-27T21:40:02Z",
+      "license": "Repository API had no recognized SPDX license; per-skill terms vary",
+      "role": "react_next_web_ui_performance",
+      "verification": "repo skill tree + react-best-practices, web-design-guidelines and composition-patterns SKILL.md read",
+      "inspected_paths": [
+        "skills/react-best-practices/SKILL.md",
+        "skills/web-design-guidelines/SKILL.md",
+        "skills/composition-patterns/SKILL.md"
+      ],
+      "findings": [
+        "React best practices file declares MIT and contains prioritized rule sets.",
+        "Composition patterns file declares MIT.",
+        "web-design-guidelines lacks a license field in its frontmatter and fetches external rules on each review.",
+        "Do not assume repository-level redistribution rights for every skill."
+      ],
+      "import_decision": "select_only_per_skill_after_license_review"
+    },
+    {
+      "id": "supabase-agent-skills",
+      "repository": "supabase/agent-skills",
+      "url": "https://github.com/supabase/agent-skills",
+      "commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+      "commit_date": "2026-10-02T12:34:48Z",
+      "license": "MIT",
+      "role": "supabase_and_postgres",
+      "verification": "README + root license + two skill files read",
+      "skill_count": 2,
+      "skill_paths": [
+        "skills/supabase",
+        "skills/supabase-postgres-best-practices"
+      ],
+      "findings": [
+        "Supabase skill emphasizes changelog/current-doc checks, post-change query verification and avoiding retry loops.",
+        "Postgres skill covers query performance, connection management, RLS, schema, locking and diagnostics.",
+        "The repo also contains MCP and release tooling; review only relevant files."
+      ],
+      "import_decision": "high_priority_if_supabase_is_in_project_stack"
+    },
+    {
+      "id": "nvidia-skillspector",
+      "repository": "NVIDIA/SkillSpector",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "commit": "62c2fe8622f580ac292d4078c3b71f790194dbbd",
+      "commit_date": "2026-11-04T22:15:03Z",
+      "license": "Apache-2.0",
+      "role": "skill_security_scanner",
+      "verification": "repo metadata + README + pyproject.toml read",
+      "findings": [
+        "Static analysis plus optional LLM semantic analysis; does not execute scanned skill code.",
+        "Optional LLM mode sends eligible file contents to configured provider; --no-llm avoids that content egress.",
+        "SC4 sends declared dependency coordinates to OSV.dev.",
+        "Scanner is defense-in-depth, not a sandbox; dynamic behavior is not proven safe.",
+        "Package requires Python >=3.12 and <3.16 in inspected pyproject."
+      ],
+      "import_decision": "use_as_preinstall_gate_after_privacy_review"
+    },
+    {
+      "id": "microsoft-agent-skills",
+      "repository": "MicrosoftDocs/Agent-Skills",
+      "url": "https://github.com/MicrosoftDocs/Agent-Skills",
+      "commit": "6ecdaf59cde880d0ef3d1715357b6c0b0c6696d8",
+      "commit_date": "2026-11-02T00:05:04Z",
+      "license": "CC-BY-4.0 repo docs; LICENSE-CODE exists separately",
+      "role": "azure_microsoft_learn_reference_skills",
+      "verification": "repo tree and license files located; individual skill/license audit incomplete",
+      "findings": [
+        "Separate documentation and code licensing; inspect LICENSE-CODE and third-party notices before copying code/assets.",
+        "Use as a source/reference catalogue, not as a blanket redistribution grant."
+      ],
+      "import_decision": "reference_only_until_per_skill_license_review"
+    }
+  ]
+}

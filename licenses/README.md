@@ -1,0 +1,3 @@
+# License handling
+
+Never infer permission to redistribute from repository popularity or organizational identity. Use the per-source license record in `catalog/external-sources.json`, then inspect the actual file/subtree license and all third-party notices before import. Mixed-license sources must remain separated. In particular: Mojang's LICENSE.md includes a Minecraft EULA carve-out for assets under `res/latest/van`; Vercel skill terms vary; Trail of Bits requires CC BY-SA review; Microsoft docs and code use separate license files. If rights are unclear, mark the item `reference_only` or `metadata_only` and link upstream instead of copying.

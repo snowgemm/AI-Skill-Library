@@ -1,0 +1,97 @@
+{
+  "snapshot_date": "2026-11-05",
+  "platforms": [
+    {
+      "platform": "Grok Build CLI",
+      "skill_locations": [
+        ".grok/skills/",
+        "~/.grok/skills/"
+      ],
+      "status": "documented_native_support",
+      "notes": [
+        "Repo-specific and user-level skill locations are documented.",
+        "Host-specific frontmatter/behavior must stay in the adapter layer.",
+        "allowed-tools is not a permission sandbox."
+      ],
+      "source": "https://github.com/xai-org/grok-build/blob/main/crates/codegen/xai-grok-pager/docs/user-guide/08-skills.md"
+    },
+    {
+      "platform": "Codex",
+      "skill_locations": [
+        ".agents/skills/",
+        "~/.agents/skills/",
+        "plugin package skills/"
+      ],
+      "status": "documented_support",
+      "notes": [
+        "Codex supports Agent Skills and plugin packaging; check surface/version before installation."
+      ],
+      "source": "https://developers.openai.com/blog/eval-skills"
+    },
+    {
+      "platform": "Claude Code",
+      "skill_locations": [
+        ".claude/skills/",
+        "plugin package skills/"
+      ],
+      "status": "documented_support",
+      "notes": [
+        "Claude Code follows the Agent Skills open standard and extends it with host-specific features."
+      ],
+      "source": "https://code.claude.com/docs/en/skills"
+    },
+    {
+      "platform": "Gemini CLI",
+      "skill_locations": [
+        ".agents/skills/",
+        ".gemini/skills/"
+      ],
+      "status": "documented_support",
+      "notes": [
+        "Official Gemini CLI documentation includes a dedicated Agent Skills guide."
+      ],
+      "source": "https://geminicli.com/docs/cli/skills/"
+    },
+    {
+      "platform": "GitHub Copilot",
+      "skill_locations": [
+        ".github/skills/",
+        ".claude/skills/",
+        ".agents/skills/",
+        "~/.copilot/skills/",
+        "~/.agents/skills/"
+      ],
+      "status": "documented_support",
+      "notes": [
+        "Locations vary by Copilot surface and scope.",
+        "GitHub warns skills may contain prompt injections or malicious scripts; preview and inspect before installation.",
+        "gh skill is public preview and may change."
+      ],
+      "source": "https://docs.github.com/en/copilot/concepts/customizations/agent-skills"
+    },
+    {
+      "platform": "ChatGPT / OpenAI Skills",
+      "skill_locations": [
+        "Skill package directories managed by ChatGPT/host; API uses configured skill paths"
+      ],
+      "status": "documented_support_surface_specific",
+      "notes": [
+        "Distinguish ChatGPT workspace skills, Codex skills and Responses API shell-tool skill paths; do not assume one install path works for all."
+      ],
+      "source": "https://developers.openai.com/plugins/concepts/skills"
+    },
+    {
+      "platform": "GitHub CLI gh skill",
+      "skill_locations": [
+        "repository-provided skill directories"
+      ],
+      "status": "public_preview",
+      "notes": [
+        "Install/list/preview/publish/search/update are preview features subject to change.",
+        "Preview before install; pin a commit SHA.",
+        "Publish dry-run validates structure and repository settings, not security or task effectiveness."
+      ],
+      "source": "https://cli.github.com/manual/gh_skill"
+    }
+  ]
+}
