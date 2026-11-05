@@ -1,48 +1,40 @@
-# Multi-host compatibility and installation
+# Host compatibility matrix
 
-One canonical copy of each skill lives under `skills/<skill-id>/SKILL.md`. Adapters map that source to each host's documented project-skill directory; they do not fork skill bodies.
+This matrix records documented project discovery paths. It does not claim that every host runtime was launched or that all skills activate correctly.
 
-## Supported hosts
+## Discovery paths
 
-| Host | Project discovery directory | Format status | Notes |
+| Host | Canonical project path | Additional documented path | Evidence status |
 |---|---|---|---|
-| OpenAI Codex | `.agents/skills/<skill-id>/` | Native Agent Skills | Project-scope discovery. |
-| Claude Code | `.claude/skills/<skill-id>/` | Native Agent Skills | Supports standard `SKILL.md` plus optional Claude-specific frontmatter extensions. |
-| Gemini CLI | `.gemini/skills/<skill-id>/` | Native Agent Skills | Also recognizes `.agents/skills/` as an interoperable alias. |
-| GitHub Copilot | `.github/skills/<skill-id>/` | Native Agent Skills | Also supports `.agents/skills/`; use documented project location for predictable discovery. |
-| Grok Build | `.grok/skills/<skill-id>/` | Native skill folder; Agent-Skills-like frontmatter | Grok documents its own skill discovery and extra fields; this is not proof of identical runtime semantics. |
+| Codex | \`.agents/skills/<skill-id>/\` | None asserted here | Format/path documented; runtime not tested |
+| Claude Code | \`.claude/skills/<skill-id>/\` | None asserted here | Format/path documented; runtime not tested |
+| Gemini CLI | \`.gemini/skills/<skill-id>/\` | \`.agents/skills/<skill-id>/\` | Format/path documented; workspace trust applies; runtime not tested |
+| GitHub Copilot CLI | \`.github/skills/<skill-id>/\` | \`.claude/skills/\`, \`.agents/skills/\` | Format/path documented; runtime not tested |
+| Grok Build | \`.grok/skills/<skill-id>/\` | Claude-compatible skill folder support is documented | Runtime semantics differ; runtime not tested |
 
-“Native” means the host documents loading a skill folder containing `SKILL.md`; it does not mean this repository has passed runtime testing on that host. Selection, tool behavior and execution permissions remain host/model/version dependent.
+## Interpret compatibility precisely
 
-## Canonical metadata policy
+- **Format-compatible:** static validation accepts the shared Agent Skills frontmatter and skill directory structure.
+- **Discovery-tested:** the named host version actually lists the skill from the documented project directory.
+- **Invocation-tested:** the host activates the skill for positive triggers and avoids activation for negative triggers.
+- **Evaluation-tested:** matched benchmark runs establish task-quality and safety outcomes.
 
-- Keep one canonical skill body in `skills/`; do not maintain hand-edited copies per host.
-- Keep `name`, `description`, and `license` in common frontmatter.
-- All five descriptions are now under 200 characters as a conservative project convention for concise, portable metadata. This is not a claimed universal host limit.
-- Keep host-specific settings and permissions in adapter documentation, not canonical skill bodies.
-- Do not treat `allowed-tools` as a cross-host permission boundary; Grok documents that it does not grant or restrict tools.
-- Minecraft must not bundle, copy, or fetch `res/latest/van` assets. The upstream license preserves the Minecraft EULA carve-out.
+Do not claim “works with all AI tools” from a format check or a folder-copy test.
 
-## Safe project-scope installer
+## Important host-specific behavior
 
-From a clone of this repository, preview then copy skills into a project directory you explicitly choose:
+- Gemini CLI documents project-scoped skill paths and workspace trust. Where two paths resolve to the same skill name, precedence may matter; avoid duplicate conflicting skill identifiers.
+- GitHub Copilot CLI documents native \`.github/skills\` and compatibility discovery paths. A format-valid file is not evidence that a specific Copilot surface or IDE version will activate it.
+- Grok's skills/plugin documentation describes a host-specific skill model. Do not assume that frontmatter fields such as \`allowed-tools\` grant or constrain runtime permissions.
+- Host behavior changes. Record exact product/CLI version, operating system, discovery result, activation prompt and test output for each compatibility run.
 
-```bash
-python3 scripts/install_skills.py --target /path/to/your/project --host all --dry-run
-python3 scripts/install_skills.py --target /path/to/your/project --host all
-```
+## Official documentation
 
-Select one host with `--host codex|claude|gemini|copilot|grok`. The target is mandatory. The installer never targets a home directory, never invokes a host CLI, never runs skill code, and refuses to overwrite any existing skill folder. If a destination already exists, review and merge manually.
+- [Codex skills](https://learn.chatgpt.com/docs/build-skills)
+- [Claude Code skills](https://code.claude.com/docs/en/skills)
+- [Gemini CLI skills](https://geminicli.com/docs/cli/skills/)
+- [GitHub Copilot CLI skills](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills)
+- [Grok skills and plugins](https://docs.x.ai/build/features/skills-plugins-marketplaces)
+- [Agent Skills specification](https://agentskills.io/specification)
 
-The installer only prepares project files. It does not configure accounts, authenticate, accept terms, enable permissions, install host software, or guarantee activation.
-
-## Official host documentation
-
-- [Codex — Build skills](https://learn.chatgpt.com/docs/build-skills)
-- [Claude Code — Extend Claude with skills](https://code.claude.com/docs/en/skills)
-- [Gemini CLI — Agent Skills](https://geminicli.com/docs/cli/skills/)
-- [GitHub Copilot — Add agent skills](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills)
-- [Grok — Skills, plugins and marketplaces](https://docs.x.ai/build/features/skills-plugins-marketplaces)
-- [Agent Skills open standard](https://agentskills.io/specification)
-
-Re-check these documents before each release; discovery paths and optional fields can change.
+All five hosts remain marked \`runtime_tested: false\` until evidence is recorded. No account-wide installation or activation is performed by this repository installer.

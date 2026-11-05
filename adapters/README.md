@@ -1,24 +1,24 @@
 # Platform adapters
 
-Canonical skill bodies live only in `../skills/<skill-id>/SKILL.md`. Host adapters map them into documented project-scope discovery folders without maintaining divergent copies.
+Canonical skill bodies live in \`../skills/<skill-id>/SKILL.md\`. Host adapters map that single canonical content into documented project-scope discovery folders; they do not maintain divergent skill copies.
 
-See [HOST-COMPATIBILITY.md](HOST-COMPATIBILITY.md) for the five-host matrix, official documentation and safety policy. Machine-readable mappings are in [host-adapters.json](host-adapters.json).
+See [HOST-COMPATIBILITY.md](HOST-COMPATIBILITY.md) for discovery paths, evidence labels and official references. Machine-readable mappings are in [host-adapters.json](host-adapters.json).
 
-## Install into a project sandbox
+## Install in a project sandbox
 
-From a clone of this repository:
+\`\`\`bash
+python3 scripts/install_skills.py --target /path/to/existing-project --host all --dry-run
+python3 scripts/install_skills.py --target /path/to/existing-project --host all
+\`\`\`
 
-```bash
-python3 scripts/install_skills.py --target /path/to/project --host all --dry-run
-python3 scripts/install_skills.py --target /path/to/project --host all
-```
+Use \`--host codex\`, \`claude\`, \`gemini\`, \`copilot\` or \`grok\` for one host. The installer is project-scope only; it does not write to user-home folders, invoke a host CLI, authenticate, execute skill scripts or prove runtime activation.
 
-Use `--host codex`, `claude`, `gemini`, `copilot`, or `grok` for one host. The installer is project-scope only, does not write to user-home directories, does not execute scripts, and refuses to overwrite existing skill folders.
+The installer stages files before writing, refuses existing skill destinations and symlinked paths, and attempts rollback if a copy fails. Review the target and dry-run output before installation.
 
 ## Design rules
 
-- One canonical source; adapters contain only host-specific discovery metadata.
-- Format support is not proof of runtime behavior or automatic activation.
-- No secrets, credentials, production configuration, EULA acceptance, or network downloads.
-- Preserve the Minecraft EULA carve-out: no `res/latest/van` assets.
-- Re-check official host docs before each compatibility release.
+- One canonical skill body; project-specific host discovery adapters.
+- Format compatibility is not proof of runtime discovery, invocation or effectiveness.
+- No secrets, production configuration, EULA acceptance or network downloads.
+- Preserve the Minecraft EULA carve-out: no \`res/latest/van\` assets.
+- Verify host versions and official documentation before each compatibility claim.

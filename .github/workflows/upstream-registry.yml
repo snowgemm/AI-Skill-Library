@@ -6,108 +6,169 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
+
+concurrency:
+  group: upstream-registry-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  check-upstream:
+  detect:
+    name: Detect upstream changes
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      has_updates: ${{ steps.scan.outputs.has_updates }}
+      registry_json: ${{ steps.scan.outputs.registry_json }}
+      summary: ${{ steps.scan.outputs.summary }}
+      branch_suffix: ${{ steps.scan.outputs.branch_suffix }}
     steps:
-      - name: Compare upstream heads and open a registry PR
-        uses: actions/github-script@v7
+      - name: Compare only imported portable skill sources
+        id: scan
+        uses: actions/github-script@ff4b64fc288a21d5291396a384c1273f032e6333 # v9.0.0
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const path = "catalog/external-sources.json";
+            const current = await github.rest.repos.getContent({ owner, repo, path, ref: "main" });
+            if (Array.isArray(current.data) || current.data.type !== "file") {
+              core.setFailed(path + " is not a regular file");
+              return;
+            }
+            const registry = JSON.parse(Buffer.from(current.data.content, "base64").toString("utf8"));
+            if (!Array.isArray(registry.sources) || registry.sources.length === 0) {
+              core.setFailed("External source registry is empty or malformed");
+              return;
+            }
+            const monitored = registry.sources.filter(item =>
+              typeof item.portable_skill_path === "string" && item.portable_skill_path.length > 0
+            );
+            if (monitored.length !== 5) {
+              core.setFailed("Expected five imported portable sources; found " + monitored.length);
+              return;
+            }
+
+            const checkedAt = new Date().toISOString();
+            const changes = [];
+            const failures = [];
+            for (const source of monitored) {
+              const parts = typeof source.repository === "string" ? source.repository.split("/") : [];
+              if (parts.length !== 2 || parts.some(part => !/^[A-Za-z0-9_.-]+$/.test(part))) {
+                failures.push("Invalid repository identifier: " + source.repository);
+                continue;
+              }
+              if (!/^[0-9a-f]{40}$/i.test(source.commit || "")) {
+                failures.push(source.repository + ": pinned commit is not a full SHA");
+                continue;
+              }
+              try {
+                const result = await github.rest.repos.listCommits({
+                  owner: parts[0], repo: parts[1], per_page: 1
+                });
+                const latest = result.data[0];
+                if (!latest || !latest.sha || !/^[0-9a-f]{40}$/i.test(latest.sha)) {
+                  throw new Error("upstream did not return a full commit SHA");
+                }
+                const previousHead = source.upstream_latest_commit || source.commit;
+                source.upstream_latest_commit = latest.sha;
+                source.upstream_latest_commit_date =
+                  (latest.commit.committer && latest.commit.committer.date) ||
+                  (latest.commit.author && latest.commit.author.date) || null;
+                source.upstream_latest_checked_at = checkedAt;
+                source.upstream_update_available = latest.sha !== source.commit;
+                if (latest.sha !== previousHead) {
+                  changes.push({
+                    repository: source.repository,
+                    pinned: source.commit,
+                    previous_head: previousHead,
+                    latest: latest.sha
+                  });
+                }
+              } catch (error) {
+                failures.push(source.repository + ": " + error.message);
+              }
+            }
+
+            if (failures.length) {
+              failures.forEach(item => core.error("Upstream check incomplete: " + item));
+              core.setFailed("At least one source could not be checked; refusing to report a clean scan or open a partial update PR.");
+              return;
+            }
+
+            core.setOutput("has_updates", changes.length ? "true" : "false");
+            core.setOutput("registry_json", JSON.stringify(registry));
+            core.setOutput("summary", changes.map(item =>
+              "- " + item.repository + ": " + item.pinned + " -> " + item.latest
+            ).join("\n"));
+            core.setOutput("branch_suffix", checkedAt.slice(0, 10).replace(/-/g, "") + "-" + context.run_id);
+            core.info("Checked all " + monitored.length + " imported sources; " + changes.length + " upstream head change(s).");
+
+  propose:
+    name: Propose metadata-only update
+    needs: detect
+    if: needs.detect.outputs.has_updates == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Open a review PR without changing skill content or import pins
+        uses: actions/github-script@ff4b64fc288a21d5291396a384c1273f032e6333 # v9.0.0
+        env:
+          REGISTRY_JSON: ${{ needs.detect.outputs.registry_json }}
+          CHANGE_SUMMARY: ${{ needs.detect.outputs.summary }}
+          BRANCH_SUFFIX: ${{ needs.detect.outputs.branch_suffix }}
         with:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const base = "main";
             const path = "catalog/external-sources.json";
-            const current = await github.rest.repos.getContent({ owner, repo, path, ref: base });
-            const registry = JSON.parse(Buffer.from(current.data.content, "base64").toString("utf8"));
-            const checkedAt = new Date().toISOString();
-            const changes = [];
-
-            for (const source of registry.sources) {
-              const [upstreamOwner, upstreamRepo] = source.repository.split("/");
-              if (!upstreamOwner || !upstreamRepo) continue;
-              try {
-                const result = await github.rest.repos.listCommits({
-                  owner: upstreamOwner,
-                  repo: upstreamRepo,
-                  per_page: 1
-                });
-                const latest = result.data[0];
-                if (!latest) continue;
-                const baseline = source.upstream_latest_commit || source.commit;
-                source.upstream_latest_commit = latest.sha;
-                source.upstream_latest_commit_date =
-                  latest.commit.committer?.date || latest.commit.author?.date || null;
-                source.upstream_latest_checked_at = checkedAt;
-                source.upstream_update_available = latest.sha !== source.commit;
-                if (latest.sha !== baseline) {
-                  changes.push({
-                    repository: source.repository,
-                    pinned: source.commit,
-                    previous_head: baseline,
-                    latest: latest.sha
-                  });
-                }
-              } catch (error) {
-                core.warning(`Could not check ${source.repository}: ${error.message}`);
-              }
-            }
-
-            if (changes.length === 0) {
-              core.info("All reachable upstream heads match the recorded tracking baselines.");
-              return;
-            }
-
-            const date = checkedAt.slice(0, 10).replace(/-/g, "");
-            const branch = `bot/upstream-registry-${date}`;
-            const open = await github.rest.pulls.list({
-              owner, repo, state: "open", base,
-              head: `${owner}:${branch}`
-            });
-
-            let branchSha;
-            if (open.data.length > 0) {
-              const ref = await github.rest.git.getRef({ owner, repo, ref: `heads/${branch}` });
-              branchSha = ref.data.object.sha;
-            } else {
-              const mainRef = await github.rest.git.getRef({ owner, repo, ref: `heads/${base}` });
-              branchSha = mainRef.data.object.sha;
+            const branch = "bot/upstream-registry-" + process.env.BRANCH_SUFFIX;
+            const registry = JSON.parse(process.env.REGISTRY_JSON);
+            const summary = process.env.CHANGE_SUMMARY || "Upstream tracking metadata changed.";
+            try {
+              await github.rest.git.getRef({ owner, repo, ref: "heads/" + branch });
+            } catch (error) {
+              if (error.status !== 404) throw error;
+              const mainRef = await github.rest.git.getRef({ owner, repo, ref: "heads/" + base });
               await github.rest.git.createRef({
-                owner, repo, ref: `refs/heads/${branch}`, sha: branchSha
+                owner, repo, ref: "refs/heads/" + branch, sha: mainRef.data.object.sha
               });
             }
-
-            let branchFile;
-            try {
-              branchFile = await github.rest.repos.getContent({ owner, repo, path, ref: branch });
-            } catch {
-              branchFile = current;
+            const branchFile = await github.rest.repos.getContent({ owner, repo, path, ref: branch });
+            if (Array.isArray(branchFile.data) || branchFile.data.type !== "file") {
+              throw new Error(path + " is not a regular file on " + branch);
             }
             await github.rest.repos.createOrUpdateFileContents({
               owner, repo, path, branch,
-              message: "chore(registry): record upstream skill updates",
+              message: "chore(registry): record upstream tracking metadata",
               sha: branchFile.data.sha,
               content: Buffer.from(JSON.stringify(registry, null, 2) + "\n").toString("base64")
             });
-
-            if (open.data.length === 0) {
-              const summary = changes.map(item =>
-                `- ${item.repository}: \`${item.pinned}\` → \`${item.latest}\``
-              ).join("\n");
+            const pulls = await github.rest.pulls.list({
+              owner, repo, state: "all", base, head: owner + ":" + branch, per_page: 100
+            });
+            const existing = pulls.data.find(pr => !pr.merged_at);
+            if (existing) {
+              if (existing.state === "closed") {
+                await github.rest.pulls.update({ owner, repo, pull_number: existing.number, state: "open" });
+              }
+            } else {
               await github.rest.pulls.create({
                 owner, repo, head: branch, base,
-                title: "chore(registry): upstream skill updates detected",
+                title: "chore(registry): upstream skill changes detected",
                 body: [
-                  "Automated weekly upstream check detected new commits.",
+                  "Automated upstream metadata review.",
                   "",
                   summary,
                   "",
-                  "This PR updates tracking metadata only. It does not replace pinned imports or modify skill bodies.",
-                  "Review upstream diffs, licenses, references, scripts, and security before manually updating portable skills."
+                  "This PR changes tracking metadata only. It does not modify skill bodies or pinned import commits.",
+                  "Review upstream diffs, file-level licensing, references, scripts and security before accepting any content update.",
+                  "An incomplete upstream scan never creates an update PR."
                 ].join("\n")
               });
             }
-            core.info(`Opened or updated ${branch} with ${changes.length} upstream change(s).`);
+            core.info("Prepared metadata-only review branch " + branch + "; imported skills and pins were not changed.");

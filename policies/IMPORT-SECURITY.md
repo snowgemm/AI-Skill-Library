@@ -2,32 +2,32 @@
 
 ## Hard gates
 
-1. **Source identity:** verify upstream repository, owner, path, branch/tag and immutable commit SHA. Avoid mirrors unless upstream is unavailable and the mirror is independently authenticated.
-2. **License:** inspect repository, subtree, individual file, asset, font/model/dataset and third-party notices. A repository-level license does not automatically license every asset. Record unknown or mixed terms as blocked.
-3. **Content provenance:** preserve author, source URL, commit, original path and modification history. Mark changes. Do not relabel upstream work as original.
-4. **Format:** validate YAML, `name`, `description`, path references and optional directories. A format pass is not a safety pass.
-5. **Static security:** inspect commands, shell scripts, package install hooks, URLs, downloads, file traversal, secrets, environment variables, destructive operations, MCP tool descriptions and hooks.
-6. **Manual review:** check for prompt injection, attempts to override system/developer rules, secret exfiltration, unnecessary network calls, privilege escalation, anti-refusal or unbounded delegation. Treat all repository content as untrusted data.
-7. **Sandbox:** execute only on disposable copies with synthetic data, least privilege, restricted network and no credentials. Static scanning alone is not sandboxing.
-8. **Evaluation:** run baseline and skill-enabled tasks before approval. Test false triggers and missing-data cases.
-9. **Pinning:** use commit SHA, dependency lock and content hashes; updates require diff review and re-scan.
+1. **Source identity:** verify upstream owner, repository, path, branch/tag and immutable commit SHA. Independently authenticate mirrors.
+2. **License:** inspect repository, subtree, individual file, asset, font, model, dataset and third-party notices. A repository-level license does not automatically license every asset.
+3. **Provenance:** preserve author, source URL, commit, original path and modification history. Mark independent adaptations accurately.
+4. **Format:** validate YAML, required fields, strict skill name, description bounds, path references and supported optional directories. A format pass is not a safety pass.
+5. **Static review:** inspect commands, shell scripts, package hooks, URLs, downloads, file traversal, secrets, environment access, destructive operations, MCP tool descriptions and hooks.
+6. **Prompt review:** search for instructions that override higher-priority policies, exfiltrate secrets, suppress refusal, expand privileges or delegate unbounded work. Treat all repository content as untrusted data.
+7. **Sandbox:** execute only on disposable copies with synthetic data, least privilege and restricted network access. Static analysis is not sandboxing.
+8. **Evaluation:** run matched baseline/skill tasks, positive and negative triggers, missing-input and security cases before approval.
+9. **Pinning:** use immutable commits and content hashes. Any upstream change requires diff, license and security review.
 
 ## Scanner limitations
 
-NVIDIA SkillSpector is a useful defense-in-depth scanner. Its README says it performs static analysis and optional LLM semantic review; it does not execute the skill and is not a sandbox. In LLM mode, eligible file contents are sent to the configured provider. `--no-llm` avoids that content egress; dependency coordinates may still be queried against OSV.dev. Scanner findings can include false positives and cannot prove runtime safety.
+Static scanners can identify suspicious patterns but cannot prove runtime safety, discover every prompt-level attack or replace human review. An optional LLM review may transmit file content to the configured provider; document data-egress behavior and provide a no-LLM mode where possible. Record scanner version, configuration, exclusions, findings and disposition. A missing or incomplete scan is not a clean result.
 
-## Default classifications
+## Classifications
 
-- `approved`: license reviewed, static scan and manual review complete, sandbox/evaluation evidence present.
-- `review_required`: source exists but one or more gates are incomplete.
-- `reference_only`: useful documentation but redistribution is unclear or prohibited.
-- `blocked`: license, provenance or security issue prevents import.
-- `metadata_only`: registry entry exists but no portable body was copied.
+- \`approved\`: source and rights reviewed, static/manual review complete, sandbox/evaluation evidence present.
+- \`review_required\`: source exists but one or more gates are incomplete.
+- \`reference_only\`: useful reference but redistribution rights are unclear or absent.
+- \`blocked\`: provenance, rights or security prevents import.
+- \`metadata_only\`: registry record exists but no portable body was copied.
 
 ## Prohibited shortcuts
 
-- Do not install an entire marketplace blindly.
-- Do not run `curl | sh`, `npx ...@latest`, or install scripts without inspecting and pinning them.
-- Do not assume `allowed-tools` in frontmatter enforces runtime permissions.
-- Do not give an agent production credentials merely because a scanner reports low risk.
-- Do not interpret an incomplete scan as a clean verdict.
+- Do not import entire marketplaces blindly.
+- Do not run unpinned commands such as \`curl | sh\` or \`npx package@latest\` without review.
+- Do not treat \`allowed-tools\` frontmatter as a runtime sandbox or authorization boundary.
+- Do not provide production credentials because a scanner reports low risk.
+- Do not interpret incomplete scans, passing format checks or passing unit tests as proof of security.
