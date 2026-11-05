@@ -9,7 +9,7 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 - 125 installed-skill catalog identifiers inventoried and reconciled against the historical 120-item grouping.
 - 11 external repositories registered with pinned `main` commit SHAs and repository-level license metadata where available.
 - Representative upstream skill files inspected for Android, Minecraft Bedrock, Three.js, software engineering, web and database workflows.
-- **0 upstream skill bodies copied** into this package.
+- **5 portable, independently edited skill adaptations** added in Phase 1; **0 verbatim upstream skill bodies** copied.
 - Published as a public repository: https://github.com/snowgemm/AI-Skill-Library. No skills have been installed into other agents.
 
 The 125 ChatGPT entries are host-managed plugin skills. The internal `skills://plugins/...` identifiers and their bodies are not portable public URLs. This package preserves the metadata inventory, not copies of proprietary instructions. A skill body may only be redistributed after rights and license review.
@@ -21,6 +21,10 @@ This research snapshot is published on the `main` branch. The repository contain
 ## Files
 
 - `MANIFEST.json` — snapshot metadata, counts and scope limits.
+- `skills/` — five portable Phase 1 skill adaptations for Android, Minecraft Bedrock, Three.js, Superpowers, and Supabase.
+- `catalog/portable-skills-phase-1.json` — portable skill inventory, source pins, and license decisions.
+- `sources/PORTABLE-SKILL-RECOVERY.md` — recovery decisions, scope boundaries, and validation notes.
+- `.github/workflows/upstream-registry.yml` — weekly upstream HEAD monitor that opens a review PR; it never overwrites imported skill files.
 - `catalog/chatgpt-installed-skills-125.json` — complete 125-item identifier inventory with host URIs and reconciliation groups.
 - `catalog/chatgpt-installed-skills-125.csv` — spreadsheet-friendly version.
 - `catalog/external-sources.json` — 11 verified source repositories, commit pins, licenses, inspected paths and decisions.
@@ -50,6 +54,10 @@ This research snapshot is published on the `main` branch. The repository contain
 ## Recommended next step
 
 Start an import queue with a small high-value set: Android Compose performance and testing, Minecraft `debug-addon` and `creator-tools-cli`, Three.js profiler and QA, Superpowers systematic debugging and verification, Trail of Bits audit-context and supply-chain review, and Supabase Postgres best practices. Pin exact commits already recorded in `external-sources.json`; review every individual skill's license and files before copying.
+
+## Portable skills — Phase 1
+
+The first five independently edited portable adaptations are now available under `skills/`. Their upstream license texts are preserved in `licenses/upstream/`. Each skill records its source and pinned commit in frontmatter and in `catalog/portable-skills-phase-1.json`. Minecraft vanilla assets covered by the EULA are excluded. The weekly monitor tracks all registered upstream repositories and opens a PR when their default branches advance; reviewers must inspect license and content changes before updating any skill.
 
 ## Not model training
 
