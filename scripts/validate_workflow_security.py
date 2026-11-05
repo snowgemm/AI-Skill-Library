@@ -65,6 +65,8 @@ def validate_documents(quality: dict[str, Any], upstream: dict[str, Any]) -> lis
         errors.append("quality.yml must run the pinned zizmor workflow security audit")
     if "advanced-security" not in security_text or "version" not in security_text:
         errors.append("zizmor must use explicit non-Advanced-Security mode and a pinned scanner version")
+    if "min-severity" not in security_text or "low" not in security_text:
+        errors.append("zizmor must include low-severity findings for review")
     check_action_pins("quality.yml", errors)
 
     u_triggers = workflow_on(upstream)
@@ -92,7 +94,7 @@ def validate_documents(quality: dict[str, Any], upstream: dict[str, Any]) -> lis
     if propose.get("if") != "needs.detect.outputs.has_updates == 'true'":
         errors.append("upstream propose job must run only when the complete scan finds an update")
     script_text = str(propose.get("steps", []))
-    for marker in ("createWorkflowDispatch", 'workflow_id: "quality.yml"',
+    for marker in ("createWorkflowDispatch", "workflow_id", "quality.yml",
                    "checksums.git-blob-sha1.txt", "SHA-1"):
         if marker not in script_text:
             errors.append(f"upstream propose script is missing required safeguard: {marker}")
