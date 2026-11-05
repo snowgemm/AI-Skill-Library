@@ -10,9 +10,13 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 - 11 external repositories registered with pinned `main` commit SHAs and repository-level license metadata where available.
 - Representative upstream skill files inspected for Android, Minecraft Bedrock, Three.js, software engineering, web and database workflows.
 - **0 upstream skill bodies copied** into this package.
-- **0 GitHub repositories created** and **0 skills installed** into other agents.
+- Published as a public repository: https://github.com/snowgemm/AI-Skill-Library. No skills have been installed into other agents.
 
 The 125 ChatGPT entries are host-managed plugin skills. The internal `skills://plugins/...` identifiers and their bodies are not portable public URLs. This package preserves the metadata inventory, not copies of proprietary instructions. A skill body may only be redistributed after rights and license review.
+
+## Published repository
+
+This research snapshot is published on the `main` branch. The repository contains the 125-item metadata inventory, source registry, platform notes, import policy and evaluation plan. It does not redistribute the internal bodies of the 125 host-managed skills.
 
 ## Files
 

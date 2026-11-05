@@ -46,16 +46,15 @@
     "other": 16,
     "vercel-ai-agent": 33
   },
-  "status": "research_and_metadata_inventory_only",
+  "status": "published_research_and_metadata_inventory_only",
   "not_done": [
-    "No GitHub repository created.",
     "No upstream skill bodies were copied.",
     "No skills were installed into another agent.",
     "No automated evaluation or security scan was run against the upstream skill collections as a whole."
   ],
   "principles": [
     "Do not redistribute proprietary/plugin-hosted skill bodies without rights.",
-    "Pin commits and checksums.",
+    "Pin source commits and record Git object identifiers for published files.",
     "Review each license at file/subtree level.",
     "Scan and manually inspect before execution.",
     "SkillSpector is not a sandbox.",
@@ -64,5 +63,7 @@
   ],
   "catalog_file": "catalog/chatgpt-installed-skills-125.json",
   "source_registry_file": "catalog/external-sources.json",
-  "validation_status": "pending_local_validation"
+  "validation_status": "repository_tree_verified;catalog_json_parse_verified;published_file_hashes_recorded_as_git_blob_sha1",
+  "published_repository": "https://github.com/snowgemm/AI-Skill-Library",
+  "published_branch": "main"
 }
