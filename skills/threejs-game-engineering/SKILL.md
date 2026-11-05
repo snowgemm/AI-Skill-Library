@@ -1,6 +1,6 @@
 ---
 name: threejs-game-engineering
-description: Build, debug, profile, test, and release browser-based Three.js games with reliable rendering, input, asset loading, mobile support, and measured performance.
+description: Build, debug, profile, and test Three.js browser games, including rendering, input, assets, mobile support, and performance.
 license: MIT
 metadata:
   author: AI-Skill-Library contributors
