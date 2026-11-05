@@ -1,7 +1,7 @@
-1496a9ce83e3cc44805ae2ffab461f9966e15665  MANIFEST.json
-246d298069b43e438a13788d89673246330faa2f  README.md
+7e59d9620b18115ad89006e37a3567130c8c5a06  MANIFEST.json
+dd76813bc58b761ac3a3e9754a06a78bc0655dfd  README.md
 7771710038058c14cf9f2dbd4f3aa1f8a33f2aa1  TRAINING-GUIDE.md
-0b23ad957a0d1767c428ac9c5ef39074f5fea994  adapters/README.md
+900c2d5c1c6d87100e7e37f182ba88c19ce88f75  adapters/README.md
 f805cb31779e3f0b0e032c97aecbc70cfea5c756  catalog/RECONCILIATION-120-to-125.md
 699950e847220a2968c6028f7b848b9ef8423810  catalog/chatgpt-installed-skills-125.csv
 e6b1750153758b3fe7962d467411a735ef835c8a  catalog/chatgpt-installed-skills-125.json
@@ -12,11 +12,11 @@ b444a656c16a46611ab0086a6bad755fed3853e0  licenses/README.md
 91d020da7a7d649af53722c55e9b4f36d5bf395a  policies/IMPORT-SECURITY.md
 1519d05e61498a677d6f06d13196c9749fcd8071  sources/PLATFORM-SUPPORT.md
 c8208071b805b1f674a7a3320873eb4adfda091b  sources/SOURCE-VERIFICATION.md
-725799f04e616a350700017f4457fa9bac018b86  skills/android-compose-engineering/SKILL.md
-c3634835cf466e159a3cc6978ff2180e3004cec1  skills/minecraft-bedrock-addon/SKILL.md
-414518202f2d6910a91217674b1fb1a7117917f4  skills/threejs-game-engineering/SKILL.md
-d01fc3f503cfd154b6f26d18aea8e1a389ed60ac  skills/superpowers-engineering-workflow/SKILL.md
-44899d052e065957925a7e2c2ee57d1dc22ec667  skills/supabase-engineering/SKILL.md
+31f846dbf798807a9ae30fbf6e02697f12b0424b  skills/android-compose-engineering/SKILL.md
+54dffcb8cb22e7e41255ad044bdde76fd2274b42  skills/minecraft-bedrock-addon/SKILL.md
+817f5736cb94650c858a8e7d701d7678c3a59a51  skills/threejs-game-engineering/SKILL.md
+69e1e4e89519870eced214d37f82818f829fab2f  skills/superpowers-engineering-workflow/SKILL.md
+696a43678c6c00e8c84e4935cf587abe4ce4577e  skills/supabase-engineering/SKILL.md
 7a4a3ea2424c09fbe48d455aed1eaa94d9124835  licenses/upstream/android-LICENSE.txt
 9ad8c583ee786c48bc52bcd72c9c960230ff38b3  licenses/upstream/mojang-LICENSE.md
 0e7cfcfa43d5da2dc6a31768afcd95525fd3000c  licenses/upstream/threejs-LICENSE
@@ -26,5 +26,6 @@ d3c9e94fbc6c28f66ecb5a01407d543c99c811b6  licenses/upstream/supabase-LICENSE
 2eff97d80aae6ef4581a3fd745b862f57048247b  sources/PORTABLE-SKILL-RECOVERY.md
 eb9e8c40f4595e4cdc0b56e60b8c43e595652cb6  .github/workflows/upstream-registry.yml
 4f5345faadf4e11e007c61ce4fd05f4122118666  catalog/external-sources.json
-59270a628b049d93d03dbcda0a8327a9a70bbdfa  README.md
-195b0bafb1051ed3b8c6d6e9fd4b69894c29b101  MANIFEST.json
+142e66bd2ed50cd08eaa93e1e584581b52a9fd00  adapters/HOST-COMPATIBILITY.md
+dc4065b16b5ae6a26e4a241540c14a6cebddd66e  adapters/host-adapters.json
+9742c0d01d810bca5c5899e919a5306226386bb8  scripts/install_skills.py
