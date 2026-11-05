@@ -1,6 +1,6 @@
 ---
 name: minecraft-bedrock-addon
-description: Create, inspect, debug, validate, upgrade, and package Minecraft Bedrock behavior packs and resource packs, including manifests, dependencies, entities, blocks, items, textures, localization, and Script API compatibility.
+description: Create, debug, validate, and package Minecraft Bedrock behavior/resource packs, including manifests, dependencies, entities, blocks, items, localization, and Script API.
 license: MIT
 metadata:
   author: AI-Skill-Library contributors
