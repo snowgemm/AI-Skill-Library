@@ -66,7 +66,6 @@
   "source_registry_file": "catalog/external-sources.json",
   "validation_status": "canonical_skill_frontmatter_checked;five_host_project_adapters_documented;safe_installer_added;runtime_not_tested",
   "published_repository": "https://github.com/snowgemm/AI-Skill-Library",
-  "published_branch": "main",
   "portable_skill_catalog_file": "catalog/portable-skills-phase-1.json",
   "upstream_monitor_workflow": ".github/workflows/upstream-registry.yml",
   "platform_adapters": [
@@ -78,5 +77,7 @@
   ],
   "adapter_guide": "adapters/HOST-COMPATIBILITY.md",
   "adapter_map": "adapters/host-adapters.json",
-  "project_installer": "scripts/install_skills.py"
+  "project_installer": "scripts/install_skills.py",
+  "base_published_branch": "main",
+  "working_branch": "compat/all-host-adapters-2026-11"
 }
