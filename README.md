@@ -16,7 +16,7 @@ The 125 ChatGPT entries are host-managed plugin skills. The internal `skills://p
 
 ## Published repository
 
-This research snapshot is published on the `main` branch. The repository contains the 125-item metadata inventory, source registry, platform notes, import policy and evaluation plan. It does not redistribute the internal bodies of the 125 host-managed skills.
+The 125-item metadata inventory is published on `main`. The five portable adaptations and their host adapters are proposed on `compat/all-host-adapters-2026-11` for review; they are not merged into `main`. The repository does not redistribute the internal bodies of the 125 host-managed skills.
 
 ## Files
 
@@ -59,7 +59,7 @@ Start an import queue with a small high-value set: Android Compose performance a
 
 ## Portable skills — Phase 1
 
-The first five independently edited portable adaptations are now available under `skills/`. Their upstream license texts are preserved in `licenses/upstream/`. Each skill records its source and pinned commit in frontmatter and in `catalog/portable-skills-phase-1.json`. Minecraft vanilla assets covered by the EULA are excluded. The weekly monitor tracks all registered upstream repositories and opens a PR when their default branches advance; reviewers must inspect license and content changes before updating any skill.
+The first five independently edited portable adaptations are now available under `skills/`. Their upstream license texts are preserved in `licenses/upstream/`. Each skill records its source and pinned commit in frontmatter and in `catalog/portable-skills-phase-1.json`. Minecraft vanilla assets covered by the EULA are excluded. The weekly monitor workflow is included on the proposal branch and will become active after that branch is reviewed and merged. It tracks upstream default branches and opens a review PR; it does not overwrite skills.
 
 ## Multi-host use
 
