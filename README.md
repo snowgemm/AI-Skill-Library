@@ -1,6 +1,6 @@
 # AI-Skill-Library
 
-**Research snapshot:** 2026-11-05 · **Version:** 0.1.0-research-snapshot
+**Research snapshot:** 2026-11-05 · **Version:** 0.3.0-multi-host-adapters
 
 A provenance-first registry and governance scaffold for portable AI agent skills. It separates the historical ChatGPT-installed skill inventory from verified public repositories and platform adapters.
 
@@ -33,6 +33,8 @@ This research snapshot is published on the `main` branch. The repository contain
 - `policies/IMPORT-SECURITY.md` — import gates, security and license policy.
 - `evaluations/EVALUATION-PLAN.md` — baseline and skill-lift methodology.
 - `adapters/README.md` — canonical skill and platform adapter design.
+- `adapters/HOST-COMPATIBILITY.md` and `adapters/host-adapters.json` — official discovery paths and five-host mapping.
+- `scripts/install_skills.py` — safe project-scope installer with dry-run and no-overwrite behavior.
 - `sources/SOURCE-VERIFICATION.md` — what was inspected and what remains unverified.
 
 ## Source selection highlights
@@ -58,6 +60,10 @@ Start an import queue with a small high-value set: Android Compose performance a
 ## Portable skills — Phase 1
 
 The first five independently edited portable adaptations are now available under `skills/`. Their upstream license texts are preserved in `licenses/upstream/`. Each skill records its source and pinned commit in frontmatter and in `catalog/portable-skills-phase-1.json`. Minecraft vanilla assets covered by the EULA are excluded. The weekly monitor tracks all registered upstream repositories and opens a PR when their default branches advance; reviewers must inspect license and content changes before updating any skill.
+
+## Multi-host use
+
+The five portable skills have concise shared metadata and documented project-scope adapters for Codex, Claude Code, Gemini CLI, GitHub Copilot, and Grok Build. Use the safe installer in `scripts/install_skills.py` to prepare a selected project directory. The installer does not install into user accounts or claim runtime compatibility without host tests. See `adapters/HOST-COMPATIBILITY.md`.
 
 ## Not model training
 
