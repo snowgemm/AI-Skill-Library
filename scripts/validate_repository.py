@@ -7,7 +7,7 @@ import json
 import re
 import subprocess
 import sys
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from typing import Any
 
 import yaml
@@ -16,6 +16,7 @@ import validate_skills
 ROOT = Path(__file__).resolve().parents[1]
 CHECKSUM_FILE = ROOT / "checksums.git-blob-sha1.txt"
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
+SKILL_ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 EXPECTED_HOSTS = {"codex", "claude", "gemini", "copilot", "grok"}
 
 
@@ -43,6 +44,41 @@ def tracked_files(errors: list[str]) -> list[Path]:
         return []
     return [ROOT / entry.decode("utf-8") for entry in result.stdout.split(b"\0") if entry]
 
+
+def resolve_repository_path(value: Any, *, label: str, errors: list[str]) -> Path | None:
+    """Resolve a catalogue path without allowing absolute, traversing, or symlinked paths."""
+    if not isinstance(value, str) or not value.strip():
+        errors.append(f"{label}: path must be a non-empty relative string")
+        return None
+    if "\\" in value:
+        errors.append(f"{label}: backslash paths are not portable")
+        return None
+    relative = Path(value)
+    windows_path = PureWindowsPath(value)
+    if relative.is_absolute() or windows_path.is_absolute() or windows_path.drive:
+        errors.append(f"{label}: absolute paths are not allowed")
+        return None
+    if ".." in relative.parts:
+        errors.append(f"{label}: parent traversal is not allowed")
+        return None
+    root = ROOT.resolve()
+    current = root
+    for part in relative.parts:
+        if part in {"", "."}:
+            continue
+        current = current / part
+        if current.is_symlink():
+            errors.append(f"{label}: symlink components are not allowed")
+            return None
+    try:
+        resolved = (root / relative).resolve(strict=False)
+    except (OSError, RuntimeError) as exc:
+        errors.append(f"{label}: cannot safely resolve path: {exc}")
+        return None
+    if not resolved.is_relative_to(root):
+        errors.append(f"{label}: resolved path escapes the repository root")
+        return None
+    return resolved
 
 def validate() -> list[str]:
     errors: list[str] = []
@@ -77,17 +113,28 @@ def validate() -> list[str]:
         if skill_id in seen:
             errors.append(f"duplicate portable skill id: {skill_id}")
         seen.add(skill_id)
+        if len(skill_id) > 64 or not SKILL_ID_RE.fullmatch(skill_id):
+            errors.append(f"portable skill id is not a valid kebab-case slug: {skill_id!r}")
+            continue
         relative_path = item.get("path")
         license_file = item.get("license_file")
         upstream = item.get("upstream")
         commit = item.get("upstream_commit")
         if relative_path != f"skills/{skill_id}/SKILL.md":
             errors.append(f"{skill_id}: non-canonical skill path")
-        if not isinstance(relative_path, str) or not (ROOT / relative_path).is_file():
-            errors.append(f"{skill_id}: missing portable skill file: {relative_path}")
+        skill_path = resolve_repository_path(
+            relative_path, label=f"{skill_id}: skill path", errors=errors
+        )
+        if skill_path is None or not skill_path.is_file():
+            if skill_path is not None:
+                errors.append(f"{skill_id}: missing portable skill file: {relative_path}")
             continue
-        if not isinstance(license_file, str) or not (ROOT / license_file).is_file():
-            errors.append(f"{skill_id}: missing preserved license notice: {license_file}")
+        license_path = resolve_repository_path(
+            license_file, label=f"{skill_id}: license path", errors=errors
+        )
+        if license_path is None or not license_path.is_file():
+            if license_path is not None:
+                errors.append(f"{skill_id}: missing preserved license notice: {license_file}")
         if not isinstance(upstream, str) or not isinstance(commit, str) or not SHA_RE.fullmatch(commit):
             errors.append(f"{skill_id}: upstream repository or immutable 40-character pin is invalid")
         else:
@@ -96,7 +143,7 @@ def validate() -> list[str]:
                 errors.append(f"{skill_id}: {upstream} missing from external source registry")
             elif source.get("commit") != commit:
                 errors.append(f"{skill_id}: pin differs from external source registry")
-        metadata, skill_errors = validate_skills.parse_skill(ROOT / relative_path)
+        metadata, skill_errors = validate_skills.parse_skill(skill_path)
         errors.extend(f"{skill_id}: {message}" for message in skill_errors)
         if isinstance(metadata, dict):
             extra = metadata.get("metadata", {})

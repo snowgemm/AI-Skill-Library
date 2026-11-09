@@ -91,5 +91,47 @@ class RepositoryIntegrityTests(unittest.TestCase):
             self.assertTrue(any("checksum mismatch for licenses/mit.txt" in item for item in errors))
 
 
+    def test_repository_validator_rejects_unsafe_license_paths(self) -> None:
+        for unsafe_path in ("../../outside.txt", "/tmp/outside.txt", r"..\\..\\outside.txt"):
+            with self.subTest(license_file=unsafe_path), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                self.build_fixture(root)
+                catalogue_path = root / "catalog/portable-skills-phase-1.json"
+                catalogue = json.loads(catalogue_path.read_text(encoding="utf-8"))
+                catalogue["skills"][0]["license_file"] = unsafe_path
+                catalogue_path.write_text(json.dumps(catalogue), encoding="utf-8")
+                errors = self.run_fixture(root)
+                self.assertTrue(
+                    any("license path" in item and ("not allowed" in item or "not portable" in item) for item in errors),
+                    errors,
+                )
+
+    def test_repository_validator_rejects_invalid_skill_ids(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.build_fixture(root)
+            catalogue_path = root / "catalog/portable-skills-phase-1.json"
+            catalogue = json.loads(catalogue_path.read_text(encoding="utf-8"))
+            catalogue["skills"][0]["id"] = "../outside"
+            catalogue["skills"][0]["path"] = "skills/../outside/SKILL.md"
+            catalogue_path.write_text(json.dumps(catalogue), encoding="utf-8")
+            errors = self.run_fixture(root)
+            self.assertTrue(any("valid kebab-case slug" in item for item in errors), errors)
+
+    def test_repository_validator_rejects_symlinked_license_paths(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.build_fixture(root)
+            outside = root.parent / f"{root.name}-outside-license.txt"
+            outside.write_text("outside license", encoding="utf-8")
+            try:
+                (root / "licenses/mit.txt").unlink()
+                (root / "licenses/mit.txt").symlink_to(outside)
+                errors = self.run_fixture(root)
+                self.assertTrue(any("license path" in item and "symlink" in item for item in errors), errors)
+            finally:
+                outside.unlink(missing_ok=True)
+
+
 if __name__ == "__main__":
     unittest.main()
