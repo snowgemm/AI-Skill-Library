@@ -19,9 +19,30 @@ def workflow_on(document: dict[str, Any]) -> Any:
     return document.get("on", document.get(True))
 
 
+
+
+def validate_raw_workflow_text(name: str, text: str) -> list[str]:
+    """Catch GitHub expressions escaped into literal strings before YAML parsing."""
+    errors: list[str] = []
+    if re.search(r"\\\$\{\{", text):
+        errors.append(f"{name}: escaped GitHub Actions expression found")
+    if name == "quality.yml":
+        required = {
+            "concurrency group": r"(?m)^\s*group:\s*quality-\$\{\{\s*github\.workflow\s*\}\}-\$\{\{\s*github\.ref\s*\}\}\s*$",
+            "matrix job name": r"(?m)^\s*name:\s*Validate \(Python \${\{\s*matrix\.python-version\s*\}\}\)\s*$",
+            "matrix Python version": r"(?m)^\s*python-version:\s*\$\{\{\s*matrix\.python-version\s*\}\}\s*$",
+        }
+        for label, pattern in required.items():
+            if not re.search(pattern, text):
+                errors.append(f"{name}: required unescaped {label} expression is missing")
+    return errors
+
+
 def parse(path: Path, errors: list[str]) -> dict[str, Any]:
     try:
-        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+        raw_text = path.read_text(encoding="utf-8")
+        errors.extend(validate_raw_workflow_text(path.name, raw_text))
+        data = yaml.safe_load(raw_text)
     except (OSError, UnicodeError, yaml.YAMLError) as exc:
         errors.append(f"{path.name}: cannot parse workflow: {exc}")
         return {}

@@ -70,5 +70,36 @@ class WorkflowSecurityTests(unittest.TestCase):
         self.assertTrue(any("checksums.git-blob-sha1.txt" in item for item in errors))
 
 
+    def test_raw_quality_workflow_accepts_unescaped_expressions(self):
+        expression = "$" + "{{"
+        text = (
+            "group: quality-" + expression + " github.workflow }}" + "-" +
+            expression + " github.ref }}\n" +
+            "name: Validate (Python " + expression + " matrix.python-version })\n" +
+            "python-version: " + expression + " matrix.python-version }\n"
+        )
+        self.assertEqual(
+            validate_workflow_security.validate_raw_workflow_text("quality.yml", text), []
+        )
+
+    def test_raw_quality_workflow_rejects_escaped_expression(self):
+        expression = "$" + "{{"
+        text = "python-version: \\" + expression + " matrix.python-version }\n"
+        errors = validate_workflow_security.validate_raw_workflow_text("quality.yml", text)
+        self.assertTrue(any("escaped GitHub Actions expression" in item for item in errors), errors)
+
+    def test_raw_quality_workflow_requires_matrix_python_expression(self):
+        expression = "$" + "{{"
+        text = (
+            "group: quality-" + expression + " github.workflow }}" + "-" +
+            expression + " github.ref }}\n" +
+            "name: Validate (Python " + expression + " matrix.python-version })\n" +
+            "python-version: 3.13\n"
+        )
+        errors = validate_workflow_security.validate_raw_workflow_text("quality.yml", text)
+        self.assertTrue(any("matrix Python version expression is missing" in item for item in errors), errors)
+
+
+
 if __name__ == "__main__":
     unittest.main()

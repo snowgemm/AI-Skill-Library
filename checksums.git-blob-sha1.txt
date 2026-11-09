@@ -1,4 +1,4 @@
-30fe4cd0d2fd54ec5f5d2f4718b24d15e81a00e1  .github/workflows/quality.yml
+bfe0ed77c8691f7b054043dcbe9ab4c2dd023ffb  .github/workflows/quality.yml
 2641e43f1f84f3127e091f35ab321c131ca876cb  .github/workflows/upstream-registry.yml
 48064354a48b02dd0b4e755dfb96348e66f74a75  .gitignore
 8ccb589d65dff09f391ef709b2ce90fc2dccd7b4  adapters/host-adapters.json
@@ -28,7 +28,7 @@ f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
 9364e385bd4ea8cac4b7aed12bc217f34cc816b9  scripts/update_checksums.py
 4db591551058236ab8ee24dcc9ba9a3b65a21d19  scripts/validate_repository.py
 0b7c5d418bc35853d88b986fbebee23521c3871a  scripts/validate_skills.py
-cc1d6a5b28f6cee111f0301e2eee112b3b264422  scripts/validate_workflow_security.py
+76424c8b326de8120155fde14adb5139d151dee2  scripts/validate_workflow_security.py
 1bd0ae359e1fb840a042d72f480f04c32640c353  SECURITY.md
 31f846dbf798807a9ae30fbf6e02697f12b0424b  skills/android-compose-engineering/SKILL.md
 54dffcb8cb22e7e41255ad044bdde76fd2274b42  skills/minecraft-bedrock-addon/SKILL.md
@@ -41,5 +41,5 @@ c8208071b805b1f674a7a3320873eb4adfda091b  sources/SOURCE-VERIFICATION.md
 31c6557befb25e95d342aad9014627e896390506  tests/test_installer.py
 1fb48f3c36490cbbad605d7d3bf2edf85e6f5cba  tests/test_repository_integrity.py
 c25842cb03f6a45d05bb94948283d0ce589582d7  tests/test_validate_skills.py
-6da270c1a621556697aea427233e605b5443fd5c  tests/test_workflow_security.py
+e7318646429634a3c222700265903e80aa611400  tests/test_workflow_security.py
 7771710038058c14cf9f2dbd4f3aa1f8a33f2aa1  TRAINING-GUIDE.md
