@@ -3,7 +3,7 @@ bfe0ed77c8691f7b054043dcbe9ab4c2dd023ffb  .github/workflows/quality.yml
 48064354a48b02dd0b4e755dfb96348e66f74a75  .gitignore
 8ccb589d65dff09f391ef709b2ce90fc2dccd7b4  adapters/host-adapters.json
 52553daa3f98d03aa30b774a3d263069814bb5e9  adapters/HOST-COMPATIBILITY.md
-0fb6af722b5b26d75177c3d84c5827f86567635c  adapters/README.md
+8ddb3f0c810d045a032ba953014e49f22b43395e  adapters/README.md
 699950e847220a2968c6028f7b848b9ef8423810  catalog/chatgpt-installed-skills-125.csv
 e6b1750153758b3fe7962d467411a735ef835c8a  catalog/chatgpt-installed-skills-125.json
 4f5345faadf4e11e007c61ce4fd05f4122118666  catalog/external-sources.json
