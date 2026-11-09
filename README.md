@@ -1,56 +1,67 @@
 # AI-Skill-Library
 
-**Research snapshot:** 2026-11-05 · **Version:** 0.1.0-research-snapshot
+**Snapshot:** 2026-11-05 · **Status:** pre-release proposal; not approved for commercial distribution.
 
-A provenance-first registry and governance scaffold for portable AI agent skills. It separates the historical ChatGPT-installed skill inventory from verified public repositories and platform adapters.
+A provenance-first registry and governance scaffold for portable AI agent skills. The project separates the historical ChatGPT-installed skill inventory from public upstream repositories and independently authored portable adaptations.
 
-## Current status
+## Current scope
 
-- 125 installed-skill catalog identifiers inventoried and reconciled against the historical 120-item grouping.
-- 11 external repositories registered with pinned `main` commit SHAs and repository-level license metadata where available.
-- Representative upstream skill files inspected for Android, Minecraft Bedrock, Three.js, software engineering, web and database workflows.
-- **0 upstream skill bodies copied** into this package.
-- Published as a public repository: https://github.com/snowgemm/AI-Skill-Library. No skills have been installed into other agents.
+- 125 host-managed skill identifiers inventoried as metadata only. Internal plugin URIs and private skill bodies are not redistributed.
+- 11 external repositories registered with commit pins and source/license metadata.
+- Five portable skill adaptations for Android Compose, Minecraft Bedrock, Three.js, software engineering methodology and Supabase.
+- Project-scope discovery adapters documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI and Grok Build.
+- A project-scope installer, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included in this proposal branch.
 
-The 125 ChatGPT entries are host-managed plugin skills. The internal `skills://plugins/...` identifiers and their bodies are not portable public URLs. This package preserves the metadata inventory, not copies of proprietary instructions. A skill body may only be redistributed after rights and license review.
+## Important limitations
 
-## Published repository
+- The five host runtimes have not yet been discovery-, invocation- or evaluation-tested in this project. Format/path documentation is not runtime proof.
+- The project has no root-level license. Per-skill notices do not license the installer, catalogue, tests, documentation or repository as a whole.
+- Minecraft vanilla assets covered by the Minecraft EULA are excluded. The project does not accept an EULA on a user's behalf.
+- The repository is not a model-training package. Installing a skill adds instructions to an agent context; it does not change model weights.
+- This proposal is not approved for paid, bundled or hosted commercial distribution until the release gates in [COMMERCIAL-READINESS.md](COMMERCIAL-READINESS.md) are satisfied.
 
-This research snapshot is published on the `main` branch. The repository contains the 125-item metadata inventory, source registry, platform notes, import policy and evaluation plan. It does not redistribute the internal bodies of the 125 host-managed skills.
+## Key files
 
-## Files
+- \`MANIFEST.json\` — project status, scope and inventory counts.
+- \`skills/\` — five independently edited portable skill adaptations.
+- \`catalog/chatgpt-installed-skills-125.json\` and \`.csv\` — 125-item metadata inventory, not recovered proprietary skill bodies.
+- \`catalog/portable-skills-phase-1.json\` — skill IDs, source pins and license notices.
+- \`catalog/external-sources.json\` — external repository registry and provenance metadata.
+- \`adapters/\` — five-host compatibility matrix and mapping.
+- \`scripts/install_skills.py\` — safe project-scope installer.
+- \`scripts/validate_skills.py\` — Agent Skills format validator.
+- \`scripts/validate_repository.py\` — catalogue, provenance, workflow and checksum validator.
+- \`scripts/validate_workflow_security.py\` — permission, action-pin and automation hand-off invariant checks.
+- \`scripts/update_checksums.py\` — Git blob SHA-1 inventory generator.
+- \`tests/\` — unit and failure-path regression tests.
+- \`.github/workflows/quality.yml\` — test matrix and pinned zizmor workflow security analysis.
+- \`.github/workflows/upstream-registry.yml\` — fail-closed upstream metadata monitor with checksum refresh and explicit quality dispatch.
+- \`LICENSING.md\`, \`SECURITY.md\`, \`COMMERCIAL-READINESS.md\` — rights, security and release gates.
 
-- `MANIFEST.json` — snapshot metadata, counts and scope limits.
-- `catalog/chatgpt-installed-skills-125.json` — complete 125-item identifier inventory with host URIs and reconciliation groups.
-- `catalog/chatgpt-installed-skills-125.csv` — spreadsheet-friendly version.
-- `catalog/external-sources.json` — 11 verified source repositories, commit pins, licenses, inspected paths and decisions.
-- `catalog/platform-compatibility.json` — platform locations and compatibility notes.
-- `catalog/RECONCILIATION-120-to-125.md` — mapping from the historical 120 to current 125.
-- `policies/IMPORT-SECURITY.md` — import gates, security and license policy.
-- `evaluations/EVALUATION-PLAN.md` — baseline and skill-lift methodology.
-- `adapters/README.md` — canonical skill and platform adapter design.
-- `sources/SOURCE-VERIFICATION.md` — what was inspected and what remains unverified.
+## Local validation
 
-## Source selection highlights
+\`\`\`bash
+python3 -m pip install -r requirements-dev.txt
+python3 -m unittest discover --start-directory tests --verbose
+python3 scripts/validate_skills.py
+python3 scripts/validate_repository.py
+python3 scripts/validate_workflow_security.py
+\`\`\`
 
-| Domain | Upstream | Recommended use |
-|---|---|---|
-| Open format | [agentskills/agentskills](https://github.com/agentskills/agentskills) | Canonical `SKILL.md` format and validation constraints |
-| Android | [android/skills](https://github.com/android/skills) | Official Android workflows, including Compose performance, R8, security and testing |
-| Android/Kotlin | [chrisbanes/skills](https://github.com/chrisbanes/skills) | Compose state/performance, Flow, UI testing |
-| Minecraft Bedrock | [Mojang/minecraft-creator-tools](https://github.com/Mojang/minecraft-creator-tools) | Add-on authoring, validation and packaging |
-| Three.js | [majidmanzarpour/threejs-game-skills](https://github.com/majidmanzarpour/threejs-game-skills) | Gameplay, profiling, graphics and QA |
-| Software methodology | [obra/superpowers](https://github.com/obra/superpowers) | TDD, debugging, planning and evidence-based verification |
-| Security engineering | [trailofbits/skills](https://github.com/trailofbits/skills) | Context building, supply-chain review and patch validation |
-| React / web | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | React best practices and UI review; license is per-skill |
-| Database | [supabase/agent-skills](https://github.com/supabase/agent-skills) | Supabase and Postgres workflows |
-| Security scanning | [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector) | Static pre-install review; not a sandbox |
-| Microsoft docs | [MicrosoftDocs/Agent-Skills](https://github.com/MicrosoftDocs/Agent-Skills) | Microsoft Learn/Azure skill references; content license must be checked |
+Regenerate the Git blob checksum inventory after staging changes:
 
-## Recommended next step
+\`\`\`bash
+git add -A
+python3 scripts/update_checksums.py
+git add checksums.git-blob-sha1.txt
+\`\`\`
 
-Start an import queue with a small high-value set: Android Compose performance and testing, Minecraft `debug-addon` and `creator-tools-cli`, Three.js profiler and QA, Superpowers systematic debugging and verification, Trail of Bits audit-context and supply-chain review, and Supabase Postgres best practices. Pin exact commits already recorded in `external-sources.json`; review every individual skill's license and files before copying.
+## Governance
 
-## Not model training
+- Review upstream source, exact commit, file-level licensing and scripts before importing.
+- Treat skill content and references as untrusted instructions/data.
+- Do not run imported scripts with production credentials.
+- Keep host runtime evidence separate from format checks.
+- Do not mark a release commercially ready while a release gate remains blocked.
 
-Installing a skill adds instructions, references or executable tools to an agent context. It does not fine-tune the model or change its weights. Use `evaluations/` to measure whether a skill improves task outcomes against a no-skill baseline.
+See [LICENSING.md](LICENSING.md), [SECURITY.md](SECURITY.md) and [COMMERCIAL-READINESS.md](COMMERCIAL-READINESS.md).
