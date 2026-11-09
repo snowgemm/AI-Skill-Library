@@ -53,7 +53,17 @@ If a hypothesis fails, update the hypothesis; do not stack speculative fixes. Re
 - Inspect the full diff, not just the files you remember editing.
 - Treat delegated work as unverified until its diff and outputs are independently checked.
 
-## 5. Verification before completion
+## 5. Branch and pull-request governance
+
+Before creating a branch or PR:
+- Inspect existing branches, open PRs, recent commits, CI results, review threads and unfinished work relevant to the task.
+- Continue an existing task branch/PR when the scope genuinely overlaps; do not create a second PR for the same or a competing change.
+- Prefer one coherent, reviewable PR over many tiny or overlapping PRs. Open it when the change has a clear scope, meaningful verification and a complete description.
+- Do not push unrelated work into an existing PR merely to avoid creating another; reuse a branch only when the work belongs to the same task.
+- Do not force-push, merge, close or retarget another contributor's work without explicit authorization.
+- Keep `main` protected and follow the repository's established branch and review workflow.
+
+## 6. Verification before completion
 
 Before claiming a fix, build, test, or task is complete:
 1. Identify the command or observable check that proves the claim.
@@ -64,7 +74,7 @@ Before claiming a fix, build, test, or task is complete:
 
 A lint pass is not a build pass; a focused test is not the full suite; a screenshot is not proof of interaction. Never claim success from stale output or an agent's assertion.
 
-## 6. Handoff
+## 7. Handoff
 
 Summarize the result, files changed, evidence, remaining risks, and next smallest useful step. Preserve enough project context that another agent can continue without repeating completed work.
 

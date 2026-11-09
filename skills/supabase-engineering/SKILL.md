@@ -32,7 +32,10 @@ Use for any task involving Supabase or Postgres. Supabase changes frequently; cu
 
 ## 3. Security and RLS
 
-- Enable RLS on tables in exposed schemas and design policies around the real ownership/tenant model.
+- Treat SQL object grants and RLS as separate, cumulative access-control gates: grants determine whether a role can reach a table, view or function; RLS policies determine which rows an allowed role can read or modify.
+- Enable RLS on tables in exposed schemas and design policies around the real ownership/tenant model. Adding an RLS policy does not revoke existing grants.
+- Inspect object privileges and default privileges for `anon`, `authenticated` and custom roles, including function `EXECUTE` grants and schemas exposed through the Data API. Do not infer exposure from RLS status alone.
+- Treat `service_role` as privileged and capable of bypassing RLS. Keep its key server-side; do not use a `service_role` policy as a substitute for explicit authorization.
 - Do not use user-editable metadata as an authorization source.
 - An authenticated role alone is not authorization; include row ownership or another explicit permission predicate.
 - For UPDATE policies, reason about both row visibility and resulting row values; use appropriate USING and WITH CHECK conditions.
@@ -59,7 +62,7 @@ Use for any task involving Supabase or Postgres. Supabase changes frequently; cu
 ## 6. Verification
 
 - Run the relevant migration, schema diff, query, tests, and security advisors available for the installed CLI/MCP version.
-- Test access as the intended roles/users, including negative cases that must be denied.
+- Test access as the intended roles/users, including negative cases that must be denied. Verify object-level grants, default privileges, exposed views/functions and row-policy behavior independently.
 - Confirm indexes and query plans for performance-sensitive changes.
 - Re-read the migration and policy definitions and inspect the final diff.
 - Report exact commands, database/environment tested, results, and any checks not run.
@@ -67,6 +70,7 @@ Use for any task involving Supabase or Postgres. Supabase changes frequently; cu
 ## References
 
 - Supabase docs: https://supabase.com/docs
+- Securing the Data API (grants, RLS and default privileges): https://supabase.com/docs/guides/api/securing-your-api
 - Supabase changelog: https://supabase.com/changelog
 - Supabase agent skills upstream: https://github.com/supabase/agent-skills
 

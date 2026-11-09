@@ -30,11 +30,11 @@ f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
 5b712012d7623a52fa4bd9fe54b9053cc4689ff5  scripts/validate_skills.py
 6b732f1d66d65435ac5832b92589cf7cd5320356  scripts/validate_workflow_security.py
 1bd0ae359e1fb840a042d72f480f04c32640c353  SECURITY.md
-31f846dbf798807a9ae30fbf6e02697f12b0424b  skills/android-compose-engineering/SKILL.md
-54dffcb8cb22e7e41255ad044bdde76fd2274b42  skills/minecraft-bedrock-addon/SKILL.md
-696a43678c6c00e8c84e4935cf587abe4ce4577e  skills/supabase-engineering/SKILL.md
-69e1e4e89519870eced214d37f82818f829fab2f  skills/superpowers-engineering-workflow/SKILL.md
-817f5736cb94650c858a8e7d701d7678c3a59a51  skills/threejs-game-engineering/SKILL.md
+fe57d0fd2b85d755754b70f896d1a0fbb0dbacdb  skills/android-compose-engineering/SKILL.md
+da102c1b432f6fd489138c34e98c261bcdc75102  skills/minecraft-bedrock-addon/SKILL.md
+db7e36ded310bd850807dfd5591b86241b703a63  skills/supabase-engineering/SKILL.md
+3c62519a0fe0f82a9691aaf1013c841c4de286bc  skills/superpowers-engineering-workflow/SKILL.md
+a8aae39ff1d72f9a4b8f9e29e5f376d48f805a5c  skills/threejs-game-engineering/SKILL.md
 1519d05e61498a677d6f06d13196c9749fcd8071  sources/PLATFORM-SUPPORT.md
 2eff97d80aae6ef4581a3fd745b862f57048247b  sources/PORTABLE-SKILL-RECOVERY.md
 c8208071b805b1f674a7a3320873eb4adfda091b  sources/SOURCE-VERIFICATION.md

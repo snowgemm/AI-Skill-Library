@@ -22,7 +22,9 @@ Use this skill for Three.js applications and browser games. Preserve the project
 
 ## 2. Rendering and lifecycle
 
-- Maintain one intentional animation loop and a consistent time-step strategy. Use elapsed time/delta time correctly; avoid frame-rate-dependent movement.
+- Maintain one intentional animation loop and a consistent time-step strategy. Prefer `renderer.setAnimationLoop(callback)` for renderer-owned scheduling when supported by the project's installed Three.js version; stop it with `renderer.setAnimationLoop(null)` during teardown. Use elapsed time/delta time correctly; avoid frame-rate-dependent movement.
+- When the renderer itself is no longer needed, stop its animation loop, release owned event listeners/DOM resources, and call `renderer.dispose()`. Do not dispose a renderer shared by another active scene or subsystem.
+- Handle WebGL context loss and restoration deliberately when the supported browser/device matrix requires recovery, and test the recovery path rather than assuming the renderer will restore application state automatically.
 - Keep renderer pixel ratio bounded for mobile/high-DPI devices and update camera aspect/projection on resize.
 - Ensure canvas CSS size and drawing-buffer size remain consistent.
 - Handle visibility, pause, restart, and context-loss behavior deliberately.
@@ -70,6 +72,7 @@ Report root cause, changed files, exact commands, test results, before/after mea
 ## References
 
 - Three.js docs: https://threejs.org/docs/
+- WebGLRenderer API (animation loop, disposal and context controls): https://threejs.org/docs/pages/WebGLRenderer.html
 - Three.js game skills upstream: https://github.com/majidmanzarpour/threejs-game-skills
 
 This is an independently edited portable workflow informed by the upstream MIT-licensed project. It does not include upstream helper scripts, scaffolds, generated assets, or third-party dependencies. See the accompanying license and attribution record.

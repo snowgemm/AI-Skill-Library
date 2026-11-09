@@ -43,6 +43,7 @@ Do not treat a successful static validation as proof that in-game behavior is co
 ## 4. Version and compatibility discipline
 
 - Check current Microsoft/Mojang documentation and release notes before using new components or Script API methods.
+- Treat upstream HEAD moving beyond the recorded source pin as drift, not permission to update it automatically. Review the exact changed skill/schema/API files, dependencies, license notices and Minecraft EULA boundaries before changing a pin or importing material.
 - Match schemas and API modules to the declared target version.
 - Do not blindly rewrite every `format_version` or `min_engine_version`; confirm the schema migration and compatibility impact first.
 - Prefer official validation output and current Creator Tools documentation over remembered command syntax.

@@ -29,6 +29,8 @@ Use this skill for Android app implementation, architecture, Compose UI, perform
 - Give remember values correct keys. Do not use remember as a substitute for a proper state owner.
 - Avoid backwards writes, unnecessary state wrappers, repeated expensive calculations, and unstable high-cost inputs in frequently recomposed paths.
 - For lazy lists, provide stable keys and content types when useful; avoid rebuilding large collections on every recomposition.
+- When a frequently changing state value causes measured unnecessary recomposition, defer its read to the phase that needs it. Prefer lambda-based modifiers such as `Modifier.offset { ... }` for placement or `Modifier.graphicsLayer { ... }` for drawing instead of reading the value during Composition.
+- For derived state, use a plain Kotlin getter for trivial expressions. On Compose 1.13+, consider `computedStateOf` for simple condition/filtering results driven by rapidly changing state; on older versions use `remember { derivedStateOf { ... } }`. Reserve `derivedStateOf` for cases where its invalidation filtering or cached derivation justifies the cost. Verify the project's Compose version and measure before changing code.
 
 ## 3. Performance workflow
 
@@ -71,6 +73,8 @@ Never claim a build, test, or performance improvement without fresh command outp
 ## References
 
 - Android developer documentation: https://developer.android.com/
+- Compose performance best practices: https://developer.android.com/develop/ui/compose/performance/bestpractices
+- Compose phases and modifier performance: https://developer.android.com/develop/ui/compose/performance/modifier-phases
 - Android skills upstream: https://github.com/android/skills
 - Agent Skills format: https://agentskills.io/specification
 
