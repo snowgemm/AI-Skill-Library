@@ -61,5 +61,31 @@ class ValidateSkillsTests(unittest.TestCase):
         self.assertTrue(any("symlink" in x for x in validate_skills.validate_root(self.root)))
 
 
+    def test_relative_markdown_resource_must_exist(self) -> None:
+        self.write("name: demo-skill\ndescription: Demo", "See [guide](references/guide.md).")
+        errors = validate_skills.validate_root(self.root)
+        self.assertTrue(any("referenced resource does not exist" in item for item in errors), errors)
+
+    def test_existing_relative_markdown_resource_passes(self) -> None:
+        self.write("name: demo-skill\ndescription: Demo", "See [guide](references/guide.md).")
+        references = self.skill / "references"
+        references.mkdir()
+        (references / "guide.md").write_text("# Guide\n\nInstructions.", encoding="utf-8")
+        self.assertEqual(validate_skills.validate_root(self.root), [])
+
+    def test_markdown_resource_cannot_escape_skill_directory(self) -> None:
+        self.write("name: demo-skill\ndescription: Demo", "See [outside](../outside.md).")
+        (self.root / "outside.md").write_text("# Outside", encoding="utf-8")
+        errors = validate_skills.validate_root(self.root)
+        self.assertTrue(any("escapes the skill directory" in item for item in errors), errors)
+
+    def test_external_and_code_example_links_are_not_local_resources(self) -> None:
+        tick = chr(96)
+        inline = "Use [site](https://example.com) and " + tick + "[fake](missing.md)" + tick + "."
+        fence = tick * 3 + "markdown\n[example](also-missing.md)\n" + tick * 3
+        self.write("name: demo-skill\ndescription: Demo", inline + "\n\n" + fence)
+        self.assertEqual(validate_skills.validate_root(self.root), [])
+
+
 if __name__ == "__main__":
     unittest.main()

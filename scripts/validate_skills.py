@@ -5,8 +5,9 @@ from __future__ import annotations
 import argparse
 import re
 import sys
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from typing import Any
+from urllib.parse import unquote, urlsplit
 
 import yaml
 
@@ -14,6 +15,10 @@ NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 MAX_DESCRIPTION = 1024
 MAX_COMPATIBILITY = 500
 MAX_FILE_BYTES = 1024 * 1024
+MARKDOWN_LINK_RE = re.compile(r"!?\[[^\]]*\]\(\s*(?:<([^>\n]+)>|([^\s)]+))")
+REFERENCE_DEFINITION_RE = re.compile(r"(?m)^ {0,3}\[[^\]]+\]:\s*(?:<([^>\n]+)>|([^\s]+))")
+HTML_LINK_RE = re.compile(r"(?i)\b(?:href|src)\s*=\s*['\"]([^'\"]+)['\"]")
+FENCE_RE = re.compile(r"^ {0,3}([\x60]{3,}|~{3,})")
 
 
 class UniqueKeySafeLoader(yaml.SafeLoader):
@@ -131,6 +136,95 @@ def parse_skill(path: Path) -> tuple[dict[str, Any] | None, list[str]]:
     return metadata, errors
 
 
+
+def markdown_destinations(source: str) -> list[str]:
+    """Extract Markdown and HTML resource links outside fenced and inline code."""
+    visible_lines: list[str] = []
+    fence_char: str | None = None
+    fence_length = 0
+    for line in source.splitlines():
+        marker = FENCE_RE.match(line)
+        if fence_char is None:
+            if marker:
+                token = marker.group(1)
+                fence_char, fence_length = token[0], len(token)
+                continue
+            visible_lines.append(line)
+        elif marker:
+            token = marker.group(1)
+            if token[0] == fence_char and len(token) >= fence_length:
+                fence_char, fence_length = None, 0
+
+    visible = "\n".join(visible_lines)
+    visible = re.sub(r"(?<!\\)([\x60]+).*?\1", "", visible, flags=re.DOTALL)
+    destinations: list[str] = []
+    for pattern in (MARKDOWN_LINK_RE, REFERENCE_DEFINITION_RE):
+        for match in pattern.finditer(visible):
+            destination = next((group for group in match.groups() if group is not None), "")
+            if destination:
+                destinations.append(destination.strip())
+    destinations.extend(match.group(1).strip() for match in HTML_LINK_RE.finditer(visible))
+    return list(dict.fromkeys(destinations))
+
+
+def validate_markdown_resources(skill_dir: Path) -> list[str]:
+    """Ensure local links resolve within the packaged skill directory."""
+    errors: list[str] = []
+    skill_root = skill_dir.resolve()
+    for document in sorted(skill_dir.rglob("*")):
+        if document.is_symlink() or not document.is_file():
+            continue
+        if document.suffix.lower() not in {".md", ".mdx"}:
+            continue
+        try:
+            raw = document.read_bytes()
+            if len(raw) > MAX_FILE_BYTES:
+                errors.append(f"{document}: Markdown resource file exceeds {MAX_FILE_BYTES} bytes")
+                continue
+            source = raw.decode("utf-8-sig")
+        except (OSError, UnicodeDecodeError) as exc:
+            errors.append(f"{document}: cannot read Markdown resource file: {exc}")
+            continue
+
+        for destination in markdown_destinations(source):
+            try:
+                parsed = urlsplit(destination)
+            except ValueError:
+                errors.append(f"{document}: malformed Markdown resource link: {destination}")
+                continue
+            if parsed.scheme and parsed.scheme.lower() != "file":
+                continue
+            if destination.startswith("//") or (not parsed.path and not parsed.scheme):
+                continue
+            if parsed.scheme == "file":
+                errors.append(f"{document}: file:// links are not portable: {destination}")
+                continue
+
+            decoded_path = unquote(parsed.path)
+            windows_path = PureWindowsPath(decoded_path)
+            if (
+                not decoded_path
+                or decoded_path.startswith("/")
+                or windows_path.is_absolute()
+                or windows_path.drive
+                or "\\" in decoded_path
+            ):
+                errors.append(f"{document}: non-relative or non-portable resource link: {destination}")
+                continue
+
+            try:
+                resolved = (document.parent / decoded_path).resolve(strict=False)
+            except (OSError, RuntimeError):
+                errors.append(f"{document}: cannot safely resolve resource link: {destination}")
+                continue
+            if not resolved.is_relative_to(skill_root):
+                errors.append(f"{document}: resource link escapes the skill directory: {destination}")
+            elif not resolved.exists():
+                errors.append(f"{document}: referenced resource does not exist: {destination}")
+
+    return errors
+
+
 def validate_root(root: Path) -> list[str]:
     errors: list[str] = []
     if not root.exists() or not root.is_dir():
@@ -158,6 +252,7 @@ def validate_root(root: Path) -> list[str]:
             continue
         _, skill_errors = parse_skill(skill_file)
         errors.extend(f"{skill_file}: {message}" for message in skill_errors)
+        errors.extend(validate_markdown_resources(skill_dir))
     return errors
 
 
