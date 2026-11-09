@@ -28,12 +28,12 @@ def validate_raw_workflow_text(name: str, text: str) -> list[str]:
         errors.append(f"{name}: escaped GitHub Actions expression found")
     if name == "quality.yml":
         required = {
-            "concurrency group": r"(?m)^\s*group:\s*quality-\$\{\{\s*github\.workflow\s*\}\}-\$\{\{\s*github\.ref\s*\}\}\s*$",
-            "matrix job name": r"(?m)^\s*name:\s*Validate \(Python \${\{\s*matrix\.python-version\s*\}\}\)\s*$",
-            "matrix Python version": r"(?m)^\s*python-version:\s*\$\{\{\s*matrix\.python-version\s*\}\}\s*$",
+            "concurrency group": "group: quality-" + "$" + "{{ github.workflow }}" + "-" + "$" + "{{ github.ref }}",
+            "matrix job name": "name: Validate (Python " + "$" + "{{ matrix.python-version }})",
+            "matrix Python version": "python-version: " + "$" + "{{ matrix.python-version }}",
         }
-        for label, pattern in required.items():
-            if not re.search(pattern, text):
+        for label, expected in required.items():
+            if expected not in text:
                 errors.append(f"{name}: required unescaped {label} expression is missing")
     return errors
 
