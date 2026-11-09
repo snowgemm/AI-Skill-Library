@@ -51,12 +51,29 @@ class InstallerTests(unittest.TestCase):
         self.assertFalse((self.target / ".agents").exists())
         self.assertFalse((self.target / ".grok").exists())
 
-    def test_all_hosts_install(self) -> None:
-        code, output, _ = self.run_cli("--target", str(self.target), "--host", "all")
-        self.assertEqual(code, 0, output)
-        for host in installer.HOST_DIRECTORIES.values():
+    def test_all_hosts_install_warns_and_creates_each_canonical_folder(self) -> None:
+        actual_hosts = {
+            "codex": ".agents/skills",
+            "claude": ".claude/skills",
+            "gemini": ".gemini/skills",
+            "copilot": ".github/skills",
+            "grok": ".grok/skills",
+        }
+        with patch.dict(installer.HOST_DIRECTORIES, actual_hosts, clear=True):
+            code, output, warning = self.run_cli(
+                "--target", str(self.target), "--host", "all"
+            )
+        self.assertEqual(code, 0, output + warning)
+        self.assertIn("discover", warning)
+        for host in actual_hosts.values():
             for skill_id in installer.SKILL_IDS:
                 self.assertTrue((self.target / host / skill_id / "SKILL.md").is_file())
+
+    def test_host_selection_is_required(self) -> None:
+        with patch.object(sys, "argv", [str(SCRIPT), "--target", str(self.target)]):
+            with self.assertRaises(SystemExit) as raised:
+                installer.parse_args()
+        self.assertEqual(raised.exception.code, 2)
 
     def test_existing_skill_refuses_without_overwrite(self) -> None:
         existing = self.target / ".agents/skills/skill-a"
@@ -69,17 +86,17 @@ class InstallerTests(unittest.TestCase):
         self.assertFalse((self.target / ".agents/skills/skill-b").exists())
 
     def test_missing_or_file_target_is_rejected(self) -> None:
-        code, _, _ = self.run_cli("--target", str(self.root / "missing"))
+        code, _, _ = self.run_cli("--target", str(self.root / "missing"), "--host", "codex")
         self.assertEqual(code, 2)
         file_target = self.root / "not-a-dir"
         file_target.write_text("x", encoding="utf-8")
-        code, _, _ = self.run_cli("--target", str(file_target))
+        code, _, _ = self.run_cli("--target", str(file_target), "--host", "codex")
         self.assertEqual(code, 2)
 
     def test_symlinked_target_is_rejected(self) -> None:
         link = self.root / "project-link"
         link.symlink_to(self.target, target_is_directory=True)
-        code, _, _ = self.run_cli("--target", str(link))
+        code, _, _ = self.run_cli("--target", str(link), "--host", "codex")
         self.assertEqual(code, 2)
 
     def test_symlinked_destination_parent_is_rejected(self) -> None:

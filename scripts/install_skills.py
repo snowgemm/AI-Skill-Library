@@ -34,8 +34,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--target", required=True, type=Path,
                         help="Existing project directory; user-home installation is not supported.")
-    parser.add_argument("--host", choices=(*HOST_DIRECTORIES, "all"), default="all",
-                        help="Target host adapter (default: all five hosts).")
+    parser.add_argument("--host", required=True, choices=(*HOST_DIRECTORIES, "all"),
+                        help="Required target host. Use all only when you intentionally want every host folder.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show planned copies without creating directories or files.")
     return parser.parse_args()
@@ -103,6 +103,12 @@ def main() -> int:
         return 2
 
     hosts = tuple(HOST_DIRECTORIES) if args.host == "all" else (args.host,)
+    if args.host == "all":
+        print(
+            "Warning: some hosts also discover compatible folders used by other hosts. "
+            "Review host precedence and runtime behavior before using this shared project.",
+            file=sys.stderr,
+        )
     missing = [skill_id for skill_id in SKILL_IDS
                if not (SKILLS_ROOT / skill_id / "SKILL.md").is_file()]
     if missing:

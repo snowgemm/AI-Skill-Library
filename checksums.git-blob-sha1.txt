@@ -3,7 +3,7 @@ bfe0ed77c8691f7b054043dcbe9ab4c2dd023ffb  .github/workflows/quality.yml
 48064354a48b02dd0b4e755dfb96348e66f74a75  .gitignore
 8ccb589d65dff09f391ef709b2ce90fc2dccd7b4  adapters/host-adapters.json
 52553daa3f98d03aa30b774a3d263069814bb5e9  adapters/HOST-COMPATIBILITY.md
-d74987fdc243089f7a9b619fd12bc1844e8dba4f  adapters/README.md
+0fb6af722b5b26d75177c3d84c5827f86567635c  adapters/README.md
 699950e847220a2968c6028f7b848b9ef8423810  catalog/chatgpt-installed-skills-125.csv
 e6b1750153758b3fe7962d467411a735ef835c8a  catalog/chatgpt-installed-skills-125.json
 4f5345faadf4e11e007c61ce4fd05f4122118666  catalog/external-sources.json
@@ -24,7 +24,7 @@ efc9a9cafa30a225834900bfa6480169dea1b45b  MANIFEST.json
 67b4f4cd79e456235a46ee66c281d8cde481b00a  policies/IMPORT-SECURITY.md
 bb67ce54f2ab56c037e9884d0e8604357787b550  README.md
 f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
-7764b821d9c3b58bd62ed1bb2df144f16949d66f  scripts/install_skills.py
+5aabd50d1fd1d5cfe33b975a1d6d7d743b32fbea  scripts/install_skills.py
 9364e385bd4ea8cac4b7aed12bc217f34cc816b9  scripts/update_checksums.py
 6f76639b1fd06618f008caf18492c09eef4af16b  scripts/validate_repository.py
 5b712012d7623a52fa4bd9fe54b9053cc4689ff5  scripts/validate_skills.py
@@ -38,7 +38,7 @@ a8aae39ff1d72f9a4b8f9e29e5f376d48f805a5c  skills/threejs-game-engineering/SKILL.
 1519d05e61498a677d6f06d13196c9749fcd8071  sources/PLATFORM-SUPPORT.md
 2eff97d80aae6ef4581a3fd745b862f57048247b  sources/PORTABLE-SKILL-RECOVERY.md
 c8208071b805b1f674a7a3320873eb4adfda091b  sources/SOURCE-VERIFICATION.md
-31c6557befb25e95d342aad9014627e896390506  tests/test_installer.py
+e970a23c5e6f594921fadad61546a1916bed942e  tests/test_installer.py
 18d9fdb21890c353d198bf63551d0915bb96ddf8  tests/test_repository_integrity.py
 ca4c0a711c6fe2b86d833708397ca7a2c8f2d00f  tests/test_validate_skills.py
 5c8e49ebcfccc32238e785e451d5ca33e226e272  tests/test_workflow_security.py

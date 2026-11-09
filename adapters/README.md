@@ -11,7 +11,7 @@ python3 scripts/install_skills.py --target /path/to/existing-project --host all 
 python3 scripts/install_skills.py --target /path/to/existing-project --host all
 \`\`\`
 
-Use \`--host codex\`, \`claude\`, \`gemini\`, \`copilot\` or \`grok\` for one host. The installer is project-scope only; it does not write to user-home folders, invoke a host CLI, authenticate, execute skill scripts or prove runtime activation.
+Use \`--host codex\`, \`claude\`, \`gemini\`, \`copilot\` or \`grok\` for one host. A host must be selected explicitly. Prefer one host per project install. `--host all` is an explicit opt-in and prints a warning because some hosts discover compatible folders used by other hosts; do not assume the hosts' precedence rules are identical. The installer is project-scope only; it does not write to user-home folders, invoke a host CLI, authenticate, execute skill scripts or prove runtime activation.
 
 The installer stages files before writing, refuses existing skill destinations and symlinked paths, and attempts rollback if a copy fails. Review the target and dry-run output before installation.
 
