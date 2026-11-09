@@ -18,7 +18,12 @@ def documents():
                 "permissions": {"contents": "read"},
                 "steps": [{
                     "uses": "zizmorcore/zizmor-action@45d7276c9ca790aabd705e31ca99c6185c3e76dd",
-                    "with": {"advanced-security": False, "version": "v1.32.0"},
+                    "with": {
+                        "advanced-security": False,
+                        "version": "v1.32.0",
+                        "min-severity": "low",
+                        "min-confidence": "low",
+                    },
                 }],
             },
         },
@@ -75,8 +80,8 @@ class WorkflowSecurityTests(unittest.TestCase):
         text = (
             "group: quality-" + expression + " github.workflow }}" + "-" +
             expression + " github.ref }}\n" +
-            "name: Validate (Python " + expression + " matrix.python-version })\n" +
-            "python-version: " + expression + " matrix.python-version }\n"
+            "name: Validate (Python " + expression + " matrix.python-version }})\n" +
+            "python-version: " + expression + " matrix.python-version }}\n"
         )
         self.assertEqual(
             validate_workflow_security.validate_raw_workflow_text("quality.yml", text), []
