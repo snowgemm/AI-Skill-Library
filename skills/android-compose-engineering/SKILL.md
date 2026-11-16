@@ -4,19 +4,21 @@ description: Build, debug, and test Android apps with Kotlin, Jetpack Compose, l
 license: Apache-2.0
 metadata:
   author: AI-Skill-Library contributors
-  version: "1.0.0"
+  version: "1.1.0"
   upstream: https://github.com/android/skills
   upstream-commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
+  reviewed-upstream-head: c72942584fff970dac86ced78b367fce0c441e52
 ---
 
 # Android Compose Engineering
 
-Use this skill for Android app implementation, architecture, Compose UI, performance, lifecycle, Gradle, and testing. Treat official Android documentation as the current source of truth; APIs and recommended patterns change.
+Use this skill for Android app implementation, architecture, Compose UI, lifecycle, Gradle, testing, accessibility, and measured performance work. Treat current Android documentation as the source of truth; APIs and recommended patterns change. Do not invoke performance guidance for a routine UI task unless the user asks for optimization or there is measurable evidence of jank, dropped frames, or excessive work.
 
 ## 1. Inspect before editing
 
 - Read the project structure, Gradle files, version catalog, manifest, app modules, and relevant source/tests before proposing changes.
-- Identify Kotlin, AGP, Gradle, Compose BOM, compile/target SDK, min SDK, and dependency versions. Do not upgrade versions merely because newer versions exist.
+- Identify Kotlin, Android Gradle Plugin, Gradle, Compose BOM/compiler/runtime, compile/target SDK, min SDK, and dependency versions. Do not upgrade versions merely because newer versions exist.
+- Read the current official reference for the exact API and version in use; do not assume a recently introduced API exists in the project dependency set.
 - Trace the current architecture and ownership: UI, ViewModel, repositories, data sources, persistence, navigation, and dependency injection.
 - Reproduce the reported issue and inspect logs, crash traces, and existing tests before editing.
 
@@ -30,7 +32,9 @@ Use this skill for Android app implementation, architecture, Compose UI, perform
 - Avoid backwards writes, unnecessary state wrappers, repeated expensive calculations, and unstable high-cost inputs in frequently recomposed paths.
 - For lazy lists, provide stable keys and content types when useful; avoid rebuilding large collections on every recomposition.
 - When a frequently changing state value causes measured unnecessary recomposition, defer its read to the phase that needs it. Prefer lambda-based modifiers such as `Modifier.offset { ... }` for placement or `Modifier.graphicsLayer { ... }` for drawing instead of reading the value during Composition.
-- For derived state, use a plain Kotlin getter for trivial expressions. On Compose 1.13+, consider `computedStateOf` for simple condition/filtering results driven by rapidly changing state; on older versions use `remember { derivedStateOf { ... } }`. Reserve `derivedStateOf` for cases where its invalidation filtering or cached derivation justifies the cost. Verify the project's Compose version and measure before changing code.
+- For derived state, use a plain Kotlin getter for trivial expressions. Use `derivedStateOf` only when its invalidation filtering justifies its cost. Consider newer APIs such as `computedStateOf` only after verifying that the exact Compose version in the project provides them and reading their current official guidance.
+
+Do not recommend `@Stable`, `@Immutable`, immutable collection replacements, or recomposition-count reductions as generic fixes. Check compiler stability inference, equality cost, and real measurements first.
 
 ## 3. Performance workflow
 
@@ -66,7 +70,7 @@ Never claim a build, test, or performance improvement without fresh command outp
 
 - Never place signing keys, passwords, service credentials, or private tokens in source control or logs.
 - Request only permissions required by the feature and explain sensitive permission use.
-- Verify exported components, deep links, intent input, file access, and network security when relevant.
+- Verify exported components, deep links, intent input, file access, and network security when relevant. Use the dedicated Android intent-security skill for inter-component trust boundaries.
 - Keep dependency versions controlled and review dependency changes.
 - Preserve existing signing and release-channel behavior unless the user explicitly requests a migration.
 
