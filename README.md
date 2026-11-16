@@ -80,7 +80,7 @@ python3 scripts/validate_workflow_security.py
 python3 scripts/validate_skill_evaluations.py
 ```
 
-The pre-hardening HEAD passed GitHub Actions run [#43882266198](https://github.com/snowgemm/AI-Skill-Library/actions/runs/43882266198) on commit `4da6933c9eb391bd527c1876348e220e7a3de4a8`: unit and failure-path tests, Agent Skills validation, repository/checksum validation, routing-fixture validation, and workflow-security invariants passed on Python 3.12 and 3.13; the zizmor workflow audit also passed. This is static/CI evidence only, not host-runtime compatibility or skill-effectiveness evidence.
+The latest code-and-test update passed GitHub Actions run [#43884409079](https://github.com/snowgemm/AI-Skill-Library/actions/runs/43884409079) on commit `c46ac4107293cbbe0a255239aae97fe62dda25e8`: unit and failure-path tests, Agent Skills validation, repository/checksum validation, routing-fixture validation, and workflow-security invariants passed on Python 3.12 and 3.13; the zizmor workflow audit also passed. This is static/CI evidence only, not host-runtime compatibility or skill-effectiveness evidence.
 
 ## Licensing and release limits
 

@@ -75,7 +75,7 @@
   "published_repository": "https://github.com/snowgemm/AI-Skill-Library",
   "base_published_branch": "main",
   "working_branch": "main",
-  "ci_verified_commit": "4da6933c9eb391bd527c1876348e220e7a3de4a8",
+  "ci_verified_commit": "c46ac4107293cbbe0a255239aae97fe62dda25e8",
   "validation_status": "148_of_148_catalog_topics_mapped_to_independent_equivalents;155_portable_guides;147_unlicensed;1550_routing_seed_cases;13_external_repositories_reviewed_and_commit_pinned;modern_web_guidance_reference_only;license_aware_catalog_driven_installer;host_runtime_not_tested;commercial_distribution_blocked",
   "skill_expansion_phase": "wave_6_adds_owner_defined_cross_project_workflow_and_installer_catalog_sync",
   "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates",
@@ -86,7 +86,7 @@
   "restoration_status_file": "catalog/restoration-status-148.json",
   "documentation_sources_file": "catalog/documentation-sources.json",
   "current_catalog_file": "catalog/current-installed-skills-148.json",
-  "ci_run_id": 43882266198,
+  "ci_run_id": 43884409079,
   "ci_conclusion": "success",
   "reference_only_external_skill_packs": [
     "modern-web-guidance",
