@@ -1,6 +1,6 @@
 # AI-Skill-Library
 
-**Snapshot:** 2026-11-05 · **Status:** pre-release proposal; not approved for commercial distribution.
+**Snapshot:** 2026-11-16 · **Version:** 0.3.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
 
 A provenance-first registry and governance scaffold for portable AI agent skills. The project separates the historical ChatGPT-installed skill inventory from public upstream repositories and independently authored portable adaptations.
 
@@ -10,7 +10,8 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 - 11 external repositories registered with commit pins and source/license metadata.
 - Five portable skill adaptations for Android Compose, Minecraft Bedrock, Three.js, software engineering methodology and Supabase.
 - Project-scope discovery adapters documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI and Grok Build.
-- A project-scope installer, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included in this proposal branch.
+- A project-scope installer, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
+- Quality CI passed on commit `e98f79c74d96a4dd871f91e8e7451e369f3deeb6`, including Python 3.12/3.13 validation and the zizmor workflow audit.
 
 ## Important limitations
 
@@ -18,43 +19,43 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 - The project has no root-level license. Per-skill notices do not license the installer, catalogue, tests, documentation or repository as a whole.
 - Minecraft vanilla assets covered by the Minecraft EULA are excluded. The project does not accept an EULA on a user's behalf.
 - The repository is not a model-training package. Installing a skill adds instructions to an agent context; it does not change model weights.
-- This proposal is not approved for paid, bundled or hosted commercial distribution until the release gates in [COMMERCIAL-READINESS.md](COMMERCIAL-READINESS.md) are satisfied.
+- This pre-release is not approved for paid, bundled or hosted commercial distribution until the release gates in [COMMERCIAL-READINESS.md](COMMERCIAL-READINESS.md) are satisfied.
 
 ## Key files
 
-- \`MANIFEST.json\` — project status, scope and inventory counts.
-- \`skills/\` — five independently edited portable skill adaptations.
-- \`catalog/chatgpt-installed-skills-125.json\` and \`.csv\` — 125-item metadata inventory, not recovered proprietary skill bodies.
-- \`catalog/portable-skills-phase-1.json\` — skill IDs, source pins and license notices.
-- \`catalog/external-sources.json\` — external repository registry and provenance metadata.
-- \`adapters/\` — five-host compatibility matrix and mapping.
-- \`scripts/install_skills.py\` — safe project-scope installer.
-- \`scripts/validate_skills.py\` — Agent Skills format validator.
-- \`scripts/validate_repository.py\` — catalogue, provenance, workflow and checksum validator.
-- \`scripts/validate_workflow_security.py\` — permission, action-pin and automation hand-off invariant checks.
-- \`scripts/update_checksums.py\` — Git blob SHA-1 inventory generator.
-- \`tests/\` — unit and failure-path regression tests.
-- \`.github/workflows/quality.yml\` — test matrix and pinned zizmor workflow security analysis.
-- \`.github/workflows/upstream-registry.yml\` — fail-closed upstream metadata monitor with checksum refresh and explicit quality dispatch.
-- \`LICENSING.md\`, \`SECURITY.md\`, \`COMMERCIAL-READINESS.md\` — rights, security and release gates.
+- `MANIFEST.json` — project status, scope and inventory counts.
+- `skills/` — five independently edited portable skill adaptations.
+- `catalog/chatgpt-installed-skills-125.json` and `.csv` — 125-item metadata inventory, not recovered proprietary skill bodies.
+- `catalog/portable-skills-phase-1.json` — skill IDs, source pins and license notices.
+- `catalog/external-sources.json` — external repository registry and provenance metadata.
+- `adapters/` — five-host compatibility matrix and mapping.
+- `scripts/install_skills.py` — safe project-scope installer.
+- `scripts/validate_skills.py` — Agent Skills format validator.
+- `scripts/validate_repository.py` — catalogue, provenance, workflow and checksum validator.
+- `scripts/validate_workflow_security.py` — permission, action-pin and automation hand-off invariant checks.
+- `scripts/update_checksums.py` — Git blob SHA-1 inventory generator.
+- `tests/` — unit and failure-path regression tests.
+- `.github/workflows/quality.yml` — test matrix and pinned zizmor workflow security analysis.
+- `.github/workflows/upstream-registry.yml` — fail-closed upstream metadata monitor with checksum refresh and explicit quality dispatch.
+- `LICENSING.md`, `SECURITY.md`, `COMMERCIAL-READINESS.md` — rights, security and release gates.
 
 ## Local validation
 
-\`\`\`bash
+```bash
 python3 -m pip install -r requirements-dev.txt
 python3 -m unittest discover --start-directory tests --verbose
 python3 scripts/validate_skills.py
 python3 scripts/validate_repository.py
 python3 scripts/validate_workflow_security.py
-\`\`\`
+```
 
 Regenerate the Git blob checksum inventory after staging changes:
 
-\`\`\`bash
+```bash
 git add -A
 python3 scripts/update_checksums.py
 git add checksums.git-blob-sha1.txt
-\`\`\`
+```
 
 ## Governance
 
