@@ -17,6 +17,8 @@ concurrency:
 jobs:
   validate:
     name: Validate (Python ${{ matrix.python-version }})
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
