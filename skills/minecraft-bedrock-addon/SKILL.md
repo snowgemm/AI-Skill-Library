@@ -4,9 +4,10 @@ description: Create, debug, validate, and package Minecraft Bedrock behavior/res
 license: MIT
 metadata:
   author: AI-Skill-Library contributors
-  version: "1.0.0"
+  version: "1.1.0"
   upstream: https://github.com/Mojang/minecraft-creator-tools
   upstream-commit: a8f2cd2fc7aa7e7e075dbf54a4597319aa8b71e1
+  reviewed-upstream-head: 114ebc99f31ba2fd37e7daf71643ea1c9f940fd6
 ---
 
 # Minecraft Bedrock Add-on Engineering
@@ -42,7 +43,9 @@ Do not treat a successful static validation as proof that in-game behavior is co
 
 ## 4. Version and compatibility discipline
 
-- Check current Microsoft/Mojang documentation and release notes before using new components or Script API methods.
+- Check current Microsoft/Mojang documentation, Creator Tools release notes, and the installed CLI help before using new components or Script API methods.
+- Creator Tools currently documents Node.js 22 or later. Verify the installed Node.js and tool versions before running commands; do not assume an older environment is compatible.
+- Prefer version-matched skills and references exposed by the installed Creator Tools package/MCP server when available. A skill printed from a different package version may describe different commands.
 - Treat upstream HEAD moving beyond the recorded source pin as drift, not permission to update it automatically. Review the exact changed skill/schema/API files, dependencies, license notices and Minecraft EULA boundaries before changing a pin or importing material.
 - Match schemas and API modules to the declared target version.
 - Do not blindly rewrite every `format_version` or `min_engine_version`; confirm the schema migration and compatibility impact first.
@@ -50,10 +53,14 @@ Do not treat a successful static validation as proof that in-game behavior is co
 
 ## 5. Safe tool usage
 
-- Inspect CLI help before using unfamiliar commands. Pin tool versions for reproducible project automation rather than relying on an unbounded latest version in CI.
+- Inspect `mct --help` and the specific `mct <command> --help` before relying on a flag. A command that does not support `--dry-run` should fail rather than be treated as safely previewed; do not assume unsupported flags are ignored harmlessly.
+- For reproducible automation, pin a reviewed Creator Tools package version. Do not use an unbounded `@latest` in CI or repeatable build scripts unless the user explicitly accepts that update policy.
 - Use temporary output folders for generated reports so the user's project remains clean.
 - Preview in-place fixes or make a backup/commit first. Explain destructive changes and ask before applying them.
-- Never accept the Minecraft EULA for the user or set an environment variable that silently accepts it. If a workflow requires acceptance, stop and let the user handle that step.
+- Never accept the Minecraft EULA for the user, set an environment variable that silently accepts it, or continue a workflow that requires acceptance before the user has accepted it themselves. Where the current CLI documents an explicit consent flow such as `mct eula --accept`, the user must run or confirm that action.
+- Do not trust arbitrary file/folder paths supplied to an MCP or local tool. Confirm the command supports the operation, normalize paths, and keep writes within the selected project root.
+- Creator Tools' HTTP API exposes only commands that explicitly opt in. Do not assume every CLI command is available through `mct serve`; validate inputs and handle unsupported operations as errors.
+- A command that is interrupted or returns a non-zero exit status is not success. Check the actual output files and logs before reporting completion.
 - Do not execute unreviewed scripts from downloaded packs or tools.
 
 ## 6. Packaging and final checks
@@ -65,7 +72,7 @@ Before exporting a `.mcpack` or `.mcaddon`:
 - Test the add-on in the target Bedrock version when possible.
 - Confirm the archive contains the intended BP/RP folders and no temporary reports or secrets.
 
-Report the exact target version, validation result, remaining warnings, and whether an in-game test was performed.
+Report the exact target version, validator/tool version, validation result, remaining warnings, and whether an in-game test was performed.
 
 ## References
 
