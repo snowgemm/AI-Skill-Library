@@ -148,6 +148,13 @@ a3a2548ac17c27def39bbe3642f7259becb25934  skills/vercel-react-best-practices/SKI
 3c2eae427b17d88a202d7906384f78ca6c19e9ef  skills/vercel-vercel-agent/SKILL.md
 0f3a5855b96570379578b148f62931209ebe2cbb  skills/vercel-vercel-cli/SKILL.md
 7a6a87a916f66f08a712320ba319b4c5fa0b309a  skills/vercel-vercel-connect/SKILL.md
+ddab56a1f7f9d6ec0d230784218fbae6f2ee3d8f  skills/vercel-vercel-firewall/SKILL.md
+c4e3f7c2fd03911ff129bb2ca3ac856101974434  skills/vercel-vercel-functions/SKILL.md
+a6b93c350072acb88896e8b26dbf0a6eaa03c021  skills/vercel-vercel-sandbox/SKILL.md
+c3911a592dc031072ab91fc0ad3d92f6c3ff2300  skills/vercel-vercel-services/SKILL.md
+20c9f35c8ba2e3aaab3d6dd0df1b372dd73c800e  skills/vercel-vercel-storage/SKILL.md
+db0339a00acffa785a6ed0b7e961d2f3380ed435  skills/vercel-verification/SKILL.md
+36c782c855e3a60a96f111dd38c2cbfc1fea40a6  skills/vercel-workflow/SKILL.md
 0ecd03365b681aca5225c6377f88b7bd70696e0d  skills/vibecoder-ai-coding-tools-guide/SKILL.md
 f1c609dbe0de74c036d7c72ee46458d89bb61fd5  skills/vibecoder-ai-features-builder/SKILL.md
 8f68ef3037a95ce71743d597240b35b2e5e28b0d  skills/vibecoder-app-safety-and-speed/SKILL.md
