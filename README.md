@@ -69,7 +69,7 @@ The full 77-guide inventory is in [`catalog/portable-skills-phase-1.json`](catal
 ## Key files
 
 - `MANIFEST.json` — project status, scope and inventory counts.
-- `skills/` — 77 portable skill guides, including 23 UNLICENSED Auth0/Render independent adaptations.
+- `skills/` — 77 portable guides, including 69 UNLICENSED Auth0/Render/Data/Vibe Coder independent adaptations.
 - `catalog/current-installed-skills-148.json` — current 148-item installed-skill inventory.
 - `catalog/restoration-status-148.json` — per-entry status showing whether an independent portable equivalent exists.
 - `catalog/documentation-sources.json` — public vendor and technical-documentation references for independently authored guides.
