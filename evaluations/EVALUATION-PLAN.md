@@ -12,7 +12,7 @@ Do not compare runs with different model versions, task prompts, permission sets
 
 ## Routing seed fixtures
 
-`skill-routing-cases.json` contains five positive-trigger and five negative-trigger prompts for each of the eight portable skills (80 cases total). The offline validator checks schema, skill coverage, case counts, IDs, prompts, rationales, and expected activation flags. These are curated test-data seeds only: they do not prove discovery, activation, invocation quality, or host compatibility. They must be executed on each advertised host/version before any runtime-tested claim is made.
+`skill-routing-cases.json` contains five positive-trigger and five negative-trigger prompts for each of the 154 portable guides (1,540 cases total). The offline validator checks schema, skill coverage, case counts, IDs, prompts, rationales, and expected activation flags. These are curated test-data seeds only: they do not prove discovery, activation, invocation quality, or host compatibility. They must be executed on each advertised host/version before any runtime-tested claim is made.
 
 ## Minimum evaluation matrix per skill and host
 
