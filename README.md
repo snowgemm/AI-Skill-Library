@@ -1,6 +1,6 @@
 # AI-Skill-Library
 
-**Snapshot:** 2026-11-16 · **Version:** 0.5.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
+**Snapshot:** 2026-11-16 · **Version:** 0.6.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
 
 A provenance-first registry and governance scaffold for portable AI agent skills. The project separates the historical ChatGPT-installed skill inventory from public upstream repositories and independently authored portable adaptations.
 
@@ -8,9 +8,9 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 
 - 148 currently installed skill identifiers inventoried. The previous 125-item snapshot is preserved as a historical catalog. Internal plugin URIs and private skill bodies are not redistributed.
 - 11 external repositories registered with commit pins and source/license metadata.
-- 31 portable skill guides: eight previously authored engineering adaptations plus 23 independently authored Auth0/Render equivalents.
+- 77 portable skill guides: eight previously authored engineering adaptations plus 23 independently authored Auth0/Render equivalents.
 - Project-scope discovery adapters documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI and Grok Build.
-- A project-scope installer for all 31 skills, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
+- A project-scope installer for all 77 skills, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
 - Upstream monitoring is read-only: it compares pinned sources with current upstream HEAD and reports drift in a GitHub issue. It does not create branches/PRs or update source pins.
 - Quality CI passed on the earlier integration commit `e98f79c74d96a4dd871f91e8e7451e369f3deeb6`; the latest skill expansion and workflow-hardening commits still require a fresh CI result.
 
@@ -51,7 +51,7 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 | `threejs-game-engineering` | Three.js browser game architecture, rendering, gameplay, and profiling |
 | `threejs-qa-release` | Real gameplay QA, responsive checks, browser evidence, performance measurement, and release verification |
 
-The 23 Auth0/Render guides are independently authored from vendor documentation and explicitly marked **UNLICENSED**. They are not recovered host-managed bodies and are not approved for redistribution. Two Supabase guides have license-reviewed independent equivalents. Original host-managed skill bodies remain unexported.
+The 69 Auth0/Render/Data/Vibe Coder guides are independently authored and explicitly marked **UNLICENSED**. They are not recovered host-managed bodies and are not approved for redistribution. Two Supabase catalog entries have license-reviewed independent equivalents. The restoration map currently contains 71 independent equivalents across the 148-item inventory; 77 entries remain metadata-only. Original host-managed skill bodies remain unexported.
 
 ## Important limitations
 
@@ -64,7 +64,7 @@ The 23 Auth0/Render guides are independently authored from vendor documentation 
 ## Key files
 
 - `MANIFEST.json` — project status, scope and inventory counts.
-- `skills/` — 31 portable skill guides, including 23 UNLICENSED Auth0/Render independent adaptations.
+- `skills/` — 77 portable skill guides, including 23 UNLICENSED Auth0/Render independent adaptations.
 - `catalog/current-installed-skills-148.json` — current 148-item installed-skill inventory.
 - `catalog/restoration-status-148.json` — per-entry status showing whether an independent portable equivalent exists.
 - `catalog/documentation-sources.json` — public vendor-documentation references for Auth0 and Render guides.
@@ -77,7 +77,7 @@ The 23 Auth0/Render guides are independently authored from vendor documentation 
 - `scripts/validate_skills.py` — Agent Skills format validator.
 - `scripts/validate_repository.py` — catalogue, provenance, workflow and checksum validator.
 - `scripts/validate_workflow_security.py` — permission, action-pin and automation hand-off invariant checks.
-- `evaluations/skill-routing-cases.json` — 310 positive/negative trigger seed cases across the 31 portable skills.
+- `evaluations/skill-routing-cases.json` — 770 positive/negative trigger seed cases across the 77 portable skills.
 - `scripts/validate_skill_evaluations.py` — offline schema and coverage validator for the routing dataset.
 - `scripts/update_checksums.py` — Git blob SHA-1 inventory generator.
 - `tests/` — unit and failure-path regression tests.
