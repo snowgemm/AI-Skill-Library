@@ -2,7 +2,7 @@
 
 All notable repository changes are documented here. A version is not considered released until a signed/tagged release points to a commit that passed its release gates.
 
-## Unreleased — 0.5.0 pre-release restoration wave
+## Unreleased — 0.6.0 pre-release restoration wave
 
 ### Added
 - Strict Agent Skills frontmatter validation with duplicate-key detection.
@@ -15,6 +15,8 @@ All notable repository changes are documented here. A version is not considered 
 - Three additional specialist portable skills and 80 routing cases (five positive and five negative for each initial skill set); fixtures do not claim host runtime activation.
 - 23 independently authored Auth0/Render equivalents from public vendor documentation. Host-managed bodies were not copied; the new files are UNLICENSED pending a repository-level licensing decision.
 - Current installed-skill inventory expanded from the preserved 125-item historical snapshot to 148 items after a live catalog comparison.
+- 21 independently authored Data workflow guides and 25 Vibe Coder software-engineering guides were added; all 46 are UNLICENSED and not approved for redistribution.
+- Portable installer, host adapters, catalog and routing fixtures expanded to 77 guides and 770 routing seed cases.
 
 ### Changed
 - Installer requires an existing project directory, stages all skills before installation, refuses symlink paths and attempts rollback on failure.
