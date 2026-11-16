@@ -166,8 +166,12 @@ def validate() -> list[str]:
             if original_docs:
                 if metadata.get("license") != "UNLICENSED":
                     errors.append(f"{skill_id}: frontmatter must mark the original adaptation UNLICENSED")
-                if not isinstance(extra, dict) or extra.get("source-type") != "independent-documentation-adaptation":
-                    errors.append(f"{skill_id}: frontmatter must identify independent-documentation-adaptation")
+                allowed_original_types = {
+                    "independent-documentation-adaptation",
+                    "independent-methodology-adaptation",
+                }
+                if not isinstance(extra, dict) or extra.get("source-type") not in allowed_original_types:
+                    errors.append(f"{skill_id}: frontmatter must identify an allowed independent adaptation source type")
                 elif extra.get("reviewed-on") != reviewed_on:
                     errors.append(f"{skill_id}: frontmatter reviewed-on differs from catalogue")
                 if isinstance(extra, dict) and "upstream-commit" in extra:
