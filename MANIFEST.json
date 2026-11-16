@@ -61,7 +61,10 @@
   "base_published_branch": "main",
   "working_branch": "main",
   "ci_verified_commit": "e98f79c74d96a4dd871f91e8e7451e369f3deeb6",
-  "validation_status": "quality_ci_passed_on_prior_main_commit;phase_2_changes_pending_ci;host_runtime_not_tested;commercial_distribution_blocked",
+  "validation_status": "phase_2_static_and_routing_fixture_validation_pending_ci;host_runtime_not_tested;commercial_distribution_blocked",
   "skill_expansion_phase": "phase_2_adds_android_intent_security_threejs_qa_and_supabase_postgres",
-  "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates"
+  "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates",
+  "skill_routing_cases_file": "evaluations/skill-routing-cases.json",
+  "skill_evaluation_validator": "scripts/validate_skill_evaluations.py",
+  "routing_case_seed_count": 80
 }
