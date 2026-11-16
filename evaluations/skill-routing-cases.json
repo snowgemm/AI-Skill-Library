@@ -1,0 +1,547 @@
+{
+  "schema_version": "1.0.0",
+  "status": "seed_cases_only_not_runtime_tested",
+  "description": "Skill-routing cases define expected activation intent. A schema pass does not prove that a particular AI host activates or suppresses a skill correctly.",
+  "requirements": {
+    "positive_cases_per_skill": 5,
+    "negative_cases_per_skill": 5
+  },
+  "skills": [
+    {
+      "skill_id": "android-compose-engineering",
+      "positive_cases": [
+        {
+          "id": "ac-positive-01",
+          "prompt": "A Jetpack Compose screen recomposes on every timer tick. Profile the cause and reduce the measured work without changing behavior.",
+          "expected_activation": true,
+          "rationale": "Measured Compose performance investigation."
+        },
+        {
+          "id": "ac-positive-02",
+          "prompt": "Show how a ViewModel should expose StateFlow UI state and how a Compose screen should collect it with lifecycle awareness.",
+          "expected_activation": true,
+          "rationale": "Compose state and lifecycle integration."
+        },
+        {
+          "id": "ac-positive-03",
+          "prompt": "A LazyColumn with thousands of rows stutters. Inspect stable keys, content types, allocations, and frame traces.",
+          "expected_activation": true,
+          "rationale": "Lazy layout performance and profiling."
+        },
+        {
+          "id": "ac-positive-04",
+          "prompt": "Add Compose UI tests for loading, empty, error, and successful states, including navigation behavior.",
+          "expected_activation": true,
+          "rationale": "Compose UI verification."
+        },
+        {
+          "id": "ac-positive-05",
+          "prompt": "Review this derivedStateOf usage and check whether the project's Compose version supports the proposed API.",
+          "expected_activation": true,
+          "rationale": "Version-aware Compose state guidance."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "ac-negative-01",
+          "prompt": "Review an exported Android Activity that accepts arbitrary deep links from other apps.",
+          "expected_activation": false,
+          "rationale": "This is an Android Intent trust-boundary review."
+        },
+        {
+          "id": "ac-negative-02",
+          "prompt": "Design row-level security policies for a multi-tenant Supabase database.",
+          "expected_activation": false,
+          "rationale": "This is Supabase/PostgreSQL authorization."
+        },
+        {
+          "id": "ac-negative-03",
+          "prompt": "Create a Minecraft Bedrock behavior pack with a custom block and recipe.",
+          "expected_activation": false,
+          "rationale": "This is Minecraft Bedrock authoring."
+        },
+        {
+          "id": "ac-negative-04",
+          "prompt": "A Three.js browser game renders a blank canvas after asset loading.",
+          "expected_activation": false,
+          "rationale": "This is a Three.js rendering/debugging task."
+        },
+        {
+          "id": "ac-negative-05",
+          "prompt": "Use EXPLAIN ANALYZE to diagnose a slow PostgreSQL query and recommend an index.",
+          "expected_activation": false,
+          "rationale": "This is PostgreSQL query engineering."
+        }
+      ]
+    },
+    {
+      "skill_id": "android-intent-security",
+      "positive_cases": [
+        {
+          "id": "ais-positive-01",
+          "prompt": "Review an Android app's merged manifest and identify exported activities that accept untrusted input.",
+          "expected_activation": true,
+          "rationale": "Exported component surface review."
+        },
+        {
+          "id": "ais-positive-02",
+          "prompt": "A deep link accepts a URI and forwards a nested Intent. Design an allowlist-based validation boundary.",
+          "expected_activation": true,
+          "rationale": "Incoming Intent and deep-link validation."
+        },
+        {
+          "id": "ais-positive-03",
+          "prompt": "Audit PendingIntent creation and decide whether each token should be immutable or mutable.",
+          "expected_activation": true,
+          "rationale": "PendingIntent security."
+        },
+        {
+          "id": "ais-positive-04",
+          "prompt": "Harden a ContentProvider that exposes files through URI grants and query arguments.",
+          "expected_activation": true,
+          "rationale": "ContentProvider access boundary."
+        },
+        {
+          "id": "ais-positive-05",
+          "prompt": "A bound Android service performs sensitive operations. Verify Binder caller identity for each protected transaction.",
+          "expected_activation": true,
+          "rationale": "Binder/IPC authorization."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "ais-negative-01",
+          "prompt": "A Compose LazyColumn recomposes too often when scrolling. Measure and optimize it.",
+          "expected_activation": false,
+          "rationale": "This is Compose performance, not component IPC."
+        },
+        {
+          "id": "ais-negative-02",
+          "prompt": "Create a Minecraft Bedrock add-on with an entity, loot table, and resource pack.",
+          "expected_activation": false,
+          "rationale": "This is Minecraft Bedrock authoring."
+        },
+        {
+          "id": "ais-negative-03",
+          "prompt": "Optimize the renderer and texture memory of a Three.js game.",
+          "expected_activation": false,
+          "rationale": "This is Three.js profiling."
+        },
+        {
+          "id": "ais-negative-04",
+          "prompt": "Create a Supabase Auth flow with password reset and session refresh.",
+          "expected_activation": false,
+          "rationale": "This is Supabase application integration."
+        },
+        {
+          "id": "ais-negative-05",
+          "prompt": "Improve a PostgreSQL query plan using EXPLAIN and index analysis.",
+          "expected_activation": false,
+          "rationale": "This is PostgreSQL performance."
+        }
+      ]
+    },
+    {
+      "skill_id": "minecraft-bedrock-addon",
+      "positive_cases": [
+        {
+          "id": "mb-positive-01",
+          "prompt": "Check the BP and RP manifests for matching UUID dependencies, versions, and min_engine_version.",
+          "expected_activation": true,
+          "rationale": "Bedrock pack manifests and dependencies."
+        },
+        {
+          "id": "mb-positive-02",
+          "prompt": "A custom Bedrock entity is invisible in-game. Trace geometry, render controller, texture references, and Content Log output.",
+          "expected_activation": true,
+          "rationale": "Bedrock runtime asset debugging."
+        },
+        {
+          "id": "mb-positive-03",
+          "prompt": "Review whether a Script API method is compatible with the pack's declared module version and target Bedrock version.",
+          "expected_activation": true,
+          "rationale": "Version-matched Bedrock Script API."
+        },
+        {
+          "id": "mb-positive-04",
+          "prompt": "Package two behavior/resource packs into a distributable mcaddon and verify the archive structure.",
+          "expected_activation": true,
+          "rationale": "Bedrock add-on packaging."
+        },
+        {
+          "id": "mb-positive-05",
+          "prompt": "Check the installed Creator Tools CLI and diagnose a failed mct validation command without assuming the operation succeeded.",
+          "expected_activation": true,
+          "rationale": "Creator Tools CLI validation."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "mb-negative-01",
+          "prompt": "Write a Fabric mod for Minecraft Java Edition that registers a custom block.",
+          "expected_activation": false,
+          "rationale": "This skill explicitly excludes Java Edition mods."
+        },
+        {
+          "id": "mb-negative-02",
+          "prompt": "Build a Jetpack Compose Android screen with lifecycle-aware StateFlow collection.",
+          "expected_activation": false,
+          "rationale": "This is Android Compose."
+        },
+        {
+          "id": "mb-negative-03",
+          "prompt": "Create a Three.js game loop with fixed-step physics and renderer cleanup.",
+          "expected_activation": false,
+          "rationale": "This is Three.js game engineering."
+        },
+        {
+          "id": "mb-negative-04",
+          "prompt": "Design a Supabase schema and add tenant-scoped RLS policies.",
+          "expected_activation": false,
+          "rationale": "This is Supabase/PostgreSQL."
+        },
+        {
+          "id": "mb-negative-05",
+          "prompt": "Review an Android PendingIntent and exported BroadcastReceiver for security issues.",
+          "expected_activation": false,
+          "rationale": "This is Android component security."
+        }
+      ]
+    },
+    {
+      "skill_id": "threejs-game-engineering",
+      "positive_cases": [
+        {
+          "id": "tj-positive-01",
+          "prompt": "A Three.js scene's render loop slows down on mobile. Identify whether CPU, GPU, fill rate, or asset loading is the bottleneck.",
+          "expected_activation": true,
+          "rationale": "Three.js rendering and profiling."
+        },
+        {
+          "id": "tj-positive-02",
+          "prompt": "Refactor a browser game's animation loop to use renderer.setAnimationLoop and correct delta-time handling.",
+          "expected_activation": true,
+          "rationale": "Three.js renderer loop lifecycle."
+        },
+        {
+          "id": "tj-positive-03",
+          "prompt": "A game scene leaks GPU memory when switching levels. Review geometry, material, texture, and renderer disposal ownership.",
+          "expected_activation": true,
+          "rationale": "Three.js resource lifecycle."
+        },
+        {
+          "id": "tj-positive-04",
+          "prompt": "Add touch input and responsive camera updates to an existing Three.js game.",
+          "expected_activation": true,
+          "rationale": "Three.js input and viewport handling."
+        },
+        {
+          "id": "tj-positive-05",
+          "prompt": "Debug a missing GLTF model by checking asset URLs, MIME type, CORS, loading callbacks, and transforms.",
+          "expected_activation": true,
+          "rationale": "Three.js asset loading diagnostics."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "tj-negative-01",
+          "prompt": "Create a Minecraft Bedrock resource pack with custom block textures and a manifest.",
+          "expected_activation": false,
+          "rationale": "This is Minecraft Bedrock content authoring."
+        },
+        {
+          "id": "tj-negative-02",
+          "prompt": "Optimize an Android Compose screen that performs expensive recomposition.",
+          "expected_activation": false,
+          "rationale": "This is Android Compose."
+        },
+        {
+          "id": "tj-negative-03",
+          "prompt": "Build a Supabase Edge Function with authentication and database access.",
+          "expected_activation": false,
+          "rationale": "This is Supabase backend integration."
+        },
+        {
+          "id": "tj-negative-04",
+          "prompt": "Review Android deep links and PendingIntent mutability for security.",
+          "expected_activation": false,
+          "rationale": "This is Android Intent security."
+        },
+        {
+          "id": "tj-negative-05",
+          "prompt": "Design a PostgreSQL index and validate it with EXPLAIN (ANALYZE, BUFFERS).",
+          "expected_activation": false,
+          "rationale": "This is PostgreSQL query engineering."
+        }
+      ]
+    },
+    {
+      "skill_id": "threejs-qa-release",
+      "positive_cases": [
+        {
+          "id": "tq-positive-01",
+          "prompt": "Create a Playwright smoke test that starts the Three.js game, begins a round, interacts, pauses, and restarts.",
+          "expected_activation": true,
+          "rationale": "Real browser gameplay smoke test."
+        },
+        {
+          "id": "tq-positive-02",
+          "prompt": "The game canvas is blank in production. Capture console errors, failed asset requests, canvas pixels, and the production base path.",
+          "expected_activation": true,
+          "rationale": "Three.js production/browser diagnostics."
+        },
+        {
+          "id": "tq-positive-03",
+          "prompt": "Verify desktop keyboard/mouse and mobile touch controls across the game's supported viewports and orientations.",
+          "expected_activation": true,
+          "rationale": "Responsive game QA."
+        },
+        {
+          "id": "tq-positive-04",
+          "prompt": "Compare frame time and draw calls before and after a renderer optimization using the same scene and device.",
+          "expected_activation": true,
+          "rationale": "Measured Three.js performance regression test."
+        },
+        {
+          "id": "tq-positive-05",
+          "prompt": "Prepare a Three.js game release checklist covering production build, core loop, audio lifecycle, assets, and deployment.",
+          "expected_activation": true,
+          "rationale": "Three.js game release verification."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "tq-negative-01",
+          "prompt": "Write a static marketing page with a responsive CSS navigation bar and no WebGL or game loop.",
+          "expected_activation": false,
+          "rationale": "This is a web UI task, not Three.js game QA."
+        },
+        {
+          "id": "tq-negative-02",
+          "prompt": "Create a Minecraft Bedrock pack and validate its manifest dependencies.",
+          "expected_activation": false,
+          "rationale": "This is Minecraft Bedrock authoring."
+        },
+        {
+          "id": "tq-negative-03",
+          "prompt": "Add a new row-level security policy to a Supabase table.",
+          "expected_activation": false,
+          "rationale": "This is Supabase/PostgreSQL."
+        },
+        {
+          "id": "tq-negative-04",
+          "prompt": "Build a Compose UI test for an Android settings screen.",
+          "expected_activation": false,
+          "rationale": "This is Android app testing."
+        },
+        {
+          "id": "tq-negative-05",
+          "prompt": "Brainstorm a high-level story premise for a game without inspecting or testing an existing project.",
+          "expected_activation": false,
+          "rationale": "This asks for ideation, not QA or release verification."
+        }
+      ]
+    },
+    {
+      "skill_id": "superpowers-engineering-workflow",
+      "positive_cases": [
+        {
+          "id": "sp-positive-01",
+          "prompt": "A bug report has a stack trace but no obvious cause. Reproduce it, trace the failing value, and add a focused regression test.",
+          "expected_activation": true,
+          "rationale": "Systematic debugging and regression test."
+        },
+        {
+          "id": "sp-positive-02",
+          "prompt": "Implement a new deterministic function with clear acceptance criteria and a practical unit-test boundary.",
+          "expected_activation": true,
+          "rationale": "Task-appropriate TDD."
+        },
+        {
+          "id": "sp-positive-03",
+          "prompt": "Plan a multi-file refactor with scope, non-goals, checkpoints, and verification commands.",
+          "expected_activation": true,
+          "rationale": "Engineering planning and scope control."
+        },
+        {
+          "id": "sp-positive-04",
+          "prompt": "Review a completed code change for correctness, security, compatibility, and untested assumptions.",
+          "expected_activation": true,
+          "rationale": "Independent engineering review."
+        },
+        {
+          "id": "sp-positive-05",
+          "prompt": "Before reporting that a build fix is complete, identify and run the exact command that proves the claim.",
+          "expected_activation": true,
+          "rationale": "Evidence-based verification."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "sp-negative-01",
+          "prompt": "Suggest five lunch ideas that can be prepared with common ingredients.",
+          "expected_activation": false,
+          "rationale": "This is a cooking request, not software engineering."
+        },
+        {
+          "id": "sp-negative-02",
+          "prompt": "Explain the difference between a metaphor and a simile for an English class.",
+          "expected_activation": false,
+          "rationale": "This is a general language explanation."
+        },
+        {
+          "id": "sp-negative-03",
+          "prompt": "Translate this short paragraph from Vietnamese into English without modifying software.",
+          "expected_activation": false,
+          "rationale": "This is a translation task."
+        },
+        {
+          "id": "sp-negative-04",
+          "prompt": "Create a bedtime story about a dragon and a lighthouse.",
+          "expected_activation": false,
+          "rationale": "This is creative writing."
+        },
+        {
+          "id": "sp-negative-05",
+          "prompt": "Convert 3.5 kilometers to meters.",
+          "expected_activation": false,
+          "rationale": "This is a unit conversion, not an engineering workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "supabase-engineering",
+      "positive_cases": [
+        {
+          "id": "se-positive-01",
+          "prompt": "Add Supabase Auth sign-in, sign-out, and session refresh to a web app using the project's existing client library.",
+          "expected_activation": true,
+          "rationale": "Supabase Auth application integration."
+        },
+        {
+          "id": "se-positive-02",
+          "prompt": "Create a Supabase Edge Function that validates an authenticated request and calls a protected backend operation.",
+          "expected_activation": true,
+          "rationale": "Supabase Edge Functions."
+        },
+        {
+          "id": "se-positive-03",
+          "prompt": "Design Storage access policies for users who may only manage files belonging to their own workspace.",
+          "expected_activation": true,
+          "rationale": "Supabase Storage and authorization."
+        },
+        {
+          "id": "se-positive-04",
+          "prompt": "Review a Supabase migration and RLS policy for a new multi-tenant application feature.",
+          "expected_activation": true,
+          "rationale": "Supabase schema and RLS integration."
+        },
+        {
+          "id": "se-positive-05",
+          "prompt": "Integrate Supabase Realtime updates into an app while handling subscriptions and cleanup.",
+          "expected_activation": true,
+          "rationale": "Supabase Realtime integration."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "se-negative-01",
+          "prompt": "Diagnose a PostgreSQL query using EXPLAIN ANALYZE and design a covering index.",
+          "expected_activation": false,
+          "rationale": "This is the specialist PostgreSQL performance skill."
+        },
+        {
+          "id": "se-negative-02",
+          "prompt": "Create a Bedrock entity with a behavior pack and resource pack.",
+          "expected_activation": false,
+          "rationale": "This is Minecraft Bedrock authoring."
+        },
+        {
+          "id": "se-negative-03",
+          "prompt": "Fix recomposition caused by an unstable Compose UI state model.",
+          "expected_activation": false,
+          "rationale": "This is Android Compose."
+        },
+        {
+          "id": "se-negative-04",
+          "prompt": "Profile GPU draw calls and texture memory in a Three.js browser game.",
+          "expected_activation": false,
+          "rationale": "This is Three.js game engineering."
+        },
+        {
+          "id": "se-negative-05",
+          "prompt": "Review PendingIntent mutability and exported Android components.",
+          "expected_activation": false,
+          "rationale": "This is Android Intent security."
+        }
+      ]
+    },
+    {
+      "skill_id": "supabase-postgres-best-practices",
+      "positive_cases": [
+        {
+          "id": "spg-positive-01",
+          "prompt": "A PostgreSQL query is slow under production-like data. Interpret EXPLAIN (ANALYZE, BUFFERS) and identify the dominant cost.",
+          "expected_activation": true,
+          "rationale": "Query plan diagnosis."
+        },
+        {
+          "id": "spg-positive-02",
+          "prompt": "Choose a multi-column or partial index for a measured Supabase query predicate and compare its write overhead.",
+          "expected_activation": true,
+          "rationale": "Index design based on workload."
+        },
+        {
+          "id": "spg-positive-03",
+          "prompt": "Investigate Supabase connection exhaustion and transaction pooling behavior before changing pool settings.",
+          "expected_activation": true,
+          "rationale": "Connection management and pooler semantics."
+        },
+        {
+          "id": "spg-positive-04",
+          "prompt": "Audit a Supabase table's grants, default privileges, RLS USING/WITH CHECK policies, and service_role exposure.",
+          "expected_activation": true,
+          "rationale": "PostgreSQL grants and RLS security."
+        },
+        {
+          "id": "spg-positive-05",
+          "prompt": "Plan a large-table migration while limiting lock duration, backfill risk, and deploy-order conflicts.",
+          "expected_activation": true,
+          "rationale": "Schema and migration engineering."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "spg-negative-01",
+          "prompt": "Implement Supabase password reset, email verification, and auth session handling in a frontend app.",
+          "expected_activation": false,
+          "rationale": "This is Supabase application/Auth integration."
+        },
+        {
+          "id": "spg-negative-02",
+          "prompt": "Create a Minecraft Bedrock add-on with custom item recipes.",
+          "expected_activation": false,
+          "rationale": "This is Minecraft Bedrock authoring."
+        },
+        {
+          "id": "spg-negative-03",
+          "prompt": "Optimize a Compose LazyColumn and verify frame timing.",
+          "expected_activation": false,
+          "rationale": "This is Android Compose performance."
+        },
+        {
+          "id": "spg-negative-04",
+          "prompt": "Fix a Three.js renderer context-loss issue in a browser game.",
+          "expected_activation": false,
+          "rationale": "This is Three.js rendering/debugging."
+        },
+        {
+          "id": "spg-negative-05",
+          "prompt": "Review a deep-link URI and decide how an Android app should validate incoming Intent extras.",
+          "expected_activation": false,
+          "rationale": "This is Android Intent security."
+        }
+      ]
+    }
+  ]
+}
