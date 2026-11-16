@@ -139,11 +139,11 @@ class RepositoryIntegrityTests(unittest.TestCase):
             self.build_fixture(root)
             skill_path = root / "skills/demo-skill/SKILL.md"
             skill_path.write_text(
-                "---\\nname: demo-skill\\ndescription: Independent demo guide\\nlicense: UNLICENSED\\nmetadata:\\n  source-type: independent-documentation-adaptation\\n  reviewed-on: '2026-11-16'\\n---\\n\\n# Original instructions\\n",
+                "---\nname: demo-skill\ndescription: Independent demo guide\nlicense: UNLICENSED\nmetadata:\n  source-type: independent-documentation-adaptation\n  reviewed-on: '2026-11-16'\n---\n\n# Original instructions\n",
                 encoding="utf-8",
             )
             notice = root / "licenses/original-content-UNLICENSED.md"
-            notice.write_text("No redistribution license is granted.\\n", encoding="utf-8")
+            notice.write_text("No redistribution license is granted.\n", encoding="utf-8")
             catalogue_path = root / "catalog/portable-skills-phase-1.json"
             catalogue = json.loads(catalogue_path.read_text(encoding="utf-8"))
             catalogue["skills"][0] = {
@@ -167,11 +167,11 @@ class RepositoryIntegrityTests(unittest.TestCase):
             self.build_fixture(root)
             skill_path = root / "skills/demo-skill/SKILL.md"
             skill_path.write_text(
-                "---\\nname: demo-skill\\ndescription: Independent demo guide\\nlicense: UNLICENSED\\nmetadata:\\n  source-type: independent-documentation-adaptation\\n  reviewed-on: '2026-11-16'\\n---\\n\\n# Original instructions\\n",
+                "---\nname: demo-skill\ndescription: Independent demo guide\nlicense: UNLICENSED\nmetadata:\n  source-type: independent-documentation-adaptation\n  reviewed-on: '2026-11-16'\n---\n\n# Original instructions\n",
                 encoding="utf-8",
             )
             notice = root / "licenses/original-content-UNLICENSED.md"
-            notice.write_text("No redistribution license is granted.\\n", encoding="utf-8")
+            notice.write_text("No redistribution license is granted.\n", encoding="utf-8")
             catalogue_path = root / "catalog/portable-skills-phase-1.json"
             catalogue = json.loads(catalogue_path.read_text(encoding="utf-8"))
             catalogue["skills"][0] = {
