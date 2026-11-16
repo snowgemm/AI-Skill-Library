@@ -67,6 +67,26 @@ class RepositoryIntegrityTests(unittest.TestCase):
         )
         subprocess.run(["git", "add", "checksums.git-blob-sha1.txt"], cwd=root, check=True)
 
+    def refresh_fixture_checksums(self, root: Path) -> None:
+        subprocess.run(["git", "add", "."], cwd=root, check=True)
+        tracked = subprocess.run(
+            ["git", "ls-files", "-z"], cwd=root, check=True,
+            stdout=subprocess.PIPE,
+        ).stdout.split(b"\\0")
+        rows = []
+        for raw in tracked:
+            if not raw:
+                continue
+            relative = raw.decode("utf-8")
+            if relative == "checksums.git-blob-sha1.txt":
+                continue
+            payload = (root / relative).read_bytes()
+            rows.append(f"{validate_repository.git_blob_sha1(payload)}  {relative}")
+        (root / "checksums.git-blob-sha1.txt").write_text(
+            "\\n".join(sorted(rows)) + "\\n", encoding="utf-8"
+        )
+        subprocess.run(["git", "add", "checksums.git-blob-sha1.txt"], cwd=root, check=True)
+
     def run_fixture(self, root: Path) -> list[str]:
         old_root, old_checksum = validate_repository.ROOT, validate_repository.CHECKSUM_FILE
         try:
@@ -159,6 +179,7 @@ class RepositoryIntegrityTests(unittest.TestCase):
             catalogue_path.write_text(json.dumps(catalogue), encoding="utf-8")
             source_path = root / "catalog/external-sources.json"
             source_path.write_text(json.dumps({"sources": []}), encoding="utf-8")
+            self.refresh_fixture_checksums(root)
             self.assertEqual(self.run_fixture(root), [])
 
     def test_repository_validator_rejects_original_adaptation_with_missing_documentation_sources(self) -> None:
