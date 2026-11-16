@@ -1,5 +1,5 @@
 {
-  "snapshot_date": "2026-11-05",
+  "snapshot_date": "2026-11-16",
   "sources": [
     {
       "id": "agentskills-spec",
@@ -26,7 +26,7 @@
       "commit_date": "2026-11-04T10:44:04Z",
       "license": "Apache-2.0",
       "role": "official_android_skills",
-      "verification": "repo README + group directories + four SKILL.md files read",
+      "verification": "Current repository metadata, README, Compose performance and intent-security skill files read; latest HEAD is plugin v1.0.23",
       "inspected_paths": [
         "jetpack-compose/jetpack-compose-performance/SKILL.md",
         "performance/r8-analyzer/SKILL.md",
@@ -36,16 +36,21 @@
       "findings": [
         "Official Android-focused AI instructions; aimed at workflows where evaluations show model weaknesses.",
         "Examples cover Compose performance, R8, intent security, and test setup.",
-        "Some skills have references/ and scripts/; test dependencies and commands must be checked per skill."
+        "Some skills have references/ and scripts/; test dependencies and commands must be checked per skill.",
+        "The 2026-11-15 HEAD change bumps plugin manifests to v1.0.23; it is recorded as upstream drift and does not automatically change the pinned content revision."
       ],
       "import_decision": "high_priority_selective_import_after_file_and_license_review",
-      "upstream_latest_commit": "bf68e2d66a992a1e6aeb7e9263293cc23fcbf475",
-      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
-      "upstream_update_available": false,
+      "upstream_latest_commit": "c72942584fff970dac86ced78b367fce0c441e52",
+      "upstream_latest_checked_at": "2026-11-16T05:23:52.682Z",
+      "upstream_update_available": true,
       "portable_skill_path": "skills/android-compose-engineering/SKILL.md",
       "portable_skill_type": "independently_edited_adaptation",
       "redistribution_license": "Apache-2.0",
-      "redistribution_license_file": "licenses/upstream/android-LICENSE.txt"
+      "redistribution_license_file": "licenses/upstream/android-LICENSE.txt",
+      "upstream_latest_commit_date": "2026-11-15T16:05:42Z",
+      "additional_portable_skill_paths": [
+        "skills/android-intent-security/SKILL.md"
+      ]
     },
     {
       "id": "chrisbanes-android",
@@ -78,7 +83,7 @@
       "commit_date": "2026-10-06T18:26:01Z",
       "license": "MIT (LICENSE.md); API metadata reported NOASSERTION",
       "role": "official_minecraft_bedrock_creator_tools",
-      "verification": "repo tree + LICENSE.md + debug-addon and creator-tools-cli SKILL.md + validation script read",
+      "verification": "Current public plugin README, debug-addon, creator-tools-cli and selected Creator Tools code/release changes inspected",
       "skill_count": 6,
       "skill_paths": [
         "create-block",
@@ -92,16 +97,19 @@
         "debug-addon uses CLI validation, temporary report output, deduplication, dependency cross-checks and a runtime fallback path.",
         "creator-tools-cli distinguishes MCP tools from CLI tasks and warns against silently accepting the Minecraft EULA.",
         "The license file states resources under res/latest/van are subject to Minecraft EULA; do not treat all assets as covered by MIT.",
-        "Commands may use npx @minecraft/creator-tools@latest; pin versions for reproducible runs."
+        "Commands may use npx @minecraft/creator-tools@latest; pin versions for reproducible runs.",
+        "The 2026-11-06 update changes dry-run behavior, EULA checks, non-zero failure/interrupt exits, HTTP command allowlisting and path/input validation.",
+        "Creator Tools skills require Node.js 22 or later; the user must accept the Minecraft EULA themselves."
       ],
       "import_decision": "top_priority_for_bedrock_after_asset_and_dependency_review",
-      "upstream_latest_commit": "a8f2cd2fc7aa7e7e075dbf54a4597319aa8b71e1",
-      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
-      "upstream_update_available": false,
+      "upstream_latest_commit": "114ebc99f31ba2fd37e7daf71643ea1c9f940fd6",
+      "upstream_latest_checked_at": "2026-11-16T05:23:52.682Z",
+      "upstream_update_available": true,
       "portable_skill_path": "skills/minecraft-bedrock-addon/SKILL.md",
       "portable_skill_type": "independently_edited_adaptation",
       "redistribution_license": "MIT; Minecraft EULA carve-out applies to res/latest/van assets",
-      "redistribution_license_file": "licenses/upstream/mojang-LICENSE.md"
+      "redistribution_license_file": "licenses/upstream/mojang-LICENSE.md",
+      "upstream_latest_commit_date": "2026-11-06T01:57:03Z"
     },
     {
       "id": "threejs-game-skills",
@@ -111,7 +119,7 @@
       "commit_date": "2026-09-28T03:23:17Z",
       "license": "MIT",
       "role": "community_threejs_game_workflows",
-      "verification": "root README + LICENSE + selected SKILL.md files and install.sh presence checked",
+      "verification": "Current README, LICENSE, game director, gameplay systems and QA-release skills inspected",
       "skill_count": 9,
       "skill_paths": [
         "threejs-3d-generator",
@@ -131,12 +139,16 @@
       ],
       "import_decision": "high_priority_selective_import_after_install_script_review",
       "upstream_latest_commit": "8286774b22a2566bf894dbc825825c16921866af",
-      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
+      "upstream_latest_checked_at": "2026-11-16T05:23:52.682Z",
       "upstream_update_available": false,
       "portable_skill_path": "skills/threejs-game-engineering/SKILL.md",
       "portable_skill_type": "independently_edited_adaptation",
       "redistribution_license": "MIT",
-      "redistribution_license_file": "licenses/upstream/threejs-LICENSE"
+      "redistribution_license_file": "licenses/upstream/threejs-LICENSE",
+      "upstream_latest_commit_date": "2026-09-28T03:23:17Z",
+      "additional_portable_skill_paths": [
+        "skills/threejs-qa-release/SKILL.md"
+      ]
     },
     {
       "id": "superpowers",
@@ -159,12 +171,13 @@
       ],
       "import_decision": "high_priority_adapt_workflow_and_test_host_compatibility",
       "upstream_latest_commit": "22f0b463e7a5e579904dd6211a520321035526f7",
-      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
+      "upstream_latest_checked_at": "2026-11-16T05:23:52.682Z",
       "upstream_update_available": false,
       "portable_skill_path": "skills/superpowers-engineering-workflow/SKILL.md",
       "portable_skill_type": "independently_edited_adaptation",
       "redistribution_license": "MIT",
-      "redistribution_license_file": "licenses/upstream/superpowers-LICENSE"
+      "redistribution_license_file": "licenses/upstream/superpowers-LICENSE",
+      "upstream_latest_commit_date": "2026-11-03T22:17:07Z"
     },
     {
       "id": "trailofbits-skills",
@@ -218,7 +231,7 @@
       "commit_date": "2026-10-02T12:34:48Z",
       "license": "MIT",
       "role": "supabase_and_postgres",
-      "verification": "README + root license + two skill files read",
+      "verification": "Current README, root license, Supabase skill and Postgres best-practices skill inspected",
       "skill_count": 2,
       "skill_paths": [
         "skills/supabase",
@@ -227,16 +240,21 @@
       "findings": [
         "Supabase skill emphasizes changelog/current-doc checks, post-change query verification and avoiding retry loops.",
         "Postgres skill covers query performance, connection management, RLS, schema, locking and diagnostics.",
-        "The repo also contains MCP and release tooling; review only relevant files."
+        "The repo also contains MCP and release tooling; review only relevant files.",
+        "Postgres best practices covers query plans, connections, security/RLS, schema, locking, data access, monitoring and advanced features."
       ],
       "import_decision": "high_priority_if_supabase_is_in_project_stack",
       "upstream_latest_commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
-      "upstream_latest_checked_at": "2026-11-05T18:58:00+07:00",
+      "upstream_latest_checked_at": "2026-11-16T05:23:52.682Z",
       "upstream_update_available": false,
       "portable_skill_path": "skills/supabase-engineering/SKILL.md",
       "portable_skill_type": "independently_edited_adaptation",
       "redistribution_license": "MIT",
-      "redistribution_license_file": "licenses/upstream/supabase-LICENSE"
+      "redistribution_license_file": "licenses/upstream/supabase-LICENSE",
+      "upstream_latest_commit_date": "2026-10-02T12:34:48Z",
+      "additional_portable_skill_paths": [
+        "skills/supabase-postgres-best-practices/SKILL.md"
+      ]
     },
     {
       "id": "nvidia-skillspector",
@@ -273,9 +291,9 @@
     }
   ],
   "upstream_tracking": {
-    "policy": "Track upstream default-branch HEAD separately from the pinned source commit used for imported content. Automated checks open a review PR; they never overwrite imported skill files.",
+    "policy": "Weekly read-only scan compares the default-branch HEAD of each imported source with its immutable pinned import commit. Drift is reported through one GitHub issue; the automation never edits source pins, skill files, checksums, branches or pull requests.",
     "checked_sources": 5,
-    "checked_at": "2026-11-05T18:58:00+07:00",
+    "checked_at": "2026-11-16T05:23:52.682Z",
     "next_check": "Weekly via .github/workflows/upstream-registry.yml"
   }
 }
