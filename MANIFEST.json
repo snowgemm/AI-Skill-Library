@@ -1,6 +1,6 @@
 {
   "name": "AI-Skill-Library",
-  "version": "0.5.0-pre-release",
+  "version": "0.6.0-pre-release",
   "snapshot_date": "2026-11-16",
   "purpose": "Current installed skill inventory plus independently authored, provenance-aware portable skill alternatives.",
   "release_status": "pre_release_not_approved_for_commercial_distribution",
@@ -11,19 +11,21 @@
     "external_repositories_reviewed": 11,
     "external_repositories_commit_pinned": 11,
     "portable_upstream_skill_bodies_copied": 0,
-    "custom_skill_bodies_created": 31,
+    "custom_skill_bodies_created": 77,
     "platforms_documented_or_tracked": 7,
-    "portable_skill_adaptations": 31,
+    "portable_skill_adaptations": 77,
     "previous_catalog_snapshot_items": 125,
-    "new_items_since_previous_snapshot": 23
+    "new_items_since_previous_snapshot": 23,
+    "data_group_portable_guides": 21,
+    "vibecoder_group_portable_guides": 25
   },
   "not_done": [
-    "The original host-managed bodies for all 148 catalog entries have not been exported; 123 entries still have no portable equivalent.",
-    "The 23 Auth0/Render alternatives are independently authored and UNLICENSED; no redistribution rights are granted for those files.",
+    "The original host-managed bodies for all 148 catalog entries have not been exported; 77 entries still have no portable equivalent.",
+    "The 69 independently authored Auth0/Render/Data/Vibe Coder guides are UNLICENSED; no redistribution rights are granted for those files.",
     "Host-specific CLI discovery, activation, invocation and evaluation tests have not been run.",
     "No project-wide license has been selected for original repository material.",
     "No comprehensive skill-level static and dynamic security assessment has been completed.",
-    "No matched baseline-versus-skill evaluation report exists across the 31 portable guides and five hosts.",
+    "No matched baseline-versus-skill evaluation report exists across the 77 portable guides and five hosts.",
     "No versioned release package, SBOM, build provenance attestation or signature-verification procedure has been published."
   ],
   "principles": [
@@ -65,12 +67,12 @@
   "base_published_branch": "main",
   "working_branch": "main",
   "ci_verified_commit": "e98f79c74d96a4dd871f91e8e7451e369f3deeb6",
-  "validation_status": "catalog_and_installer_synced;checksum_inventory_updated;github_actions_result_not_verified;host_runtime_not_tested;commercial_distribution_blocked",
-  "skill_expansion_phase": "wave_3_adds_23_independent_auth0_render_equivalents_and_updates_installed_catalog_to_148",
+  "validation_status": "wave_4_files_created;catalog_and_installer_sync_pending;github_actions_result_not_verified;host_runtime_not_tested;commercial_distribution_blocked",
+  "skill_expansion_phase": "wave_4_adds_21_data_and_25_vibecoder_independent_guides",
   "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates",
   "skill_routing_cases_file": "evaluations/skill-routing-cases.json",
   "skill_evaluation_validator": "scripts/validate_skill_evaluations.py",
-  "routing_case_seed_count": 310,
+  "routing_case_seed_count": 770,
   "historical_catalog_file": "catalog/chatgpt-installed-skills-125.json",
   "restoration_status_file": "catalog/restoration-status-148.json",
   "documentation_sources_file": "catalog/documentation-sources.json"
