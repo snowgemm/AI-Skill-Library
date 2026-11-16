@@ -30,12 +30,20 @@ Keep platform-specific discovery paths, marketplace metadata and command syntax 
 - Record SHA-256 hashes for every imported file.
 - Record license, dependency versions and required environment.
 - Review diffs before update; never auto-run changed scripts.
+- The scheduled upstream monitor is read-only and reports source drift in an Issue. It does not update pins, skill files, checksums, branches, or pull requests.
 - Use preview/dry-run features where available. GitHub CLI `gh skill` is currently Preview and subject to change.
 
-## 5. Evaluation
+## 5. Authoring quality
+
+- Prefer small, specialist skills with clear positive and negative triggers over a single oversized skill for an entire platform.
+- Each skill should name its supported scope, inspect-before-edit workflow, version-sensitive references, safety boundaries, verification steps, and honest reporting requirements.
+- Keep executable scripts, templates, assets, and long reference material out of a skill unless they are necessary, reviewed, licensed, tested, and maintained.
+- Distinguish original adaptations from upstream content. Record exact source commit, source paths, component license, review date, and excluded material.
+
+## 6. Evaluation
 
 For each skill, define representative tasks, expected outcomes and negative triggers. Compare the same model/host/configuration with and without the skill. Record correctness, safety, time/tool calls and token/context cost.
 
-## 6. Moving to Grok, Claude, Codex, Gemini or Copilot
+## 7. Moving to Grok, Claude, Codex, Gemini or Copilot
 
 Copy only files with redistribution rights. Put canonical skills in the target host's supported skill directory and add a small adapter for host-specific discovery. Re-check the latest platform documentation before installation because host behavior evolves.
