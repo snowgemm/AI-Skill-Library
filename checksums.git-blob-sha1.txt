@@ -14,7 +14,7 @@ bd10ef519465bf25798d810864aca9479d1b0fd1  catalog/external-sources.json
 23816f53874f6ce183e1a717034f8eb9d0bca384  catalog/portable-skills-phase-1.json
 f805cb31779e3f0b0e032c97aecbc70cfea5c756  catalog/RECONCILIATION-120-to-125.md
 a1d601b04849ab35bfe0cbecfba658c8396c0daa  catalog/restoration-status-148.json
-62c52877b39a05b4075ba5bfa9b996721b06f05a  CHANGELOG.md
+8f63487396c46f788488561a9b3dcb9b02605d6f  CHANGELOG.md
 9a63aea24d67a88b3ea5bf9bd4b67c2d3b7ae501  COMMERCIAL-READINESS.md
 a7327d345955c1ed631159b7a63905795a82523a  evaluations/EVALUATION-PLAN.md
 4632636aab8754deea5e907be0c89a5d9022a47d  evaluations/skill-routing-cases.json

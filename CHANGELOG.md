@@ -37,6 +37,6 @@ All notable repository changes are documented here. A version is not considered 
 - Installer and host adapter catalog expanded to 77 portable guides.
 
 ### Not yet verified
-- Real host discovery and invocation for every advertised host/version and all 154 portable guides.
+- Real host discovery and invocation for every advertised host/version and all 155 portable guides.
 - Comprehensive security assessment and matched skill-effectiveness benchmark.
 - SBOM, build provenance, signing and signature-verification process.
