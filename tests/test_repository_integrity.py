@@ -23,6 +23,7 @@ class RepositoryIntegrityTests(unittest.TestCase):
         (root / "skills/demo-skill").mkdir(parents=True)
         (root / "licenses").mkdir()
         (root / ".github/workflows").mkdir(parents=True)
+        (root / "evaluations").mkdir()
         (root / "skills/demo-skill/SKILL.md").write_text(
             "---\nname: demo-skill\ndescription: Demo skill\nlicense: MIT\nmetadata:\n  upstream: https://github.com/example/demo\n  upstream-commit: 0123456789abcdef0123456789abcdef01234567\n---\n\n# Instructions\n",
             encoding="utf-8",
@@ -30,17 +31,37 @@ class RepositoryIntegrityTests(unittest.TestCase):
         (root / "licenses/mit.txt").write_text("MIT notice\n", encoding="utf-8")
         (root / "MANIFEST.json").write_text(json.dumps({
             "release_status": "pre_release_not_approved_for_commercial_distribution",
-            "counts": {"portable_skill_adaptations": 1, "custom_skill_bodies_created": 1},
+            "counts": {
+                "portable_skill_adaptations": 1,
+                "custom_skill_bodies_created": 1,
+                "unlicensed_independent_guides": 0,
+                "license_reviewed_independent_guides": 1,
+                "external_repositories_reviewed": 1,
+                "external_repositories_commit_pinned": 1,
+                "routing_case_seed_count": 0,
+            },
+            "routing_case_seed_count": 0,
+            "ci_conclusion": "success",
+            "ci_verified_commit": "0123456789abcdef0123456789abcdef01234567",
+            "ci_run_id": 1,
         }), encoding="utf-8")
         (root / "catalog").mkdir()
         (root / "catalog/portable-skills-phase-1.json").write_text(json.dumps({"skills": [{
-            "id": "demo-skill", "path": "skills/demo-skill/SKILL.md", "license": "MIT",
+            "id": "demo-skill", "path": "skills/demo-skill/SKILL.md",
+            "status": "portable_adaptation", "license": "MIT",
             "license_file": "licenses/mit.txt", "upstream": "example/demo",
             "upstream_commit": "0123456789abcdef0123456789abcdef01234567",
         }]}), encoding="utf-8")
         (root / "catalog/external-sources.json").write_text(json.dumps({"sources": [{
             "repository": "example/demo", "commit": "0123456789abcdef0123456789abcdef01234567",
         }]}), encoding="utf-8")
+        (root / "evaluations/skill-routing-cases.json").write_text(json.dumps({
+            "skills": [{
+                "skill_id": "demo-skill",
+                "positive_cases": [],
+                "negative_cases": [],
+            }]
+        }), encoding="utf-8")
         hosts = {name: {"directory": f".{name}/skills", "runtime_tested": False}
                  for name in ("codex", "claude", "gemini", "copilot", "grok")}
         (root / "adapters").mkdir()
@@ -66,6 +87,44 @@ class RepositoryIntegrityTests(unittest.TestCase):
             "\n".join(sorted(rows)) + "\n", encoding="utf-8"
         )
         subprocess.run(["git", "add", "checksums.git-blob-sha1.txt"], cwd=root, check=True)
+
+    def sync_fixture_manifest(self, root: Path) -> None:
+        manifest_path = root / "MANIFEST.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        catalogue = json.loads(
+            (root / "catalog/portable-skills-phase-1.json").read_text(encoding="utf-8")
+        )
+        sources = json.loads(
+            (root / "catalog/external-sources.json").read_text(encoding="utf-8")
+        )
+        routing = json.loads(
+            (root / "evaluations/skill-routing-cases.json").read_text(encoding="utf-8")
+        )
+        skills = catalogue["skills"]
+        unlicensed = sum(item.get("license") == "UNLICENSED" for item in skills)
+        reviewed = sum(
+            item.get("status") == "portable_adaptation" and item.get("license") != "UNLICENSED"
+            for item in skills
+        )
+        routing_count = sum(
+            len(item.get("positive_cases", [])) + len(item.get("negative_cases", []))
+            for item in routing["skills"]
+        )
+        valid_pins = sum(
+            isinstance(item.get("commit"), str) and len(item["commit"]) == 40
+            for item in sources["sources"]
+        )
+        manifest["counts"].update({
+            "portable_skill_adaptations": len(skills),
+            "custom_skill_bodies_created": len(skills),
+            "unlicensed_independent_guides": unlicensed,
+            "license_reviewed_independent_guides": reviewed,
+            "external_repositories_reviewed": len(sources["sources"]),
+            "external_repositories_commit_pinned": valid_pins,
+            "routing_case_seed_count": routing_count,
+        })
+        manifest["routing_case_seed_count"] = routing_count
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
 
     def refresh_fixture_checksums(self, root: Path) -> None:
         subprocess.run(["git", "add", "."], cwd=root, check=True)
@@ -179,6 +238,7 @@ class RepositoryIntegrityTests(unittest.TestCase):
             catalogue_path.write_text(json.dumps(catalogue), encoding="utf-8")
             source_path = root / "catalog/external-sources.json"
             source_path.write_text(json.dumps({"sources": []}), encoding="utf-8")
+            self.sync_fixture_manifest(root)
             self.refresh_fixture_checksums(root)
             self.assertEqual(self.run_fixture(root), [])
 
@@ -208,6 +268,8 @@ class RepositoryIntegrityTests(unittest.TestCase):
             catalogue_path.write_text(json.dumps(catalogue), encoding="utf-8")
             source_path = root / "catalog/external-sources.json"
             source_path.write_text(json.dumps({"sources": []}), encoding="utf-8")
+            self.sync_fixture_manifest(root)
+            self.refresh_fixture_checksums(root)
             errors = self.run_fixture(root)
             self.assertTrue(any("requires documentation_sources" in item for item in errors), errors)
 
