@@ -30,9 +30,9 @@ All notable repository changes are documented here. A version is not considered 
 - Android Compose and Minecraft Bedrock adaptations were reviewed against current upstream heads; the original imported source pins remain immutable.
 - Minecraft guidance now covers current Creator Tools Node.js, `--dry-run`, EULA, command failure/interrupt, and API path-validation behavior.
 
-- Installer and host adapter catalog expanded to 31 portable guides.
+- Installer and host adapter catalog expanded to 77 portable guides.
 
 ### Not yet verified
-- Real host discovery and invocation for every advertised host/version and all eight skills.
+- Real host discovery and invocation for every advertised host/version and all 77 portable guides.
 - Comprehensive security assessment and matched skill-effectiveness benchmark.
 - SBOM, build provenance, signing and signature-verification process.
