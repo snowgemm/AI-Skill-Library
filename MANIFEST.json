@@ -1,6 +1,6 @@
 {
   "name": "AI-Skill-Library",
-  "version": "0.6.0-pre-release",
+  "version": "0.7.0-pre-release",
   "snapshot_date": "2026-11-16",
   "purpose": "Current installed skill inventory plus independently authored, provenance-aware portable skill alternatives.",
   "release_status": "pre_release_not_approved_for_commercial_distribution",
@@ -11,22 +11,25 @@
     "external_repositories_reviewed": 11,
     "external_repositories_commit_pinned": 11,
     "portable_upstream_skill_bodies_copied": 0,
-    "custom_skill_bodies_created": 77,
+    "custom_skill_bodies_created": 154,
     "platforms_documented_or_tracked": 7,
-    "portable_skill_adaptations": 77,
+    "portable_skill_adaptations": 154,
     "previous_catalog_snapshot_items": 125,
     "new_items_since_previous_snapshot": 23,
     "data_group_portable_guides": 21,
-    "vibecoder_group_portable_guides": 25
+    "vibecoder_group_portable_guides": 25,
+    "unlicensed_independent_guides": 146,
+    "license_reviewed_independent_guides": 2,
+    "catalog_topics_with_independent_equivalent": 148,
+    "metadata_only_topics": 0
   },
   "not_done": [
-    "The original host-managed bodies for all 148 catalog entries have not been exported; 77 entries still have no portable equivalent.",
-    "The 69 independently authored Auth0/Render/Data/Vibe Coder guides are UNLICENSED; no redistribution rights are granted for those files.",
-    "Host-specific CLI discovery, activation, invocation and evaluation tests have not been run.",
-    "No project-wide license has been selected for original repository material.",
-    "No comprehensive skill-level static and dynamic security assessment has been completed.",
-    "No matched baseline-versus-skill evaluation report exists across the 77 portable guides and five hosts.",
-    "No versioned release package, SBOM, build provenance attestation or signature-verification procedure has been published."
+    "The original host-managed bodies for the 148 catalog entries have not been exported. The 154 portable guides are independent equivalents, not exact recovery of proprietary/plugin-managed text.",
+    "146 portable guides are UNLICENSED. No redistribution, bundling, hosting, or commercial-use permission is granted for those files until a compatible license is selected.",
+    "Host-specific CLI discovery, activation, invocation, and evaluation tests have not been run for Codex, Claude, Gemini, Copilot, and Grok.",
+    "No comprehensive skill-level static/dynamic security assessment has been completed.",
+    "No matched baseline-versus-skill evaluation report exists across the 154 guides and five hosts; 1,540 routing prompts are seed data only.",
+    "No versioned release package, SBOM, build provenance attestation, or signature-verification process has been published."
   ],
   "principles": [
     "Do not redistribute proprietary/plugin-hosted skill bodies without rights.",
@@ -67,13 +70,14 @@
   "base_published_branch": "main",
   "working_branch": "main",
   "ci_verified_commit": "e98f79c74d96a4dd871f91e8e7451e369f3deeb6",
-  "validation_status": "catalog_installer_adapters_routing_and_124_checksums_synced;github_actions_result_not_verified;host_runtime_not_tested;commercial_distribution_blocked",
+  "validation_status": "148_catalog_topics_mapped_to_independent_equivalents;154_portable_guides;1540_routing_seed_cases;latest_ci_not_verified;host_runtime_not_tested;commercial_distribution_blocked",
   "skill_expansion_phase": "wave_4_adds_21_data_and_25_vibecoder_independent_guides",
   "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates",
   "skill_routing_cases_file": "evaluations/skill-routing-cases.json",
   "skill_evaluation_validator": "scripts/validate_skill_evaluations.py",
-  "routing_case_seed_count": 770,
+  "routing_case_seed_count": 1540,
   "historical_catalog_file": "catalog/chatgpt-installed-skills-125.json",
   "restoration_status_file": "catalog/restoration-status-148.json",
-  "documentation_sources_file": "catalog/documentation-sources.json"
+  "documentation_sources_file": "catalog/documentation-sources.json",
+  "current_catalog_file": "catalog/current-installed-skills-148.json"
 }
