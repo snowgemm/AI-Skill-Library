@@ -165,6 +165,164 @@
         "https://c4model.com/",
         "https://docs.github.com/en/actions"
       ]
+    },
+    {
+      "id": "biohub-esm-documentation",
+      "vendor": "Biohub ESM",
+      "homepage": "https://github.com/Biohub/esm",
+      "reviewed_on": "2026-11-16",
+      "license_status": "documentation_links_only; no upstream skill body or bundled assets copied",
+      "portable_guides": [
+        "biohub-esm",
+        "biohub-esm-setup",
+        "biohub-esm-atlas",
+        "biohub-esmc",
+        "biohub-esm-esmfold2"
+      ],
+      "references": [
+        "https://github.com/Biohub/esm",
+        "https://github.com/Biohub/esm/tree/main/cookbook/tutorials",
+        "https://biohub.ai/"
+      ]
+    },
+    {
+      "id": "codex-and-github-workflows",
+      "vendor": "OpenAI Codex and GitHub",
+      "homepage": "https://developers.openai.com/codex/",
+      "reviewed_on": "2026-11-16",
+      "license_status": "documentation_links_only; no host-managed skill body copied",
+      "portable_guides": [
+        "gh-review-loop",
+        "coderabbit-code-review",
+        "coderabbit-learnings-curator",
+        "codex-coordinator",
+        "codex-material-themes-choose-codex-theme",
+        "codex-cost",
+        "codex-usage-codex-usage-hud",
+        "codex-sdlc",
+        "codex-sdlc-ba",
+        "codex-sdlc-backend",
+        "codex-sdlc-frontend",
+        "codex-sdlc-pm",
+        "codex-sdlc-po",
+        "codex-sdlc-qc",
+        "codex-sdlc-setup",
+        "codex-dev-bug-investigation",
+        "codex-dev-code-review",
+        "codex-dev-comprehensive-qa",
+        "codex-dev-create-agent-instructions",
+        "codex-dev-feature-development",
+        "codex-dev-feature-testing",
+        "codex-dev-new-project",
+        "codex-dev-orchestrate-work",
+        "codex-dev-platform-guidance",
+        "codex-dev-pre-release-review",
+        "codex-dev-resume-interrupted-task",
+        "codex-dev-session-handoff"
+      ],
+      "references": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://developers.openai.com/api/docs/guides/agents-api/observability",
+        "https://docs.github.com/en/pull-requests",
+        "https://google.github.io/eng-practices/review/",
+        "https://docs.coderabbit.ai/"
+      ]
+    },
+    {
+      "id": "usage-metering-and-tokenization",
+      "vendor": "UsageTap and OpenAI tokenization/usage docs",
+      "homepage": "https://www.usagetap.com/",
+      "reviewed_on": "2026-11-16",
+      "license_status": "documentation_links_only; no host-managed skill body copied",
+      "portable_guides": [
+        "ai-codex-usage",
+        "codex-cost",
+        "codex-usage-codex-usage-hud",
+        "usage-checker-usage",
+        "app-6a9e2447eaf48191b9019af0c0ca8332-integrate-usagetap",
+        "cache-stats-cache-stats",
+        "token-tally-token-tally",
+        "token-tally-token-tally-setup"
+      ],
+      "references": [
+        "https://www.usagetap.com/",
+        "https://platform.openai.com/tokenizer",
+        "https://github.com/openai/tiktoken",
+        "https://platform.openai.com/docs/pricing",
+        "https://developers.openai.com/api/docs/guides/agents-api/observability"
+      ]
+    },
+    {
+      "id": "game-development-reference-docs",
+      "vendor": "Game engine and asset tooling documentation",
+      "homepage": "https://docs.blender.org/manual/en/latest/",
+      "reviewed_on": "2026-11-16",
+      "license_status": "documentation_links_only; no vendor assets or code copied",
+      "portable_guides": [
+        "game-development-studio-game-asset-production",
+        "game-development-studio-game-asset-vendoring",
+        "game-development-studio-game-development-studio",
+        "game-development-studio-game-performance-optimization",
+        "game-development-studio-game-visual-debugging"
+      ],
+      "references": [
+        "https://docs.blender.org/manual/en/latest/",
+        "https://docs.unity3d.com/Manual/index.html",
+        "https://docs.godotengine.org/en/stable/",
+        "https://threejs.org/docs/"
+      ]
+    },
+    {
+      "id": "vercel-platform-documentation",
+      "vendor": "Vercel",
+      "homepage": "https://vercel.com/docs",
+      "reviewed_on": "2026-11-16",
+      "license_status": "documentation_links_only; no host-managed skill body copied",
+      "portable_guides": [
+        "vercel-access-protected-deployment",
+        "vercel-ai-gateway",
+        "vercel-ai-sdk",
+        "vercel-auth",
+        "vercel-bootstrap",
+        "vercel-build-agents",
+        "vercel-cdn-caching",
+        "vercel-chat-sdk",
+        "vercel-create-a-backend",
+        "vercel-custom-metrics",
+        "vercel-deployments-cicd",
+        "vercel-domains",
+        "vercel-env-vars",
+        "vercel-eve",
+        "vercel-flags-sdk",
+        "vercel-is-agentic",
+        "vercel-knowledge-update",
+        "vercel-marketplace",
+        "vercel-microfrontends",
+        "vercel-queues",
+        "vercel-react-best-practices",
+        "vercel-routing-middleware",
+        "vercel-runtime-cache",
+        "vercel-vercel-agent",
+        "vercel-vercel-cli",
+        "vercel-vercel-connect",
+        "vercel-vercel-firewall",
+        "vercel-vercel-functions",
+        "vercel-vercel-sandbox",
+        "vercel-vercel-services",
+        "vercel-vercel-storage",
+        "vercel-verification",
+        "vercel-workflow"
+      ],
+      "references": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog",
+        "https://vercel.com/docs/ai-gateway",
+        "https://vercel.com/docs/queues",
+        "https://vercel.com/docs/functions",
+        "https://vercel.com/docs/deployment-protection",
+        "https://vercel.com/docs/workflow"
+      ]
     }
   ]
 }
