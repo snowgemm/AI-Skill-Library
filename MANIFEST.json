@@ -73,8 +73,8 @@
   "published_repository": "https://github.com/snowgemm/AI-Skill-Library",
   "base_published_branch": "main",
   "working_branch": "main",
-  "ci_verified_commit": "e98f79c74d96a4dd871f91e8e7451e369f3deeb6",
-  "validation_status": "148_of_148_catalog_topics_mapped_to_independent_equivalents;154_portable_guides;146_unlicensed;1540_routing_seed_cases;ci_not_verified;host_runtime_not_tested;commercial_distribution_blocked",
+  "ci_verified_commit": "0559e66a5119ef01f7b6af2846d1713e492b8e9c",
+  "validation_status": "148_of_148_catalog_topics_mapped_to_independent_equivalents;154_portable_guides;146_unlicensed;1540_routing_seed_cases;quality_ci_passed_python_3_12_3_13_and_zizmor_on_0559e66a;host_runtime_not_tested;commercial_distribution_blocked",
   "skill_expansion_phase": "wave_4_adds_21_data_and_25_vibecoder_independent_guides",
   "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates",
   "skill_routing_cases_file": "evaluations/skill-routing-cases.json",
@@ -83,5 +83,7 @@
   "historical_catalog_file": "catalog/chatgpt-installed-skills-125.json",
   "restoration_status_file": "catalog/restoration-status-148.json",
   "documentation_sources_file": "catalog/documentation-sources.json",
-  "current_catalog_file": "catalog/current-installed-skills-148.json"
+  "current_catalog_file": "catalog/current-installed-skills-148.json",
+  "ci_run_id": 43825916875,
+  "ci_conclusion": "success"
 }
