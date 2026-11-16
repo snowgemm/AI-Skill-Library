@@ -72,7 +72,7 @@ class RepositoryIntegrityTests(unittest.TestCase):
         tracked = subprocess.run(
             ["git", "ls-files", "-z"], cwd=root, check=True,
             stdout=subprocess.PIPE,
-        ).stdout.split(b"\\0")
+        ).stdout.split(b"\0")
         rows = []
         for raw in tracked:
             if not raw:
