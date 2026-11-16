@@ -67,7 +67,7 @@
   "base_published_branch": "main",
   "working_branch": "main",
   "ci_verified_commit": "e98f79c74d96a4dd871f91e8e7451e369f3deeb6",
-  "validation_status": "wave_4_files_created;catalog_and_installer_sync_pending;github_actions_result_not_verified;host_runtime_not_tested;commercial_distribution_blocked",
+  "validation_status": "catalog_installer_adapters_routing_and_124_checksums_synced;github_actions_result_not_verified;host_runtime_not_tested;commercial_distribution_blocked",
   "skill_expansion_phase": "wave_4_adds_21_data_and_25_vibecoder_independent_guides",
   "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates",
   "skill_routing_cases_file": "evaluations/skill-routing-cases.json",
