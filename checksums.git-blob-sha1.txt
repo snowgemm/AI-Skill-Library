@@ -26,9 +26,9 @@ d3c9e94fbc6c28f66ecb5a01407d543c99c811b6  licenses/upstream/supabase-LICENSE
 abf0390320aa14406af7a520b9b0739fdda9bf08  licenses/upstream/superpowers-LICENSE
 0e7cfcfa43d5da2dc6a31768afcd95525fd3000c  licenses/upstream/threejs-LICENSE
 223f61565beef7da8a2720f205f6bda651b22c10  LICENSING.md
-fcf0f4d013d35580f84c5cd98dee76a92a11dd69  MANIFEST.json
+e1d29c2e1735b341e959933cb35a6641531ce6f1  MANIFEST.json
 67b4f4cd79e456235a46ee66c281d8cde481b00a  policies/IMPORT-SECURITY.md
-29514b6ae4beabf3aec8c168e1a5f7ea6c7e7414  README.md
+63d4f17f0bc34b8ac29fbad94d4b264818327883  README.md
 f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
 cb9f94b6e303e0f610f813a278b78201cf2039b5  scripts/install_skills.py
 9364e385bd4ea8cac4b7aed12bc217f34cc816b9  scripts/update_checksums.py
