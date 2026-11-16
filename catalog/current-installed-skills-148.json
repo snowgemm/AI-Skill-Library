@@ -5,7 +5,7 @@
   "total_items": 148,
   "source": "Current installed-skill catalog enumerated in this conversation; compared against and supersedes the preserved 2026-11-05 125-item snapshot.",
   "important_limitations": [
-    "This inventory restores the 125 exact catalog identifiers and names, not 125 portable SKILL.md bodies.",
+    "The preserved historical 125-item snapshot records the exact identifiers and names from 2026-11-05; this current 148-item snapshot adds 23 verified catalog entries. Neither snapshot contains the original host-managed SKILL.md bodies.",
     "The skill bodies are host-managed plugin content. This package does not copy or redistribute them.",
     "A skills:// URI is a ChatGPT-internal reference and is not a public URL or a portable install path.",
     "Five identifiers are the additions recorded after the historical 120-item inventory; the other 120 reconcile to the previously recorded categories.",
