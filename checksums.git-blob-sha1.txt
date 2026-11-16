@@ -33,7 +33,7 @@ a1730d914e56280ddbe92f31e41314bdc7620a17  scripts/validate_repository.py
 7bd59604ed2e79c010629aad36ce7750fe711302  scripts/validate_workflow_security.py
 1bd0ae359e1fb840a042d72f480f04c32640c353  SECURITY.md
 a7283acde3a1303b81d1c1d6ffe775a6a0d89f3d  skills/android-compose-engineering/SKILL.md
-ff7d8ec48875f03b710e71ca12900cafe0b4251a  skills/android-intent-security/SKILL.md
+b76e2b5b5d53288b59abdafa27a2d0158f450d01  skills/android-intent-security/SKILL.md
 2deca3894f69b346eeb336fc3fae4f53a70d4e11  skills/minecraft-bedrock-addon/SKILL.md
 db7e36ded310bd850807dfd5591b86241b703a63  skills/supabase-engineering/SKILL.md
 340bd7b2160e5a93a97d16ffd3f0d98e9cf5f588  skills/supabase-postgres-best-practices/SKILL.md
