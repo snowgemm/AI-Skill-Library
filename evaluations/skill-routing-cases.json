@@ -542,6 +542,1547 @@
           "rationale": "This is Android Intent security."
         }
       ]
+    },
+    {
+      "skill_id": "auth0-authentication",
+      "positive_cases": [
+        {
+          "id": "auth0-authentication-positive-01",
+          "prompt": "Integrate Universal Login into this React SPA using the current Auth0 SDK and Authorization Code with PKCE.",
+          "expected_activation": true,
+          "rationale": "The task is directly within auth0-authentication's documented scope."
+        },
+        {
+          "id": "auth0-authentication-positive-02",
+          "prompt": "An Auth0 callback succeeds but the API rejects access tokens. Inspect issuer, audience, signature, and scopes.",
+          "expected_activation": true,
+          "rationale": "The task is directly within auth0-authentication's documented scope."
+        },
+        {
+          "id": "auth0-authentication-positive-03",
+          "prompt": "Design MFA and step-up authentication for a sensitive account operation using Auth0.",
+          "expected_activation": true,
+          "rationale": "The task is directly within auth0-authentication's documented scope."
+        },
+        {
+          "id": "auth0-authentication-positive-04",
+          "prompt": "Add Organization-aware sign-in and ensure API permissions depend on the selected organization.",
+          "expected_activation": true,
+          "rationale": "The task is directly within auth0-authentication's documented scope."
+        },
+        {
+          "id": "auth0-authentication-positive-05",
+          "prompt": "Review refresh-token rotation, expiry, revocation, and logout behavior for an Auth0 application.",
+          "expected_activation": true,
+          "rationale": "The task is directly within auth0-authentication's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "auth0-authentication-negative-01",
+          "prompt": "Create a Render background worker to process jobs from a queue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "auth0-authentication-negative-02",
+          "prompt": "Review Android exported activities and nested Intent validation.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "auth0-authentication-negative-03",
+          "prompt": "Design row-level security for a PostgreSQL multi-tenant database without Auth0.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "auth0-authentication-negative-04",
+          "prompt": "Create a custom Minecraft Bedrock behavior pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "auth0-authentication-negative-05",
+          "prompt": "Profile draw calls and GPU memory in a Three.js game.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-background-workers",
+      "positive_cases": [
+        {
+          "id": "render-background-workers-positive-01",
+          "prompt": "Move report generation out of the HTTP request path into a Render background worker and queue.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-background-workers's documented scope."
+        },
+        {
+          "id": "render-background-workers-positive-02",
+          "prompt": "A worker may receive the same job twice. Make the handler idempotent and design bounded retries.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-background-workers's documented scope."
+        },
+        {
+          "id": "render-background-workers-positive-03",
+          "prompt": "Review graceful SIGTERM shutdown for a Render queue consumer so in-flight jobs are not lost.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-background-workers's documented scope."
+        },
+        {
+          "id": "render-background-workers-positive-04",
+          "prompt": "Decide whether this Render component should be a background worker or a private service that receives HTTP requests.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-background-workers's documented scope."
+        },
+        {
+          "id": "render-background-workers-positive-05",
+          "prompt": "Design monitoring for queue depth, oldest job age, retries, and failed jobs on a Render worker.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-background-workers's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-background-workers-negative-01",
+          "prompt": "Create a Render Cron Job that runs a finite database cleanup once per day.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-background-workers-negative-02",
+          "prompt": "Configure Auth0 refresh-token rotation for a web application.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-background-workers-negative-03",
+          "prompt": "Create a Render static site with SPA routing and custom headers.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-background-workers-negative-04",
+          "prompt": "Design a PostgreSQL index using EXPLAIN ANALYZE.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-background-workers-negative-05",
+          "prompt": "Build an Android notification receiver with a secure PendingIntent.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-blueprints",
+      "positive_cases": [
+        {
+          "id": "render-blueprints-positive-01",
+          "prompt": "Review this render.yaml and validate service types, resource references, and supported fields.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-blueprints's documented scope."
+        },
+        {
+          "id": "render-blueprints-positive-02",
+          "prompt": "Represent a web service, worker, Postgres database, and Key Value datastore in a Render Blueprint.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-blueprints's documented scope."
+        },
+        {
+          "id": "render-blueprints-positive-03",
+          "prompt": "Replace plaintext secrets in render.yaml with generated values and dashboard-supplied secrets.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-blueprints's documented scope."
+        },
+        {
+          "id": "render-blueprints-positive-04",
+          "prompt": "Check a Blueprint change for resource replacement, region immutability, plan limits, and downtime risk.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-blueprints's documented scope."
+        },
+        {
+          "id": "render-blueprints-positive-05",
+          "prompt": "Validate a Render Blueprint with the current CLI and explain any warnings before applying it.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-blueprints's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-blueprints-negative-01",
+          "prompt": "Inspect live Render deploy logs to diagnose an out-of-memory crash.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-blueprints-negative-02",
+          "prompt": "Set up a one-off Render CLI command to tail logs for a specific service.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-blueprints-negative-03",
+          "prompt": "Configure Auth0 Organizations and user roles.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-blueprints-negative-04",
+          "prompt": "Design a Render Key Value eviction strategy for a cache.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-blueprints-negative-05",
+          "prompt": "Review a Three.js visual regression test.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-cli",
+      "positive_cases": [
+        {
+          "id": "render-cli-positive-01",
+          "prompt": "Install the current Render CLI and verify its version and command syntax.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cli's documented scope."
+        },
+        {
+          "id": "render-cli-positive-02",
+          "prompt": "Use the Render CLI to list services in the intended workspace in JSON format.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cli's documented scope."
+        },
+        {
+          "id": "render-cli-positive-03",
+          "prompt": "Diagnose a failed Render deploy by querying logs and deploy history from the terminal.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cli's documented scope."
+        },
+        {
+          "id": "render-cli-positive-04",
+          "prompt": "Validate render.yaml through the Render CLI before applying a Blueprint change.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cli's documented scope."
+        },
+        {
+          "id": "render-cli-positive-05",
+          "prompt": "Write a non-interactive Render CLI workflow that confirms the workspace and resource ID before restarting a service.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cli's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-cli-negative-01",
+          "prompt": "Create a persistent disk and configure filesystem mount paths in the Render dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-cli-negative-02",
+          "prompt": "Implement OAuth login with Auth0 using PKCE.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-cli-negative-03",
+          "prompt": "Use SQL EXPLAIN to optimize a query on a PostgreSQL database.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-cli-negative-04",
+          "prompt": "Build a worker queue consumer in Python without Render resource administration.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-cli-negative-05",
+          "prompt": "Create a custom domain DNS record for a website hosted outside Render.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-cron-jobs",
+      "positive_cases": [
+        {
+          "id": "render-cron-jobs-positive-01",
+          "prompt": "Schedule a finite Render job that runs a backup verification command every night.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cron-jobs's documented scope."
+        },
+        {
+          "id": "render-cron-jobs-positive-02",
+          "prompt": "Choose between a Render Cron Job and a Background Worker for a task that runs once, then exits.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cron-jobs's documented scope."
+        },
+        {
+          "id": "render-cron-jobs-positive-03",
+          "prompt": "Prevent duplicate side effects when a Render Cron Job is retried or overlaps with an earlier run.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cron-jobs's documented scope."
+        },
+        {
+          "id": "render-cron-jobs-positive-04",
+          "prompt": "Configure a Render Cron Job's command, region, and environment variables.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cron-jobs's documented scope."
+        },
+        {
+          "id": "render-cron-jobs-positive-05",
+          "prompt": "Troubleshoot a Render scheduled job that exits non-zero and inspect its run history.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-cron-jobs's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-cron-jobs-negative-01",
+          "prompt": "Create a continuous Render queue consumer that polls Redis all day.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-cron-jobs-negative-02",
+          "prompt": "Design a multi-step durable Render Workflow with retries and resumable state.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-cron-jobs-negative-03",
+          "prompt": "Configure Render autoscaling for a high-traffic web service.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-cron-jobs-negative-04",
+          "prompt": "Enable Auth0 MFA for privileged users.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-cron-jobs-negative-05",
+          "prompt": "Debug an Android Activity receiving an untrusted nested Intent.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-debug",
+      "positive_cases": [
+        {
+          "id": "render-debug-positive-01",
+          "prompt": "A Render web service deploys but fails its health check. Diagnose the issue from deploy and runtime logs.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-debug's documented scope."
+        },
+        {
+          "id": "render-debug-positive-02",
+          "prompt": "A Render service repeatedly restarts after a memory spike. Correlate logs, metrics, and recent deploys.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-debug's documented scope."
+        },
+        {
+          "id": "render-debug-positive-03",
+          "prompt": "Investigate why a Render build cannot find a dependency after a lockfile change.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-debug's documented scope."
+        },
+        {
+          "id": "render-debug-positive-04",
+          "prompt": "An app on Render cannot connect to its Postgres database. Trace configuration, private networking, and connection limits.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-debug's documented scope."
+        },
+        {
+          "id": "render-debug-positive-05",
+          "prompt": "Diagnose a Render deployment regression and propose one minimal reversible fix with verification.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-debug's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-debug-negative-01",
+          "prompt": "Create a new Render web service from a repository and configure its build command.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-debug-negative-02",
+          "prompt": "Design an Auth0 login flow with refresh token rotation.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-debug-negative-03",
+          "prompt": "Write a Three.js gameplay loop with fixed-step simulation.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-debug-negative-04",
+          "prompt": "Create a Supabase RLS policy for tenant isolation.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-debug-negative-05",
+          "prompt": "Create a Minecraft Bedrock item recipe.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-deploy",
+      "positive_cases": [
+        {
+          "id": "render-deploy-positive-01",
+          "prompt": "Deploy an existing Node.js API to Render and verify the production route and health check.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-deploy's documented scope."
+        },
+        {
+          "id": "render-deploy-positive-02",
+          "prompt": "Choose the right Render service type for an API, static frontend, and queue consumer.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-deploy's documented scope."
+        },
+        {
+          "id": "render-deploy-positive-03",
+          "prompt": "Review the exact Render deploy target, branch, build command, start command, and region before deployment.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-deploy's documented scope."
+        },
+        {
+          "id": "render-deploy-positive-04",
+          "prompt": "Prepare a controlled Render rollback plan for an application release that includes a database migration.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-deploy's documented scope."
+        },
+        {
+          "id": "render-deploy-positive-05",
+          "prompt": "Verify a Render deployment using the deploy ID, logs, health state, and one representative user flow.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-deploy's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-deploy-negative-01",
+          "prompt": "Write a Dockerfile for a generic local development environment with no Render deployment.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-deploy-negative-02",
+          "prompt": "Investigate a Render Postgres query plan without changing deployment configuration.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-deploy-negative-03",
+          "prompt": "Implement an Auth0 passwordless login flow.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-deploy-negative-04",
+          "prompt": "Create an Android Compose screen with loading and error states.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-deploy-negative-05",
+          "prompt": "Generate a Minecraft resource pack manifest.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-disks",
+      "positive_cases": [
+        {
+          "id": "render-disks-positive-01",
+          "prompt": "Configure a Render persistent disk so uploaded files survive service redeploys.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-disks's documented scope."
+        },
+        {
+          "id": "render-disks-positive-02",
+          "prompt": "Review the constraints of attaching a persistent disk to a Render service that needs multiple instances.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-disks's documented scope."
+        },
+        {
+          "id": "render-disks-positive-03",
+          "prompt": "Plan backup and restore for data stored on a Render persistent disk.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-disks's documented scope."
+        },
+        {
+          "id": "render-disks-positive-04",
+          "prompt": "An application writes to /tmp on Render and loses files after deployment. Design the correct persistence path.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-disks's documented scope."
+        },
+        {
+          "id": "render-disks-positive-05",
+          "prompt": "Check whether a Render Cron Job can use a persistent disk and propose an appropriate alternative if not.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-disks's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-disks-negative-01",
+          "prompt": "Configure a Render Postgres database and its connection pool.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-disks-negative-02",
+          "prompt": "Add a custom domain and TLS certificate to a Render static site.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-disks-negative-03",
+          "prompt": "Create a Redis-compatible Render Key Value instance.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-disks-negative-04",
+          "prompt": "Review a Docker image's provenance and vulnerability scan without using Render disks.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-disks-negative-05",
+          "prompt": "Implement browser IndexedDB persistence for an offline web app.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-docker",
+      "positive_cases": [
+        {
+          "id": "render-docker-positive-01",
+          "prompt": "Deploy this application to Render from its Dockerfile and verify the runtime port.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-docker's documented scope."
+        },
+        {
+          "id": "render-docker-positive-02",
+          "prompt": "Review a Dockerfile for Render production deployment, graceful shutdown, non-root execution, and logging.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-docker's documented scope."
+        },
+        {
+          "id": "render-docker-positive-03",
+          "prompt": "Move sensitive Docker build arguments out of the image build and into safe runtime configuration.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-docker's documented scope."
+        },
+        {
+          "id": "render-docker-positive-04",
+          "prompt": "Compare deploying a prebuilt Docker image with building the image from a repository on Render.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-docker's documented scope."
+        },
+        {
+          "id": "render-docker-positive-05",
+          "prompt": "Troubleshoot a Render Docker service that starts but never passes its health check.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-docker's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-docker-negative-01",
+          "prompt": "Set environment variables for a Render native Node runtime without Docker.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-docker-negative-02",
+          "prompt": "Configure a Render Key Value cache and Redis client.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-docker-negative-03",
+          "prompt": "Design an Auth0 OIDC authorization flow.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-docker-negative-04",
+          "prompt": "Build a Three.js GLTF asset loader.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-docker-negative-05",
+          "prompt": "Add an Android notification channel.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-domains",
+      "positive_cases": [
+        {
+          "id": "render-domains-positive-01",
+          "prompt": "Connect an apex domain to a Render web service and verify DNS and HTTPS.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-domains's documented scope."
+        },
+        {
+          "id": "render-domains-positive-02",
+          "prompt": "Add www and root hostnames to a Render static site while preserving existing MX and DKIM records.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-domains's documented scope."
+        },
+        {
+          "id": "render-domains-positive-03",
+          "prompt": "A Render custom domain remains pending certificate issuance. Diagnose the DNS and verification state.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-domains's documented scope."
+        },
+        {
+          "id": "render-domains-positive-04",
+          "prompt": "Review the canonical-domain redirect policy for a Render-hosted website.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-domains's documented scope."
+        },
+        {
+          "id": "render-domains-positive-05",
+          "prompt": "Plan a DNS cutover for a domain moving from another host to Render with a rollback record set.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-domains's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-domains-negative-01",
+          "prompt": "Create a Render Cron Job that runs every hour.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-domains-negative-02",
+          "prompt": "Inspect environment variables in a Render worker.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-domains-negative-03",
+          "prompt": "Design a Render Postgres backup and recovery plan.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-domains-negative-04",
+          "prompt": "Configure Auth0 callback URLs for a SPA that is not hosted on Render.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-domains-negative-05",
+          "prompt": "Fix a WebGL context-loss issue in a Three.js game.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-env-vars",
+      "positive_cases": [
+        {
+          "id": "render-env-vars-positive-01",
+          "prompt": "Configure environment variables for Render production and staging without leaking secrets into Git.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-env-vars's documented scope."
+        },
+        {
+          "id": "render-env-vars-positive-02",
+          "prompt": "Replace a plaintext database password in render.yaml with a safe secret reference.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-env-vars's documented scope."
+        },
+        {
+          "id": "render-env-vars-positive-03",
+          "prompt": "Diagnose why a Render service does not see a variable added to an environment group.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-env-vars's documented scope."
+        },
+        {
+          "id": "render-env-vars-positive-04",
+          "prompt": "Review whether a changed Render environment variable needs a rebuild or redeploy.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-env-vars's documented scope."
+        },
+        {
+          "id": "render-env-vars-positive-05",
+          "prompt": "Audit Render environment groups for key collisions and service-specific overrides.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-env-vars's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-env-vars-negative-01",
+          "prompt": "Set up a persistent disk mount path for Render uploads.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-env-vars-negative-02",
+          "prompt": "Configure Auth0 API roles and permissions.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-env-vars-negative-03",
+          "prompt": "Add a partial index to a PostgreSQL database.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-env-vars-negative-04",
+          "prompt": "Configure a Render custom domain and TLS certificate.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-env-vars-negative-05",
+          "prompt": "Create a Three.js screenshot visual regression test.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-keyvalue",
+      "positive_cases": [
+        {
+          "id": "render-keyvalue-positive-01",
+          "prompt": "Choose a Render Key Value instance for a shared cache and verify the client compatibility with its datastore version.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-keyvalue's documented scope."
+        },
+        {
+          "id": "render-keyvalue-positive-02",
+          "prompt": "Configure a Render Key Value datastore as the backing queue for a background worker.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-keyvalue's documented scope."
+        },
+        {
+          "id": "render-keyvalue-positive-03",
+          "prompt": "Review Redis client connection settings, key TTLs, eviction, and memory use for Render Key Value.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-keyvalue's documented scope."
+        },
+        {
+          "id": "render-keyvalue-positive-04",
+          "prompt": "Determine whether a workload needs a cache, a durable queue, or Postgres before provisioning Render Key Value.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-keyvalue's documented scope."
+        },
+        {
+          "id": "render-keyvalue-positive-05",
+          "prompt": "Troubleshoot connection failures between a Render worker and its Key Value datastore over the private network.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-keyvalue's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-keyvalue-negative-01",
+          "prompt": "Design a PostgreSQL point-in-time recovery plan on Render Postgres.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-keyvalue-negative-02",
+          "prompt": "Build a durable multi-step Render Workflow.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-keyvalue-negative-03",
+          "prompt": "Add a custom domain to a Render static site.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-keyvalue-negative-04",
+          "prompt": "Implement Auth0 refresh-token rotation.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-keyvalue-negative-05",
+          "prompt": "Optimize a Three.js renderer's texture memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-mcp",
+      "positive_cases": [
+        {
+          "id": "render-mcp-positive-01",
+          "prompt": "Connect a coding agent to the official Render MCP server and inspect its available tools.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-mcp's documented scope."
+        },
+        {
+          "id": "render-mcp-positive-02",
+          "prompt": "Review the permissions granted when a coding assistant authenticates to Render MCP.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-mcp's documented scope."
+        },
+        {
+          "id": "render-mcp-positive-03",
+          "prompt": "Use Render MCP to list services and inspect logs without making changes.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-mcp's documented scope."
+        },
+        {
+          "id": "render-mcp-positive-04",
+          "prompt": "Before using Render MCP to change environment variables or trigger a deploy, define a user-approval checkpoint.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-mcp's documented scope."
+        },
+        {
+          "id": "render-mcp-positive-05",
+          "prompt": "Troubleshoot why Render MCP cannot see the intended workspace or service.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-mcp's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-mcp-negative-01",
+          "prompt": "Configure a generic MCP server for filesystem access without Render.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-mcp-negative-02",
+          "prompt": "Write a Supabase Edge Function to validate JWT claims.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-mcp-negative-03",
+          "prompt": "Create a Render Cron Job directly through the dashboard without any MCP setup.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-mcp-negative-04",
+          "prompt": "Review an Android Intent redirection vulnerability.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-mcp-negative-05",
+          "prompt": "Add browser-side feature flags with no Vercel or Render integration.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-migrate-from-heroku",
+      "positive_cases": [
+        {
+          "id": "render-migrate-from-heroku-positive-01",
+          "prompt": "Migrate a Heroku app with web and worker Procfile processes to appropriate Render service types.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-migrate-from-heroku's documented scope."
+        },
+        {
+          "id": "render-migrate-from-heroku-positive-02",
+          "prompt": "Plan a Heroku Postgres to Render Postgres data migration with a final consistency check.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-migrate-from-heroku's documented scope."
+        },
+        {
+          "id": "render-migrate-from-heroku-positive-03",
+          "prompt": "Map Heroku config vars, Scheduler jobs, and add-ons to Render equivalents.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-migrate-from-heroku's documented scope."
+        },
+        {
+          "id": "render-migrate-from-heroku-positive-04",
+          "prompt": "Prepare a staged DNS cutover and rollback plan for a Heroku-to-Render production migration.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-migrate-from-heroku's documented scope."
+        },
+        {
+          "id": "render-migrate-from-heroku-positive-05",
+          "prompt": "Inventory a Heroku project before migrating its workers, datastore, and deployment process to Render.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-migrate-from-heroku's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-migrate-from-heroku-negative-01",
+          "prompt": "Deploy a new greenfield app to Render without any existing Heroku resources.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-migrate-from-heroku-negative-02",
+          "prompt": "Create an Auth0 Organization for a multi-tenant SaaS.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-migrate-from-heroku-negative-03",
+          "prompt": "Configure a Render Key Value cache without a migration.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-migrate-from-heroku-negative-04",
+          "prompt": "Design a Minecraft Bedrock behavior pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-migrate-from-heroku-negative-05",
+          "prompt": "Build a Supabase data dashboard from uploaded CSV data.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-monitor",
+      "positive_cases": [
+        {
+          "id": "render-monitor-positive-01",
+          "prompt": "Monitor a Render API's latency, error rate, CPU, memory, and request volume after a release.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-monitor's documented scope."
+        },
+        {
+          "id": "render-monitor-positive-02",
+          "prompt": "Correlate Render runtime logs with deploy history to identify a service regression.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-monitor's documented scope."
+        },
+        {
+          "id": "render-monitor-positive-03",
+          "prompt": "Set actionable alert thresholds for a Render background worker queue.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-monitor's documented scope."
+        },
+        {
+          "id": "render-monitor-positive-04",
+          "prompt": "Review Render Postgres connection count, query latency, and storage metrics.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-monitor's documented scope."
+        },
+        {
+          "id": "render-monitor-positive-05",
+          "prompt": "Compare current Render service metrics with a known-good baseline and report whether the service is healthy.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-monitor's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-monitor-negative-01",
+          "prompt": "Create a Dockerfile and build a container locally without monitoring Render.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-monitor-negative-02",
+          "prompt": "Configure Render private-network routing between two services.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-monitor-negative-03",
+          "prompt": "Set up an Auth0 MFA enrollment flow.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-monitor-negative-04",
+          "prompt": "Implement an offline cache in a React Native mobile app.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-monitor-negative-05",
+          "prompt": "Create a scheduled Render Cron Job rather than monitor it.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-networking",
+      "positive_cases": [
+        {
+          "id": "render-networking-positive-01",
+          "prompt": "Connect a Render web service to a Render Postgres database over the internal network.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-networking's documented scope."
+        },
+        {
+          "id": "render-networking-positive-02",
+          "prompt": "Determine whether a Render worker can receive inbound private-network HTTP requests or only initiate requests.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-networking's documented scope."
+        },
+        {
+          "id": "render-networking-positive-03",
+          "prompt": "Troubleshoot service discovery and port reachability between two Render services in different regions.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-networking's documented scope."
+        },
+        {
+          "id": "render-networking-positive-04",
+          "prompt": "Design a private network layout for an API, worker, and internal search service on Render.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-networking's documented scope."
+        },
+        {
+          "id": "render-networking-positive-05",
+          "prompt": "Review internal hostnames, protocol, ports, and region constraints for Render service-to-service communication.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-networking's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-networking-negative-01",
+          "prompt": "Configure public DNS and TLS for a custom domain on Render.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-networking-negative-02",
+          "prompt": "Set up Auth0 token validation for an API.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-networking-negative-03",
+          "prompt": "Create a persistent disk on Render.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-networking-negative-04",
+          "prompt": "Implement a PostgreSQL partial index for a local database.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-networking-negative-05",
+          "prompt": "Create an Android deep link and Intent filter.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-postgres",
+      "positive_cases": [
+        {
+          "id": "render-postgres-positive-01",
+          "prompt": "Provision Render Postgres and configure an application to use its internal connection URL.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-postgres's documented scope."
+        },
+        {
+          "id": "render-postgres-positive-02",
+          "prompt": "Review application connection pooling to avoid exhausting Render Postgres connections.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-postgres's documented scope."
+        },
+        {
+          "id": "render-postgres-positive-03",
+          "prompt": "Design a backup and point-in-time recovery plan for a Render Postgres database.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-postgres's documented scope."
+        },
+        {
+          "id": "render-postgres-positive-04",
+          "prompt": "Plan a production PostgreSQL schema migration on Render with low-locking risk and tested recovery.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-postgres's documented scope."
+        },
+        {
+          "id": "render-postgres-positive-05",
+          "prompt": "Troubleshoot a Render Postgres connection error using service region, URL type, roles, and connection counts.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-postgres's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-postgres-negative-01",
+          "prompt": "Configure a Render Key Value Redis-compatible cache.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-postgres-negative-02",
+          "prompt": "Create a Render static site and configure a publish directory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-postgres-negative-03",
+          "prompt": "Implement Auth0 Organizations and role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-postgres-negative-04",
+          "prompt": "Build an Android Compose screen.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-postgres-negative-05",
+          "prompt": "Create a Minecraft Bedrock resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-private-services",
+      "positive_cases": [
+        {
+          "id": "render-private-services-positive-01",
+          "prompt": "Expose an internal HTTP API to other Render services without making it publicly accessible.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-private-services's documented scope."
+        },
+        {
+          "id": "render-private-services-positive-02",
+          "prompt": "Choose between a Render private service and a background worker for a process that needs inbound traffic.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-private-services's documented scope."
+        },
+        {
+          "id": "render-private-services-positive-03",
+          "prompt": "Review whether an internal Render service is reachable only from authorized same-region resources.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-private-services's documented scope."
+        },
+        {
+          "id": "render-private-services-positive-04",
+          "prompt": "Configure health checks and service discovery for a Render private service.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-private-services's documented scope."
+        },
+        {
+          "id": "render-private-services-positive-05",
+          "prompt": "Add application-level authentication to an API running on Render's private network.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-private-services's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-private-services-negative-01",
+          "prompt": "Deploy a public Render web service with a custom domain.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-private-services-negative-02",
+          "prompt": "Configure a queue consumer as a Render background worker.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-private-services-negative-03",
+          "prompt": "Create a Render Cron Job that exits after one run.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-private-services-negative-04",
+          "prompt": "Set up Auth0 login for a web application.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-private-services-negative-05",
+          "prompt": "Design a PostgreSQL RLS policy.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-sandboxes",
+      "positive_cases": [
+        {
+          "id": "render-sandboxes-positive-01",
+          "prompt": "Run untrusted AI-generated code in a temporary Render Sandbox with a restricted outbound network policy.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-sandboxes's documented scope."
+        },
+        {
+          "id": "render-sandboxes-positive-02",
+          "prompt": "Design file upload/download and cleanup behavior for a Render Sandbox execution.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-sandboxes's documented scope."
+        },
+        {
+          "id": "render-sandboxes-positive-03",
+          "prompt": "Prepare a reusable Render Sandbox snapshot for a reproducible build/test environment.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-sandboxes's documented scope."
+        },
+        {
+          "id": "render-sandboxes-positive-04",
+          "prompt": "Review how to prevent production secrets from leaking into an isolated Render Sandbox.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-sandboxes's documented scope."
+        },
+        {
+          "id": "render-sandboxes-positive-05",
+          "prompt": "Run a bounded code-evaluation job in Render Sandboxes and verify termination and output files.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-sandboxes's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-sandboxes-negative-01",
+          "prompt": "Deploy a long-running web API to Render Web Services.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-sandboxes-negative-02",
+          "prompt": "Use a Render worker to continuously process an authenticated queue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-sandboxes-negative-03",
+          "prompt": "Create a Render Postgres PITR restore.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-sandboxes-negative-04",
+          "prompt": "Configure Auth0 SSO for enterprise users.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-sandboxes-negative-05",
+          "prompt": "Build a custom Three.js physics engine.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-scaling",
+      "positive_cases": [
+        {
+          "id": "render-scaling-positive-01",
+          "prompt": "A Render web service has high latency under load. Evaluate vertical versus horizontal scaling from CPU and memory metrics.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-scaling's documented scope."
+        },
+        {
+          "id": "render-scaling-positive-02",
+          "prompt": "Configure safe autoscaling bounds for a Render worker after verifying current plan eligibility.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-scaling's documented scope."
+        },
+        {
+          "id": "render-scaling-positive-03",
+          "prompt": "Estimate how additional Render web-service instances affect Postgres connection counts and monthly compute cost.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-scaling's documented scope."
+        },
+        {
+          "id": "render-scaling-positive-04",
+          "prompt": "Review whether a stateful Render service can safely scale horizontally.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-scaling's documented scope."
+        },
+        {
+          "id": "render-scaling-positive-05",
+          "prompt": "Compare before/after service latency and resource metrics after changing Render instance count.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-scaling's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-scaling-negative-01",
+          "prompt": "Configure a Render custom domain with DNS records.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-scaling-negative-02",
+          "prompt": "Create a Render Cron Job schedule.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-scaling-negative-03",
+          "prompt": "Set Auth0 access-token audience and issuer validation.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-scaling-negative-04",
+          "prompt": "Create a Minecraft Bedrock add-on.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-scaling-negative-05",
+          "prompt": "Fix a React component rendering bug.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-static-sites",
+      "positive_cases": [
+        {
+          "id": "render-static-sites-positive-01",
+          "prompt": "Deploy a Vite SPA to Render Static Sites and configure the correct build output directory.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-static-sites's documented scope."
+        },
+        {
+          "id": "render-static-sites-positive-02",
+          "prompt": "Fix a React single-page application where refreshing a nested route returns 404 on Render.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-static-sites's documented scope."
+        },
+        {
+          "id": "render-static-sites-positive-03",
+          "prompt": "Configure redirects and response headers for a Render static site.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-static-sites's documented scope."
+        },
+        {
+          "id": "render-static-sites-positive-04",
+          "prompt": "Review cache behavior and asset paths after deploying a frontend to Render's global CDN.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-static-sites's documented scope."
+        },
+        {
+          "id": "render-static-sites-positive-05",
+          "prompt": "Connect a custom domain to a Render static site and verify root/www navigation.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-static-sites's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-static-sites-negative-01",
+          "prompt": "Deploy a Node API that listens for incoming HTTP requests as a Render Web Service.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-static-sites-negative-02",
+          "prompt": "Create a Render background worker with a Redis queue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-static-sites-negative-03",
+          "prompt": "Create a Render Postgres instance and tune connection pools.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-static-sites-negative-04",
+          "prompt": "Configure Auth0 MFA.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-static-sites-negative-05",
+          "prompt": "Optimize Three.js shadow maps.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-web-services",
+      "positive_cases": [
+        {
+          "id": "render-web-services-positive-01",
+          "prompt": "Deploy a Node.js HTTP API to Render and make sure it binds to the configured port.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-web-services's documented scope."
+        },
+        {
+          "id": "render-web-services-positive-02",
+          "prompt": "Set up a health endpoint and readiness check for a Render Web Service.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-web-services's documented scope."
+        },
+        {
+          "id": "render-web-services-positive-03",
+          "prompt": "Troubleshoot a Render Web Service that starts locally but cannot accept production requests.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-web-services's documented scope."
+        },
+        {
+          "id": "render-web-services-positive-04",
+          "prompt": "Review graceful shutdown, HTTP concurrency, and WebSocket behavior for a Render Web Service.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-web-services's documented scope."
+        },
+        {
+          "id": "render-web-services-positive-05",
+          "prompt": "Verify a Render Web Service after deployment using health status, logs, and a real HTTP request.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-web-services's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-web-services-negative-01",
+          "prompt": "Schedule a finite Render Cron Job that exits after a command.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-web-services-negative-02",
+          "prompt": "Create a Render private service intended only for internal traffic.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-web-services-negative-03",
+          "prompt": "Run untrusted code in a Render Sandbox.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-web-services-negative-04",
+          "prompt": "Configure Auth0 client credential rotation.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-web-services-negative-05",
+          "prompt": "Build a Three.js browser game release test.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "render-workflows",
+      "positive_cases": [
+        {
+          "id": "render-workflows-positive-01",
+          "prompt": "Design a multi-step Render Workflow for a long-running ETL pipeline with durable state and retries.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-workflows's documented scope."
+        },
+        {
+          "id": "render-workflows-positive-02",
+          "prompt": "Implement idempotent task steps in a Render Workflow so resuming does not duplicate external side effects.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-workflows's documented scope."
+        },
+        {
+          "id": "render-workflows-positive-03",
+          "prompt": "Choose between Render Workflows, a background worker, and Cron for an agent task with several recoverable stages.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-workflows's documented scope."
+        },
+        {
+          "id": "render-workflows-positive-04",
+          "prompt": "Validate a Render Workflow locally with the current SDK before deploying it.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-workflows's documented scope."
+        },
+        {
+          "id": "render-workflows-positive-05",
+          "prompt": "Test failure, retry, cancellation, and resume behavior for a Render Workflow execution.",
+          "expected_activation": true,
+          "rationale": "The task is directly within render-workflows's documented scope."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "render-workflows-negative-01",
+          "prompt": "Create a single finite Render Cron Job with no multi-step orchestration.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-workflows-negative-02",
+          "prompt": "Configure a continuous Render worker to consume a simple queue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-workflows-negative-03",
+          "prompt": "Set up Auth0 social login and callback URLs.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-workflows-negative-04",
+          "prompt": "Review Android Intent sanitization.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        },
+        {
+          "id": "render-workflows-negative-05",
+          "prompt": "Create a Render static landing page with no background tasks.",
+          "expected_activation": false,
+          "rationale": "The task belongs to a different skill or does not require this specialist workflow."
+        }
+      ]
     }
   ]
 }
