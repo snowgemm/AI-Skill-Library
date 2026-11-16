@@ -7,10 +7,10 @@
   "policy": "Restoration is based on independent reimplementation or license-compliant public sources. Host-managed bodies are not copied. A matching portable equivalent is not the original host skill.",
   "summary": {
     "host_managed_bodies_exported": 0,
-    "catalog_items_with_independent_equivalent": 25,
-    "unlicensed_portable_equivalents": 23,
+    "catalog_items_with_independent_equivalent": 71,
+    "unlicensed_portable_equivalents": 69,
     "license_reviewed_portable_equivalents": 2,
-    "remaining_metadata_only": 123
+    "remaining_metadata_only": 77
   },
   "items": [
     {
@@ -19,8 +19,13 @@
       "display_name": "Analyze Data Quality",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-analyze-data-quality/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 2,
@@ -28,8 +33,13 @@
       "display_name": "Answers Follow Up",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-answers-follow-up/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 3,
@@ -37,8 +47,13 @@
       "display_name": "Build Dashboard",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-build-dashboard/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 4,
@@ -46,8 +61,13 @@
       "display_name": "Build Report",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-build-report/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 5,
@@ -55,8 +75,13 @@
       "display_name": "Convert To Doc",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-convert-to-doc/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 6,
@@ -64,8 +89,13 @@
       "display_name": "Convert To Slides",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-convert-to-slides/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 7,
@@ -73,8 +103,13 @@
       "display_name": "Customize Data Plugin",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-customize-data-plugin/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 8,
@@ -82,8 +117,13 @@
       "display_name": "Design Kpis",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-design-kpis/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 9,
@@ -91,8 +131,13 @@
       "display_name": "Index",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-index/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 10,
@@ -100,8 +145,13 @@
       "display_name": "Jupyter Notebooks",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-jupyter-notebooks/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 11,
@@ -109,8 +159,13 @@
       "display_name": "Kpi Reporting",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-kpi-reporting/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 12,
@@ -118,8 +173,13 @@
       "display_name": "Market Sizing",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-market-sizing/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 13,
@@ -127,8 +187,13 @@
       "display_name": "Metric Diagnostics",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-metric-diagnostics/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 14,
@@ -136,8 +201,13 @@
       "display_name": "Onboarding",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-onboarding/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 15,
@@ -145,8 +215,13 @@
       "display_name": "Product Business Analysis",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-product-business-analysis/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 16,
@@ -154,8 +229,13 @@
       "display_name": "Publish Artifact To Sites",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-publish-artifact-to-sites/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 17,
@@ -163,8 +243,13 @@
       "display_name": "Report To Pdf",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-report-to-pdf/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 18,
@@ -172,8 +257,13 @@
       "display_name": "Schedule Refresh Jobs",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-schedule-refresh-jobs/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 19,
@@ -181,8 +271,13 @@
       "display_name": "Share Artifact Summary",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-share-artifact-summary/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 20,
@@ -190,8 +285,13 @@
       "display_name": "Validate Data",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-validate-data/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 21,
@@ -199,8 +299,13 @@
       "display_name": "Visualize Data",
       "catalog_group": "data",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/data-visualize-data/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 22,
@@ -208,8 +313,13 @@
       "display_name": "Ai Coding Tools Guide",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-ai-coding-tools-guide/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 23,
@@ -217,8 +327,13 @@
       "display_name": "Ai Features Builder",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-ai-features-builder/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 24,
@@ -226,8 +341,13 @@
       "display_name": "App Safety And Speed",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-app-safety-and-speed/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 25,
@@ -235,8 +355,13 @@
       "display_name": "Auth And Payments",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-auth-and-payments/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 26,
@@ -244,8 +369,13 @@
       "display_name": "Bug Fixer",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-bug-fixer/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 27,
@@ -253,8 +383,13 @@
       "display_name": "Code Explainer",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-code-explainer/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 28,
@@ -262,8 +397,13 @@
       "display_name": "Code Review",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-code-review/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 29,
@@ -271,8 +411,13 @@
       "display_name": "Deployment And Git",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-deployment-and-git/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 30,
@@ -280,8 +425,13 @@
       "display_name": "Frontend Ui Builder",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-frontend-ui-builder/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 31,
@@ -289,8 +439,13 @@
       "display_name": "Full Stack App Builder",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-full-stack-app-builder/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 32,
@@ -298,8 +453,13 @@
       "display_name": "Idea To Build Plan",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-idea-to-build-plan/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 33,
@@ -307,8 +467,13 @@
       "display_name": "Landing Page Builder",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-landing-page-builder/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 34,
@@ -316,8 +481,13 @@
       "display_name": "Launch And Docs",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-launch-and-docs/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 35,
@@ -325,8 +495,13 @@
       "display_name": "Mobile App Builder",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-mobile-app-builder/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 36,
@@ -334,8 +509,13 @@
       "display_name": "Prd Writer",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-prd-writer/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 37,
@@ -343,8 +523,13 @@
       "display_name": "Project Rescue",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-project-rescue/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 38,
@@ -352,8 +537,13 @@
       "display_name": "Scripts And Automation",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-scripts-and-automation/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 39,
@@ -361,8 +551,13 @@
       "display_name": "System Design",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-system-design/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 40,
@@ -370,8 +565,13 @@
       "display_name": "Task Breakdown And Kanban",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-task-breakdown-and-kanban/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 41,
@@ -379,8 +579,13 @@
       "display_name": "Tech Stack Advisor",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-tech-stack-advisor/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 42,
@@ -388,8 +593,13 @@
       "display_name": "Testing",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-testing/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 43,
@@ -397,8 +607,13 @@
       "display_name": "Vibe Coder",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-vibe-coder/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 44,
@@ -406,8 +621,13 @@
       "display_name": "Vibe Coder Help",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-vibe-coder-help/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 45,
@@ -415,8 +635,13 @@
       "display_name": "Vibe Coder Planner Guide",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-vibe-coder-planner-guide/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 46,
@@ -424,8 +649,13 @@
       "display_name": "Vibe Coding Prompts",
       "catalog_group": "vibecoder",
       "body_status": "host_managed_not_exported",
-      "portable_equivalent": null,
-      "restoration_status": "metadata_only_pending_independent_reimplementation"
+      "portable_equivalent": {
+        "path": "skills/vibecoder-vibe-coding-prompts/SKILL.md",
+        "status": "original_documentation_adaptation",
+        "license": "UNLICENSED",
+        "original_host_body_recovered": false
+      },
+      "restoration_status": "independent_equivalent_unlicensed"
     },
     {
       "number": 47,
