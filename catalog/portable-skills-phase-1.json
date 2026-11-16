@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "snapshot_date": "2026-11-05",
-  "phase": "portable-skill-recovery-1",
+  "snapshot_date": "2026-11-16",
+  "phase": "portable-skill-library-expansion-2",
   "policy": "Only original or license-compliant adapted skill content is included. Each upstream source and license is preserved; upstream tracking is separate from pinned import provenance.",
   "skills": [
     {
@@ -17,7 +17,8 @@
         "testing/testing-setup/SKILL.md"
       ],
       "license_file": "licenses/upstream/android-LICENSE.txt",
-      "notes": "Independent adaptation; no verbatim upstream skill body or bundled references."
+      "notes": "Independent adaptation; no verbatim upstream skill body or bundled references.",
+      "reviewed_upstream_head": "c72942584fff970dac86ced78b367fce0c441e52"
     },
     {
       "id": "minecraft-bedrock-addon",
@@ -32,7 +33,8 @@
         "plugins/minecraft/skills/creator-tools-cli/SKILL.md"
       ],
       "license_file": "licenses/upstream/mojang-LICENSE.md",
-      "notes": "No vanilla assets or res/latest/van resources copied; user must accept EULA themselves where applicable."
+      "notes": "No vanilla assets or res/latest/van resources copied; user must accept EULA themselves where applicable.",
+      "reviewed_upstream_head": "114ebc99f31ba2fd37e7daf71643ea1c9f940fd6"
     },
     {
       "id": "threejs-game-engineering",
@@ -79,6 +81,48 @@
       ],
       "license_file": "licenses/upstream/supabase-LICENSE",
       "notes": "Independent adaptation; current docs/changelog required before version-sensitive implementation."
+    },
+    {
+      "id": "android-intent-security",
+      "domain": "Android security",
+      "path": "skills/android-intent-security/SKILL.md",
+      "status": "portable_adaptation",
+      "license": "Apache-2.0",
+      "upstream": "android/skills",
+      "upstream_commit": "c72942584fff970dac86ced78b367fce0c441e52",
+      "upstream_skill_examples": [
+        "security/android-intent-security/SKILL.md"
+      ],
+      "license_file": "licenses/upstream/android-LICENSE.txt",
+      "notes": "Independently authored defensive adaptation for Intent, deep-link, PendingIntent, component, provider and IPC trust boundaries; no upstream scripts imported."
+    },
+    {
+      "id": "threejs-qa-release",
+      "domain": "Three.js game QA",
+      "path": "skills/threejs-qa-release/SKILL.md",
+      "status": "portable_adaptation",
+      "license": "MIT",
+      "upstream": "majidmanzarpour/threejs-game-skills",
+      "upstream_commit": "8286774b22a2566bf894dbc825825c16921866af",
+      "upstream_skill_examples": [
+        "skills/threejs-qa-release/SKILL.md"
+      ],
+      "license_file": "licenses/upstream/threejs-LICENSE",
+      "notes": "Independent adaptation focused on observable gameplay, browser diagnostics, responsive checks, measurable performance and release evidence; no upstream scripts or assets copied."
+    },
+    {
+      "id": "supabase-postgres-best-practices",
+      "domain": "Supabase and PostgreSQL",
+      "path": "skills/supabase-postgres-best-practices/SKILL.md",
+      "status": "portable_adaptation",
+      "license": "MIT",
+      "upstream": "supabase/agent-skills",
+      "upstream_commit": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+      "upstream_skill_examples": [
+        "skills/supabase-postgres-best-practices/SKILL.md"
+      ],
+      "license_file": "licenses/upstream/supabase-LICENSE",
+      "notes": "Independent adaptation covering query plans, connection management, RLS, schema, migrations, concurrency and diagnostics."
     }
   ]
 }
