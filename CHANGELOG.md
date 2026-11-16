@@ -12,6 +12,7 @@ All notable repository changes are documented here. A version is not considered 
 - Pinned zizmor workflow security analysis and explicit workflow-permission/automation invariants.
 - Commercial readiness, per-component licensing, security, evaluation and compatibility documentation.
 - Three specialist portable skills: Android Intent security, Three.js QA/release, and Supabase/PostgreSQL best practices.
+- Eighty deterministic positive/negative routing seed cases (five of each per skill) and an offline validator; these fixtures do not claim host runtime activation.
 
 ### Changed
 - Installer requires an existing project directory, stages all skills before installation, refuses symlink paths and attempts rollback on failure.
