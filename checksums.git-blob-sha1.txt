@@ -25,9 +25,9 @@ d3c9e94fbc6c28f66ecb5a01407d543c99c811b6  licenses/upstream/supabase-LICENSE
 abf0390320aa14406af7a520b9b0739fdda9bf08  licenses/upstream/superpowers-LICENSE
 0e7cfcfa43d5da2dc6a31768afcd95525fd3000c  licenses/upstream/threejs-LICENSE
 223f61565beef7da8a2720f205f6bda651b22c10  LICENSING.md
-1e9fb5cb9509a71a0e0d1e8789b36df96e38d13c  MANIFEST.json
+1f684df87cab0af59f3508044f414e4b51deea06  MANIFEST.json
 67b4f4cd79e456235a46ee66c281d8cde481b00a  policies/IMPORT-SECURITY.md
-3939e8187171a1cf35d743836f3aa8dcb79afb2e  README.md
+d663e32fa21dfd423036b5162d93d27ff6a67ee3  README.md
 f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
 e8f3cc81ab6eaa169afaf0cd381faae4b0c0c0ae  scripts/install_skills.py
 9364e385bd4ea8cac4b7aed12bc217f34cc816b9  scripts/update_checksums.py
@@ -71,7 +71,7 @@ a8aae39ff1d72f9a4b8f9e29e5f376d48f805a5c  skills/threejs-game-engineering/SKILL.
 2eff97d80aae6ef4581a3fd745b862f57048247b  sources/PORTABLE-SKILL-RECOVERY.md
 078984dea890f7d8147a83a35deb8b69c94cf925  sources/SOURCE-VERIFICATION.md
 e970a23c5e6f594921fadad61546a1916bed942e  tests/test_installer.py
-ddf248824e0f6cfb383c9d66db31914bcb6f244a  tests/test_repository_integrity.py
+304550d4a6ded0ecafaaf17de25c22daecacb4f6  tests/test_repository_integrity.py
 5d8990aa3b6e7c9ac07668429716cfce7af24c43  tests/test_skill_evaluations.py
 ca4c0a711c6fe2b86d833708397ca7a2c8f2d00f  tests/test_validate_skills.py
 72c80b297fbbcf27583f384ac11ccab342581094  tests/test_workflow_security.py
