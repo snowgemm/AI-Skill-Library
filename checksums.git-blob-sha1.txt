@@ -195,7 +195,7 @@ bd79ed00a513fd2f043df0c773f543ebd979d762  skills/vibecoder-vibe-coding-prompts/S
 2eff97d80aae6ef4581a3fd745b862f57048247b  sources/PORTABLE-SKILL-RECOVERY.md
 078984dea890f7d8147a83a35deb8b69c94cf925  sources/SOURCE-VERIFICATION.md
 e970a23c5e6f594921fadad61546a1916bed942e  tests/test_installer.py
-54ec12a1f155457e05758b133add5c8eb8431668  tests/test_repository_integrity.py
+29b2bf8d31f743f6ea2225e4d3e9c01b55c8dcff  tests/test_repository_integrity.py
 5d8990aa3b6e7c9ac07668429716cfce7af24c43  tests/test_skill_evaluations.py
 ca4c0a711c6fe2b86d833708397ca7a2c8f2d00f  tests/test_validate_skills.py
 72c80b297fbbcf27583f384ac11ccab342581094  tests/test_workflow_security.py
