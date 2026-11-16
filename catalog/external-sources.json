@@ -288,6 +288,60 @@
         "Use as a source/reference catalogue, not as a blanket redistribution grant."
       ],
       "import_decision": "reference_only_until_per_skill_license_review"
+    },
+    {
+      "id": "googlechrome-modern-web-guidance",
+      "repository": "GoogleChrome/modern-web-guidance",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance",
+      "commit": "4dd968349e54ca45a05dd5c818fb035c9054b022",
+      "commit_date": "2026-11-10T03:08:33Z",
+      "license": "Apache-2.0 for repository software code; CC-BY-4.0 for documentation and guide content under guides/ as stated by upstream README; derived MDN/W3C/WHATWG/IETF material requires its own attribution and license review.",
+      "role": "official_cross_browser_modern_web_agent_guidance",
+      "verification": "Repository metadata, main ref, README, LICENSE, package.json, and both published SKILL.md pack entrypoints reviewed on 2026-11-16; linked authoring repository separately pinned.",
+      "inspected_paths": [
+        "README.md",
+        "LICENSE",
+        "package.json",
+        "skills/modern-web-guidance/SKILL.md",
+        "skills/chrome-extensions/SKILL.md"
+      ],
+      "findings": [
+        "Stewarded by Google Chrome, Microsoft Edge, Mozilla Firefox, MDN teams, and the web development community.",
+        "Official CLI supports installation, semantic search, guide retrieval, and broad legacy-pattern scans; the published packs are modern-web-guidance and chrome-extensions.",
+        "Coverage includes modern browser APIs, HTML/DOM, CSS/layout, UI behavior, forms, accessibility, performance, privacy/security, PWAs, built-in browser AI, and Chrome Extensions Manifest V3.",
+        "Guidance uses Baseline-aware browser compatibility context and gates Origin Trial or volatile features from retrieval unless explicitly enabled; target-browser behavior still requires project-level testing.",
+        "Reviewed package version is 1.0.0 and package.json requires Node.js >=22. Pin an exact package version for reproducible use instead of relying on a floating latest tag.",
+        "Upstream documents anonymous telemetry for installation counts, agent identity, retrieved guide IDs, and CLI search queries; it states raw prompts are not collected and documents DISABLE_TELEMETRY=1 as an opt-out.",
+        "No upstream SKILL.md, guide content, scripts, or assets are copied into AI-Skill-Library."
+      ],
+      "import_decision": "reference_only_use_upstream_cli_no_bulk_copy",
+      "related_source_repository": "GoogleChrome/modern-web-guidance-src",
+      "related_source_commit": "5e5cd33a7738f21281e3027732bcbd58cfa82bf1",
+      "latest_checked_on": "2026-11-16"
+    },
+    {
+      "id": "googlechrome-modern-web-guidance-src",
+      "repository": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "commit": "5e5cd33a7738f21281e3027732bcbd58cfa82bf1",
+      "commit_date": "2026-11-14T01:16:48Z",
+      "license": "Apache-2.0 for repository software code; guide content in the published project is identified as CC-BY-4.0; third-party-derived material retains separate attribution and licensing requirements.",
+      "role": "modern_web_guidance_authoring_and_evaluation_source",
+      "verification": "Repository metadata, main ref, README, LICENSE, guides/README.md, and GOVERNANCE.md reviewed on 2026-11-16.",
+      "inspected_paths": [
+        "README.md",
+        "LICENSE",
+        "guides/README.md",
+        "GOVERNANCE.md"
+      ],
+      "findings": [
+        "This is the linked authoring repository for the published GoogleChrome/modern-web-guidance skill packs.",
+        "It contains the guide authoring workflow, category documentation, calibration/evaluation infrastructure, and project governance.",
+        "Guide content is separated from the repository software and carries a distinct published CC-BY-4.0 licensing statement; do not treat the root Apache-2.0 metadata as a blanket license for every guide or third-party-derived file.",
+        "Used as a provenance and update-review reference only; no source files or guide content are imported."
+      ],
+      "import_decision": "reference_only_authoring_and_evaluation_source",
+      "latest_checked_on": "2026-11-16"
     }
   ],
   "upstream_tracking": {

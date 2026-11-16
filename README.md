@@ -25,6 +25,28 @@ AI-Skill-Library maintains a current catalog of host-managed skill identifiers, 
 
 The canonical list is in [`catalog/portable-skills-phase-1.json`](catalog/portable-skills-phase-1.json). Individual guide contents are under [`skills/`](skills/).
 
+## Modern Web Guidance — external reference
+
+[GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) is now tracked as an official external reference, together with its [authoring and evaluation repository](https://github.com/GoogleChrome/modern-web-guidance-src). It is **not** counted as one of the 154 portable guides and its upstream skill bodies, guides, scripts, and assets are not copied into this repository.
+
+The published package contains two selectable packs:
+
+- `modern-web-guidance`: current browser APIs, HTML/DOM, CSS/layout, interaction patterns, forms, accessibility, performance, privacy/security, PWA, and browser built-in AI.
+- `chrome-extensions`: Chrome Extensions Manifest V3, extension APIs, service workers, permissions, and Chrome Web Store publishing.
+
+For browser-side web work, prefer the upstream search-and-retrieve workflow over relying on static or model-memory guidance:
+
+```sh
+npx modern-web-guidance@1.0.0 search "responsive data table"
+npx modern-web-guidance@1.0.0 retrieve "<guide-id>"
+```
+
+The reviewed published package is version `1.0.0` and declares Node.js `>=22`. Pin and review the package version before execution; avoid silently relying on a floating `@latest` in reproducible project workflows. Use `legacy-scan` only for broad, open-ended modernization work—not as a substitute for inspecting a specific feature. Verify the retrieved guidance against the project's actual target browsers; Baseline-aware recommendations do not replace runtime testing, and experimental/volatile features should remain opt-in.
+
+**Privacy:** upstream documents anonymous collection of installation counts, agent identity, retrieved guide IDs, and CLI search queries; it states that raw prompts are not collected. The documented opt-out is `DISABLE_TELEMETRY=1`.
+
+**Licensing:** upstream distinguishes Apache-2.0 software code from CC-BY-4.0 documentation and guide content under `guides/`; some material derives from MDN, W3C, WHATWG, and IETF specifications. This library stores provenance and links only and does not relicense or redistribute those materials.
+
 ## Host support
 
 Project-scope discovery adapters are documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI, and Grok Build. The installer targets those project directories and does not execute skill scripts.
@@ -58,7 +80,7 @@ python3 scripts/validate_workflow_security.py
 python3 scripts/validate_skill_evaluations.py
 ```
 
-GitHub Actions run [#43825916875](https://github.com/snowgemm/AI-Skill-Library/actions/runs/43825916875) passed on commit `0559e66a5119ef01f7b6af2846d1713e492b8e9c`: 52 unit tests, Agent Skills validation, repository/checksum validation, routing-fixture validation, and workflow-security invariants passed on Python 3.12 and 3.13; the zizmor workflow audit also passed. This is static/CI evidence only, not host-runtime compatibility or skill-effectiveness evidence.
+The pre-integration HEAD passed GitHub Actions run [#43826039066](https://github.com/snowgemm/AI-Skill-Library/actions/runs/43826039066) on commit `9b1d3a807b12b3fd7110fcd3bd04dadee191e91b`: 52 unit tests, Agent Skills validation, repository/checksum validation, routing-fixture validation, and workflow-security invariants passed on Python 3.12 and 3.13; the zizmor workflow audit also passed. This is static/CI evidence only, not host-runtime compatibility or skill-effectiveness evidence.
 
 ## Licensing and release limits
 

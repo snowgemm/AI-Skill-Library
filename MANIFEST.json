@@ -8,8 +8,8 @@
     "chatgpt_catalog_items": 148,
     "historical_base_items": 125,
     "post_inventory_additions": 23,
-    "external_repositories_reviewed": 11,
-    "external_repositories_commit_pinned": 11,
+    "external_repositories_reviewed": 13,
+    "external_repositories_commit_pinned": 13,
     "portable_upstream_skill_bodies_copied": 0,
     "custom_skill_bodies_created": 154,
     "platforms_documented_or_tracked": 7,
@@ -23,7 +23,8 @@
     "catalog_topics_with_independent_equivalent": 148,
     "metadata_only_topics": 0,
     "routing_case_seed_count": 1540,
-    "license_reviewed_catalog_equivalents": 2
+    "license_reviewed_catalog_equivalents": 2,
+    "reference_only_external_skill_packs": 2
   },
   "not_done": [
     "The original host-managed bodies for the 148 catalog entries have not been exported. Portable guides are independent equivalents, not exact recovery of private/plugin-managed text.",
@@ -33,7 +34,7 @@
     "No comprehensive skill-level static and dynamic security assessment has been completed.",
     "No root-level license has been selected for all original repository files.",
     "No signed release package, SBOM, build provenance attestation, or signature verification procedure has been published.",
-    "The latest GitHub Actions result for the final restoration commit has not been independently verified."
+    "Modern Web Guidance is catalogued as an external reference only; the upstream CLI has not been executed and its host-specific activation/invocation has not been tested as part of this repository."
   ],
   "principles": [
     "Do not redistribute proprietary/plugin-hosted skill bodies without rights.",
@@ -73,8 +74,8 @@
   "published_repository": "https://github.com/snowgemm/AI-Skill-Library",
   "base_published_branch": "main",
   "working_branch": "main",
-  "ci_verified_commit": "0559e66a5119ef01f7b6af2846d1713e492b8e9c",
-  "validation_status": "148_of_148_catalog_topics_mapped_to_independent_equivalents;154_portable_guides;146_unlicensed;1540_routing_seed_cases;quality_ci_passed_python_3_12_3_13_and_zizmor_on_0559e66a;host_runtime_not_tested;commercial_distribution_blocked",
+  "ci_verified_commit": "9b1d3a807b12b3fd7110fcd3bd04dadee191e91b",
+  "validation_status": "148_of_148_catalog_topics_mapped_to_independent_equivalents;154_portable_guides;146_unlicensed;1540_routing_seed_cases;13_external_repositories_reviewed_and_commit_pinned;modern_web_guidance_reference_only;quality_ci_passed_on_9b1d3a8;host_runtime_not_tested;commercial_distribution_blocked",
   "skill_expansion_phase": "wave_4_adds_21_data_and_25_vibecoder_independent_guides",
   "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates",
   "skill_routing_cases_file": "evaluations/skill-routing-cases.json",
@@ -84,6 +85,11 @@
   "restoration_status_file": "catalog/restoration-status-148.json",
   "documentation_sources_file": "catalog/documentation-sources.json",
   "current_catalog_file": "catalog/current-installed-skills-148.json",
-  "ci_run_id": 43825916875,
-  "ci_conclusion": "success"
+  "ci_run_id": 43826039066,
+  "ci_conclusion": "success",
+  "reference_only_external_skill_packs": [
+    "modern-web-guidance",
+    "chrome-extensions"
+  ],
+  "updated_at": "2026-11-16"
 }

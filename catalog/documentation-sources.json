@@ -323,6 +323,27 @@
         "https://vercel.com/docs/deployment-protection",
         "https://vercel.com/docs/workflow"
       ]
+    },
+    {
+      "id": "modern-web-guidance",
+      "vendor": "Google Chrome, Microsoft Edge, Mozilla Firefox, MDN, and the web development community",
+      "homepage": "https://developer.chrome.com/docs/modern-web-guidance",
+      "reviewed_on": "2026-11-16",
+      "license_status": "reference-only; no upstream SKILL.md, guide content, code, or assets copied. Upstream states software code is Apache-2.0 and guide content under guides/ is CC-BY-4.0; MDN/W3C/WHATWG/IETF-derived portions require separate attribution and license checks.",
+      "portable_guides": [],
+      "references": [
+        "https://github.com/GoogleChrome/modern-web-guidance",
+        "https://github.com/GoogleChrome/modern-web-guidance-src",
+        "https://developer.chrome.com/docs/modern-web-guidance",
+        "https://googlechrome.github.io/modern-web-guidance-src/",
+        "https://www.npmjs.com/package/modern-web-guidance"
+      ],
+      "usage_notes": [
+        "Use the upstream modern-web-guidance CLI for browser-side UI, CSS, HTML, DOM, and client-side JavaScript tasks when available.",
+        "Use the chrome-extensions pack only for Chrome Extensions Manifest V3 and Chrome Web Store workflows.",
+        "Review and pin the exact package version before execution; the reviewed 1.0.0 package requires Node.js >=22.",
+        "Review telemetry settings before use; DISABLE_TELEMETRY=1 is the documented opt-out."
+      ]
     }
   ]
 }

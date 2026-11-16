@@ -5,6 +5,7 @@ All notable repository changes are documented here. A version is not considered 
 ## Unreleased — 0.7.0 pre-release restoration wave
 
 ### Added
+- Added GoogleChrome Modern Web Guidance as a pinned, reference-only source (published skill packs plus linked authoring/evaluation repository); no upstream skill bodies or guide content copied.
 - Strict Agent Skills frontmatter validation with duplicate-key detection.
 - Repository consistency, provenance, immutable GitHub Actions pin and Git blob checksum validation.
 - Failure-path tests for installer rollback and malformed skill metadata.
