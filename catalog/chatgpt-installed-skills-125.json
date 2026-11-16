@@ -897,7 +897,8 @@
       "catalog_group": "codex-dev-workflows",
       "chatgpt_skill_uri": "skills://plugins/codex-dev-workflows/session-handoff",
       "legacy_reconciliation_group": "codex-development",
-      "catalog_record_status": "verified_in_current_125_item_skill_catalog",      "description_status": "available_in_host_catalog_not_redistributed",
+      "catalog_record_status": "verified_in_current_125_item_skill_catalog",
+      "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
       "portable_status": "metadata_only_do_not_copy_body_without_permission"
@@ -1669,5 +1670,7 @@
       "license_status": "not_established_for_portable_redistribution",
       "portable_status": "metadata_only_do_not_copy_body_without_permission"
     }
-  ]
+  ],
+  "superseded_by": "catalog/current-installed-skills-148.json",
+  "snapshot_role": "historical_125_item_snapshot_preserved_unmodified_except_superseded_by_pointer"
 }
