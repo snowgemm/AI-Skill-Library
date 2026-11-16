@@ -61,7 +61,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-analyze-data-quality/SKILL.md"
     },
     {
       "number": 2,
@@ -74,7 +75,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-answers-follow-up/SKILL.md"
     },
     {
       "number": 3,
@@ -87,7 +89,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-build-dashboard/SKILL.md"
     },
     {
       "number": 4,
@@ -100,7 +103,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-build-report/SKILL.md"
     },
     {
       "number": 5,
@@ -113,7 +117,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-convert-to-doc/SKILL.md"
     },
     {
       "number": 6,
@@ -126,7 +131,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-convert-to-slides/SKILL.md"
     },
     {
       "number": 7,
@@ -139,7 +145,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-customize-data-plugin/SKILL.md"
     },
     {
       "number": 8,
@@ -152,7 +159,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-design-kpis/SKILL.md"
     },
     {
       "number": 9,
@@ -165,7 +173,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-index/SKILL.md"
     },
     {
       "number": 10,
@@ -178,7 +187,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-jupyter-notebooks/SKILL.md"
     },
     {
       "number": 11,
@@ -191,7 +201,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-kpi-reporting/SKILL.md"
     },
     {
       "number": 12,
@@ -204,7 +215,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-market-sizing/SKILL.md"
     },
     {
       "number": 13,
@@ -217,7 +229,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-metric-diagnostics/SKILL.md"
     },
     {
       "number": 14,
@@ -230,7 +243,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-onboarding/SKILL.md"
     },
     {
       "number": 15,
@@ -243,7 +257,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-product-business-analysis/SKILL.md"
     },
     {
       "number": 16,
@@ -256,7 +271,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-publish-artifact-to-sites/SKILL.md"
     },
     {
       "number": 17,
@@ -269,7 +285,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-report-to-pdf/SKILL.md"
     },
     {
       "number": 18,
@@ -282,7 +299,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-schedule-refresh-jobs/SKILL.md"
     },
     {
       "number": 19,
@@ -295,7 +313,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-share-artifact-summary/SKILL.md"
     },
     {
       "number": 20,
@@ -308,7 +327,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-validate-data/SKILL.md"
     },
     {
       "number": 21,
@@ -321,7 +341,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/data-visualize-data/SKILL.md"
     },
     {
       "number": 22,
@@ -334,7 +355,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-ai-coding-tools-guide/SKILL.md"
     },
     {
       "number": 23,
@@ -347,7 +369,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-ai-features-builder/SKILL.md"
     },
     {
       "number": 24,
@@ -360,7 +383,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-app-safety-and-speed/SKILL.md"
     },
     {
       "number": 25,
@@ -373,7 +397,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-auth-and-payments/SKILL.md"
     },
     {
       "number": 26,
@@ -386,7 +411,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-bug-fixer/SKILL.md"
     },
     {
       "number": 27,
@@ -399,7 +425,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-code-explainer/SKILL.md"
     },
     {
       "number": 28,
@@ -412,7 +439,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-code-review/SKILL.md"
     },
     {
       "number": 29,
@@ -425,7 +453,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-deployment-and-git/SKILL.md"
     },
     {
       "number": 30,
@@ -438,7 +467,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-frontend-ui-builder/SKILL.md"
     },
     {
       "number": 31,
@@ -451,7 +481,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-full-stack-app-builder/SKILL.md"
     },
     {
       "number": 32,
@@ -464,7 +495,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-idea-to-build-plan/SKILL.md"
     },
     {
       "number": 33,
@@ -477,7 +509,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-landing-page-builder/SKILL.md"
     },
     {
       "number": 34,
@@ -490,7 +523,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-launch-and-docs/SKILL.md"
     },
     {
       "number": 35,
@@ -503,7 +537,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-mobile-app-builder/SKILL.md"
     },
     {
       "number": 36,
@@ -516,7 +551,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-prd-writer/SKILL.md"
     },
     {
       "number": 37,
@@ -529,7 +565,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-project-rescue/SKILL.md"
     },
     {
       "number": 38,
@@ -542,7 +579,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-scripts-and-automation/SKILL.md"
     },
     {
       "number": 39,
@@ -555,7 +593,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-system-design/SKILL.md"
     },
     {
       "number": 40,
@@ -568,7 +607,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-task-breakdown-and-kanban/SKILL.md"
     },
     {
       "number": 41,
@@ -581,7 +621,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-tech-stack-advisor/SKILL.md"
     },
     {
       "number": 42,
@@ -594,7 +635,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-testing/SKILL.md"
     },
     {
       "number": 43,
@@ -607,7 +649,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-vibe-coder/SKILL.md"
     },
     {
       "number": 44,
@@ -620,7 +663,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-vibe-coder-help/SKILL.md"
     },
     {
       "number": 45,
@@ -633,7 +677,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-vibe-coder-planner-guide/SKILL.md"
     },
     {
       "number": 46,
@@ -646,7 +691,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vibecoder-vibe-coding-prompts/SKILL.md"
     },
     {
       "number": 47,
