@@ -18,12 +18,12 @@
     "new_items_since_previous_snapshot": 23
   },
   "not_done": [
-    "125 earlier host-managed plugin entries remain metadata-only; their original bodies have not been exported or licensed for redistribution.",
-    "All 23 newly discovered Auth0/Render equivalents are independently authored and UNLICENSED; no redistribution rights are granted for those files.",
+    "The original host-managed bodies for all 148 catalog entries have not been exported; 123 entries still have no portable equivalent.",
+    "The 23 Auth0/Render alternatives are independently authored and UNLICENSED; no redistribution rights are granted for those files.",
     "Host-specific CLI discovery, activation, invocation and evaluation tests have not been run.",
     "No project-wide license has been selected for original repository material.",
     "No comprehensive skill-level static and dynamic security assessment has been completed.",
-    "No matched baseline-versus-skill evaluation report exists across the 31 portable skills and five hosts.",
+    "No matched baseline-versus-skill evaluation report exists across the 31 portable guides and five hosts.",
     "No versioned release package, SBOM, build provenance attestation or signature-verification procedure has been published."
   ],
   "principles": [
@@ -65,7 +65,7 @@
   "base_published_branch": "main",
   "working_branch": "main",
   "ci_verified_commit": "e98f79c74d96a4dd871f91e8e7451e369f3deeb6",
-  "validation_status": "wave_3_files_created;catalog_and_validation_sync_pending;host_runtime_not_tested;commercial_distribution_blocked",
+  "validation_status": "catalog_and_installer_synced;checksum_inventory_updated;github_actions_result_not_verified;host_runtime_not_tested;commercial_distribution_blocked",
   "skill_expansion_phase": "wave_3_adds_23_independent_auth0_render_equivalents_and_updates_installed_catalog_to_148",
   "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates",
   "skill_routing_cases_file": "evaluations/skill-routing-cases.json",
