@@ -1,93 +1,51 @@
 # AI-Skill-Library
 
-**Snapshot:** 2026-11-16 · **Version:** 0.7.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
+**Snapshot:** 2026-11-16 · **Version:** 0.7.0-pre-release · **Status:** private evaluation only; not approved for redistribution or commercial distribution.
 
-A provenance-first registry and governance scaffold for portable AI agent skills. The project separates the historical ChatGPT-installed skill inventory from public upstream repositories and independently authored portable adaptations.
+AI-Skill-Library maintains a current catalog of host-managed skill identifiers, independently authored portable workflow guides, source provenance, license status, host adapters, and evaluation fixtures.
 
-## Current scope
+## Restoration status
 
-- 148 currently installed skill identifiers inventoried. The previous 125-item snapshot is preserved as a historical catalog. Internal plugin URIs and private skill bodies are not redistributed.
-- 11 external repositories registered with commit pins and source/license metadata.
-- 77 independently authored portable guides: 154 independently authored or license-reviewed guides across Android, Biohub ESM, Codex, CodeRabbit/GitHub, Data, Game Development, plugin management, Render, Supabase, Three.js, Usage/Cost, Vibe Coder, and Vercel.
-- Project-scope discovery adapters documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI and Grok Build.
-- A project-scope installer for all 154 skills, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
-- Upstream monitoring is read-only: it compares pinned sources with current upstream HEAD and reports drift in a GitHub issue. It does not create branches/PRs or update source pins.
-- Quality CI passed on the earlier integration commit `e98f79c74d96a4dd871f91e8e7451e369f3deeb6`; the latest skill expansion and workflow-hardening commits still require a fresh CI result.
+- **148/148** current host-managed catalog entries have an independently authored or license-reviewed portable equivalent.
+- **154** portable guides exist in `skills/`. The total is larger than the 148-item catalog because six initial engineering guides are additional standalone guides.
+- **0** host-managed plugin skill bodies were exported or copied. Portable equivalents are independent guides based on public documentation and general methodology; they are not exact recovery of private/plugin-managed content.
+- **146** portable guides are explicitly `UNLICENSED`. Only **8** guides have a license reviewed for the specific included material; of those, only **2** map to entries in the 148-item host-managed catalog.
+- **1,540** positive/negative routing prompts are test-data seeds (five positive and five negative per guide). They are not proof of host activation or runtime compatibility.
 
+## Guide groups
 
-## Portable skills
+| Group | Guides |
+|---|---:|
+| Initial Android, Minecraft, Three.js, engineering, and Supabase set | 8 |
+| Auth0 and Render | 23 |
+| Data analysis and reporting | 21 |
+| Vibe Coder software engineering | 25 |
+| Biohub ESM, Codex, GitHub/CodeRabbit, usage/cost, game development, plugin management, and Vercel | 77 |
+| **Total** | **154** |
 
-| Skill | Intended trigger |
-|---|---|
-| `android-compose-engineering` | Android app architecture, Compose state/lifecycle, testing, and measured performance |
-| `android-intent-security` | Defensive Android Intent, deep-link, PendingIntent, component, provider, and IPC review |
-| `auth0-authentication` | Auth0 OIDC/OAuth, sessions, token validation, MFA, Organizations, and RBAC |
-| `minecraft-bedrock-addon` | Bedrock behavior/resource packs, Creator Tools, validation, and packaging |
-| `render-background-workers` | Queue consumers and long-running asynchronous jobs |
-| `render-blueprints` | Render Blueprint YAML and multi-service infrastructure |
-| `render-cli` | Render CLI inspection and resource operations |
-| `render-cron-jobs` | Finite scheduled tasks |
-| `render-debug` | Render build, deploy, startup, health-check, and runtime debugging |
-| `render-deploy` | Render service deployment and rollback |
-| `render-disks` | Persistent disk mount, capacity, and recovery practices |
-| `render-docker` | Docker-based Render services and container deployment |
-| `render-domains` | Custom domains, DNS, and TLS |
-| `render-env-vars` | Render environment variables, secrets, and groups |
-| `render-keyvalue` | Render Key Value / Redis-compatible cache and queue setup |
-| `render-mcp` | Render MCP setup, access boundaries, and tool review |
-| `render-migrate-from-heroku` | Heroku-to-Render migration and cutover |
-| `render-monitor` | Render logs, metrics, and service health |
-| `render-networking` | Render private networking and service connectivity |
-| `render-postgres` | Render Postgres provisioning, migration, backup, and recovery |
-| `render-private-services` | Internal-only Render APIs |
-| `render-sandboxes` | Ephemeral isolated execution for untrusted code |
-| `render-scaling` | Measured Render scaling and capacity |
-| `render-static-sites` | Static frontends, SPA routing, headers, and CDN |
-| `render-web-services` | HTTP APIs and WebSocket services on Render |
-| `render-workflows` | Durable multi-step jobs and orchestration |
-| `supabase-engineering` | Supabase Auth, Storage, Edge Functions, migrations, RLS, and application integration |
-| `supabase-postgres-best-practices` | PostgreSQL query plans, schema, indexing, connections, concurrency, and database security |
-| `superpowers-engineering-workflow` | Task-appropriate planning, TDD, systematic debugging, and evidence-based verification |
-| `threejs-game-engineering` | Three.js browser game architecture, rendering, gameplay, and profiling |
-| `threejs-qa-release` | Real gameplay QA, responsive checks, browser evidence, performance measurement, and release verification |
+The canonical list is in [`catalog/portable-skills-phase-1.json`](catalog/portable-skills-phase-1.json). Individual guide contents are under [`skills/`](skills/).
 
-The 146 independent guides are independently authored and explicitly marked **UNLICENSED**. They are not recovered host-managed bodies and are not approved for redistribution. Two Supabase catalog entries have license-reviewed independent equivalents. The restoration map contains 148 independent equivalents across the 148-item inventory; zero entries remain metadata-only. Original host-managed skill bodies remain unexported.
+## Host support
 
+Project-scope discovery adapters are documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI, and Grok Build. The installer targets those project directories and does not execute skill scripts.
 
-### Additional guide groups
+**Important:** host discovery, activation, invocation, and matched effectiveness tests have not yet been run for the advertised host versions. Adapter paths and valid frontmatter are not runtime proof.
 
-The full 77-guide inventory is in [`catalog/portable-skills-phase-1.json`](catalog/portable-skills-phase-1.json). Beyond the first set listed above, it includes 21 Data workflows (`data-*`), 25 Vibe Coder workflows (`vibecoder-*`), plus Biohub ESM, Codex, GitHub/CodeRabbit, game-development, usage/cost, plugin-management, and Vercel guides. The 69 new Auth0/Render/Data/Vibe Coder guides are UNLICENSED and remain for private evaluation only.
+## Integrity and evaluation
 
-## Important limitations
-
-- The five host runtimes have not yet been discovery-, invocation- or evaluation-tested in this project. The 1,540 routing cases are seed fixtures only, not runtime evidence. The original 125 host-managed bodies remain unavailable for export/licensed redistribution; the repo contains independent alternatives, not exact recovery.
-- The project has no root-level license. The 69 Auth0/Render/Data/Vibe Coder guides are UNLICENSED; do not redistribute them until a project/content license is formally chosen. Per-skill notices do not license the installer, catalogue, tests, documentation or repository as a whole.
-- Minecraft vanilla assets covered by the Minecraft EULA are excluded. The project does not accept an EULA on a user's behalf.
-- The repository is not a model-training package. Installing a skill adds instructions to an agent context; it does not change model weights.
-- This pre-release is not approved for paid, bundled or hosted commercial distribution until the release gates in [COMMERCIAL-READINESS.md](COMMERCIAL-READINESS.md) are satisfied.
-
-## Key files
-
-- `MANIFEST.json` — project status, scope and inventory counts.
-- `skills/` — 77 portable guides, including 69 UNLICENSED Auth0/Render/Data/Vibe Coder independent adaptations.
-- `catalog/current-installed-skills-148.json` — current 148-item installed-skill inventory.
-- `catalog/restoration-status-148.json` — per-entry status showing whether an independent portable equivalent exists.
-- `catalog/documentation-sources.json` — public vendor and technical-documentation references for independently authored guides.
-- `catalog/chatgpt-installed-skills-125.json` — preserved historical 125-item snapshot.
-- `catalog/portable-skills-phase-1.json` — all 77 guide IDs, source provenance, documentation references, and license status.
-- `catalog/external-sources.json` — external repository registry and provenance metadata.
-- `adapters/` — five-host compatibility matrix and mapping.
-- `scripts/install_skills.py` — safe project-scope installer.
-- `scripts/validate_skills.py` — Agent Skills format validator.
-- `scripts/validate_repository.py` — catalogue, provenance, workflow and checksum validator.
-- `scripts/validate_workflow_security.py` — permission, action-pin and automation hand-off invariant checks.
-- `evaluations/skill-routing-cases.json` — 770 positive/negative trigger seed cases across the 154 portable guides.
-- `scripts/validate_skill_evaluations.py` — offline schema and coverage validator for the routing dataset.
-- `scripts/update_checksums.py` — Git blob SHA-1 inventory generator.
-- `tests/` — unit and failure-path regression tests.
-- `.github/workflows/quality.yml` — test matrix and pinned zizmor workflow security analysis.
-- `.github/workflows/upstream-registry.yml` — fail-closed, read-only drift monitor with issue-only notification; no branch/PR or source mutation.
-- `LICENSING.md`, `SECURITY.md`, `COMMERCIAL-READINESS.md` — rights, security and release gates.
+- [`catalog/current-installed-skills-148.json`](catalog/current-installed-skills-148.json) — current 148-item catalog.
+- [`catalog/restoration-status-148.json`](catalog/restoration-status-148.json) — per-item equivalent, license, and restoration status.
+- [`catalog/portable-skills-phase-1.json`](catalog/portable-skills-phase-1.json) — 154 portable guide records and provenance.
+- [`catalog/documentation-sources.json`](catalog/documentation-sources.json) — public vendor/reference documentation links.
+- [`adapters/host-adapters.json`](adapters/host-adapters.json) — host skill directories and supported guide list.
+- [`scripts/install_skills.py`](scripts/install_skills.py) — explicit project-only, no-overwrite installer.
+- [`scripts/validate_skills.py`](scripts/validate_skills.py) and [`scripts/validate_repository.py`](scripts/validate_repository.py) — format, provenance, metadata, workflow, and checksum checks.
+- [`evaluations/skill-routing-cases.json`](evaluations/skill-routing-cases.json) — 1,540 positive/negative routing seed cases.
+- [`scripts/validate_skill_evaluations.py`](scripts/validate_skill_evaluations.py) — offline validation of the routing fixture structure.
+- [`evaluations/EVALUATION-PLAN.md`](evaluations/EVALUATION-PLAN.md) — matched baseline/skill evaluation plan.
+- [`checksums.git-blob-sha1.txt`](checksums.git-blob-sha1.txt) — Git blob checksum inventory.
+- [`.github/workflows/upstream-registry.yml`](.github/workflows/upstream-registry.yml) — read-only upstream drift checks; issue-only notifications.
+- [`LICENSING.md`](LICENSING.md), [`SECURITY.md`](SECURITY.md), and [`COMMERCIAL-READINESS.md`](COMMERCIAL-READINESS.md) — rights, security, and release gates.
 
 ## Local validation
 
@@ -100,20 +58,15 @@ python3 scripts/validate_workflow_security.py
 python3 scripts/validate_skill_evaluations.py
 ```
 
-Regenerate the Git blob checksum inventory after staging changes:
+The latest GitHub Actions result for the final restoration commit has not been independently confirmed in this session. Do not treat the local validation commands above as already executed.
 
-```bash
-git add -A
-python3 scripts/update_checksums.py
-git add checksums.git-blob-sha1.txt
-```
+## Licensing and release limits
 
-## Governance
+- The original 148 host-managed skill bodies were not exported.
+- The 146 `UNLICENSED` guides are not approved for redistribution, bundled publication, hosted distribution, or commercial use until a compatible license is explicitly selected.
+- Per-skill license notices do not grant a root license to the installer, catalog, tests, or repository as a whole.
+- Minecraft vanilla assets subject to the Minecraft EULA are excluded; this project does not accept the EULA for a user.
+- The library is not a model-training dataset. Installing a skill adds instructions to agent context; it does not change model weights.
+- No host-runtime compatibility, full security certification, matched effectiveness benchmark, signed release, or SBOM is claimed.
 
-- Review upstream source, exact commit, file-level licensing and scripts before importing.
-- Treat skill content and references as untrusted instructions/data.
-- Do not run imported scripts with production credentials.
-- Keep host runtime evidence separate from format checks.
-- Do not mark a release commercially ready while a release gate remains blocked.
-
-See [LICENSING.md](LICENSING.md), [SECURITY.md](SECURITY.md) and [COMMERCIAL-READINESS.md](COMMERCIAL-READINESS.md).
+See [`LICENSING.md`](LICENSING.md), [`SECURITY.md`](SECURITY.md), and [`COMMERCIAL-READINESS.md`](COMMERCIAL-READINESS.md).
