@@ -5,6 +5,8 @@ All notable repository changes are documented here. A version is not considered 
 ## Unreleased — 0.7.0 pre-release restoration wave
 
 ### Added
+- Added the owner-defined cross-project engineering workflow distilled from saved working preferences; expanded Codex feature development, the Superpowers Git policy, and frontend guidance with explicit main-only rules and Modern Web Guidance integration.
+- Fixed installer drift: skill IDs now load from the canonical portable catalogue instead of a duplicated hard-coded list; added tests for dynamic discovery and malformed catalogues.
 - Added GoogleChrome Modern Web Guidance as a pinned, reference-only source (published skill packs plus linked authoring/evaluation repository); no upstream skill bodies or guide content copied.
 - Strict Agent Skills frontmatter validation with duplicate-key detection.
 - Repository consistency, provenance, immutable GitHub Actions pin and Git blob checksum validation.

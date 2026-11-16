@@ -15,14 +15,15 @@ Use when implementing a new feature or behavior change in an existing codebase.
 
 ## Workflow
 
-1. Inspect repository state, prior unfinished work, project instructions, architecture, and relevant tests before editing.
-2. Restate the requested behavior, acceptance criteria, non-goals, compatibility requirements, and affected modules.
-3. Research version-sensitive official docs for APIs, SDKs, libraries, and security assumptions.
-4. Plan a vertical implementation slice. Identify data/API/UI changes, migrations, permissions, and failure cases.
-5. Write or update focused tests before implementation where practical, then implement the smallest coherent change.
-6. Preserve existing user work and project source-control rules. Do not add dependencies or widen scope without a reason.
-7. Re-read changed files and surrounding code; run focused tests, relevant suite, lint/typecheck, and build.
-8. Report behavior delivered, exact files, tests and results, and any remaining limitation.
+1. Inspect repository state, ownership, current branch, uncommitted work, recent commits, relevant open PRs/issues, CI status, prior unfinished work, project instructions, architecture, and tests before editing. The repository is the source of truth; cross-check memory and handoff notes against it.
+2. Restate observable behavior, acceptance criteria, non-goals, compatibility requirements, and affected modules.
+3. Research current official docs, changelogs, saved references, relevant skills, and exact installed dependency versions. Use Reference → Evaluate → Integrate: assess license, security, privacy, maintenance, performance, compatibility, and necessity before adding anything.
+4. For browser-side HTML/CSS/DOM/client JavaScript, consult the current Modern Web Guidance search/retrieve workflow when available. Check the exact CLI version, Node engine, telemetry setting, target-browser support, and fallbacks; use official docs if the CLI cannot be run.
+5. Plan a vertical implementation slice. Identify data/API/UI changes, migrations, permissions, failure cases, and the smallest useful architecture.
+6. Write or update focused regression tests before implementation where practical, then implement the smallest coherent change. Preserve existing user work; do not add dependencies or widen scope without a demonstrated reason.
+7. Follow explicit repository-owner Git policy. If a persistent main-only rule applies, stay on `main` and do not create branches or PRs unless explicitly authorized; never bypass branch protection.
+8. After each meaningful change, re-read the modified files and surrounding call sites, inspect the full diff, then run focused tests and relevant suites, lint/typecheck, build, and runtime checks where feasible.
+9. Report behavior delivered, exact files, tests and observed results, skipped checks, limitations, and unverified assumptions.
 
 ## Verification checklist
 

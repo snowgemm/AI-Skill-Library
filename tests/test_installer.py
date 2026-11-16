@@ -45,6 +45,35 @@ class InstallerTests(unittest.TestCase):
             code = installer.main()
         return code, stdout.getvalue(), stderr.getvalue()
 
+    def test_default_skill_ids_are_loaded_from_canonical_catalogue(self) -> None:
+        catalog = installer.REPOSITORY_ROOT / "catalog" / "portable-skills-phase-1.json"
+        catalog.parent.mkdir(parents=True)
+        catalog.write_text(
+            '{"skills": ['
+            '{"id": "skill-a", "path": "skills/skill-a/SKILL.md"},'
+            '{"id": "skill-b", "path": "skills/skill-b/SKILL.md"}'
+            ']}',
+            encoding="utf-8",
+        )
+        installer.SKILL_IDS = None
+        code, output, error = self.run_cli("--target", str(self.target), "--host", "codex")
+        self.assertEqual(code, 0, output + error)
+        for skill_id in ("skill-a", "skill-b"):
+            self.assertTrue((self.target / ".agents/skills" / skill_id / "SKILL.md").is_file())
+
+    def test_malformed_catalogue_id_is_rejected_before_writing(self) -> None:
+        catalog = installer.REPOSITORY_ROOT / "catalog" / "portable-skills-phase-1.json"
+        catalog.parent.mkdir(parents=True)
+        catalog.write_text(
+            '{"skills": [{"id": "../outside", "path": "skills/../outside/SKILL.md"}]}',
+            encoding="utf-8",
+        )
+        installer.SKILL_IDS = None
+        code, output, error = self.run_cli("--target", str(self.target), "--host", "codex")
+        self.assertEqual(code, 2)
+        self.assertIn("valid kebab-case slug", error)
+        self.assertEqual(list(self.target.iterdir()), [])
+
     def test_dry_run_does_not_create_host_paths(self) -> None:
         code, _, _ = self.run_cli("--target", str(self.target), "--host", "all", "--dry-run")
         self.assertEqual(code, 0)

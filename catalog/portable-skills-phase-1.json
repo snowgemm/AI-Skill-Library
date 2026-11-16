@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "snapshot_date": "2026-11-16",
-  "phase": "portable-skill-library-restoration-wave-5",
+  "phase": "portable-skill-library-restoration-wave-6",
   "policy": "The portable catalog contains independently authored adaptations and selected license-compliant adaptations. Original host-managed plugin skill bodies are not copied. Entries marked UNLICENSED are usable for private project evaluation but are not licensed for redistribution until the repository owner chooses a license.",
   "skills": [
     {
@@ -2663,6 +2663,24 @@
       "reviewed_on": "2026-11-16",
       "license_file": "licenses/original-content-UNLICENSED.md",
       "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "project-engineering-workflow",
+      "domain": "Cross-project software engineering workflow",
+      "path": "skills/project-engineering-workflow/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "owner_defined_workflow_and_public_standards",
+      "documentation_sources": [
+        "https://agentskills.io/specification",
+        "https://learn.chatgpt.com/docs/customization/overview",
+        "https://developer.chrome.com/docs/modern-web-guidance",
+        "https://git-scm.com/docs",
+        "https://owasp.org/www-project-application-security-verification-standard/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored from owner-defined working preferences and public engineering standards. No personal identifiers, private project details, or upstream skill bodies are included."
     }
   ]
 }

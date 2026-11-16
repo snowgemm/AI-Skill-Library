@@ -1,7 +1,7 @@
 56e3ff04f2cfaba224d9c19a128d1c8b4ae8c841  .github/workflows/quality.yml
 e862fc4a60d44ded09ff65c17035327ded9980f6  .github/workflows/upstream-registry.yml
 48064354a48b02dd0b4e755dfb96348e66f74a75  .gitignore
-a01b7ddd57b84c56344464375e60effb917167c0  adapters/host-adapters.json
+4d3aa363cc3f8d9004aff200ddf3c6640854acc7  adapters/host-adapters.json
 52553daa3f98d03aa30b774a3d263069814bb5e9  adapters/HOST-COMPATIBILITY.md
 8ddb3f0c810d045a032ba953014e49f22b43395e  adapters/README.md
 b33207b4572d516a0051654702024fab20022839  archive/legacy-biohub-esmfold2-SKILL.md
@@ -11,13 +11,13 @@ b1d7576ae40b2f49f5720a08d7c51dd561f649ee  catalog/current-installed-skills-148.j
 1e35933f8d655d8d868553b2ad194971c1e52630  catalog/documentation-sources.json
 bd10ef519465bf25798d810864aca9479d1b0fd1  catalog/external-sources.json
 5b072add6dfb4d39c03b4b93d0a6604ae426eb5b  catalog/platform-compatibility.json
-130f0554a51dd68717cf7d180fc934aacc7cd92c  catalog/portable-skills-phase-1.json
+23816f53874f6ce183e1a717034f8eb9d0bca384  catalog/portable-skills-phase-1.json
 f805cb31779e3f0b0e032c97aecbc70cfea5c756  catalog/RECONCILIATION-120-to-125.md
 a1d601b04849ab35bfe0cbecfba658c8396c0daa  catalog/restoration-status-148.json
-81757e7ebb90490ee69c7cd6c612c7b24cc8ecc0  CHANGELOG.md
+62c52877b39a05b4075ba5bfa9b996721b06f05a  CHANGELOG.md
 9a63aea24d67a88b3ea5bf9bd4b67c2d3b7ae501  COMMERCIAL-READINESS.md
-d5e85a0f8cee59824ab7c12a644b3d9ea8666097  evaluations/EVALUATION-PLAN.md
-afb86473137f568a13469e94f14b0aeb95b55893  evaluations/skill-routing-cases.json
+a7327d345955c1ed631159b7a63905795a82523a  evaluations/EVALUATION-PLAN.md
+4632636aab8754deea5e907be0c89a5d9022a47d  evaluations/skill-routing-cases.json
 d1432da0ccd68cddb24f391196e409d5639ef10e  licenses/original-content-UNLICENSED.md
 b444a656c16a46611ab0086a6bad755fed3853e0  licenses/README.md
 7a4a3ea2424c09fbe48d455aed1eaa94d9124835  licenses/upstream/android-LICENSE.txt
@@ -26,11 +26,11 @@ d3c9e94fbc6c28f66ecb5a01407d543c99c811b6  licenses/upstream/supabase-LICENSE
 abf0390320aa14406af7a520b9b0739fdda9bf08  licenses/upstream/superpowers-LICENSE
 0e7cfcfa43d5da2dc6a31768afcd95525fd3000c  licenses/upstream/threejs-LICENSE
 223f61565beef7da8a2720f205f6bda651b22c10  LICENSING.md
-5a16311b59ed12b438704ef586ef544f8e0dd5ee  MANIFEST.json
+013b9e0ecce2b280d13e1f3a6d87c2c2dc649dec  MANIFEST.json
 67b4f4cd79e456235a46ee66c281d8cde481b00a  policies/IMPORT-SECURITY.md
-ff334c20d8c8566b9ae0d022f41f6b6a2316b721  README.md
+1afed2692fa51b17da2df59f57e1791c4f18ba6a  README.md
 f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
-cb9f94b6e303e0f610f813a278b78201cf2039b5  scripts/install_skills.py
+c45426162ce2b9df1db0cecc0082566c0904fed2  scripts/install_skills.py
 9364e385bd4ea8cac4b7aed12bc217f34cc816b9  scripts/update_checksums.py
 40839f26e5921c98bcb5c547e4a6341a03bb0543  scripts/validate_repository.py
 898017ee2fe619ab89eb6134d63b67d47f49ad8b  scripts/validate_skill_evaluations.py
@@ -56,7 +56,7 @@ b180842981f090afaeeb01838eec20e861221d06  skills/codex-dev-bug-investigation/SKI
 22519dc0f3845e2661a99a6caf1564a19c23ff61  skills/codex-dev-code-review/SKILL.md
 0086c8705863e234c520c8017d77c69ff0334e80  skills/codex-dev-comprehensive-qa/SKILL.md
 76eaf43142019d732a971486a8fd1a45a23cf106  skills/codex-dev-create-agent-instructions/SKILL.md
-ab24da05ac1918c12307c779f4881ba320c63b7b  skills/codex-dev-feature-development/SKILL.md
+9b63b2b4d1278ccf466f1bdd5d92ef023654fe38  skills/codex-dev-feature-development/SKILL.md
 455a9a931963760c84318e1d17f7fdaa2a44be33  skills/codex-dev-feature-testing/SKILL.md
 cd6d4b69f96be053e19997cf7e3fe4394e663c20  skills/codex-dev-new-project/SKILL.md
 998d96a2f87dd6dfeb3e31c5a2b1f49213aef4b4  skills/codex-dev-orchestrate-work/SKILL.md
@@ -103,6 +103,7 @@ e31913749e03bf219bceabb7a43fab698caa2701  skills/game-development-studio-game-de
 49ededa8fd1e9fa211e533e25838ffc6e89eaba3  skills/gh-review-loop/SKILL.md
 2deca3894f69b346eeb336fc3fae4f53a70d4e11  skills/minecraft-bedrock-addon/SKILL.md
 c0fa76a43ff8c4e4ee3ac93628b6dcccbfadfe23  skills/plugin-management-plugin-management/SKILL.md
+d307524cf537b2e8b1498dec13f07c21123dde79  skills/project-engineering-workflow/SKILL.md
 97e7bee8f58ef39f58753bb799f0029eef683d31  skills/render-background-workers/SKILL.md
 4d223121822725382339ea29297a7ab6dfe038a0  skills/render-blueprints/SKILL.md
 0ccbffc56e9d58a0170cc890e1f0d0347278b284  skills/render-cli/SKILL.md
@@ -127,7 +128,7 @@ b46748ffee454af0b9622b28adedfde8d24a0916  skills/render-web-services/SKILL.md
 b24bfcb15f6a0050c7e00ea40e4376ecaad934a4  skills/render-workflows/SKILL.md
 db7e36ded310bd850807dfd5591b86241b703a63  skills/supabase-engineering/SKILL.md
 340bd7b2160e5a93a97d16ffd3f0d98e9cf5f588  skills/supabase-postgres-best-practices/SKILL.md
-3c62519a0fe0f82a9691aaf1013c841c4de286bc  skills/superpowers-engineering-workflow/SKILL.md
+32734a3ff3d63d31aab00a9e7e73d6f2331ef3b0  skills/superpowers-engineering-workflow/SKILL.md
 a8aae39ff1d72f9a4b8f9e29e5f376d48f805a5c  skills/threejs-game-engineering/SKILL.md
 6c86ddb10ddc2c31a6b60b0df881409b754d6ae9  skills/threejs-qa-release/SKILL.md
 ecceaf80a91219cfaaa6fea93244797c6de7191c  skills/token-tally-token-tally-setup/SKILL.md
@@ -174,7 +175,7 @@ f1c609dbe0de74c036d7c72ee46458d89bb61fd5  skills/vibecoder-ai-features-builder/S
 ec06450666f75c2e8b2797d15dc3db515d0efacc  skills/vibecoder-code-explainer/SKILL.md
 16a442e4ed746c5444a9b7ff875391b8d1b7db9a  skills/vibecoder-code-review/SKILL.md
 68c3687084e768bc02b8e52993ad584ea33bc0e4  skills/vibecoder-deployment-and-git/SKILL.md
-31ec6d6d163a078b558d1148631ea87866d036fa  skills/vibecoder-frontend-ui-builder/SKILL.md
+354e53c6893e3b9d6fdfee6e9e73fca84e54721c  skills/vibecoder-frontend-ui-builder/SKILL.md
 10ccae7bfff18ebbd85ea88d6f38b0efaf32d04d  skills/vibecoder-full-stack-app-builder/SKILL.md
 740cc89e8049390b7bbb3c373f8f3ade24732cb7  skills/vibecoder-idea-to-build-plan/SKILL.md
 e6585ef8224f23d7ae2569c54feefc26d6188028  skills/vibecoder-landing-page-builder/SKILL.md
@@ -194,7 +195,7 @@ bd79ed00a513fd2f043df0c773f543ebd979d762  skills/vibecoder-vibe-coding-prompts/S
 1519d05e61498a677d6f06d13196c9749fcd8071  sources/PLATFORM-SUPPORT.md
 2eff97d80aae6ef4581a3fd745b862f57048247b  sources/PORTABLE-SKILL-RECOVERY.md
 078984dea890f7d8147a83a35deb8b69c94cf925  sources/SOURCE-VERIFICATION.md
-e970a23c5e6f594921fadad61546a1916bed942e  tests/test_installer.py
+fb01cade20ca029974c45792e96a70b1998d3a7c  tests/test_installer.py
 29b2bf8d31f743f6ea2225e4d3e9c01b55c8dcff  tests/test_repository_integrity.py
 5d8990aa3b6e7c9ac07668429716cfce7af24c43  tests/test_skill_evaluations.py
 ca4c0a711c6fe2b86d833708397ca7a2c8f2d00f  tests/test_validate_skills.py

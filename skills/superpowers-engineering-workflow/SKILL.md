@@ -53,15 +53,12 @@ If a hypothesis fails, update the hypothesis; do not stack speculative fixes. Re
 - Inspect the full diff, not just the files you remember editing.
 - Treat delegated work as unverified until its diff and outputs are independently checked.
 
-## 5. Branch and pull-request governance
+## 5. Git and review governance
 
-Before creating a branch or PR:
-- Inspect existing branches, open PRs, recent commits, CI results, review threads and unfinished work relevant to the task.
-- Continue an existing task branch/PR when the scope genuinely overlaps; do not create a second PR for the same or a competing change.
-- Prefer one coherent, reviewable PR over many tiny or overlapping PRs. Open it when the change has a clear scope, meaningful verification and a complete description.
-- Do not push unrelated work into an existing PR merely to avoid creating another; reuse a branch only when the work belongs to the same task.
-- Do not force-push, merge, close or retarget another contributor's work without explicit authorization.
-- Keep `main` protected and follow the repository's established branch and review workflow.
+- Follow repository protection rules and explicit owner instructions. An explicit persistent main-only policy takes precedence over generic PR-based habits: stay on `main`, and do not create, use, or recommend feature branches or PRs unless the owner authorizes an exception.
+- For repositories that use PRs, inspect existing branches, open PRs, CI, review threads, and unfinished work before creating anything. Continue an overlapping task instead of opening a duplicate PR.
+- Keep each change coherent and reviewable. Do not put unrelated work into an existing PR merely to avoid creating another.
+- Never force-push, rewrite shared history, bypass branch protection, merge, close, or retarget another contributor's work without explicit authorization.
 
 ## 6. Verification before completion
 

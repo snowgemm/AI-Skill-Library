@@ -7,6 +7,8 @@ It stages all files before installation and rolls back newly created paths on fa
 from __future__ import annotations
 
 import argparse
+import json
+import re
 import shutil
 import sys
 import tempfile
@@ -14,162 +16,10 @@ from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 SKILLS_ROOT = REPOSITORY_ROOT / "skills"
-SKILL_IDS = (
-    "ai-codex-usage",
-    "android-compose-engineering",
-    "android-intent-security",
-    "app-6a9e2447eaf48191b9019af0c0ca8332-integrate-usagetap",
-    "auth0-authentication",
-    "biohub-esm",
-    "biohub-esm-atlas",
-    "biohub-esm-esmfold2",
-    "biohub-esm-setup",
-    "biohub-esmc",
-    "cache-stats-cache-stats",
-    "coderabbit-code-review",
-    "coderabbit-learnings-curator",
-    "codex-coordinator",
-    "codex-cost",
-    "codex-dev-bug-investigation",
-    "codex-dev-code-review",
-    "codex-dev-comprehensive-qa",
-    "codex-dev-create-agent-instructions",
-    "codex-dev-feature-development",
-    "codex-dev-feature-testing",
-    "codex-dev-new-project",
-    "codex-dev-orchestrate-work",
-    "codex-dev-platform-guidance",
-    "codex-dev-pre-release-review",
-    "codex-dev-resume-interrupted-task",
-    "codex-dev-session-handoff",
-    "codex-material-themes-choose-codex-theme",
-    "codex-sdlc",
-    "codex-sdlc-ba",
-    "codex-sdlc-backend",
-    "codex-sdlc-frontend",
-    "codex-sdlc-pm",
-    "codex-sdlc-po",
-    "codex-sdlc-qc",
-    "codex-sdlc-setup",
-    "codex-usage-codex-usage-hud",
-    "data-analyze-data-quality",
-    "data-answers-follow-up",
-    "data-build-dashboard",
-    "data-build-report",
-    "data-convert-to-doc",
-    "data-convert-to-slides",
-    "data-customize-data-plugin",
-    "data-design-kpis",
-    "data-index",
-    "data-jupyter-notebooks",
-    "data-kpi-reporting",
-    "data-market-sizing",
-    "data-metric-diagnostics",
-    "data-onboarding",
-    "data-product-business-analysis",
-    "data-publish-artifact-to-sites",
-    "data-report-to-pdf",
-    "data-schedule-refresh-jobs",
-    "data-share-artifact-summary",
-    "data-validate-data",
-    "data-visualize-data",
-    "game-development-studio-game-asset-production",
-    "game-development-studio-game-asset-vendoring",
-    "game-development-studio-game-development-studio",
-    "game-development-studio-game-performance-optimization",
-    "game-development-studio-game-visual-debugging",
-    "gh-review-loop",
-    "minecraft-bedrock-addon",
-    "plugin-management-plugin-management",
-    "render-background-workers",
-    "render-blueprints",
-    "render-cli",
-    "render-cron-jobs",
-    "render-debug",
-    "render-deploy",
-    "render-disks",
-    "render-docker",
-    "render-domains",
-    "render-env-vars",
-    "render-keyvalue",
-    "render-mcp",
-    "render-migrate-from-heroku",
-    "render-monitor",
-    "render-networking",
-    "render-postgres",
-    "render-private-services",
-    "render-sandboxes",
-    "render-scaling",
-    "render-static-sites",
-    "render-web-services",
-    "render-workflows",
-    "supabase-engineering",
-    "supabase-postgres-best-practices",
-    "superpowers-engineering-workflow",
-    "threejs-game-engineering",
-    "threejs-qa-release",
-    "token-tally-token-tally",
-    "token-tally-token-tally-setup",
-    "usage-checker-usage",
-    "vercel-access-protected-deployment",
-    "vercel-ai-gateway",
-    "vercel-ai-sdk",
-    "vercel-auth",
-    "vercel-bootstrap",
-    "vercel-build-agents",
-    "vercel-cdn-caching",
-    "vercel-chat-sdk",
-    "vercel-create-a-backend",
-    "vercel-custom-metrics",
-    "vercel-deployments-cicd",
-    "vercel-domains",
-    "vercel-env-vars",
-    "vercel-eve",
-    "vercel-flags-sdk",
-    "vercel-is-agentic",
-    "vercel-knowledge-update",
-    "vercel-marketplace",
-    "vercel-microfrontends",
-    "vercel-queues",
-    "vercel-react-best-practices",
-    "vercel-routing-middleware",
-    "vercel-runtime-cache",
-    "vercel-vercel-agent",
-    "vercel-vercel-cli",
-    "vercel-vercel-connect",
-    "vercel-vercel-firewall",
-    "vercel-vercel-functions",
-    "vercel-vercel-sandbox",
-    "vercel-vercel-services",
-    "vercel-vercel-storage",
-    "vercel-verification",
-    "vercel-workflow",
-    "vibecoder-ai-coding-tools-guide",
-    "vibecoder-ai-features-builder",
-    "vibecoder-app-safety-and-speed",
-    "vibecoder-auth-and-payments",
-    "vibecoder-bug-fixer",
-    "vibecoder-code-explainer",
-    "vibecoder-code-review",
-    "vibecoder-deployment-and-git",
-    "vibecoder-frontend-ui-builder",
-    "vibecoder-full-stack-app-builder",
-    "vibecoder-idea-to-build-plan",
-    "vibecoder-landing-page-builder",
-    "vibecoder-launch-and-docs",
-    "vibecoder-mobile-app-builder",
-    "vibecoder-prd-writer",
-    "vibecoder-project-rescue",
-    "vibecoder-scripts-and-automation",
-    "vibecoder-system-design",
-    "vibecoder-task-breakdown-and-kanban",
-    "vibecoder-tech-stack-advisor",
-    "vibecoder-testing",
-    "vibecoder-vibe-coder",
-    "vibecoder-vibe-coder-help",
-    "vibecoder-vibe-coder-planner-guide",
-    "vibecoder-vibe-coding-prompts",
-)
+SKILL_ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+# None means load the authoritative list from catalog/portable-skills-phase-1.json.
+# Tests may override this constant to isolate installer behavior.
+SKILL_IDS: tuple[str, ...] | None = None
 HOST_DIRECTORIES = {
     "codex": ".agents/skills",
     "claude": ".claude/skills",
@@ -177,6 +27,30 @@ HOST_DIRECTORIES = {
     "copilot": ".github/skills",
     "grok": ".grok/skills",
 }
+
+
+def load_skill_ids(catalog_path: Path) -> tuple[str, ...]:
+    """Load and validate canonical skill IDs from the portable catalogue."""
+    data = json.loads(catalog_path.read_text(encoding="utf-8"))
+    records = data.get("skills") if isinstance(data, dict) else None
+    if not isinstance(records, list) or not records:
+        raise ValueError("catalogue must contain a non-empty skills array")
+
+    skill_ids: list[str] = []
+    seen: set[str] = set()
+    for index, record in enumerate(records):
+        if not isinstance(record, dict):
+            raise ValueError(f"catalogue skills[{index}] must be an object")
+        skill_id = record.get("id")
+        if not isinstance(skill_id, str) or not SKILL_ID_RE.fullmatch(skill_id):
+            raise ValueError(f"catalogue skills[{index}].id must be a valid kebab-case slug")
+        if skill_id in seen:
+            raise ValueError(f"catalogue contains duplicate skill ID: {skill_id}")
+        if record.get("path") != f"skills/{skill_id}/SKILL.md":
+            raise ValueError(f"{skill_id}: catalogue path must be canonical")
+        seen.add(skill_id)
+        skill_ids.append(skill_id)
+    return tuple(skill_ids)
 
 
 def parse_args() -> argparse.Namespace:
@@ -251,6 +125,16 @@ def main() -> int:
         print("Refusing a home-directory, filesystem-root, or installer-repository target.", file=sys.stderr)
         return 2
 
+    try:
+        skill_ids = SKILL_IDS
+        if skill_ids is None:
+            skill_ids = load_skill_ids(
+                REPOSITORY_ROOT / "catalog" / "portable-skills-phase-1.json"
+            )
+    except (OSError, UnicodeError, ValueError) as error:
+        print(f"Cannot load canonical portable skill catalogue: {error}", file=sys.stderr)
+        return 2
+
     hosts = tuple(HOST_DIRECTORIES) if args.host == "all" else (args.host,)
     if args.host == "all":
         print(
@@ -258,7 +142,7 @@ def main() -> int:
             "Review host precedence and runtime behavior before using this shared project.",
             file=sys.stderr,
         )
-    missing = [skill_id for skill_id in SKILL_IDS
+    missing = [skill_id for skill_id in skill_ids
                if not (SKILLS_ROOT / skill_id / "SKILL.md").is_file()]
     if missing:
         print("Missing canonical skill files: " + ", ".join(missing), file=sys.stderr)
@@ -270,7 +154,7 @@ def main() -> int:
         destination_root = target / HOST_DIRECTORIES[host]
         if _path_has_symlink(destination_root, target):
             conflicts.append(destination_root)
-        for skill_id in SKILL_IDS:
+        for skill_id in skill_ids:
             source = SKILLS_ROOT / skill_id
             if source.is_symlink() or any(child.is_symlink() for child in source.rglob("*")):
                 conflicts.append(source)
