@@ -2083,6 +2083,3088 @@
           "rationale": "The task belongs to a different skill or does not require this specialist workflow."
         }
       ]
+    },
+    {
+      "skill_id": "data-analyze-data-quality",
+      "positive_cases": [
+        {
+          "id": "data-analyze-data-quality-positive-1",
+          "prompt": "Profile a CSV for row grain, missing values, duplicate keys, schema drift, and freshness before a retention analysis.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-analyze-data-quality-positive-2",
+          "prompt": "An SQL join doubles the expected row count. Diagnose key uniqueness, cardinality, and dropped records.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-analyze-data-quality-positive-3",
+          "prompt": "Two dashboards disagree on monthly revenue. Reconcile source versions, definitions, filters, and refresh times.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-analyze-data-quality-positive-4",
+          "prompt": "Validate coverage and missingness before comparing customer cohorts year over year.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-analyze-data-quality-positive-5",
+          "prompt": "Check outliers, units, nulls, and conflicting totals in a dataset before creating a KPI.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-analyze-data-quality-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-analyze-data-quality-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-analyze-data-quality-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-analyze-data-quality-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-analyze-data-quality-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-answers-follow-up",
+      "positive_cases": [
+        {
+          "id": "data-answers-follow-up-positive-1",
+          "prompt": "After a product metrics analysis, suggest one concrete next analysis that would improve the decision.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-answers-follow-up-positive-2",
+          "prompt": "A report is complete. Recommend a specific follow-up to explain the largest unexplained driver.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-answers-follow-up-positive-3",
+          "prompt": "After reviewing a dashboard, offer one additional useful deliverable without repeating completed work.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-answers-follow-up-positive-4",
+          "prompt": "After comparing two experiments, suggest an evidence-driven next step for the product team.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-answers-follow-up-positive-5",
+          "prompt": "Provide one practical next task after completing a data analysis, and do not imply it is scheduled.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-answers-follow-up-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-answers-follow-up-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-answers-follow-up-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-answers-follow-up-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-answers-follow-up-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-build-dashboard",
+      "positive_cases": [
+        {
+          "id": "data-build-dashboard-positive-1",
+          "prompt": "Build an interactive dashboard from CSV data for weekly activation with filters, KPI definitions, and source freshness.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-build-dashboard-positive-2",
+          "prompt": "Create an operations dashboard for API errors, latency, and request volume from connected data.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-build-dashboard-positive-3",
+          "prompt": "Update a dashboard to add segment filters and reliable empty, error, and stale-data states.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-build-dashboard-positive-4",
+          "prompt": "Design an executive dashboard with outcome KPIs and diagnostic drill-downs.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-build-dashboard-positive-5",
+          "prompt": "Create a retention cohort dashboard with consistent date windows and exportable charts.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-build-dashboard-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-build-dashboard-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-build-dashboard-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-build-dashboard-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-build-dashboard-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-build-report",
+      "positive_cases": [
+        {
+          "id": "data-build-report-positive-1",
+          "prompt": "Turn validated product analysis into an executive report with findings, methodology, caveats, and recommendations.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-build-report-positive-2",
+          "prompt": "Create a technical analytics report where headline figures trace to source queries and charts.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-build-report-positive-3",
+          "prompt": "Prepare a business report comparing current-quarter performance against target and prior periods.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-build-report-positive-4",
+          "prompt": "Write a decision memo from structured data that separates observations from hypotheses.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-build-report-positive-5",
+          "prompt": "Build a durable report from notebook results with source notes, assumptions, and limitations.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-build-report-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-build-report-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-build-report-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-build-report-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-build-report-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-convert-to-doc",
+      "positive_cases": [
+        {
+          "id": "data-convert-to-doc-positive-1",
+          "prompt": "Convert an existing dashboard analysis into an editable DOCX with headings, figures, captions, and sources.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-convert-to-doc-positive-2",
+          "prompt": "Create a Word document version of an existing metrics report without altering its results.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-convert-to-doc-positive-3",
+          "prompt": "Export validated analysis to DOCX and preserve table headers, pagination, and chart labels.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-convert-to-doc-positive-4",
+          "prompt": "Turn an existing analytical summary into an editable document for stakeholder review.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-convert-to-doc-positive-5",
+          "prompt": "Convert a report artifact into a structured document with source notes and accessible headings.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-convert-to-doc-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-convert-to-doc-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-convert-to-doc-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-convert-to-doc-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-convert-to-doc-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-convert-to-slides",
+      "positive_cases": [
+        {
+          "id": "data-convert-to-slides-positive-1",
+          "prompt": "Turn a validated product analytics report into decision-focused PowerPoint slides for an executive review.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-convert-to-slides-positive-2",
+          "prompt": "Convert a dashboard into slides with a clear storyline, annotated charts, and methodology appendix.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-convert-to-slides-positive-3",
+          "prompt": "Create a presentation from KPI analysis with one main takeaway per slide.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-convert-to-slides-positive-4",
+          "prompt": "Prepare a review deck comparing segment performance while preserving units, denominators, and dates.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-convert-to-slides-positive-5",
+          "prompt": "Export an existing analysis into editable slides and verify chart readability.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-convert-to-slides-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-convert-to-slides-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-convert-to-slides-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-convert-to-slides-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-convert-to-slides-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-customize-data-plugin",
+      "positive_cases": [
+        {
+          "id": "data-customize-data-plugin-positive-1",
+          "prompt": "Create a reusable instruction file for how my team analyzes spreadsheets and cites sources.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-customize-data-plugin-positive-2",
+          "prompt": "Define persistent preferences for KPI names, chart formatting, citation style, and report structure.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-customize-data-plugin-positive-3",
+          "prompt": "Update a reusable data workflow guide to require quality validation before market sizing.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-customize-data-plugin-positive-4",
+          "prompt": "Package our team's data-analysis conventions as an editable portable skill.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-customize-data-plugin-positive-5",
+          "prompt": "Review reusable analysis instructions for contradictions, vague rules, and accidental inclusion of project secrets.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-customize-data-plugin-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-customize-data-plugin-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-customize-data-plugin-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-customize-data-plugin-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-customize-data-plugin-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-design-kpis",
+      "positive_cases": [
+        {
+          "id": "data-design-kpis-positive-1",
+          "prompt": "Design a KPI framework for a subscription product with activation, retention, revenue, and guardrail metrics.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-design-kpis-positive-2",
+          "prompt": "Define numerator, denominator, population, window, and owner for a customer-support SLA KPI.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-design-kpis-positive-3",
+          "prompt": "Create leading indicators and outcome metrics for an onboarding redesign.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-design-kpis-positive-4",
+          "prompt": "Choose launch success metrics and guardrails for a recommendation feature.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-design-kpis-positive-5",
+          "prompt": "Review KPI definitions for gaming risk, redundancy, and missing operational safeguards.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-design-kpis-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-design-kpis-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-design-kpis-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-design-kpis-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-design-kpis-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-index",
+      "positive_cases": [
+        {
+          "id": "data-index-positive-1",
+          "prompt": "Route a request involving a spreadsheet and product question to the right analysis and validation workflows.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-index-positive-2",
+          "prompt": "Decide whether a request needs a dashboard, KPI design, report, notebook, market sizing, or data-quality review.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-index-positive-3",
+          "prompt": "A user asks for a metric comparison with CSV data. Identify the necessary analysis steps.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-index-positive-4",
+          "prompt": "Separate a SQL performance request from a business decision analysis and visualization request.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-index-positive-5",
+          "prompt": "Classify a request spanning data, charts, metrics, and an executive recommendation.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-index-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-index-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-index-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-index-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-index-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-jupyter-notebooks",
+      "positive_cases": [
+        {
+          "id": "data-jupyter-notebooks-positive-1",
+          "prompt": "Create a reproducible Python notebook to analyze CSV data, validate fields, and visualize monthly trends.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-jupyter-notebooks-positive-2",
+          "prompt": "Repair a Jupyter notebook whose cells depend on hidden execution order and stale outputs.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-jupyter-notebooks-positive-3",
+          "prompt": "Create a SQL notebook with documented connection assumptions and repeatable queries.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-jupyter-notebooks-positive-4",
+          "prompt": "Export a notebook to HTML after running all cells from a clean kernel.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-jupyter-notebooks-positive-5",
+          "prompt": "Review a notebook for nondeterministic results, embedded secrets, huge outputs, and missing provenance.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-jupyter-notebooks-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-jupyter-notebooks-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-jupyter-notebooks-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-jupyter-notebooks-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-jupyter-notebooks-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-kpi-reporting",
+      "positive_cases": [
+        {
+          "id": "data-kpi-reporting-positive-1",
+          "prompt": "Prepare a weekly business review scorecard with target attainment, variance, drivers, and action owners.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-kpi-reporting-positive-2",
+          "prompt": "Write a monthly KPI readout explaining why retention missed target and which drivers are validated.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-kpi-reporting-positive-3",
+          "prompt": "Prepare a quarterly executive KPI summary with leading indicators and guardrails.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-kpi-reporting-positive-4",
+          "prompt": "Compare current product KPIs against agreed thresholds and report status.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-kpi-reporting-positive-5",
+          "prompt": "Create a scorecard that separates measured drivers from hypotheses and next actions.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-kpi-reporting-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-kpi-reporting-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-kpi-reporting-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-kpi-reporting-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-kpi-reporting-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-market-sizing",
+      "positive_cases": [
+        {
+          "id": "data-market-sizing-positive-1",
+          "prompt": "Estimate the annual addressable market for a regional subscription product using bottom-up assumptions and ranges.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-market-sizing-positive-2",
+          "prompt": "Build TAM, SAM, and SOM scenarios for an education software concept with geographic constraints.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-market-sizing-positive-3",
+          "prompt": "Compare two market segments using customer count, annual spend, adoption, and sensitivity ranges.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-market-sizing-positive-4",
+          "prompt": "Review a market report for overlapping segments and double counting.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-market-sizing-positive-5",
+          "prompt": "Size an opportunity from population and pricing data while documenting assumptions and source dates.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-market-sizing-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-market-sizing-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-market-sizing-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-market-sizing-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-market-sizing-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-metric-diagnostics",
+      "positive_cases": [
+        {
+          "id": "data-metric-diagnostics-positive-1",
+          "prompt": "A conversion rate dropped this week. Check the metric definition, segments, instrumentation, and drivers.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-metric-diagnostics-positive-2",
+          "prompt": "Investigate why monthly revenue differs between a dashboard and a finance report.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-metric-diagnostics-positive-3",
+          "prompt": "Decompose a weekly active user drop by geography, channel, and cohort.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-metric-diagnostics-positive-4",
+          "prompt": "Determine whether a metric spike came from backfill, definition change, seasonality, or user behavior.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-metric-diagnostics-positive-5",
+          "prompt": "A KPI missed target. Identify contributing components and quantify unexplained variance.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-metric-diagnostics-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-metric-diagnostics-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-metric-diagnostics-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-metric-diagnostics-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-metric-diagnostics-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-onboarding",
+      "positive_cases": [
+        {
+          "id": "data-onboarding-positive-1",
+          "prompt": "A new user asks how to start analyzing a spreadsheet in the data workspace. Provide a safe first workflow.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-onboarding-positive-2",
+          "prompt": "Explain what is needed before connecting a data source and building a first dashboard.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-onboarding-positive-3",
+          "prompt": "Onboard a teammate to a data environment with access, privacy, source selection, and a first analysis.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-onboarding-positive-4",
+          "prompt": "A user is unsure whether to start with a notebook, report, KPI analysis, or dashboard. Guide the first step.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-onboarding-positive-5",
+          "prompt": "Give a concise tour of available data workflows while checking which connectors are actually available.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-onboarding-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-onboarding-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-onboarding-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-onboarding-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-onboarding-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-product-business-analysis",
+      "positive_cases": [
+        {
+          "id": "data-product-business-analysis-positive-1",
+          "prompt": "Use product usage data to recommend which onboarding step should be prioritized.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-product-business-analysis-positive-2",
+          "prompt": "Compare two feature-launch options using adoption, retention, implementation cost, and risk evidence.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-product-business-analysis-positive-3",
+          "prompt": "Analyze customer segments to find the cohort with the strongest retention opportunity.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-product-business-analysis-positive-4",
+          "prompt": "Evaluate whether a pricing experiment improved revenue without harming conversion guardrails.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-product-business-analysis-positive-5",
+          "prompt": "Recommend a product roadmap priority using KPI trends and user-segment evidence.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-product-business-analysis-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-product-business-analysis-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-product-business-analysis-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-product-business-analysis-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-product-business-analysis-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-publish-artifact-to-sites",
+      "positive_cases": [
+        {
+          "id": "data-publish-artifact-to-sites-positive-1",
+          "prompt": "Publish an existing HTML dashboard to an approved site after checking for private records.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-publish-artifact-to-sites-positive-2",
+          "prompt": "The user explicitly requests publication of a completed report. Verify destination and access first.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-publish-artifact-to-sites-positive-3",
+          "prompt": "Prepare a dashboard for publication with sanitized data, correct permissions, and a verifiable URL.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-publish-artifact-to-sites-positive-4",
+          "prompt": "Review a report for embedded secrets and personal data before publishing it.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-publish-artifact-to-sites-positive-5",
+          "prompt": "Publish a finished HTML report to a private destination under the approved sharing policy.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-publish-artifact-to-sites-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-publish-artifact-to-sites-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-publish-artifact-to-sites-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-publish-artifact-to-sites-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-publish-artifact-to-sites-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-report-to-pdf",
+      "positive_cases": [
+        {
+          "id": "data-report-to-pdf-positive-1",
+          "prompt": "Export an analytical report to PDF with selectable text, readable charts, and correct pagination.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-report-to-pdf-positive-2",
+          "prompt": "Convert an existing dashboard summary into a PDF for offline distribution.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-report-to-pdf-positive-3",
+          "prompt": "Review a generated PDF for cropped figures, missing fonts, and broken page breaks.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-report-to-pdf-positive-4",
+          "prompt": "Produce a PDF appendix with supporting tables and methodology from an existing report.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-report-to-pdf-positive-5",
+          "prompt": "Create a print-ready PDF from a validated HTML report and verify the pages.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-report-to-pdf-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-report-to-pdf-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-report-to-pdf-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-report-to-pdf-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-report-to-pdf-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-schedule-refresh-jobs",
+      "positive_cases": [
+        {
+          "id": "data-schedule-refresh-jobs-positive-1",
+          "prompt": "Schedule a recurring refresh for an existing dashboard and define stale-data alerts.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-schedule-refresh-jobs-positive-2",
+          "prompt": "Design a nightly refresh job for a report with bounded retries and overlap protection.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-schedule-refresh-jobs-positive-3",
+          "prompt": "A dashboard must refresh every weekday morning. Verify timezone, source limits, and ownership.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-schedule-refresh-jobs-positive-4",
+          "prompt": "Set up an approved scheduled job to refresh a report and notify an owner on failure.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-schedule-refresh-jobs-positive-5",
+          "prompt": "Review a refresh schedule for API rate limits, idempotency, and freshness requirements.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-schedule-refresh-jobs-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-schedule-refresh-jobs-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-schedule-refresh-jobs-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-schedule-refresh-jobs-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-schedule-refresh-jobs-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-share-artifact-summary",
+      "positive_cases": [
+        {
+          "id": "data-share-artifact-summary-positive-1",
+          "prompt": "Write a shareable summary of a dashboard's findings, date range, limitations, and recommended action.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-share-artifact-summary-positive-2",
+          "prompt": "Summarize an analytical report for an executive who cannot access the dashboard.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-share-artifact-summary-positive-3",
+          "prompt": "Create a concise handoff note for a chart with definitions, freshness, and a verified artifact link.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-share-artifact-summary-positive-4",
+          "prompt": "Prepare a short KPI scorecard summary without exposing customer-level records.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-share-artifact-summary-positive-5",
+          "prompt": "Explain report takeaways and verify that a shared link has the right recipient permissions.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-share-artifact-summary-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-share-artifact-summary-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-share-artifact-summary-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-share-artifact-summary-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-share-artifact-summary-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-validate-data",
+      "positive_cases": [
+        {
+          "id": "data-validate-data-positive-1",
+          "prompt": "Independently verify a report's headline calculations, source lineage, chart scales, and conclusions.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-validate-data-positive-2",
+          "prompt": "Review a dashboard for misleading axes, stale data, missing states, and accessibility issues.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-validate-data-positive-3",
+          "prompt": "Validate whether a before-and-after experiment supports causal wording.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-validate-data-positive-4",
+          "prompt": "Recompute a KPI from source rows and compare it with the displayed result.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-validate-data-positive-5",
+          "prompt": "Audit a notebook for hidden execution state, stale outputs, missing caveats, and join assumptions.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-validate-data-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-validate-data-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-validate-data-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-validate-data-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-validate-data-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "data-visualize-data",
+      "positive_cases": [
+        {
+          "id": "data-visualize-data-positive-1",
+          "prompt": "Choose a chart to compare monthly retention across cohorts and explain its scale and denominator.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-visualize-data-positive-2",
+          "prompt": "Redesign a dashboard chart so an executive can compare conversion trends across segments.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-visualize-data-positive-3",
+          "prompt": "Visualize response-time distribution and outliers with appropriate labels and scales.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-visualize-data-positive-4",
+          "prompt": "Create a revenue-mix chart by product without misleading percentages.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "data-visualize-data-positive-5",
+          "prompt": "Review a time-series plot for truncated axes, unclear units, missing values, and inaccessible colors.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "data-visualize-data-negative-1",
+          "prompt": "Build a Render private service and verify internal networking.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-visualize-data-negative-2",
+          "prompt": "Implement Auth0 MFA and validate access tokens.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-visualize-data-negative-3",
+          "prompt": "Create a Minecraft Bedrock entity and resource pack.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-visualize-data-negative-4",
+          "prompt": "Profile a Three.js renderer and optimize GPU memory.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "data-visualize-data-negative-5",
+          "prompt": "Analyze a CSV to calculate a retention metric and create a data dashboard.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-ai-coding-tools-guide",
+      "positive_cases": [
+        {
+          "id": "vibecoder-ai-coding-tools-guide-positive-1",
+          "prompt": "Compare Cursor, Claude Code, and GitHub Copilot for repo-level refactoring based on context, permissions, privacy, and testing.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-ai-coding-tools-guide-positive-2",
+          "prompt": "Choose between an IDE assistant, terminal agent, and browser builder for an existing large codebase.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-ai-coding-tools-guide-positive-3",
+          "prompt": "Create a benchmark comparing coding tools on the same repository task and acceptance criteria.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-ai-coding-tools-guide-positive-4",
+          "prompt": "Evaluate coding tools for an Android project with a limited budget and GitHub workflow.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-ai-coding-tools-guide-positive-5",
+          "prompt": "Compare security and permission boundaries of filesystem agents versus chat-only assistants.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-ai-coding-tools-guide-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-ai-coding-tools-guide-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-ai-coding-tools-guide-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-ai-coding-tools-guide-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-ai-coding-tools-guide-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-ai-features-builder",
+      "positive_cases": [
+        {
+          "id": "vibecoder-ai-features-builder-positive-1",
+          "prompt": "Add streaming AI chat to an app with server-side keys, rate limits, and cost tracking.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-ai-features-builder-positive-2",
+          "prompt": "Design a RAG pipeline that retrieves only documents the signed-in user may read.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-ai-features-builder-positive-3",
+          "prompt": "Implement structured AI output with schema validation and safe fallback handling.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-ai-features-builder-positive-4",
+          "prompt": "Add tool calling while preventing prompt injection from authorizing destructive actions.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-ai-features-builder-positive-5",
+          "prompt": "Evaluate model choice, context, latency, cost, and privacy for in-app summarization.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-ai-features-builder-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-ai-features-builder-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-ai-features-builder-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-ai-features-builder-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-ai-features-builder-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-app-safety-and-speed",
+      "positive_cases": [
+        {
+          "id": "vibecoder-app-safety-and-speed-positive-1",
+          "prompt": "Audit a web app for server-side authorization gaps, unsafe file uploads, secret leakage, and slow queries.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-app-safety-and-speed-positive-2",
+          "prompt": "Review an API for rate limits, SQL injection, CORS, session handling, and sensitive logs.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-app-safety-and-speed-positive-3",
+          "prompt": "Profile a React page before optimizing large images and expensive re-renders.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-app-safety-and-speed-positive-4",
+          "prompt": "Prepare an app for launch by prioritizing security findings and measuring performance bottlenecks.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-app-safety-and-speed-positive-5",
+          "prompt": "Inspect dependencies, upload paths, access rules, and database queries for risks.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-app-safety-and-speed-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-app-safety-and-speed-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-app-safety-and-speed-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-app-safety-and-speed-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-app-safety-and-speed-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-auth-and-payments",
+      "positive_cases": [
+        {
+          "id": "vibecoder-auth-and-payments-positive-1",
+          "prompt": "Add Auth0 sign-in and server-side session handling with role-based authorization.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-auth-and-payments-positive-2",
+          "prompt": "Integrate checkout with verified webhooks and idempotent subscription updates.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-auth-and-payments-positive-3",
+          "prompt": "Design password reset, email verification, and session revocation for an app.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-auth-and-payments-positive-4",
+          "prompt": "Implement subscription cancellation and failed-payment flows using provider test mode.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-auth-and-payments-positive-5",
+          "prompt": "Review webhook signature verification and duplicate event handling.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-auth-and-payments-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-auth-and-payments-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-auth-and-payments-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-auth-and-payments-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-auth-and-payments-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-bug-fixer",
+      "positive_cases": [
+        {
+          "id": "vibecoder-bug-fixer-positive-1",
+          "prompt": "A Next.js app returns a blank page after a dependency upgrade. Reproduce and trace the cause.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-bug-fixer-positive-2",
+          "prompt": "A Python API times out on database calls. Inspect logs, pool behavior, and tests.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-bug-fixer-positive-3",
+          "prompt": "A mobile app crashes after returning from background. Trace lifecycle state and add a regression test.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-bug-fixer-positive-4",
+          "prompt": "A CI build fails after a commit. Compare environment, dependencies, and logs to find the failing boundary.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-bug-fixer-positive-5",
+          "prompt": "Fix file upload validation by adding a failing test and making a minimal correction.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-bug-fixer-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-bug-fixer-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-bug-fixer-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-bug-fixer-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-bug-fixer-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-code-explainer",
+      "positive_cases": [
+        {
+          "id": "vibecoder-code-explainer-positive-1",
+          "prompt": "Explain how authentication middleware, API routes, and database layers work together in this repository.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-code-explainer-positive-2",
+          "prompt": "Walk through a Kotlin coroutine flow in a ViewModel and explain lifecycle ownership.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-code-explainer-positive-3",
+          "prompt": "Explain a React component's state transitions and side effects using callers and tests.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-code-explainer-positive-4",
+          "prompt": "Describe how a database migration changes a schema and how the app consumes the new column.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-code-explainer-positive-5",
+          "prompt": "Explain an unfamiliar function at beginner level, including inputs, outputs, errors, and dependencies.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-code-explainer-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-code-explainer-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-code-explainer-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-code-explainer-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-code-explainer-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-code-review",
+      "positive_cases": [
+        {
+          "id": "vibecoder-code-review-positive-1",
+          "prompt": "Review a PR for security, behavior regressions, compatibility, test coverage, and data-loss risk.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-code-review-positive-2",
+          "prompt": "Inspect a diff and surrounding code for concurrency bugs and missing resource cleanup.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-code-review-positive-3",
+          "prompt": "Review a database migration and app change for deploy-order compatibility.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-code-review-positive-4",
+          "prompt": "Assess whether tests verify actual behavior or merely mock interactions.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-code-review-positive-5",
+          "prompt": "Report prioritized, actionable findings with exact file and line references.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-code-review-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-code-review-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-code-review-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-code-review-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-code-review-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-deployment-and-git",
+      "positive_cases": [
+        {
+          "id": "vibecoder-deployment-and-git-positive-1",
+          "prompt": "Inspect main branch state and CI before committing a verified fix, without creating extra PRs.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-deployment-and-git-positive-2",
+          "prompt": "Deploy a Node API to Render after checking variables, health checks, and migration compatibility.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-deployment-and-git-positive-3",
+          "prompt": "Plan a release with tags, changelog, artifact checksums, and rollback steps.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-deployment-and-git-positive-4",
+          "prompt": "A production deploy failed. Inspect the deploy ID, logs, and health before retrying.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-deployment-and-git-positive-5",
+          "prompt": "Prepare a direct-main-only Git workflow while preserving uncommitted user changes.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-deployment-and-git-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-deployment-and-git-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-deployment-and-git-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-deployment-and-git-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-deployment-and-git-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-frontend-ui-builder",
+      "positive_cases": [
+        {
+          "id": "vibecoder-frontend-ui-builder-positive-1",
+          "prompt": "Build an accessible responsive settings page using the existing React design system.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-frontend-ui-builder-positive-2",
+          "prompt": "Turn a screenshot into a Vue component with responsive layout and keyboard behavior.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-frontend-ui-builder-positive-3",
+          "prompt": "Create a dashboard navigation system with mobile menu, focus handling, and error states.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-frontend-ui-builder-positive-4",
+          "prompt": "Improve form validation, error messages, and touch target behavior.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-frontend-ui-builder-positive-5",
+          "prompt": "Refactor a frontend page to use shared design tokens without changing its behavior.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-frontend-ui-builder-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-frontend-ui-builder-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-frontend-ui-builder-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-frontend-ui-builder-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-frontend-ui-builder-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-full-stack-app-builder",
+      "positive_cases": [
+        {
+          "id": "vibecoder-full-stack-app-builder-positive-1",
+          "prompt": "Build a small SaaS app with accounts, database, API, responsive frontend, and tests from an approved PRD.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-full-stack-app-builder-positive-2",
+          "prompt": "Create a task-management app with persistence, authorization, error states, and E2E tests.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-full-stack-app-builder-positive-3",
+          "prompt": "Implement a real end-to-end flow from UI to secured API to persistence.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-full-stack-app-builder-positive-4",
+          "prompt": "Build an MVP dashboard app with authentication, data import, filters, and production instructions.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-full-stack-app-builder-positive-5",
+          "prompt": "Turn a feature brief into a runnable full-stack app using the existing stack.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-full-stack-app-builder-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-full-stack-app-builder-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-full-stack-app-builder-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-full-stack-app-builder-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-full-stack-app-builder-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-idea-to-build-plan",
+      "positive_cases": [
+        {
+          "id": "vibecoder-idea-to-build-plan-positive-1",
+          "prompt": "Turn an app idea into an MVP with users, acceptance criteria, architecture, milestones, and risks.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-idea-to-build-plan-positive-2",
+          "prompt": "Plan a mobile assignment tracker by defining the core user flow and smallest release.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-idea-to-build-plan-positive-3",
+          "prompt": "Convert a SaaS concept into stories, non-goals, technical constraints, and implementation phases.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-idea-to-build-plan-positive-4",
+          "prompt": "Compare two architectures for an offline-first app and propose a low-risk first milestone.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-idea-to-build-plan-positive-5",
+          "prompt": "Create a browser-game build plan covering gameplay, assets, performance, and QA.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-idea-to-build-plan-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-idea-to-build-plan-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-idea-to-build-plan-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-idea-to-build-plan-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-idea-to-build-plan-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-landing-page-builder",
+      "positive_cases": [
+        {
+          "id": "vibecoder-landing-page-builder-positive-1",
+          "prompt": "Build a product homepage with a clear value proposition, accurate features, responsive layout, and working CTA.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-landing-page-builder-positive-2",
+          "prompt": "Create a portfolio landing page with semantic markup, accessible navigation, and SEO metadata.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-landing-page-builder-positive-3",
+          "prompt": "Design a campaign page using only verified testimonials and accurate product claims.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-landing-page-builder-positive-4",
+          "prompt": "Improve landing-page performance by optimizing image sizes, fonts, and scripts.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-landing-page-builder-positive-5",
+          "prompt": "Build a responsive marketing page using the existing component system and brand tokens.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-landing-page-builder-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-landing-page-builder-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-landing-page-builder-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-landing-page-builder-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-landing-page-builder-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-launch-and-docs",
+      "positive_cases": [
+        {
+          "id": "vibecoder-launch-and-docs-positive-1",
+          "prompt": "Prepare an app for launch with QA, security review, monitoring, backups, release notes, and setup docs.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-launch-and-docs-positive-2",
+          "prompt": "Create a README and environment-variable guide that matches the actual application.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-launch-and-docs-positive-3",
+          "prompt": "Write release notes that separate new features, breaking changes, and known issues.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-launch-and-docs-positive-4",
+          "prompt": "Build a production-readiness checklist for an API with migrations and rollback constraints.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-launch-and-docs-positive-5",
+          "prompt": "Review launch docs for missing setup, privacy, and recovery instructions.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-launch-and-docs-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-launch-and-docs-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-launch-and-docs-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-launch-and-docs-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-launch-and-docs-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-mobile-app-builder",
+      "positive_cases": [
+        {
+          "id": "vibecoder-mobile-app-builder-positive-1",
+          "prompt": "Build a React Native app with navigation, offline state, push notifications, and permission handling.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-mobile-app-builder-positive-2",
+          "prompt": "Create a Flutter settings flow and verify orientation, accessibility, and network errors.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-mobile-app-builder-positive-3",
+          "prompt": "Add secure token storage and deep-link handling to an Android app.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-mobile-app-builder-positive-4",
+          "prompt": "Plan camera access with least-privilege permissions and lifecycle cleanup.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-mobile-app-builder-positive-5",
+          "prompt": "Prepare release build and device test coverage for a cross-platform app.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-mobile-app-builder-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-mobile-app-builder-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-mobile-app-builder-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-mobile-app-builder-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-mobile-app-builder-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-prd-writer",
+      "positive_cases": [
+        {
+          "id": "vibecoder-prd-writer-positive-1",
+          "prompt": "Write a PRD for a mobile app with user stories, acceptance criteria, security, accessibility, and metrics.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-prd-writer-positive-2",
+          "prompt": "Create a specification for a dashboard feature including non-functional requirements and data flows.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-prd-writer-positive-3",
+          "prompt": "Turn a stakeholder brief into requirements, user journeys, edge cases, scope, and milestones.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-prd-writer-positive-4",
+          "prompt": "Review a draft PRD for ambiguous requirements and missing failure states.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-prd-writer-positive-5",
+          "prompt": "Define success metrics and guardrails for a product onboarding change.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-prd-writer-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-prd-writer-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-prd-writer-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-prd-writer-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-prd-writer-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-project-rescue",
+      "positive_cases": [
+        {
+          "id": "vibecoder-project-rescue-positive-1",
+          "prompt": "An AI coding agent repeatedly broke the project. Inspect Git state and isolate regressions without losing user work.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-project-rescue-positive-2",
+          "prompt": "The app no longer builds after broad refactors. Reconstruct failures and plan incremental repairs.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-project-rescue-positive-3",
+          "prompt": "Recover a development workflow with duplicate files, missing tests, and uncertain source-control state.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-project-rescue-positive-4",
+          "prompt": "A fix introduced new bugs across modules. Trace dependencies and create a staged stabilization plan.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-project-rescue-positive-5",
+          "prompt": "Recover a project with lost context while preserving all uncommitted changes.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-project-rescue-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-project-rescue-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-project-rescue-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-project-rescue-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-project-rescue-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-scripts-and-automation",
+      "positive_cases": [
+        {
+          "id": "vibecoder-scripts-and-automation-positive-1",
+          "prompt": "Write a Python CLI to process uploaded CSVs with validation, safe paths, and deterministic output.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-scripts-and-automation-positive-2",
+          "prompt": "Build a Discord bot with retries, rate limits, and duplicate webhook protection.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-scripts-and-automation-positive-3",
+          "prompt": "Automate recurring report export using an approved API and secret manager.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-scripts-and-automation-positive-4",
+          "prompt": "Create a browser extension that stores minimal settings and validates data before sending it.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-scripts-and-automation-positive-5",
+          "prompt": "Write a scheduled script to sync public API data into a database and log failures safely.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-scripts-and-automation-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-scripts-and-automation-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-scripts-and-automation-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-scripts-and-automation-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-scripts-and-automation-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-system-design",
+      "positive_cases": [
+        {
+          "id": "vibecoder-system-design-positive-1",
+          "prompt": "Design API, schema, service boundaries, and authorization for a multi-tenant SaaS.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-system-design-positive-2",
+          "prompt": "Decide whether a feature needs a queue, transaction, cache, or synchronous API call.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-system-design-positive-3",
+          "prompt": "Define entities, relationships, indexes, migration strategy, and REST contracts.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-system-design-positive-4",
+          "prompt": "Draw architecture and identify trust boundaries and dependencies for mobile/backend systems.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-system-design-positive-5",
+          "prompt": "Model failure modes including timeouts, retries, duplicate events, partial outages, and recovery.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-system-design-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-system-design-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-system-design-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-system-design-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-system-design-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-task-breakdown-and-kanban",
+      "positive_cases": [
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-positive-1",
+          "prompt": "Break a feature into ordered tasks with dependencies, acceptance tests, priorities, and Kanban columns.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-positive-2",
+          "prompt": "Create a sprint plan for an app release and identify critical-path risks.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-positive-3",
+          "prompt": "Turn a multi-step refactor into vertical tasks that are independently reviewable.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-positive-4",
+          "prompt": "Prioritize backlog items by impact, effort, risk, and dependencies.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-positive-5",
+          "prompt": "Organize work into a board with definitions of ready and done.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-task-breakdown-and-kanban-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-tech-stack-advisor",
+      "positive_cases": [
+        {
+          "id": "vibecoder-tech-stack-advisor-positive-1",
+          "prompt": "Compare React Native, Flutter, and native Android for offline-first mobile app requirements.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-tech-stack-advisor-positive-2",
+          "prompt": "Recommend a SaaS stack with authentication, payments, relational data, and limited operations capacity.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-tech-stack-advisor-positive-3",
+          "prompt": "Evaluate whether to retain or migrate the existing framework with cost and risk trade-offs.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-tech-stack-advisor-positive-4",
+          "prompt": "Compare managed Postgres, SQLite, and document databases for the application's access patterns.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-tech-stack-advisor-positive-5",
+          "prompt": "Choose hosting for a small API and frontend with cost, portability, and operational simplicity.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-tech-stack-advisor-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-tech-stack-advisor-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-tech-stack-advisor-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-tech-stack-advisor-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-tech-stack-advisor-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-testing",
+      "positive_cases": [
+        {
+          "id": "vibecoder-testing-positive-1",
+          "prompt": "Add unit/integration tests for a new API endpoint including validation and unauthorized cases.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-testing-positive-2",
+          "prompt": "Set up Playwright E2E tests for a critical checkout path with deterministic fixtures.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-testing-positive-3",
+          "prompt": "Diagnose flaky tests caused by timing and shared state.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-testing-positive-4",
+          "prompt": "Write a regression test for a bug before changing production code.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-testing-positive-5",
+          "prompt": "Review test assertions for real behavior and negative authorization paths.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-testing-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-testing-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-testing-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-testing-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-testing-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-vibe-coder",
+      "positive_cases": [
+        {
+          "id": "vibecoder-vibe-coder-positive-1",
+          "prompt": "Help me scope and build a tested first version of an Android app idea in an existing repository.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-positive-2",
+          "prompt": "Fix a broken app by tracing root cause and verifying the repair with tests.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-positive-3",
+          "prompt": "Build a responsive website using the existing project stack and design conventions.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-positive-4",
+          "prompt": "Classify this software request as planning, implementation, debugging, review, testing, or documentation.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-positive-5",
+          "prompt": "Add an AI feature to my app with secure architecture and verified implementation steps.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-vibe-coder-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-vibe-coder-help",
+      "positive_cases": [
+        {
+          "id": "vibecoder-vibe-coder-help-positive-1",
+          "prompt": "What software-development workflows can this assistant help with, and what should I provide for a repository task?",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-help-positive-2",
+          "prompt": "Explain the difference between code review, bug fixing, build planning, and feature implementation.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-help-positive-3",
+          "prompt": "Give examples of requests for a software assistant and explain their scope.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-help-positive-4",
+          "prompt": "Describe which actions require connected tools or human approval.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-help-positive-5",
+          "prompt": "Help me choose a first task to prepare an existing project for development.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-vibe-coder-help-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-help-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-help-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-help-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-help-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-vibe-coder-planner-guide",
+      "positive_cases": [
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-positive-1",
+          "prompt": "Turn a PRD into milestones and agent tasks with dependencies, tests, and review gates.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-positive-2",
+          "prompt": "Organize an AI-assisted project so each agent works on small tasks and reports test evidence.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-positive-3",
+          "prompt": "Create a project execution plan that follows a direct-main-only workflow and avoids duplicate PRs.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-positive-4",
+          "prompt": "Review a Kanban plan for missing dependencies and tasks without acceptance criteria.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-positive-5",
+          "prompt": "Prepare implementation prompts with scope, prohibited changes, and verification commands.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coder-planner-guide-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
+    },
+    {
+      "skill_id": "vibecoder-vibe-coding-prompts",
+      "positive_cases": [
+        {
+          "id": "vibecoder-vibe-coding-prompts-positive-1",
+          "prompt": "Write a coding-agent prompt for a security review of a folder with scope and acceptance criteria.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coding-prompts-positive-2",
+          "prompt": "Create an AGENTS.md that documents architecture, commands, and safe development rules.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coding-prompts-positive-3",
+          "prompt": "Improve a prompt so the agent inspects current files, changes only what is needed, and runs tests.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coding-prompts-positive-4",
+          "prompt": "Write a staged bug-fix prompt: reproduce, root cause, failing test, minimal fix, verify.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        },
+        {
+          "id": "vibecoder-vibe-coding-prompts-positive-5",
+          "prompt": "Review an agent prompt for vague scope, unsupported assumptions, secret handling, and completion claims.",
+          "expected_activation": true,
+          "rationale": "The task directly matches this specialist guide."
+        }
+      ],
+      "negative_cases": [
+        {
+          "id": "vibecoder-vibe-coding-prompts-negative-1",
+          "prompt": "Analyze a CSV for missing values and build a data-quality report.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coding-prompts-negative-2",
+          "prompt": "Configure a Render Cron Job to refresh a dashboard every night.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coding-prompts-negative-3",
+          "prompt": "Implement an Auth0 API login flow with role-based access.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coding-prompts-negative-4",
+          "prompt": "Create a Minecraft Bedrock add-on with a custom mob.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        },
+        {
+          "id": "vibecoder-vibe-coding-prompts-negative-5",
+          "prompt": "Profile a Three.js game and fix a renderer performance issue.",
+          "expected_activation": false,
+          "rationale": "The task belongs to another specialist workflow."
+        }
+      ]
     }
   ]
 }
