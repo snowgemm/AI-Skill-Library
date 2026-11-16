@@ -26,7 +26,10 @@
     },
     "copilot": {
       "directory": ".github/skills",
-      "alternate_directories": [".claude/skills", ".agents/skills"],
+      "alternate_directories": [
+        ".claude/skills",
+        ".agents/skills"
+      ],
       "mode": "native_agent_skills",
       "documentation": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills",
       "runtime_tested": false
@@ -41,10 +44,13 @@
   },
   "skills": [
     "android-compose-engineering",
+    "android-intent-security",
     "minecraft-bedrock-addon",
     "threejs-game-engineering",
+    "threejs-qa-release",
     "superpowers-engineering-workflow",
-    "supabase-engineering"
+    "supabase-engineering",
+    "supabase-postgres-best-practices"
   ],
   "policy": {
     "single_canonical_copy": true,
