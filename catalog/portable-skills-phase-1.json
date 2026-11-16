@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "snapshot_date": "2026-11-16",
-  "phase": "portable-skill-library-expansion-2",
-  "policy": "Only original or license-compliant adapted skill content is included. Each upstream source and license is preserved; upstream tracking is separate from pinned import provenance.",
+  "phase": "portable-skill-library-restoration-wave-3",
+  "policy": "The portable catalog contains independently authored adaptations and selected license-compliant adaptations. Original host-managed plugin skill bodies are not copied. Entries marked UNLICENSED are usable for private project evaluation but are not licensed for redistribution until the repository owner chooses a license.",
   "skills": [
     {
       "id": "android-compose-engineering",
@@ -124,6 +124,328 @@
       ],
       "license_file": "licenses/upstream/supabase-LICENSE",
       "notes": "Independent adaptation covering query plans, connection management, RLS, schema, migrations, concurrency and diagnostics."
+    },
+    {
+      "id": "auth0-authentication",
+      "domain": "Auth0 identity and access",
+      "path": "skills/auth0-authentication/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://auth0.com/docs"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-background-workers",
+      "domain": "Render background workers",
+      "path": "skills/render-background-workers/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/background-workers"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-blueprints",
+      "domain": "Render Blueprints",
+      "path": "skills/render-blueprints/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/blueprint-spec"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-cli",
+      "domain": "Render CLI",
+      "path": "skills/render-cli/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/cli"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-cron-jobs",
+      "domain": "Render Cron Jobs",
+      "path": "skills/render-cron-jobs/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/cronjobs"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-debug",
+      "domain": "Render troubleshooting",
+      "path": "skills/render-debug/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/troubleshooting-deploys"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-deploy",
+      "domain": "Render deployments",
+      "path": "skills/render-deploy/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/service-types"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-disks",
+      "domain": "Render persistent disks",
+      "path": "skills/render-disks/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/disks"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-docker",
+      "domain": "Docker on Render",
+      "path": "skills/render-docker/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/docker"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-domains",
+      "domain": "Render custom domains",
+      "path": "skills/render-domains/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/custom-domains"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-env-vars",
+      "domain": "Render environment variables",
+      "path": "skills/render-env-vars/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/configure-environment-variables"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-keyvalue",
+      "domain": "Render Key Value",
+      "path": "skills/render-keyvalue/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/key-value"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-mcp",
+      "domain": "Render MCP server",
+      "path": "skills/render-mcp/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/mcp-server"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-migrate-from-heroku",
+      "domain": "Heroku to Render migration",
+      "path": "skills/render-migrate-from-heroku/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/migrate-from-heroku"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-monitor",
+      "domain": "Render monitoring",
+      "path": "skills/render-monitor/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/metrics"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-networking",
+      "domain": "Render private networking",
+      "path": "skills/render-networking/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/private-network"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-postgres",
+      "domain": "Render Postgres",
+      "path": "skills/render-postgres/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/postgresql"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-private-services",
+      "domain": "Render private services",
+      "path": "skills/render-private-services/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/private-services"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-sandboxes",
+      "domain": "Render Sandboxes",
+      "path": "skills/render-sandboxes/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/sandboxes"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-scaling",
+      "domain": "Render scaling",
+      "path": "skills/render-scaling/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/scaling"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-static-sites",
+      "domain": "Render static sites",
+      "path": "skills/render-static-sites/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/static-sites"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-web-services",
+      "domain": "Render web services",
+      "path": "skills/render-web-services/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/web-services"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "render-workflows",
+      "domain": "Render Workflows",
+      "path": "skills/render-workflows/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "official_vendor_documentation",
+      "documentation_sources": [
+        "https://render.com/docs/workflows"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow instructions based on public vendor documentation. Not a copy of the host-managed plugin body. No redistribution license is granted."
     }
   ]
 }
