@@ -39,6 +39,16 @@ bfba10725806098e6cef63b700fb2af44bbf793a  scripts/install_skills.py
 a7283acde3a1303b81d1c1d6ffe775a6a0d89f3d  skills/android-compose-engineering/SKILL.md
 b76e2b5b5d53288b59abdafa27a2d0158f450d01  skills/android-intent-security/SKILL.md
 e1adccd845fd1a8d05c2c2970c7e484294013a79  skills/auth0-authentication/SKILL.md
+24b9604d3b395f5eb14bbcf29ecb57c4aae2f54b  skills/codex-coordinator/SKILL.md
+28fe62a995600a6295511f472ea2b00d174e4090  skills/codex-cost/SKILL.md
+b180842981f090afaeeb01838eec20e861221d06  skills/codex-dev-bug-investigation/SKILL.md
+22519dc0f3845e2661a99a6caf1564a19c23ff61  skills/codex-dev-code-review/SKILL.md
+0086c8705863e234c520c8017d77c69ff0334e80  skills/codex-dev-comprehensive-qa/SKILL.md
+76eaf43142019d732a971486a8fd1a45a23cf106  skills/codex-dev-create-agent-instructions/SKILL.md
+ab24da05ac1918c12307c779f4881ba320c63b7b  skills/codex-dev-feature-development/SKILL.md
+455a9a931963760c84318e1d17f7fdaa2a44be33  skills/codex-dev-feature-testing/SKILL.md
+cd6d4b69f96be053e19997cf7e3fe4394e663c20  skills/codex-dev-new-project/SKILL.md
+998d96a2f87dd6dfeb3e31c5a2b1f49213aef4b4  skills/codex-dev-orchestrate-work/SKILL.md
 b7aae8a09d109acb486ce79ec7db8feb57742c28  skills/data-analyze-data-quality/SKILL.md
 87e1732526232e960644faaa1aeadc7dd7314f17  skills/data-answers-follow-up/SKILL.md
 6d03dd353bb281b69a8a36b3ce973b38de773207  skills/data-build-dashboard/SKILL.md
