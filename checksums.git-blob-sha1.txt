@@ -34,6 +34,7 @@ a7283acde3a1303b81d1c1d6ffe775a6a0d89f3d  skills/android-compose-engineering/SKI
 ff7d8ec48875f03b710e71ca12900cafe0b4251a  skills/android-intent-security/SKILL.md
 2deca3894f69b346eeb336fc3fae4f53a70d4e11  skills/minecraft-bedrock-addon/SKILL.md
 db7e36ded310bd850807dfd5591b86241b703a63  skills/supabase-engineering/SKILL.md
+340bd7b2160e5a93a97d16ffd3f0d98e9cf5f588  skills/supabase-postgres-best-practices/SKILL.md
 3c62519a0fe0f82a9691aaf1013c841c4de286bc  skills/superpowers-engineering-workflow/SKILL.md
 a8aae39ff1d72f9a4b8f9e29e5f376d48f805a5c  skills/threejs-game-engineering/SKILL.md
 6c86ddb10ddc2c31a6b60b0df881409b754d6ae9  skills/threejs-qa-release/SKILL.md
@@ -43,5 +44,5 @@ a8aae39ff1d72f9a4b8f9e29e5f376d48f805a5c  skills/threejs-game-engineering/SKILL.
 e970a23c5e6f594921fadad61546a1916bed942e  tests/test_installer.py
 18d9fdb21890c353d198bf63551d0915bb96ddf8  tests/test_repository_integrity.py
 ca4c0a711c6fe2b86d833708397ca7a2c8f2d00f  tests/test_validate_skills.py
-5c8e49ebcfccc32238e785e451d5ca33e226e272  tests/test_workflow_security.py
-7771710038058c14cf9f2dbd4f3aa1f8a33f2aa1  TRAINING-GUIDE.md
+72c80b297fbbcf27583f384ac11ccab342581094  tests/test_workflow_security.py
+929b535efaa68f6a22cec5209b4866b9e213a43d  TRAINING-GUIDE.md
