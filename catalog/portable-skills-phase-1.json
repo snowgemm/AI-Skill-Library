@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "snapshot_date": "2026-11-16",
-  "phase": "portable-skill-library-restoration-wave-4",
+  "phase": "portable-skill-library-restoration-wave-5",
   "policy": "The portable catalog contains independently authored adaptations and selected license-compliant adaptations. Original host-managed plugin skill bodies are not copied. Entries marked UNLICENSED are usable for private project evaluation but are not licensed for redistribution until the repository owner chooses a license.",
   "skills": [
     {
@@ -1473,6 +1473,1196 @@
       "reviewed_on": "2026-11-16",
       "license_file": "licenses/original-content-UNLICENSED.md",
       "notes": "Independently authored workflow guide from general methodology and linked public documentation. Not a copy/export of the host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "biohub-esm",
+      "domain": "biohub-esm",
+      "path": "skills/biohub-esm/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://github.com/Biohub/esm",
+        "https://github.com/Biohub/esm/tree/main/cookbook/tutorials",
+        "https://biohub.ai/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "biohub-esm-setup",
+      "domain": "biohub-esm",
+      "path": "skills/biohub-esm-setup/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://github.com/Biohub/esm",
+        "https://github.com/Biohub/esm/tree/main/cookbook/tutorials",
+        "https://biohub.ai/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "biohub-esm-atlas",
+      "domain": "biohub-esm",
+      "path": "skills/biohub-esm-atlas/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://github.com/Biohub/esm",
+        "https://github.com/Biohub/esm/tree/main/cookbook/tutorials",
+        "https://biohub.ai/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "biohub-esmc",
+      "domain": "biohub-esm",
+      "path": "skills/biohub-esmc/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://github.com/Biohub/esm",
+        "https://github.com/Biohub/esm/tree/main/cookbook/tutorials",
+        "https://biohub.ai/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "biohub-esm-esmfold2",
+      "domain": "biohub-esm",
+      "path": "skills/biohub-esm-esmfold2/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://github.com/Biohub/esm",
+        "https://github.com/Biohub/esm/tree/main/cookbook/tutorials",
+        "https://biohub.ai/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "gh-review-loop",
+      "domain": "gh-review-loop",
+      "path": "skills/gh-review-loop/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://docs.github.com/en/pull-requests",
+        "https://google.github.io/eng-practices/review/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "coderabbit-code-review",
+      "domain": "coderabbit",
+      "path": "skills/coderabbit-code-review/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://docs.coderabbit.ai/",
+        "https://docs.coderabbit.ai/security"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "coderabbit-learnings-curator",
+      "domain": "gina-coderabbit-learnings-curator",
+      "path": "skills/coderabbit-learnings-curator/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://docs.coderabbit.ai/",
+        "https://docs.coderabbit.ai/security"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-coordinator",
+      "domain": "codex-coordinator",
+      "path": "skills/codex-coordinator/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-material-themes-choose-codex-theme",
+      "domain": "codex-material-themes",
+      "path": "skills/codex-material-themes-choose-codex-theme/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-cost",
+      "domain": "codex-cost",
+      "path": "skills/codex-cost/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "ai-codex-usage",
+      "domain": "ai-codex-usage",
+      "path": "skills/ai-codex-usage/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-usage-codex-usage-hud",
+      "domain": "codex-usage",
+      "path": "skills/codex-usage-codex-usage-hud/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "usage-checker-usage",
+      "domain": "usage-checker",
+      "path": "skills/usage-checker-usage/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://www.usagetap.com/",
+        "https://modelcontextprotocol.io/specification"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "app-6a9e2447eaf48191b9019af0c0ca8332-integrate-usagetap",
+      "domain": "app-6a9e2447eaf48191b9019af0c0ca8332",
+      "path": "skills/app-6a9e2447eaf48191b9019af0c0ca8332-integrate-usagetap/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://www.usagetap.com/",
+        "https://modelcontextprotocol.io/specification"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "cache-stats-cache-stats",
+      "domain": "cache-stats",
+      "path": "skills/cache-stats-cache-stats/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching",
+        "https://vercel.com/docs/cdn"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "token-tally-token-tally",
+      "domain": "token-tally",
+      "path": "skills/token-tally-token-tally/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://platform.openai.com/tokenizer",
+        "https://github.com/openai/tiktoken"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "token-tally-token-tally-setup",
+      "domain": "token-tally",
+      "path": "skills/token-tally-token-tally-setup/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://platform.openai.com/tokenizer",
+        "https://github.com/openai/tiktoken"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "plugin-management-plugin-management",
+      "domain": "plugin-management",
+      "path": "skills/plugin-management-plugin-management/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://modelcontextprotocol.io/specification",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "game-development-studio-game-asset-production",
+      "domain": "game-development-studio",
+      "path": "skills/game-development-studio-game-asset-production/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://docs.blender.org/manual/en/latest/",
+        "https://docs.unity3d.com/Manual/index.html",
+        "https://threejs.org/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "game-development-studio-game-asset-vendoring",
+      "domain": "game-development-studio",
+      "path": "skills/game-development-studio-game-asset-vendoring/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://docs.blender.org/manual/en/latest/",
+        "https://docs.unity3d.com/Manual/index.html",
+        "https://threejs.org/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "game-development-studio-game-development-studio",
+      "domain": "game-development-studio",
+      "path": "skills/game-development-studio-game-development-studio/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://docs.blender.org/manual/en/latest/",
+        "https://docs.unity3d.com/Manual/index.html",
+        "https://threejs.org/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "game-development-studio-game-performance-optimization",
+      "domain": "game-development-studio",
+      "path": "skills/game-development-studio-game-performance-optimization/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://docs.blender.org/manual/en/latest/",
+        "https://docs.unity3d.com/Manual/index.html",
+        "https://threejs.org/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "game-development-studio-game-visual-debugging",
+      "domain": "game-development-studio",
+      "path": "skills/game-development-studio-game-visual-debugging/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://docs.blender.org/manual/en/latest/",
+        "https://docs.unity3d.com/Manual/index.html",
+        "https://threejs.org/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-sdlc",
+      "domain": "codex-sdlc",
+      "path": "skills/codex-sdlc/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-sdlc-ba",
+      "domain": "codex-sdlc",
+      "path": "skills/codex-sdlc-ba/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-sdlc-backend",
+      "domain": "codex-sdlc",
+      "path": "skills/codex-sdlc-backend/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-sdlc-frontend",
+      "domain": "codex-sdlc",
+      "path": "skills/codex-sdlc-frontend/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-sdlc-pm",
+      "domain": "codex-sdlc",
+      "path": "skills/codex-sdlc-pm/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-sdlc-po",
+      "domain": "codex-sdlc",
+      "path": "skills/codex-sdlc-po/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-sdlc-qc",
+      "domain": "codex-sdlc",
+      "path": "skills/codex-sdlc-qc/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-sdlc-setup",
+      "domain": "codex-sdlc",
+      "path": "skills/codex-sdlc-setup/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-bug-investigation",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-bug-investigation/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-code-review",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-code-review/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-comprehensive-qa",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-comprehensive-qa/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-create-agent-instructions",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-create-agent-instructions/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-feature-development",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-feature-development/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-feature-testing",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-feature-testing/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-new-project",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-new-project/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-orchestrate-work",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-orchestrate-work/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-platform-guidance",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-platform-guidance/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-pre-release-review",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-pre-release-review/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-resume-interrupted-task",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-resume-interrupted-task/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "codex-dev-session-handoff",
+      "domain": "codex-dev-workflows",
+      "path": "skills/codex-dev-session-handoff/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://developers.openai.com/codex/",
+        "https://developers.openai.com/api/docs/guides/agents-api/multi-agent",
+        "https://platform.openai.com/docs/"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-access-protected-deployment",
+      "domain": "vercel",
+      "path": "skills/vercel-access-protected-deployment/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-ai-gateway",
+      "domain": "vercel",
+      "path": "skills/vercel-ai-gateway/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-ai-sdk",
+      "domain": "vercel",
+      "path": "skills/vercel-ai-sdk/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-auth",
+      "domain": "vercel",
+      "path": "skills/vercel-auth/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-bootstrap",
+      "domain": "vercel",
+      "path": "skills/vercel-bootstrap/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-build-agents",
+      "domain": "vercel",
+      "path": "skills/vercel-build-agents/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-cdn-caching",
+      "domain": "vercel",
+      "path": "skills/vercel-cdn-caching/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-chat-sdk",
+      "domain": "vercel",
+      "path": "skills/vercel-chat-sdk/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-create-a-backend",
+      "domain": "vercel",
+      "path": "skills/vercel-create-a-backend/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-custom-metrics",
+      "domain": "vercel",
+      "path": "skills/vercel-custom-metrics/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-deployments-cicd",
+      "domain": "vercel",
+      "path": "skills/vercel-deployments-cicd/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-domains",
+      "domain": "vercel",
+      "path": "skills/vercel-domains/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-env-vars",
+      "domain": "vercel",
+      "path": "skills/vercel-env-vars/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-eve",
+      "domain": "vercel",
+      "path": "skills/vercel-eve/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-flags-sdk",
+      "domain": "vercel",
+      "path": "skills/vercel-flags-sdk/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-is-agentic",
+      "domain": "vercel",
+      "path": "skills/vercel-is-agentic/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-knowledge-update",
+      "domain": "vercel",
+      "path": "skills/vercel-knowledge-update/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-marketplace",
+      "domain": "vercel",
+      "path": "skills/vercel-marketplace/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-microfrontends",
+      "domain": "vercel",
+      "path": "skills/vercel-microfrontends/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-queues",
+      "domain": "vercel",
+      "path": "skills/vercel-queues/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-react-best-practices",
+      "domain": "vercel",
+      "path": "skills/vercel-react-best-practices/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-routing-middleware",
+      "domain": "vercel",
+      "path": "skills/vercel-routing-middleware/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-runtime-cache",
+      "domain": "vercel",
+      "path": "skills/vercel-runtime-cache/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-vercel-agent",
+      "domain": "vercel",
+      "path": "skills/vercel-vercel-agent/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-vercel-cli",
+      "domain": "vercel",
+      "path": "skills/vercel-vercel-cli/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-vercel-connect",
+      "domain": "vercel",
+      "path": "skills/vercel-vercel-connect/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-vercel-firewall",
+      "domain": "vercel",
+      "path": "skills/vercel-vercel-firewall/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-vercel-functions",
+      "domain": "vercel",
+      "path": "skills/vercel-vercel-functions/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-vercel-sandbox",
+      "domain": "vercel",
+      "path": "skills/vercel-vercel-sandbox/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-vercel-services",
+      "domain": "vercel",
+      "path": "skills/vercel-vercel-services/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-vercel-storage",
+      "domain": "vercel",
+      "path": "skills/vercel-vercel-storage/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-verification",
+      "domain": "vercel",
+      "path": "skills/vercel-verification/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
+    },
+    {
+      "id": "vercel-workflow",
+      "domain": "vercel",
+      "path": "skills/vercel-workflow/SKILL.md",
+      "status": "original_documentation_adaptation",
+      "license": "UNLICENSED",
+      "source_type": "public_documentation_and_general_methodology",
+      "documentation_sources": [
+        "https://vercel.com/docs",
+        "https://vercel.com/changelog"
+      ],
+      "reviewed_on": "2026-11-16",
+      "license_file": "licenses/original-content-UNLICENSED.md",
+      "notes": "Independently authored workflow guide. Not copied/exported from host-managed plugin body. No redistribution license is granted."
     }
   ]
 }
