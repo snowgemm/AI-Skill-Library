@@ -1,16 +1,16 @@
 # AI-Skill-Library
 
-**Snapshot:** 2026-11-16 · **Version:** 0.4.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
+**Snapshot:** 2026-11-16 · **Version:** 0.5.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
 
 A provenance-first registry and governance scaffold for portable AI agent skills. The project separates the historical ChatGPT-installed skill inventory from public upstream repositories and independently authored portable adaptations.
 
 ## Current scope
 
-- 125 host-managed skill identifiers inventoried as metadata only. Internal plugin URIs and private skill bodies are not redistributed.
+- 148 currently installed skill identifiers inventoried. The previous 125-item snapshot is preserved as a historical catalog. Internal plugin URIs and private skill bodies are not redistributed.
 - 11 external repositories registered with commit pins and source/license metadata.
-- Eight portable skill adaptations covering Android Compose and Intent security, Minecraft Bedrock, Three.js game engineering and QA, software engineering methodology, and Supabase/PostgreSQL.
+- 31 portable skill guides: eight previously authored engineering adaptations plus 23 independently authored Auth0/Render equivalents.
 - Project-scope discovery adapters documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI and Grok Build.
-- A project-scope installer for all eight skills, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
+- A project-scope installer for all 31 skills, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
 - Upstream monitoring is read-only: it compares pinned sources with current upstream HEAD and reports drift in a GitHub issue. It does not create branches/PRs or update source pins.
 - Quality CI passed on the earlier integration commit `e98f79c74d96a4dd871f91e8e7451e369f3deeb6`; the latest skill expansion and workflow-hardening commits still require a fresh CI result.
 
@@ -28,12 +28,12 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 | `supabase-engineering` | Supabase Auth, Storage, Edge Functions, migrations, RLS, and application integration |
 | `supabase-postgres-best-practices` | PostgreSQL query plans, schema, indexing, connections, concurrency, and database security |
 
-These are eight independently authored adaptations, not recovered copies of the 125 host-managed ChatGPT skill bodies. Source revisions and component license notices are recorded in `catalog/portable-skills-phase-1.json`.
+These are independently authored guides, not recovered copies of host-managed skill bodies. The 23 new Auth0/Render guides are explicitly UNLICENSED and are not approved for redistribution. Source revisions and component license notices are recorded in `catalog/portable-skills-phase-1.json`.
 
 ## Important limitations
 
-- The five host runtimes have not yet been discovery-, invocation- or evaluation-tested in this project. Format/path documentation and routing seed fixtures are not runtime proof.
-- The project has no root-level license. Per-skill notices do not license the installer, catalogue, tests, documentation or repository as a whole.
+- The five host runtimes have not yet been discovery-, invocation- or evaluation-tested in this project. Format/path documentation and routing seed fixtures are not runtime proof. The original 125 host-managed bodies remain unavailable for export/licensed redistribution; the repo contains independent alternatives, not exact recovery.
+- The project has no root-level license. The 23 Auth0/Render guides are UNLICENSED; do not redistribute them until a project/content license is formally chosen. Per-skill notices do not license the installer, catalogue, tests, documentation or repository as a whole.
 - Minecraft vanilla assets covered by the Minecraft EULA are excluded. The project does not accept an EULA on a user's behalf.
 - The repository is not a model-training package. Installing a skill adds instructions to an agent context; it does not change model weights.
 - This pre-release is not approved for paid, bundled or hosted commercial distribution until the release gates in [COMMERCIAL-READINESS.md](COMMERCIAL-READINESS.md) are satisfied.
@@ -41,8 +41,10 @@ These are eight independently authored adaptations, not recovered copies of the 
 ## Key files
 
 - `MANIFEST.json` — project status, scope and inventory counts.
-- `skills/` — eight independently edited portable skill adaptations.
-- `catalog/chatgpt-installed-skills-125.json` and `.csv` — 125-item metadata inventory, not recovered proprietary skill bodies.
+- `skills/` — 31 portable skill guides, including 23 UNLICENSED Auth0/Render independent adaptations.
+- `catalog/current-installed-skills-148.json` — current 148-item installed-skill inventory.
+- `catalog/chatgpt-installed-skills-125.json` — preserved historical 125-item snapshot.
+- `catalog/restoration-status-148.json` — per-item restoration status and portable equivalent mapping.
 - `catalog/portable-skills-phase-1.json` — skill IDs, source pins and license notices.
 - `catalog/external-sources.json` — external repository registry and provenance metadata.
 - `adapters/` — five-host compatibility matrix and mapping.
@@ -50,7 +52,7 @@ These are eight independently authored adaptations, not recovered copies of the 
 - `scripts/validate_skills.py` — Agent Skills format validator.
 - `scripts/validate_repository.py` — catalogue, provenance, workflow and checksum validator.
 - `scripts/validate_workflow_security.py` — permission, action-pin and automation hand-off invariant checks.
-- `evaluations/skill-routing-cases.json` — 80 positive/negative trigger seed cases across the eight portable skills.
+- `evaluations/skill-routing-cases.json` — 310 positive/negative trigger seed cases across the 31 portable skills.
 - `scripts/validate_skill_evaluations.py` — offline schema and coverage validator for the routing dataset.
 - `scripts/update_checksums.py` — Git blob SHA-1 inventory generator.
 - `tests/` — unit and failure-path regression tests.
