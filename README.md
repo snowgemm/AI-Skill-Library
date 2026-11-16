@@ -27,7 +27,7 @@ The canonical list is in [`catalog/portable-skills-phase-1.json`](catalog/portab
 
 ## Modern Web Guidance — external reference
 
-[GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) is now tracked as an official external reference, together with its [authoring and evaluation repository](https://github.com/GoogleChrome/modern-web-guidance-src). It is **not** counted as one of the 154 portable guides and its upstream skill bodies, guides, scripts, and assets are not copied into this repository.
+[GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) is now tracked as an official external reference, together with its [authoring and evaluation repository](https://github.com/GoogleChrome/modern-web-guidance-src). It is **not** counted as one of the 155 portable guides and its upstream skill bodies, guides, scripts, and assets are not copied into this repository.
 
 The published package contains two selectable packs:
 

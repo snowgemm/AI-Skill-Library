@@ -28,7 +28,7 @@ abf0390320aa14406af7a520b9b0739fdda9bf08  licenses/upstream/superpowers-LICENSE
 223f61565beef7da8a2720f205f6bda651b22c10  LICENSING.md
 ca781244da7ac1b421e38ab998e2488e02d62b52  MANIFEST.json
 67b4f4cd79e456235a46ee66c281d8cde481b00a  policies/IMPORT-SECURITY.md
-a64d10fd8c5efe93026059ef14861af7cfafac51  README.md
+a8917bccc04a5a8cef3943229d618f0e9ef5140f  README.md
 f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
 c48f75481b478f5f8023430d59ed30d4a043176b  scripts/install_skills.py
 9364e385bd4ea8cac4b7aed12bc217f34cc816b9  scripts/update_checksums.py
