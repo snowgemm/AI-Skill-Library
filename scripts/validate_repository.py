@@ -147,7 +147,7 @@ def validate() -> list[str]:
                     if not isinstance(source_url, str) or not source_url.startswith("https://"):
                         errors.append(f"{skill_id}: documentation source must be an HTTPS URL")
             reviewed_on = item.get("reviewed_on")
-            if not isinstance(reviewed_on, str) or not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", reviewed_on):
+            if not isinstance(reviewed_on, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", reviewed_on):
                 errors.append(f"{skill_id}: reviewed_on must use YYYY-MM-DD")
             if upstream is not None or commit is not None:
                 errors.append(f"{skill_id}: documentation adaptations must not pretend to have an immutable code upstream pin")
