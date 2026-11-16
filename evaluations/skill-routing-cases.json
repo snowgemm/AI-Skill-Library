@@ -6775,34 +6775,34 @@
       ]
     },
     {
-      "skill_id": "vercel-access-protected-vercel-deployment",
+      "skill_id": "vercel-access-protected-deployment",
       "positive_cases": [
         {
-          "id": "vercel-access-protected-vercel-deployment-positive-01",
+          "id": "vercel-access-protected-deployment-positive-01",
           "prompt": "A user has the following task: Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection. Use when curl, agent-browser, Playwright, or another automated request reaches a Vercel login or protection page; when a protected preview or production URL returns 401 or 403; when TRUSTED_SOURCES_ENVIRONMENT_MISMATCH appears; or when choosing between `vercel curl` and the `x-vercel-trusted-oidc-idp-token` header.",
           "expected_activation": true,
           "rationale": "The described task is directly within this skill's host-managed catalog scope."
         },
         {
-          "id": "vercel-access-protected-vercel-deployment-positive-02",
+          "id": "vercel-access-protected-deployment-positive-02",
           "prompt": "Please review and help complete this request: Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection. Use when curl, agent-browser, Playwright, or another automated request reaches a Vercel login or protection page; when a protected preview or production URL returns 401 or 403; when TRUSTED_SOURCES_ENVIRONMENT_MISMATCH appears; or when choosing between `vercel curl` and the `x-vercel-trusted-oidc-idp-token` header.",
           "expected_activation": true,
           "rationale": "The described task is directly within this skill's host-managed catalog scope."
         },
         {
-          "id": "vercel-access-protected-vercel-deployment-positive-03",
+          "id": "vercel-access-protected-deployment-positive-03",
           "prompt": "Investigate and resolve this problem: Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection. Use when curl, agent-browser, Playwright, or another automated request reaches a Vercel login or protection page; when a protected preview or production URL returns 401 or 403; when TRUSTED_SOURCES_ENVIRONMENT_MISMATCH appears; or when choosing between `vercel curl` and the `x-vercel-trusted-oidc-idp-token` header.",
           "expected_activation": true,
           "rationale": "The described task is directly within this skill's host-managed catalog scope."
         },
         {
-          "id": "vercel-access-protected-vercel-deployment-positive-04",
+          "id": "vercel-access-protected-deployment-positive-04",
           "prompt": "Plan a safe, repeatable implementation for this requirement: Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection. Use when curl, agent-browser, Playwright, or another automated request reaches a Vercel login or protection page; when a protected preview or production URL returns 401 or 403; when TRUSTED_SOURCES_ENVIRONMENT_MISMATCH appears; or when choosing between `vercel curl` and the `x-vercel-trusted-oidc-idp-token` header.",
           "expected_activation": true,
           "rationale": "The described task is directly within this skill's host-managed catalog scope."
         },
         {
-          "id": "vercel-access-protected-vercel-deployment-positive-05",
+          "id": "vercel-access-protected-deployment-positive-05",
           "prompt": "Prepare a verification checklist and evidence report for this capability: Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection. Use when curl, agent-browser, Playwright, or another automated request reaches a Vercel login or protection page; when a protected preview or production URL returns 401 or 403; when TRUSTED_SOURCES_ENVIRONMENT_MISMATCH appears; or when choosing between `vercel curl` and the `x-vercel-trusted-oidc-idp-token` header.",
           "expected_activation": true,
           "rationale": "The described task is directly within this skill's host-managed catalog scope."
@@ -6810,31 +6810,31 @@
       ],
       "negative_cases": [
         {
-          "id": "vercel-access-protected-vercel-deployment-negative-01",
+          "id": "vercel-access-protected-deployment-negative-01",
           "prompt": "Prepare a DOCX report from validated business metrics.",
           "expected_activation": false,
           "rationale": "This task belongs to a separate technical domain and should not activate this specialist skill."
         },
         {
-          "id": "vercel-access-protected-vercel-deployment-negative-02",
+          "id": "vercel-access-protected-deployment-negative-02",
           "prompt": "Optimize a Kotlin Compose LazyColumn using measured frame-time data.",
           "expected_activation": false,
           "rationale": "This task belongs to a separate technical domain and should not activate this specialist skill."
         },
         {
-          "id": "vercel-access-protected-vercel-deployment-negative-03",
+          "id": "vercel-access-protected-deployment-negative-03",
           "prompt": "Create a Minecraft Bedrock entity and resource pack.",
           "expected_activation": false,
           "rationale": "This task belongs to a separate technical domain and should not activate this specialist skill."
         },
         {
-          "id": "vercel-access-protected-vercel-deployment-negative-04",
+          "id": "vercel-access-protected-deployment-negative-04",
           "prompt": "Analyze a protein sequence using Biohub ESM for benign research.",
           "expected_activation": false,
           "rationale": "This task belongs to a separate technical domain and should not activate this specialist skill."
         },
         {
-          "id": "vercel-access-protected-vercel-deployment-negative-05",
+          "id": "vercel-access-protected-deployment-negative-05",
           "prompt": "Build a Three.js physics system and test collision behavior.",
           "expected_activation": false,
           "rationale": "This task belongs to a separate technical domain and should not activate this specialist skill."
