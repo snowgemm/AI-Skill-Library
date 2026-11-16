@@ -59,6 +59,10 @@ fc80f4022d2dcc2698a02bac75f23fd14b0eb32d  skills/codex-material-themes-choose-co
 32483ea2222328f8c3a448a70670566247485388  skills/codex-sdlc-frontend/SKILL.md
 185440456594279fd6b253f7e0f4b8b07482e21b  skills/codex-sdlc-pm/SKILL.md
 49f9f20e05899a8e0d59ea6d5a03311b26165eb5  skills/codex-sdlc-po/SKILL.md
+d360fef744e5e8167a0bbae57049ab150cf3a42f  skills/codex-sdlc-qc/SKILL.md
+80d11ca34e64db0451df28b8df8bd7a2b5ac9dcb  skills/codex-sdlc-setup/SKILL.md
+6f6775d8075c06cb9f630d057cae186de3d09c55  skills/codex-sdlc/SKILL.md
+db0e88c77e33e1695442986d99a9fe54565032f3  skills/codex-usage-codex-usage-hud/SKILL.md
 b7aae8a09d109acb486ce79ec7db8feb57742c28  skills/data-analyze-data-quality/SKILL.md
 87e1732526232e960644faaa1aeadc7dd7314f17  skills/data-answers-follow-up/SKILL.md
 6d03dd353bb281b69a8a36b3ce973b38de773207  skills/data-build-dashboard/SKILL.md
@@ -80,6 +84,12 @@ b1cf0f0a4b0b35e611082c1f994475a292c11c46  skills/data-report-to-pdf/SKILL.md
 3247335a815aa1865464b3f4b39d0f49bc384d41  skills/data-share-artifact-summary/SKILL.md
 4e43cdbbc192694359532edca6cac5046011e879  skills/data-validate-data/SKILL.md
 e14dd69a3ad1ad46d0424c2329996263ff59a79b  skills/data-visualize-data/SKILL.md
+bb0a2f54c9f09b5e5f6ff16348e35fc085ec9b78  skills/game-development-studio-game-asset-production/SKILL.md
+8807c61558cb4e8665a10597823aef48737a460b  skills/game-development-studio-game-asset-vendoring/SKILL.md
+e31913749e03bf219bceabb7a43fab698caa2701  skills/game-development-studio-game-development-studio/SKILL.md
+3164bdfff53d5630a7e8ae7ef863d1b7e81dc5cc  skills/game-development-studio-game-performance-optimization/SKILL.md
+4a53138a0544c904621ecf8d54a6cd6f79df15c0  skills/game-development-studio-game-visual-debugging/SKILL.md
+49ededa8fd1e9fa211e533e25838ffc6e89eaba3  skills/gh-review-loop/SKILL.md
 2deca3894f69b346eeb336fc3fae4f53a70d4e11  skills/minecraft-bedrock-addon/SKILL.md
 97e7bee8f58ef39f58753bb799f0029eef683d31  skills/render-background-workers/SKILL.md
 4d223121822725382339ea29297a7ab6dfe038a0  skills/render-blueprints/SKILL.md
