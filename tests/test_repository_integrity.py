@@ -83,7 +83,7 @@ class RepositoryIntegrityTests(unittest.TestCase):
             payload = (root / relative).read_bytes()
             rows.append(f"{validate_repository.git_blob_sha1(payload)}  {relative}")
         (root / "checksums.git-blob-sha1.txt").write_text(
-            "\\n".join(sorted(rows)) + "\\n", encoding="utf-8"
+            "\n".join(sorted(rows)) + "\n", encoding="utf-8"
         )
         subprocess.run(["git", "add", "checksums.git-blob-sha1.txt"], cwd=root, check=True)
 
@@ -210,6 +210,37 @@ class RepositoryIntegrityTests(unittest.TestCase):
             source_path.write_text(json.dumps({"sources": []}), encoding="utf-8")
             errors = self.run_fixture(root)
             self.assertTrue(any("requires documentation_sources" in item for item in errors), errors)
+
+
+
+    def test_repository_validator_accepts_unlicensed_original_methodology_adaptation(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.build_fixture(root)
+            skill_path = root / "skills/demo-skill/SKILL.md"
+            skill_path.write_text(
+                "---\nname: demo-skill\ndescription: Independent methodology guide\nlicense: UNLICENSED\nmetadata:\n  source-type: independent-methodology-adaptation\n  reviewed-on: '2026-11-16'\n---\n\n# Methodology workflow\n",
+                encoding="utf-8",
+            )
+            notice = root / "licenses/original-content-UNLICENSED.md"
+            notice.write_text("No redistribution license is granted.\n", encoding="utf-8")
+            catalogue_path = root / "catalog/portable-skills-phase-1.json"
+            catalogue = json.loads(catalogue_path.read_text(encoding="utf-8"))
+            catalogue["skills"][0] = {
+                "id": "demo-skill",
+                "path": "skills/demo-skill/SKILL.md",
+                "status": "original_documentation_adaptation",
+                "license": "UNLICENSED",
+                "source_type": "public_documentation_and_general_methodology",
+                "documentation_sources": ["https://docs.example.com/guide"],
+                "reviewed_on": "2026-11-16",
+                "license_file": "licenses/original-content-UNLICENSED.md",
+            }
+            catalogue_path.write_text(json.dumps(catalogue), encoding="utf-8")
+            source_path = root / "catalog/external-sources.json"
+            source_path.write_text(json.dumps({"sources": []}), encoding="utf-8")
+            self.refresh_fixture_checksums(root)
+            self.assertEqual(self.run_fixture(root), [])
 
 
 
