@@ -91,6 +91,7 @@ e31913749e03bf219bceabb7a43fab698caa2701  skills/game-development-studio-game-de
 4a53138a0544c904621ecf8d54a6cd6f79df15c0  skills/game-development-studio-game-visual-debugging/SKILL.md
 49ededa8fd1e9fa211e533e25838ffc6e89eaba3  skills/gh-review-loop/SKILL.md
 2deca3894f69b346eeb336fc3fae4f53a70d4e11  skills/minecraft-bedrock-addon/SKILL.md
+c0fa76a43ff8c4e4ee3ac93628b6dcccbfadfe23  skills/plugin-management-plugin-management/SKILL.md
 97e7bee8f58ef39f58753bb799f0029eef683d31  skills/render-background-workers/SKILL.md
 4d223121822725382339ea29297a7ab6dfe038a0  skills/render-blueprints/SKILL.md
 0ccbffc56e9d58a0170cc890e1f0d0347278b284  skills/render-cli/SKILL.md
@@ -118,6 +119,15 @@ db7e36ded310bd850807dfd5591b86241b703a63  skills/supabase-engineering/SKILL.md
 3c62519a0fe0f82a9691aaf1013c841c4de286bc  skills/superpowers-engineering-workflow/SKILL.md
 a8aae39ff1d72f9a4b8f9e29e5f376d48f805a5c  skills/threejs-game-engineering/SKILL.md
 6c86ddb10ddc2c31a6b60b0df881409b754d6ae9  skills/threejs-qa-release/SKILL.md
+ecceaf80a91219cfaaa6fea93244797c6de7191c  skills/token-tally-token-tally-setup/SKILL.md
+b9c6698d0656cf3b1f0c4bee2a5beffd2e38cb33  skills/token-tally-token-tally/SKILL.md
+e0adfce46de7c5e99861db803bf756c7db29ec7f  skills/usage-checker-usage/SKILL.md
+61af957cc077d82d6c52a23569d16eb10e812aed  skills/vercel-access-protected-deployment/SKILL.md
+2919dc0fe111716669be49d6270c534b70c6780e  skills/vercel-ai-gateway/SKILL.md
+2ac000bb90c571e8ed09272e235134b631f5f741  skills/vercel-ai-sdk/SKILL.md
+201714c03c93870a8f46968d1f1278e88fff9483  skills/vercel-auth/SKILL.md
+173d04c315eb4937bccfbbfa689a944d53d477c3  skills/vercel-bootstrap/SKILL.md
+c86e0b5cc8336aa92c743076bde1843e4b718890  skills/vercel-build-agents/SKILL.md
 0ecd03365b681aca5225c6377f88b7bd70696e0d  skills/vibecoder-ai-coding-tools-guide/SKILL.md
 f1c609dbe0de74c036d7c72ee46458d89bb61fd5  skills/vibecoder-ai-features-builder/SKILL.md
 8f68ef3037a95ce71743d597240b35b2e5e28b0d  skills/vibecoder-app-safety-and-speed/SKILL.md
