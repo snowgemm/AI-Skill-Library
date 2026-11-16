@@ -20,15 +20,38 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 | Skill | Intended trigger |
 |---|---|
 | `android-compose-engineering` | Android app architecture, Compose state/lifecycle, testing, and measured performance |
-| `android-intent-security` | Defensive review of Android Intents, deep links, PendingIntents, exported components, providers, and IPC |
+| `android-intent-security` | Defensive Android Intent, deep-link, PendingIntent, component, provider, and IPC review |
+| `auth0-authentication` | Auth0 OIDC/OAuth, sessions, token validation, MFA, Organizations, and RBAC |
 | `minecraft-bedrock-addon` | Bedrock behavior/resource packs, Creator Tools, validation, and packaging |
-| `threejs-game-engineering` | Three.js browser game architecture, rendering, gameplay, and profiling |
-| `threejs-qa-release` | Real gameplay QA, responsive checks, browser evidence, performance measurement, and release verification |
-| `superpowers-engineering-workflow` | Task-appropriate planning, TDD, systematic debugging, and evidence-based verification |
+| `render-background-workers` | Queue consumers and long-running asynchronous jobs |
+| `render-blueprints` | Render Blueprint YAML and multi-service infrastructure |
+| `render-cli` | Render CLI inspection and resource operations |
+| `render-cron-jobs` | Finite scheduled tasks |
+| `render-debug` | Render build, deploy, startup, health-check, and runtime debugging |
+| `render-deploy` | Render service deployment and rollback |
+| `render-disks` | Persistent disk mount, capacity, and recovery practices |
+| `render-docker` | Docker-based Render services and container deployment |
+| `render-domains` | Custom domains, DNS, and TLS |
+| `render-env-vars` | Render environment variables, secrets, and groups |
+| `render-keyvalue` | Render Key Value / Redis-compatible cache and queue setup |
+| `render-mcp` | Render MCP setup, access boundaries, and tool review |
+| `render-migrate-from-heroku` | Heroku-to-Render migration and cutover |
+| `render-monitor` | Render logs, metrics, and service health |
+| `render-networking` | Render private networking and service connectivity |
+| `render-postgres` | Render Postgres provisioning, migration, backup, and recovery |
+| `render-private-services` | Internal-only Render APIs |
+| `render-sandboxes` | Ephemeral isolated execution for untrusted code |
+| `render-scaling` | Measured Render scaling and capacity |
+| `render-static-sites` | Static frontends, SPA routing, headers, and CDN |
+| `render-web-services` | HTTP APIs and WebSocket services on Render |
+| `render-workflows` | Durable multi-step jobs and orchestration |
 | `supabase-engineering` | Supabase Auth, Storage, Edge Functions, migrations, RLS, and application integration |
 | `supabase-postgres-best-practices` | PostgreSQL query plans, schema, indexing, connections, concurrency, and database security |
+| `superpowers-engineering-workflow` | Task-appropriate planning, TDD, systematic debugging, and evidence-based verification |
+| `threejs-game-engineering` | Three.js browser game architecture, rendering, gameplay, and profiling |
+| `threejs-qa-release` | Real gameplay QA, responsive checks, browser evidence, performance measurement, and release verification |
 
-These are independently authored guides, not recovered copies of host-managed skill bodies. Two Supabase entries have license-reviewed equivalents; 23 Auth0/Render guides are explicitly UNLICENSED and are not approved for redistribution. The other 123 installed entries remain metadata-only pending restoration. Source revisions and component license notices are recorded in `catalog/portable-skills-phase-1.json`.
+The 23 Auth0/Render guides are independently authored from vendor documentation and explicitly marked **UNLICENSED**. They are not recovered host-managed bodies and are not approved for redistribution. Two Supabase guides have license-reviewed independent equivalents. Original host-managed skill bodies remain unexported.
 
 ## Important limitations
 
@@ -43,6 +66,8 @@ These are independently authored guides, not recovered copies of host-managed sk
 - `MANIFEST.json` — project status, scope and inventory counts.
 - `skills/` — 31 portable skill guides, including 23 UNLICENSED Auth0/Render independent adaptations.
 - `catalog/current-installed-skills-148.json` — current 148-item installed-skill inventory.
+- `catalog/restoration-status-148.json` — per-entry status showing whether an independent portable equivalent exists.
+- `catalog/documentation-sources.json` — public vendor-documentation references for Auth0 and Render guides.
 - `catalog/chatgpt-installed-skills-125.json` — preserved historical 125-item snapshot.
 - `catalog/restoration-status-148.json` — per-item restoration status and portable equivalent mapping.
 - `catalog/portable-skills-phase-1.json` — skill IDs, source pins and license notices.
