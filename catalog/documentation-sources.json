@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_date": "2026-11-16",
+  "policy": "Official vendor documentation URLs are references only. No vendor prose, sample assets, code, or host-managed plugin skill bodies are copied into the independent guides.",
+  "sources": [
+    {
+      "id": "auth0-documentation",
+      "vendor": "Auth0",
+      "homepage": "https://auth0.com/docs",
+      "reviewed_on": "2026-11-16",
+      "license_status": "vendor_documentation_not_relicensed_by_this_repository",
+      "portable_guides": [
+        "auth0-authentication"
+      ],
+      "references": [
+        "https://auth0.com/docs",
+        "https://auth0.com/docs/secure/tokens",
+        "https://auth0.com/changelog"
+      ]
+    },
+    {
+      "id": "render-documentation",
+      "vendor": "Render",
+      "homepage": "https://render.com/docs",
+      "reviewed_on": "2026-11-16",
+      "license_status": "vendor_documentation_not_relicensed_by_this_repository",
+      "portable_guides": [
+        "auth0-authentication",
+        "render-background-workers",
+        "render-blueprints",
+        "render-cli",
+        "render-cron-jobs",
+        "render-debug",
+        "render-deploy",
+        "render-disks",
+        "render-docker",
+        "render-domains",
+        "render-env-vars",
+        "render-keyvalue",
+        "render-mcp",
+        "render-migrate-from-heroku",
+        "render-monitor",
+        "render-networking",
+        "render-postgres",
+        "render-private-services",
+        "render-sandboxes",
+        "render-scaling",
+        "render-static-sites",
+        "render-web-services",
+        "render-workflows"
+      ],
+      "references": [
+        "https://auth0.com/docs",
+        "https://render.com/docs/background-workers",
+        "https://render.com/docs/blueprint-spec",
+        "https://render.com/docs/cli",
+        "https://render.com/docs/cronjobs",
+        "https://render.com/docs/troubleshooting-deploys",
+        "https://render.com/docs/service-types",
+        "https://render.com/docs/disks",
+        "https://render.com/docs/docker",
+        "https://render.com/docs/custom-domains",
+        "https://render.com/docs/configure-environment-variables",
+        "https://render.com/docs/key-value",
+        "https://render.com/docs/mcp-server",
+        "https://render.com/docs/migrate-from-heroku",
+        "https://render.com/docs/metrics",
+        "https://render.com/docs/private-network",
+        "https://render.com/docs/postgresql",
+        "https://render.com/docs/private-services",
+        "https://render.com/docs/sandboxes",
+        "https://render.com/docs/scaling",
+        "https://render.com/docs/static-sites",
+        "https://render.com/docs/web-services",
+        "https://render.com/docs/workflows",
+        "https://render.com/docs/environment-variables",
+        "https://render.com/docs/cli-reference",
+        "https://render.com/docs/postgresql-backups",
+        "https://render.com/docs/sandboxes-snapshots"
+      ]
+    }
+  ]
+}
