@@ -196,8 +196,35 @@ def validate() -> list[str]:
                 errors.append(f"{workflow.relative_to(ROOT)}: every third-party action must use a full 40-character commit SHA")
             if re.search(r"(?m)^\s*pull_request_target\s*:", text):
                 errors.append(f"{workflow.relative_to(ROOT)}: pull_request_target is not allowed in this repository workflow")
-            if "contents: write" in text and workflow.name != "upstream-registry.yml":
-                errors.append(f"{workflow.relative_to(ROOT)}: write permission is reserved for the gated upstream proposal job")
+            permission_scopes: list[tuple[str, Any]] = [
+                ("workflow", data.get("permissions", {}))
+            ]
+            jobs = data.get("jobs", {})
+            if isinstance(jobs, dict):
+                permission_scopes.extend(
+                    (f"job {job_name}", job.get("permissions", {}))
+                    for job_name, job in jobs.items()
+                    if isinstance(job, dict)
+                )
+            for scope, permissions in permission_scopes:
+                if not isinstance(permissions, dict):
+                    errors.append(
+                        f"{workflow.relative_to(ROOT)} {scope}: permissions must be a mapping"
+                    )
+                    continue
+                for permission, level in permissions.items():
+                    if level != "write":
+                        continue
+                    allowed_issue_writer = (
+                        workflow.name == "upstream-registry.yml"
+                        and scope == "job notify"
+                        and permission == "issues"
+                    )
+                    if not allowed_issue_writer:
+                        errors.append(
+                            f"{workflow.relative_to(ROOT)} {scope}: "
+                            f"{permission}: write is not allowed"
+                        )
 
     files = tracked_files(errors)
     if CHECKSUM_FILE.is_file():
