@@ -6,7 +6,7 @@ metadata:
   author: AI-Skill-Library contributors
   version: "1.0.0"
   upstream: https://github.com/android/skills
-  upstream-commit: c72942584fff970dac86ced78b367fce0c441e52
+  upstream-commit: bf68e2d66a992a1e6aeb7e9263293cc23fcbf475
 ---
 
 # Android Intent and Component Security
