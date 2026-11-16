@@ -32,7 +32,7 @@ These are eight independently authored adaptations, not recovered copies of the 
 
 ## Important limitations
 
-- The five host runtimes have not yet been discovery-, invocation- or evaluation-tested in this project. Format/path documentation is not runtime proof.
+- The five host runtimes have not yet been discovery-, invocation- or evaluation-tested in this project. Format/path documentation and routing seed fixtures are not runtime proof.
 - The project has no root-level license. Per-skill notices do not license the installer, catalogue, tests, documentation or repository as a whole.
 - Minecraft vanilla assets covered by the Minecraft EULA are excluded. The project does not accept an EULA on a user's behalf.
 - The repository is not a model-training package. Installing a skill adds instructions to an agent context; it does not change model weights.
@@ -50,6 +50,8 @@ These are eight independently authored adaptations, not recovered copies of the 
 - `scripts/validate_skills.py` — Agent Skills format validator.
 - `scripts/validate_repository.py` — catalogue, provenance, workflow and checksum validator.
 - `scripts/validate_workflow_security.py` — permission, action-pin and automation hand-off invariant checks.
+- `evaluations/skill-routing-cases.json` — 80 positive/negative trigger seed cases across the eight portable skills.
+- `scripts/validate_skill_evaluations.py` — offline schema and coverage validator for the routing dataset.
 - `scripts/update_checksums.py` — Git blob SHA-1 inventory generator.
 - `tests/` — unit and failure-path regression tests.
 - `.github/workflows/quality.yml` — test matrix and pinned zizmor workflow security analysis.
@@ -64,6 +66,7 @@ python3 -m unittest discover --start-directory tests --verbose
 python3 scripts/validate_skills.py
 python3 scripts/validate_repository.py
 python3 scripts/validate_workflow_security.py
+python3 scripts/validate_skill_evaluations.py
 ```
 
 Regenerate the Git blob checksum inventory after staging changes:
