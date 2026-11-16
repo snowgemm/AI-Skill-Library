@@ -3,7 +3,7 @@ e862fc4a60d44ded09ff65c17035327ded9980f6  .github/workflows/upstream-registry.ym
 48064354a48b02dd0b4e755dfb96348e66f74a75  .gitignore
 4d3aa363cc3f8d9004aff200ddf3c6640854acc7  adapters/host-adapters.json
 52553daa3f98d03aa30b774a3d263069814bb5e9  adapters/HOST-COMPATIBILITY.md
-8ddb3f0c810d045a032ba953014e49f22b43395e  adapters/README.md
+1c0d30e9a4769fe45412b043e029f1bb68389867  adapters/README.md
 b33207b4572d516a0051654702024fab20022839  archive/legacy-biohub-esmfold2-SKILL.md
 699950e847220a2968c6028f7b848b9ef8423810  catalog/chatgpt-installed-skills-125.csv
 884c8f4123027cb881dc2f57bc4c4df016933663  catalog/chatgpt-installed-skills-125.json
@@ -14,7 +14,7 @@ bd10ef519465bf25798d810864aca9479d1b0fd1  catalog/external-sources.json
 23816f53874f6ce183e1a717034f8eb9d0bca384  catalog/portable-skills-phase-1.json
 f805cb31779e3f0b0e032c97aecbc70cfea5c756  catalog/RECONCILIATION-120-to-125.md
 a1d601b04849ab35bfe0cbecfba658c8396c0daa  catalog/restoration-status-148.json
-8f63487396c46f788488561a9b3dcb9b02605d6f  CHANGELOG.md
+a9b42b21512325b0f486391f21d74f5cd6bcbb4b  CHANGELOG.md
 9a63aea24d67a88b3ea5bf9bd4b67c2d3b7ae501  COMMERCIAL-READINESS.md
 a7327d345955c1ed631159b7a63905795a82523a  evaluations/EVALUATION-PLAN.md
 4632636aab8754deea5e907be0c89a5d9022a47d  evaluations/skill-routing-cases.json
@@ -26,13 +26,13 @@ d3c9e94fbc6c28f66ecb5a01407d543c99c811b6  licenses/upstream/supabase-LICENSE
 abf0390320aa14406af7a520b9b0739fdda9bf08  licenses/upstream/superpowers-LICENSE
 0e7cfcfa43d5da2dc6a31768afcd95525fd3000c  licenses/upstream/threejs-LICENSE
 223f61565beef7da8a2720f205f6bda651b22c10  LICENSING.md
-013b9e0ecce2b280d13e1f3a6d87c2c2dc649dec  MANIFEST.json
+ca781244da7ac1b421e38ab998e2488e02d62b52  MANIFEST.json
 67b4f4cd79e456235a46ee66c281d8cde481b00a  policies/IMPORT-SECURITY.md
-1afed2692fa51b17da2df59f57e1791c4f18ba6a  README.md
+a64d10fd8c5efe93026059ef14861af7cfafac51  README.md
 f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
-c45426162ce2b9df1db0cecc0082566c0904fed2  scripts/install_skills.py
+c48f75481b478f5f8023430d59ed30d4a043176b  scripts/install_skills.py
 9364e385bd4ea8cac4b7aed12bc217f34cc816b9  scripts/update_checksums.py
-40839f26e5921c98bcb5c547e4a6341a03bb0543  scripts/validate_repository.py
+ba0e520130787ebbb486cc00fb40a1c374b810a9  scripts/validate_repository.py
 898017ee2fe619ab89eb6134d63b67d47f49ad8b  scripts/validate_skill_evaluations.py
 5b712012d7623a52fa4bd9fe54b9053cc4689ff5  scripts/validate_skills.py
 7bd59604ed2e79c010629aad36ce7750fe711302  scripts/validate_workflow_security.py
@@ -195,7 +195,8 @@ bd79ed00a513fd2f043df0c773f543ebd979d762  skills/vibecoder-vibe-coding-prompts/S
 1519d05e61498a677d6f06d13196c9749fcd8071  sources/PLATFORM-SUPPORT.md
 2eff97d80aae6ef4581a3fd745b862f57048247b  sources/PORTABLE-SKILL-RECOVERY.md
 078984dea890f7d8147a83a35deb8b69c94cf925  sources/SOURCE-VERIFICATION.md
-fb01cade20ca029974c45792e96a70b1998d3a7c  tests/test_installer.py
+935b47544d09f1ffdb2dc8ead2e2b8bb54182210  tests/test_catalog_metadata.py
+2f457cbe852edd68f3ba98e54375ba4f440c5b9c  tests/test_installer.py
 29b2bf8d31f743f6ea2225e4d3e9c01b55c8dcff  tests/test_repository_integrity.py
 5d8990aa3b6e7c9ac07668429716cfce7af24c43  tests/test_skill_evaluations.py
 ca4c0a711c6fe2b86d833708397ca7a2c8f2d00f  tests/test_validate_skills.py

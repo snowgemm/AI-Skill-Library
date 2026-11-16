@@ -23,7 +23,9 @@ All notable repository changes are documented here. A version is not considered 
 - Added 77 independent guides for Biohub ESM, Codex, GitHub/CodeRabbit, UsageTap/usage analysis, game development, plugin management, and Vercel.
 
 ### Changed
-- Installer requires an existing project directory, stages all skills before installation, refuses symlink paths and attempts rollback on failure.
+- Installer now excludes guides without reviewed redistribution terms by default; `--include-unlicensed` is an explicit evaluation-only opt-in and grants no redistribution rights.
+- Repository validation now cross-checks manifest counters, source pin uniqueness, adapter ID uniqueness, license-status counts, and routing seed totals.
+- Installer requires an existing project directory, stages selected guides before installation, refuses symlink paths and attempts rollback on failure.
 - Upstream monitor checks only sources mapped to imported portable skills and fails closed if any monitored source cannot be checked.
 - Upstream monitoring is read-only and compares upstream default-branch HEAD with immutable import pins; it creates or updates one GitHub Issue when drift is detected and never writes files, pins, branches, or PRs.
 - Quality push checks are scoped to `main`.

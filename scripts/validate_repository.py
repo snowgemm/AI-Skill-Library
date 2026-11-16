@@ -80,12 +80,137 @@ def resolve_repository_path(value: Any, *, label: str, errors: list[str]) -> Pat
         return None
     return resolved
 
+def validate_inventory_consistency(
+    manifest: Any,
+    skills: Any,
+    adapter_data: Any,
+    source_rows: Any,
+    routing_data: Any,
+) -> list[str]:
+    """Cross-check counts and identifiers shared by catalogues and manifest files."""
+    errors: list[str] = []
+    if not isinstance(skills, list):
+        return ["portable skill catalogue must be a list for inventory checks"]
+    valid_skills = [item for item in skills if isinstance(item, dict)]
+    if len(valid_skills) != len(skills):
+        errors.append("portable skill catalogue entries must all be objects")
+
+    if not isinstance(manifest, dict):
+        errors.append("MANIFEST must be an object for inventory checks")
+        return errors
+    counts = manifest.get("counts")
+    if not isinstance(counts, dict):
+        errors.append("MANIFEST counts must be an object for inventory checks")
+        counts = {}
+
+    unlicensed = 0
+    reviewed = 0
+    expected_ids: set[str] = set()
+    for item in valid_skills:
+        skill_id = item.get("id")
+        if isinstance(skill_id, str):
+            expected_ids.add(skill_id)
+        status = item.get("status")
+        license_name = item.get("license")
+        if status == "original_documentation_adaptation":
+            if license_name != "UNLICENSED":
+                errors.append(f"{item.get('id', '<unknown>')}: original documentation adaptation must remain UNLICENSED")
+            unlicensed += license_name == "UNLICENSED"
+        elif status == "portable_adaptation":
+            if not isinstance(license_name, str) or not license_name.strip() or license_name == "UNLICENSED":
+                errors.append(f"{item.get('id', '<unknown>')}: portable adaptation requires a reviewed component license")
+            else:
+                reviewed += 1
+        else:
+            errors.append(f"{item.get('id', '<unknown>')}: unsupported portable skill status {status!r}")
+
+    expected_counts = {
+        "portable_skill_adaptations": len(valid_skills),
+        "custom_skill_bodies_created": len(valid_skills),
+        "unlicensed_independent_guides": unlicensed,
+        "license_reviewed_independent_guides": reviewed,
+    }
+    for key, expected in expected_counts.items():
+        if counts.get(key) != expected:
+            errors.append(f"MANIFEST counts.{key} must equal catalog-derived value {expected}")
+
+    if isinstance(adapter_data, dict):
+        adapter_ids = adapter_data.get("skills")
+        if not isinstance(adapter_ids, list) or any(not isinstance(item, str) for item in adapter_ids):
+            errors.append("host adapter skills must be an array of string IDs")
+        else:
+            if len(adapter_ids) != len(set(adapter_ids)):
+                errors.append("host adapter skills must not contain duplicate IDs")
+            if set(adapter_ids) != expected_ids:
+                errors.append("host adapter skill IDs must match the portable catalogue exactly")
+
+    if not isinstance(source_rows, list):
+        errors.append("external source registry must contain a sources array")
+        source_rows = []
+    repositories: set[str] = set()
+    pinned_count = 0
+    repository_re = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
+    for index, source in enumerate(source_rows):
+        if not isinstance(source, dict):
+            errors.append(f"external source registry sources[{index}] must be an object")
+            continue
+        repository = source.get("repository")
+        if not isinstance(repository, str) or not repository_re.fullmatch(repository):
+            errors.append(f"external source registry sources[{index}] has an invalid repository identifier")
+        elif repository in repositories:
+            errors.append(f"external source registry contains duplicate repository: {repository}")
+        else:
+            repositories.add(repository)
+        commit = source.get("commit")
+        if isinstance(commit, str) and SHA_RE.fullmatch(commit):
+            pinned_count += 1
+        else:
+            errors.append(f"external source registry {repository or index} must use a full 40-character commit SHA")
+
+    if counts.get("external_repositories_reviewed") != len(source_rows):
+        errors.append("MANIFEST counts.external_repositories_reviewed must match external source registry size")
+    if counts.get("external_repositories_commit_pinned") != pinned_count:
+        errors.append("MANIFEST counts.external_repositories_commit_pinned must match valid immutable source pins")
+
+    routing_skills = routing_data.get("skills") if isinstance(routing_data, dict) else None
+    if not isinstance(routing_skills, list):
+        errors.append("skill-routing fixture must contain a skills array for manifest count checks")
+        routing_count = -1
+    else:
+        routing_count = 0
+        for index, item in enumerate(routing_skills):
+            if not isinstance(item, dict):
+                errors.append(f"skill-routing fixture skills[{index}] must be an object")
+                continue
+            for field in ("positive_cases", "negative_cases"):
+                cases = item.get(field)
+                if not isinstance(cases, list):
+                    errors.append(f"skill-routing fixture skills[{index}].{field} must be an array")
+                else:
+                    routing_count += len(cases)
+    if routing_count >= 0:
+        if counts.get("routing_case_seed_count") != routing_count:
+            errors.append(f"MANIFEST counts.routing_case_seed_count must equal fixture count {routing_count}")
+        if manifest.get("routing_case_seed_count") != routing_count:
+            errors.append(f"MANIFEST routing_case_seed_count must equal fixture count {routing_count}")
+
+    if manifest.get("ci_conclusion") != "success":
+        errors.append("MANIFEST ci_conclusion must refer to a successful CI run")
+    if not isinstance(manifest.get("ci_verified_commit"), str) or not SHA_RE.fullmatch(manifest["ci_verified_commit"]):
+        errors.append("MANIFEST ci_verified_commit must be a full 40-character commit SHA")
+    ci_run_id = manifest.get("ci_run_id")
+    if not isinstance(ci_run_id, int) or isinstance(ci_run_id, bool) or ci_run_id <= 0:
+        errors.append("MANIFEST ci_run_id must be a positive integer")
+    return errors
+
+
 def validate() -> list[str]:
     errors: list[str] = []
     manifest = read_json(ROOT / "MANIFEST.json", errors)
     catalogue = read_json(ROOT / "catalog/portable-skills-phase-1.json", errors)
     source_data = read_json(ROOT / "catalog/external-sources.json", errors)
     adapter_data = read_json(ROOT / "adapters/host-adapters.json", errors)
+    routing_data = read_json(ROOT / "evaluations/skill-routing-cases.json", errors)
 
     skills = catalogue.get("skills") if isinstance(catalogue, dict) else None
     if not isinstance(skills, list) or not skills:
@@ -96,6 +221,11 @@ def validate() -> list[str]:
     if not isinstance(source_rows, list):
         errors.append("external source registry must contain a sources array")
         source_rows = []
+    errors.extend(
+        validate_inventory_consistency(
+            manifest, skills, adapter_data, source_rows, routing_data
+        )
+    )
     source_index = {
         row.get("repository"): row for row in source_rows
         if isinstance(row, dict) and isinstance(row.get("repository"), str)
@@ -203,8 +333,14 @@ def validate() -> list[str]:
                 if isinstance(config, dict) and config.get("runtime_tested") is not False:
                     errors.append(f"{host}: runtime_tested must remain false until runtime evidence exists")
         expected_ids = {item.get("id") for item in skills if isinstance(item, dict)}
-        if set(adapter_data.get("skills", [])) != expected_ids:
-            errors.append("host adapter skill list does not match portable catalogue")
+        adapter_skill_ids = adapter_data.get("skills", [])
+        if not isinstance(adapter_skill_ids, list) or any(not isinstance(item, str) for item in adapter_skill_ids):
+            errors.append("host adapter skill list must be an array of string IDs")
+        else:
+            if len(adapter_skill_ids) != len(set(adapter_skill_ids)):
+                errors.append("host adapter skill list contains duplicate IDs")
+            if set(adapter_skill_ids) != expected_ids:
+                errors.append("host adapter skill list does not match portable catalogue")
         policy = adapter_data.get("policy", {})
         if not isinstance(policy, dict) or policy.get("host_runtime_tested") is not False:
             errors.append("adapter policy must not claim unverified host runtime compatibility")

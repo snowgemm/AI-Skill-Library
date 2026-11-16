@@ -60,7 +60,7 @@ Project-scope discovery adapters are documented for Codex, Claude Code, Gemini C
 - [`catalog/portable-skills-phase-1.json`](catalog/portable-skills-phase-1.json) — 155 portable guide records and provenance.
 - [`catalog/documentation-sources.json`](catalog/documentation-sources.json) — public vendor/reference documentation links.
 - [`adapters/host-adapters.json`](adapters/host-adapters.json) — host skill directories and supported guide list.
-- [`scripts/install_skills.py`](scripts/install_skills.py) — explicit project-only, no-overwrite installer.
+- [`scripts/install_skills.py`](scripts/install_skills.py) — explicit project-only, no-overwrite installer. It includes only license-reviewed adaptations by default; `--include-unlicensed` is a deliberate evaluation-only opt-in and does not grant redistribution rights.
 - [`scripts/validate_skills.py`](scripts/validate_skills.py) and [`scripts/validate_repository.py`](scripts/validate_repository.py) — format, provenance, metadata, workflow, and checksum checks.
 - [`evaluations/skill-routing-cases.json`](evaluations/skill-routing-cases.json) — 1,550 positive/negative routing seed cases.
 - [`scripts/validate_skill_evaluations.py`](scripts/validate_skill_evaluations.py) — offline validation of the routing fixture structure.
@@ -80,7 +80,7 @@ python3 scripts/validate_workflow_security.py
 python3 scripts/validate_skill_evaluations.py
 ```
 
-The pre-work HEAD passed GitHub Actions run [#43877061957](https://github.com/snowgemm/AI-Skill-Library/actions/runs/43877061957) on commit `995f2e735f883736060b59038f8a314086defb75`: 52 unit tests, Agent Skills validation, repository/checksum validation, routing-fixture validation, and workflow-security invariants passed on Python 3.12 and 3.13; the zizmor workflow audit also passed. This is static/CI evidence only, not host-runtime compatibility or skill-effectiveness evidence.
+The pre-hardening HEAD passed GitHub Actions run [#43882266198](https://github.com/snowgemm/AI-Skill-Library/actions/runs/43882266198) on commit `4da6933c9eb391bd527c1876348e220e7a3de4a8`: unit and failure-path tests, Agent Skills validation, repository/checksum validation, routing-fixture validation, and workflow-security invariants passed on Python 3.12 and 3.13; the zizmor workflow audit also passed. This is static/CI evidence only, not host-runtime compatibility or skill-effectiveness evidence.
 
 ## Licensing and release limits
 

@@ -50,8 +50,8 @@ class InstallerTests(unittest.TestCase):
         catalog.parent.mkdir(parents=True)
         catalog.write_text(
             '{"skills": ['
-            '{"id": "skill-a", "path": "skills/skill-a/SKILL.md"},'
-            '{"id": "skill-b", "path": "skills/skill-b/SKILL.md"}'
+            '{"id": "skill-a", "path": "skills/skill-a/SKILL.md", "status": "portable_adaptation", "license": "MIT", "license_file": "licenses/mit.txt"},'
+            '{"id": "skill-b", "path": "skills/skill-b/SKILL.md", "status": "portable_adaptation", "license": "Apache-2.0", "license_file": "licenses/apache.txt"}'
             ']}',
             encoding="utf-8",
         )
@@ -60,6 +60,42 @@ class InstallerTests(unittest.TestCase):
         self.assertEqual(code, 0, output + error)
         for skill_id in ("skill-a", "skill-b"):
             self.assertTrue((self.target / ".agents/skills" / skill_id / "SKILL.md").is_file())
+
+    def test_unlicensed_guides_are_excluded_by_default(self) -> None:
+        catalog = installer.REPOSITORY_ROOT / "catalog" / "portable-skills-phase-1.json"
+        catalog.parent.mkdir(parents=True)
+        catalog.write_text(
+            '{"skills": ['
+            '{"id": "skill-a", "path": "skills/skill-a/SKILL.md", "status": "portable_adaptation", "license": "MIT", "license_file": "licenses/mit.txt"},'
+            '{"id": "skill-b", "path": "skills/skill-b/SKILL.md", "status": "original_documentation_adaptation", "license": "UNLICENSED", "license_file": "licenses/unlicensed.txt"}'
+            ']}',
+            encoding="utf-8",
+        )
+        installer.SKILL_IDS = None
+        code, output, warning = self.run_cli("--target", str(self.target), "--host", "codex")
+        self.assertEqual(code, 0, output + warning)
+        self.assertTrue((self.target / ".agents/skills/skill-a/SKILL.md").is_file())
+        self.assertFalse((self.target / ".agents/skills/skill-b").exists())
+        self.assertIn("Excluded 1 guide", warning)
+
+    def test_unlicensed_guides_need_explicit_opt_in(self) -> None:
+        catalog = installer.REPOSITORY_ROOT / "catalog" / "portable-skills-phase-1.json"
+        catalog.parent.mkdir(parents=True)
+        catalog.write_text(
+            '{"skills": ['
+            '{"id": "skill-a", "path": "skills/skill-a/SKILL.md", "status": "portable_adaptation", "license": "MIT", "license_file": "licenses/mit.txt"},'
+            '{"id": "skill-b", "path": "skills/skill-b/SKILL.md", "status": "original_documentation_adaptation", "license": "UNLICENSED", "license_file": "licenses/unlicensed.txt"}'
+            ']}',
+            encoding="utf-8",
+        )
+        installer.SKILL_IDS = None
+        code, output, warning = self.run_cli(
+            "--target", str(self.target), "--host", "codex", "--include-unlicensed"
+        )
+        self.assertEqual(code, 0, output + warning)
+        self.assertTrue((self.target / ".agents/skills/skill-a/SKILL.md").is_file())
+        self.assertTrue((self.target / ".agents/skills/skill-b/SKILL.md").is_file())
+        self.assertIn("does not grant any right", warning)
 
     def test_malformed_catalogue_id_is_rejected_before_writing(self) -> None:
         catalog = installer.REPOSITORY_ROOT / "catalog" / "portable-skills-phase-1.json"

@@ -29,8 +29,10 @@ HOST_DIRECTORIES = {
 }
 
 
-def load_skill_ids(catalog_path: Path) -> tuple[str, ...]:
-    """Load and validate canonical skill IDs from the portable catalogue."""
+def load_skill_ids(
+    catalog_path: Path, *, include_unlicensed: bool = False
+) -> tuple[tuple[str, ...], int]:
+    """Load canonical IDs, excluding guides without reviewed redistribution terms by default."""
     data = json.loads(catalog_path.read_text(encoding="utf-8"))
     records = data.get("skills") if isinstance(data, dict) else None
     if not isinstance(records, list) or not records:
@@ -38,6 +40,7 @@ def load_skill_ids(catalog_path: Path) -> tuple[str, ...]:
 
     skill_ids: list[str] = []
     seen: set[str] = set()
+    unlicensed_count = 0
     for index, record in enumerate(records):
         if not isinstance(record, dict):
             raise ValueError(f"catalogue skills[{index}] must be an object")
@@ -48,9 +51,26 @@ def load_skill_ids(catalog_path: Path) -> tuple[str, ...]:
             raise ValueError(f"catalogue contains duplicate skill ID: {skill_id}")
         if record.get("path") != f"skills/{skill_id}/SKILL.md":
             raise ValueError(f"{skill_id}: catalogue path must be canonical")
+        if record.get("status") not in {"portable_adaptation", "original_documentation_adaptation"}:
+            raise ValueError(f"{skill_id}: unsupported catalogue status")
+        if not isinstance(record.get("license"), str) or not record["license"].strip():
+            raise ValueError(f"{skill_id}: catalogue license metadata is missing")
+        if not isinstance(record.get("license_file"), str) or not record["license_file"].strip():
+            raise ValueError(f"{skill_id}: catalogue license notice path is missing")
+
+        reviewed = (
+            record["status"] == "portable_adaptation"
+            and record["license"] != "UNLICENSED"
+        )
+        if not reviewed:
+            unlicensed_count += 1
+            if not include_unlicensed:
+                seen.add(skill_id)
+                continue
+
         seen.add(skill_id)
         skill_ids.append(skill_id)
-    return tuple(skill_ids)
+    return tuple(skill_ids), unlicensed_count
 
 
 def parse_args() -> argparse.Namespace:
@@ -61,6 +81,11 @@ def parse_args() -> argparse.Namespace:
                         help="Required target host. Use all only when you intentionally want every host folder.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show planned copies without creating directories or files.")
+    parser.add_argument(
+        "--include-unlicensed",
+        action="store_true",
+        help="Explicitly include guides without reviewed redistribution terms; this does not grant rights to publish or redistribute them.",
+    )
     return parser.parse_args()
 
 
@@ -125,15 +150,31 @@ def main() -> int:
         print("Refusing a home-directory, filesystem-root, or installer-repository target.", file=sys.stderr)
         return 2
 
+    unlicensed_count = 0
     try:
         skill_ids = SKILL_IDS
         if skill_ids is None:
-            skill_ids = load_skill_ids(
-                REPOSITORY_ROOT / "catalog" / "portable-skills-phase-1.json"
+            skill_ids, unlicensed_count = load_skill_ids(
+                REPOSITORY_ROOT / "catalog" / "portable-skills-phase-1.json",
+                include_unlicensed=args.include_unlicensed,
             )
     except (OSError, UnicodeError, ValueError) as error:
         print(f"Cannot load canonical portable skill catalogue: {error}", file=sys.stderr)
         return 2
+
+    if unlicensed_count:
+        if args.include_unlicensed:
+            print(
+                f"WARNING: explicitly including {unlicensed_count} guide(s) without reviewed redistribution terms. "
+                "This option does not grant any right to publish or redistribute them.",
+                file=sys.stderr,
+            )
+        else:
+            print(
+                f"Excluded {unlicensed_count} guide(s) without reviewed redistribution terms. "
+                "Use --include-unlicensed only for isolated evaluation; do not publish or redistribute those files.",
+                file=sys.stderr,
+            )
 
     hosts = tuple(HOST_DIRECTORIES) if args.host == "all" else (args.host,)
     if args.host == "all":
