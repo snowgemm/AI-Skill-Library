@@ -4,6 +4,7 @@ e862fc4a60d44ded09ff65c17035327ded9980f6  .github/workflows/upstream-registry.ym
 a01b7ddd57b84c56344464375e60effb917167c0  adapters/host-adapters.json
 52553daa3f98d03aa30b774a3d263069814bb5e9  adapters/HOST-COMPATIBILITY.md
 8ddb3f0c810d045a032ba953014e49f22b43395e  adapters/README.md
+b33207b4572d516a0051654702024fab20022839  archive/legacy-biohub-esmfold2-SKILL.md
 699950e847220a2968c6028f7b848b9ef8423810  catalog/chatgpt-installed-skills-125.csv
 884c8f4123027cb881dc2f57bc4c4df016933663  catalog/chatgpt-installed-skills-125.json
 b1d7576ae40b2f49f5720a08d7c51dd561f649ee  catalog/current-installed-skills-148.json
