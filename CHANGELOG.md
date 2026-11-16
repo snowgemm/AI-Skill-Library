@@ -2,7 +2,7 @@
 
 All notable repository changes are documented here. A version is not considered released until a signed/tagged release points to a commit that passed its release gates.
 
-## Unreleased — 0.4.0 pre-release expansion
+## Unreleased — 0.5.0 pre-release restoration wave
 
 ### Added
 - Strict Agent Skills frontmatter validation with duplicate-key detection.
@@ -12,7 +12,9 @@ All notable repository changes are documented here. A version is not considered 
 - Pinned zizmor workflow security analysis and explicit workflow-permission/automation invariants.
 - Commercial readiness, per-component licensing, security, evaluation and compatibility documentation.
 - Three specialist portable skills: Android Intent security, Three.js QA/release, and Supabase/PostgreSQL best practices.
-- Eighty deterministic positive/negative routing seed cases (five of each per skill) and an offline validator; these fixtures do not claim host runtime activation.
+- Three additional specialist portable skills and 80 routing cases (five positive and five negative for each initial skill set); fixtures do not claim host runtime activation.
+- 23 independently authored Auth0/Render equivalents from public vendor documentation. Host-managed bodies were not copied; the new files are UNLICENSED pending a repository-level licensing decision.
+- Current installed-skill inventory expanded from the preserved 125-item historical snapshot to 148 items after a live catalog comparison.
 
 ### Changed
 - Installer requires an existing project directory, stages all skills before installation, refuses symlink paths and attempts rollback on failure.
@@ -25,6 +27,8 @@ All notable repository changes are documented here. A version is not considered 
 
 - Android Compose and Minecraft Bedrock adaptations were reviewed against current upstream heads; the original imported source pins remain immutable.
 - Minecraft guidance now covers current Creator Tools Node.js, `--dry-run`, EULA, command failure/interrupt, and API path-validation behavior.
+
+- Installer and host adapter catalog expanded to 31 portable guides.
 
 ### Not yet verified
 - Real host discovery and invocation for every advertised host/version and all eight skills.
