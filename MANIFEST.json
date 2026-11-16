@@ -1,6 +1,6 @@
 {
   "name": "AI-Skill-Library",
-  "version": "0.3.0-pre-release",
+  "version": "0.4.0-pre-release",
   "snapshot_date": "2026-11-16",
   "purpose": "Portable, provenance-first inventory and governance scaffold for AI agent skills.",
   "release_status": "pre_release_not_approved_for_commercial_distribution",
@@ -11,15 +11,15 @@
     "external_repositories_reviewed": 11,
     "external_repositories_commit_pinned": 11,
     "portable_upstream_skill_bodies_copied": 0,
-    "custom_skill_bodies_created": 5,
+    "custom_skill_bodies_created": 8,
     "platforms_documented_or_tracked": 7,
-    "portable_skill_adaptations": 5
+    "portable_skill_adaptations": 8
   },
   "not_done": [
     "Host-specific CLI discovery, activation, invocation and evaluation tests have not been run.",
     "No project-wide license has been selected for original repository material.",
     "No comprehensive skill-level static and dynamic security assessment has been completed.",
-    "No matched baseline-versus-skill evaluation report exists across the five skills and five hosts.",
+    "No matched baseline-versus-skill evaluation report exists across the eight skills and five hosts.",
     "No versioned release package, SBOM, build provenance attestation or signature-verification procedure has been published."
   ],
   "principles": [
@@ -38,7 +38,13 @@
   "portable_skill_catalog_file": "catalog/portable-skills-phase-1.json",
   "upstream_monitor_workflow": ".github/workflows/upstream-registry.yml",
   "quality_workflow": ".github/workflows/quality.yml",
-  "platform_adapters": ["codex", "claude", "gemini", "github-copilot", "grok"],
+  "platform_adapters": [
+    "codex",
+    "claude",
+    "gemini",
+    "github-copilot",
+    "grok"
+  ],
   "adapter_guide": "adapters/HOST-COMPATIBILITY.md",
   "adapter_map": "adapters/host-adapters.json",
   "project_installer": "scripts/install_skills.py",
@@ -55,5 +61,7 @@
   "base_published_branch": "main",
   "working_branch": "main",
   "ci_verified_commit": "e98f79c74d96a4dd871f91e8e7451e369f3deeb6",
-  "validation_status": "quality_ci_passed_on_main;host_runtime_not_tested;commercial_distribution_blocked"
+  "validation_status": "quality_ci_passed_on_prior_main_commit;phase_2_changes_pending_ci;host_runtime_not_tested;commercial_distribution_blocked",
+  "skill_expansion_phase": "phase_2_adds_android_intent_security_threejs_qa_and_supabase_postgres",
+  "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates"
 }
