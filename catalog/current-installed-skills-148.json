@@ -705,7 +705,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/biohub-esm/SKILL.md"
     },
     {
       "number": 48,
@@ -718,7 +719,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/biohub-esm-setup/SKILL.md"
     },
     {
       "number": 49,
@@ -731,7 +733,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/biohub-esm-atlas/SKILL.md"
     },
     {
       "number": 50,
@@ -744,7 +747,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/biohub-esmc/SKILL.md"
     },
     {
       "number": 51,
@@ -757,7 +761,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/biohub-esm-esmfold2/SKILL.md"
     },
     {
       "number": 52,
@@ -770,7 +775,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/gh-review-loop/SKILL.md"
     },
     {
       "number": 53,
@@ -783,7 +789,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/coderabbit-learnings-curator/SKILL.md"
     },
     {
       "number": 54,
@@ -796,7 +803,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-coordinator/SKILL.md"
     },
     {
       "number": 55,
@@ -809,7 +817,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-bug-investigation/SKILL.md"
     },
     {
       "number": 56,
@@ -822,7 +831,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-code-review/SKILL.md"
     },
     {
       "number": 57,
@@ -835,7 +845,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-comprehensive-qa/SKILL.md"
     },
     {
       "number": 58,
@@ -848,7 +859,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-create-agent-instructions/SKILL.md"
     },
     {
       "number": 59,
@@ -861,7 +873,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-feature-development/SKILL.md"
     },
     {
       "number": 60,
@@ -874,7 +887,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-feature-testing/SKILL.md"
     },
     {
       "number": 61,
@@ -887,7 +901,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-new-project/SKILL.md"
     },
     {
       "number": 62,
@@ -900,7 +915,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-orchestrate-work/SKILL.md"
     },
     {
       "number": 63,
@@ -913,7 +929,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-platform-guidance/SKILL.md"
     },
     {
       "number": 64,
@@ -926,7 +943,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-pre-release-review/SKILL.md"
     },
     {
       "number": 65,
@@ -939,7 +957,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-resume-interrupted-task/SKILL.md"
     },
     {
       "number": 66,
@@ -952,7 +971,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-dev-session-handoff/SKILL.md"
     },
     {
       "number": 67,
@@ -965,7 +985,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-material-themes-choose-codex-theme/SKILL.md"
     },
     {
       "number": 68,
@@ -978,7 +999,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-cost/SKILL.md"
     },
     {
       "number": 69,
@@ -991,7 +1013,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-sdlc/SKILL.md"
     },
     {
       "number": 70,
@@ -1004,7 +1027,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-sdlc-ba/SKILL.md"
     },
     {
       "number": 71,
@@ -1017,7 +1041,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-sdlc-backend/SKILL.md"
     },
     {
       "number": 72,
@@ -1030,7 +1055,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-sdlc-frontend/SKILL.md"
     },
     {
       "number": 73,
@@ -1043,7 +1069,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-sdlc-pm/SKILL.md"
     },
     {
       "number": 74,
@@ -1056,7 +1083,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-sdlc-po/SKILL.md"
     },
     {
       "number": 75,
@@ -1069,7 +1097,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-sdlc-qc/SKILL.md"
     },
     {
       "number": 76,
@@ -1082,7 +1111,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-sdlc-setup/SKILL.md"
     },
     {
       "number": 77,
@@ -1095,7 +1125,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/ai-codex-usage/SKILL.md"
     },
     {
       "number": 78,
@@ -1108,7 +1139,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/codex-usage-codex-usage-hud/SKILL.md"
     },
     {
       "number": 79,
@@ -1121,7 +1153,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/usage-checker-usage/SKILL.md"
     },
     {
       "number": 80,
@@ -1134,7 +1167,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/app-6a9e2447eaf48191b9019af0c0ca8332-integrate-usagetap/SKILL.md"
     },
     {
       "number": 81,
@@ -1147,7 +1181,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/cache-stats-cache-stats/SKILL.md"
     },
     {
       "number": 82,
@@ -1160,7 +1195,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/token-tally-token-tally/SKILL.md"
     },
     {
       "number": 83,
@@ -1173,7 +1209,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/token-tally-token-tally-setup/SKILL.md"
     },
     {
       "number": 84,
@@ -1186,7 +1223,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/game-development-studio-game-asset-production/SKILL.md"
     },
     {
       "number": 85,
@@ -1199,7 +1237,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/game-development-studio-game-asset-vendoring/SKILL.md"
     },
     {
       "number": 86,
@@ -1212,7 +1251,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/game-development-studio-game-development-studio/SKILL.md"
     },
     {
       "number": 87,
@@ -1225,7 +1265,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/game-development-studio-game-performance-optimization/SKILL.md"
     },
     {
       "number": 88,
@@ -1238,7 +1279,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/game-development-studio-game-visual-debugging/SKILL.md"
     },
     {
       "number": 89,
@@ -1279,7 +1321,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/plugin-management-plugin-management/SKILL.md"
     },
     {
       "number": 92,
@@ -1292,7 +1335,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-access-protected-deployment/SKILL.md"
     },
     {
       "number": 93,
@@ -1305,7 +1349,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-ai-gateway/SKILL.md"
     },
     {
       "number": 94,
@@ -1318,7 +1363,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-ai-sdk/SKILL.md"
     },
     {
       "number": 95,
@@ -1331,7 +1377,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-auth/SKILL.md"
     },
     {
       "number": 96,
@@ -1344,7 +1391,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-bootstrap/SKILL.md"
     },
     {
       "number": 97,
@@ -1357,7 +1405,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-build-agents/SKILL.md"
     },
     {
       "number": 98,
@@ -1370,7 +1419,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-cdn-caching/SKILL.md"
     },
     {
       "number": 99,
@@ -1383,7 +1433,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-chat-sdk/SKILL.md"
     },
     {
       "number": 100,
@@ -1396,7 +1447,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-create-a-backend/SKILL.md"
     },
     {
       "number": 101,
@@ -1409,7 +1461,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-custom-metrics/SKILL.md"
     },
     {
       "number": 102,
@@ -1422,7 +1475,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-deployments-cicd/SKILL.md"
     },
     {
       "number": 103,
@@ -1435,7 +1489,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-domains/SKILL.md"
     },
     {
       "number": 104,
@@ -1448,7 +1503,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-env-vars/SKILL.md"
     },
     {
       "number": 105,
@@ -1461,7 +1517,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-eve/SKILL.md"
     },
     {
       "number": 106,
@@ -1474,7 +1531,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-flags-sdk/SKILL.md"
     },
     {
       "number": 107,
@@ -1487,7 +1545,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-is-agentic/SKILL.md"
     },
     {
       "number": 108,
@@ -1500,7 +1559,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-knowledge-update/SKILL.md"
     },
     {
       "number": 109,
@@ -1513,7 +1573,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-marketplace/SKILL.md"
     },
     {
       "number": 110,
@@ -1526,7 +1587,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-microfrontends/SKILL.md"
     },
     {
       "number": 111,
@@ -1539,7 +1601,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-queues/SKILL.md"
     },
     {
       "number": 112,
@@ -1552,7 +1615,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-react-best-practices/SKILL.md"
     },
     {
       "number": 113,
@@ -1565,7 +1629,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-routing-middleware/SKILL.md"
     },
     {
       "number": 114,
@@ -1578,7 +1643,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-runtime-cache/SKILL.md"
     },
     {
       "number": 115,
@@ -1591,7 +1657,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-vercel-agent/SKILL.md"
     },
     {
       "number": 116,
@@ -1604,7 +1671,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-vercel-cli/SKILL.md"
     },
     {
       "number": 117,
@@ -1617,7 +1685,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-vercel-connect/SKILL.md"
     },
     {
       "number": 118,
@@ -1630,7 +1699,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-vercel-firewall/SKILL.md"
     },
     {
       "number": 119,
@@ -1643,7 +1713,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-vercel-functions/SKILL.md"
     },
     {
       "number": 120,
@@ -1656,7 +1727,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-vercel-sandbox/SKILL.md"
     },
     {
       "number": 121,
@@ -1669,7 +1741,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-vercel-services/SKILL.md"
     },
     {
       "number": 122,
@@ -1682,7 +1755,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-vercel-storage/SKILL.md"
     },
     {
       "number": 123,
@@ -1695,7 +1769,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-verification/SKILL.md"
     },
     {
       "number": 124,
@@ -1708,7 +1783,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/vercel-workflow/SKILL.md"
     },
     {
       "number": 125,
@@ -1721,7 +1797,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/coderabbit-code-review/SKILL.md"
     },
     {
       "number": 126,
