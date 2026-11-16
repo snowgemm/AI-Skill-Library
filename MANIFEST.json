@@ -1,25 +1,29 @@
 {
   "name": "AI-Skill-Library",
-  "version": "0.4.0-pre-release",
+  "version": "0.5.0-pre-release",
   "snapshot_date": "2026-11-16",
-  "purpose": "Portable, provenance-first inventory and governance scaffold for AI agent skills.",
+  "purpose": "Current installed skill inventory plus independently authored, provenance-aware portable skill alternatives.",
   "release_status": "pre_release_not_approved_for_commercial_distribution",
   "counts": {
-    "chatgpt_catalog_items": 125,
+    "chatgpt_catalog_items": 148,
     "historical_base_items": 120,
-    "post_inventory_additions": 5,
+    "post_inventory_additions": 28,
     "external_repositories_reviewed": 11,
     "external_repositories_commit_pinned": 11,
     "portable_upstream_skill_bodies_copied": 0,
-    "custom_skill_bodies_created": 8,
+    "custom_skill_bodies_created": 31,
     "platforms_documented_or_tracked": 7,
-    "portable_skill_adaptations": 8
+    "portable_skill_adaptations": 31,
+    "previous_catalog_snapshot_items": 125,
+    "new_items_since_previous_snapshot": 23
   },
   "not_done": [
+    "125 earlier host-managed plugin entries remain metadata-only; their original bodies have not been exported or licensed for redistribution.",
+    "All 23 newly discovered Auth0/Render equivalents are independently authored and UNLICENSED; no redistribution rights are granted for those files.",
     "Host-specific CLI discovery, activation, invocation and evaluation tests have not been run.",
     "No project-wide license has been selected for original repository material.",
     "No comprehensive skill-level static and dynamic security assessment has been completed.",
-    "No matched baseline-versus-skill evaluation report exists across the eight skills and five hosts.",
+    "No matched baseline-versus-skill evaluation report exists across the 31 portable skills and five hosts.",
     "No versioned release package, SBOM, build provenance attestation or signature-verification procedure has been published."
   ],
   "principles": [
@@ -33,7 +37,7 @@
     "Distinguish format validation from host runtime compatibility and task evaluation.",
     "Do not declare commercial readiness while a release gate remains blocked."
   ],
-  "catalog_file": "catalog/chatgpt-installed-skills-125.json",
+  "catalog_file": "catalog/current-installed-skills-148.json",
   "source_registry_file": "catalog/external-sources.json",
   "portable_skill_catalog_file": "catalog/portable-skills-phase-1.json",
   "upstream_monitor_workflow": ".github/workflows/upstream-registry.yml",
@@ -61,10 +65,13 @@
   "base_published_branch": "main",
   "working_branch": "main",
   "ci_verified_commit": "e98f79c74d96a4dd871f91e8e7451e369f3deeb6",
-  "validation_status": "phase_2_static_and_routing_fixture_validation_pending_ci;host_runtime_not_tested;commercial_distribution_blocked",
-  "skill_expansion_phase": "phase_2_adds_android_intent_security_threejs_qa_and_supabase_postgres",
+  "validation_status": "wave_3_files_created;catalog_and_validation_sync_pending;host_runtime_not_tested;commercial_distribution_blocked",
+  "skill_expansion_phase": "wave_3_adds_23_independent_auth0_render_equivalents_and_updates_installed_catalog_to_148",
   "upstream_policy": "read_only_drift_scan_issue_notification_only; no automatic source pin or skill content updates",
   "skill_routing_cases_file": "evaluations/skill-routing-cases.json",
   "skill_evaluation_validator": "scripts/validate_skill_evaluations.py",
-  "routing_case_seed_count": 80
+  "routing_case_seed_count": 310,
+  "historical_catalog_file": "catalog/chatgpt-installed-skills-125.json",
+  "restoration_status_file": "catalog/restoration-status-148.json",
+  "documentation_sources_file": "catalog/documentation-sources.json"
 }
