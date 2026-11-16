@@ -13,7 +13,7 @@ bcf9c29a951689b2114ae5be7a86a8c171f8e07c  catalog/external-sources.json
 5f4f5ee4e2999aa7cd37d3c05cbf0e43ca49b43b  catalog/portable-skills-phase-1.json
 f805cb31779e3f0b0e032c97aecbc70cfea5c756  catalog/RECONCILIATION-120-to-125.md
 896e922f669286494933fe181b134e83ba8c2e59  catalog/restoration-status-148.json
-e5ef2c7750a4f9c12ec2c0123e5c7880935c8b01  CHANGELOG.md
+88c067fb5c4697f8db07d4e45b88745c20d23bb1  CHANGELOG.md
 9a63aea24d67a88b3ea5bf9bd4b67c2d3b7ae501  COMMERCIAL-READINESS.md
 cebe6048e5da43e656e5bf2c2e0dc0f06afa1801  evaluations/EVALUATION-PLAN.md
 b0e6581c20f186c9e82d63444054aacf95a84b49  evaluations/skill-routing-cases.json
@@ -25,9 +25,9 @@ d3c9e94fbc6c28f66ecb5a01407d543c99c811b6  licenses/upstream/supabase-LICENSE
 abf0390320aa14406af7a520b9b0739fdda9bf08  licenses/upstream/superpowers-LICENSE
 0e7cfcfa43d5da2dc6a31768afcd95525fd3000c  licenses/upstream/threejs-LICENSE
 223f61565beef7da8a2720f205f6bda651b22c10  LICENSING.md
-cc2dcf9ce2b27cd88368eb18f1a63f17f6a50b3f  MANIFEST.json
+3e9dbee329fe3fcfdc9d86015b3e6a2b3fe55f43  MANIFEST.json
 67b4f4cd79e456235a46ee66c281d8cde481b00a  policies/IMPORT-SECURITY.md
-52bb4c60bfeb91ee88acd59dc231c2f7fd410ac6  README.md
+93a8abffce2ef88d7bb9001219edaa0191b4a2a7  README.md
 f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
 bfba10725806098e6cef63b700fb2af44bbf793a  scripts/install_skills.py
 9364e385bd4ea8cac4b7aed12bc217f34cc816b9  scripts/update_checksums.py
