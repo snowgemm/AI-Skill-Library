@@ -1251,7 +1251,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/supabase-engineering/SKILL.md"
     },
     {
       "number": 90,
@@ -1264,7 +1265,8 @@
       "description_status": "available_in_host_catalog_not_redistributed",
       "body_status": "host_managed_not_exported",
       "license_status": "not_established_for_portable_redistribution",
-      "portable_status": "metadata_only_do_not_copy_body_without_permission"
+      "portable_status": "independent_equivalent_created_not_original_body",
+      "portable_equivalent_path": "skills/supabase-postgres-best-practices/SKILL.md"
     },
     {
       "number": 91,
