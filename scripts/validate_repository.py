@@ -135,7 +135,23 @@ def validate() -> list[str]:
         if license_path is None or not license_path.is_file():
             if license_path is not None:
                 errors.append(f"{skill_id}: missing preserved license notice: {license_file}")
-        if not isinstance(upstream, str) or not isinstance(commit, str) or not SHA_RE.fullmatch(commit):
+        original_docs = item.get("status") == "original_documentation_adaptation"
+        if original_docs:
+            if item.get("license") != "UNLICENSED":
+                errors.append(f"{skill_id}: original documentation adaptations must remain explicitly UNLICENSED")
+            documentation_sources = item.get("documentation_sources")
+            if not isinstance(documentation_sources, list) or not documentation_sources:
+                errors.append(f"{skill_id}: original documentation adaptation requires documentation_sources")
+            else:
+                for source_url in documentation_sources:
+                    if not isinstance(source_url, str) or not source_url.startswith("https://"):
+                        errors.append(f"{skill_id}: documentation source must be an HTTPS URL")
+            reviewed_on = item.get("reviewed_on")
+            if not isinstance(reviewed_on, str) or not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", reviewed_on):
+                errors.append(f"{skill_id}: reviewed_on must use YYYY-MM-DD")
+            if upstream is not None or commit is not None:
+                errors.append(f"{skill_id}: documentation adaptations must not pretend to have an immutable code upstream pin")
+        elif not isinstance(upstream, str) or not isinstance(commit, str) or not SHA_RE.fullmatch(commit):
             errors.append(f"{skill_id}: upstream repository or immutable 40-character pin is invalid")
         else:
             source = source_index.get(upstream)
@@ -147,7 +163,16 @@ def validate() -> list[str]:
         errors.extend(f"{skill_id}: {message}" for message in skill_errors)
         if isinstance(metadata, dict):
             extra = metadata.get("metadata", {})
-            if isinstance(extra, dict) and extra.get("upstream-commit") != commit:
+            if original_docs:
+                if metadata.get("license") != "UNLICENSED":
+                    errors.append(f"{skill_id}: frontmatter must mark the original adaptation UNLICENSED")
+                if not isinstance(extra, dict) or extra.get("source-type") != "independent-documentation-adaptation":
+                    errors.append(f"{skill_id}: frontmatter must identify independent-documentation-adaptation")
+                elif extra.get("reviewed-on") != reviewed_on:
+                    errors.append(f"{skill_id}: frontmatter reviewed-on differs from catalogue")
+                if isinstance(extra, dict) and "upstream-commit" in extra:
+                    errors.append(f"{skill_id}: original documentation adaptation must not claim an upstream commit")
+            elif isinstance(extra, dict) and extra.get("upstream-commit") != commit:
                 errors.append(f"{skill_id}: frontmatter upstream-commit differs from catalogue")
 
     if isinstance(manifest, dict):
