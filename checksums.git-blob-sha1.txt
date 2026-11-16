@@ -1,4 +1,4 @@
-09cfb704b922391719db76dbb07fdd0de488b002  .github/workflows/quality.yml
+2a051526978807a7416cffabb186b673bb72019b  .github/workflows/quality.yml
 e862fc4a60d44ded09ff65c17035327ded9980f6  .github/workflows/upstream-registry.yml
 48064354a48b02dd0b4e755dfb96348e66f74a75  .gitignore
 218cf3af6f1a2f7f2f0cb16842a9efc055e1267c  adapters/host-adapters.json
@@ -10,9 +10,10 @@ bcf9c29a951689b2114ae5be7a86a8c171f8e07c  catalog/external-sources.json
 5b072add6dfb4d39c03b4b93d0a6604ae426eb5b  catalog/platform-compatibility.json
 8153be23511b183235b73d96d5ba356ecc85a33a  catalog/portable-skills-phase-1.json
 f805cb31779e3f0b0e032c97aecbc70cfea5c756  catalog/RECONCILIATION-120-to-125.md
-9f4a2763d5a973d113abe949e8df08fef47c92b4  CHANGELOG.md
+a910e424a1a19498594034e8bc87add9526a8774  CHANGELOG.md
 9a63aea24d67a88b3ea5bf9bd4b67c2d3b7ae501  COMMERCIAL-READINESS.md
-51b3ea65483a21be9c823eb2ed5c28b276c5ae3a  evaluations/EVALUATION-PLAN.md
+cebe6048e5da43e656e5bf2c2e0dc0f06afa1801  evaluations/EVALUATION-PLAN.md
+56febc0b8a3b68af0f97c8eba260eb86d945136f  evaluations/skill-routing-cases.json
 b444a656c16a46611ab0086a6bad755fed3853e0  licenses/README.md
 7a4a3ea2424c09fbe48d455aed1eaa94d9124835  licenses/upstream/android-LICENSE.txt
 9ad8c583ee786c48bc52bcd72c9c960230ff38b3  licenses/upstream/mojang-LICENSE.md
@@ -20,13 +21,14 @@ d3c9e94fbc6c28f66ecb5a01407d543c99c811b6  licenses/upstream/supabase-LICENSE
 abf0390320aa14406af7a520b9b0739fdda9bf08  licenses/upstream/superpowers-LICENSE
 0e7cfcfa43d5da2dc6a31768afcd95525fd3000c  licenses/upstream/threejs-LICENSE
 223f61565beef7da8a2720f205f6bda651b22c10  LICENSING.md
-cdaab52007cbd54f5515d92c560ee0a246584bbe  MANIFEST.json
+1ac19296629ed5a8541391445b5bbf247568130e  MANIFEST.json
 67b4f4cd79e456235a46ee66c281d8cde481b00a  policies/IMPORT-SECURITY.md
-a67e81c73035ba5c6d19375678e5d50b65796bf4  README.md
+1c5c82f7d82a5d0a1e34bd4fe8dae2fe7c7463d7  README.md
 f62ce0c56db2b5d134cff98f7fb1625023cd2874  requirements-dev.txt
 a9aa80eca83970968e5ee49d00be42e30b1f133c  scripts/install_skills.py
 9364e385bd4ea8cac4b7aed12bc217f34cc816b9  scripts/update_checksums.py
 a1730d914e56280ddbe92f31e41314bdc7620a17  scripts/validate_repository.py
+898017ee2fe619ab89eb6134d63b67d47f49ad8b  scripts/validate_skill_evaluations.py
 5b712012d7623a52fa4bd9fe54b9053cc4689ff5  scripts/validate_skills.py
 7bd59604ed2e79c010629aad36ce7750fe711302  scripts/validate_workflow_security.py
 1bd0ae359e1fb840a042d72f480f04c32640c353  SECURITY.md
@@ -43,6 +45,7 @@ a8aae39ff1d72f9a4b8f9e29e5f376d48f805a5c  skills/threejs-game-engineering/SKILL.
 078984dea890f7d8147a83a35deb8b69c94cf925  sources/SOURCE-VERIFICATION.md
 e970a23c5e6f594921fadad61546a1916bed942e  tests/test_installer.py
 18d9fdb21890c353d198bf63551d0915bb96ddf8  tests/test_repository_integrity.py
+5d8990aa3b6e7c9ac07668429716cfce7af24c43  tests/test_skill_evaluations.py
 ca4c0a711c6fe2b86d833708397ca7a2c8f2d00f  tests/test_validate_skills.py
 72c80b297fbbcf27583f384ac11ccab342581094  tests/test_workflow_security.py
 929b535efaa68f6a22cec5209b4866b9e213a43d  TRAINING-GUIDE.md
