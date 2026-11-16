@@ -301,6 +301,7 @@ class RepositoryIntegrityTests(unittest.TestCase):
             catalogue_path.write_text(json.dumps(catalogue), encoding="utf-8")
             source_path = root / "catalog/external-sources.json"
             source_path.write_text(json.dumps({"sources": []}), encoding="utf-8")
+            self.sync_fixture_manifest(root)
             self.refresh_fixture_checksums(root)
             self.assertEqual(self.run_fixture(root), [])
 
