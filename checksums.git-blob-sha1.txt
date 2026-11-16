@@ -128,6 +128,16 @@ e0adfce46de7c5e99861db803bf756c7db29ec7f  skills/usage-checker-usage/SKILL.md
 201714c03c93870a8f46968d1f1278e88fff9483  skills/vercel-auth/SKILL.md
 173d04c315eb4937bccfbbfa689a944d53d477c3  skills/vercel-bootstrap/SKILL.md
 c86e0b5cc8336aa92c743076bde1843e4b718890  skills/vercel-build-agents/SKILL.md
+465d359325dcd0ff15efd1b77712b3c884e85261  skills/vercel-cdn-caching/SKILL.md
+fe0d63a359e4e23b13e078e4958cc0c642d48353  skills/vercel-chat-sdk/SKILL.md
+86ed6251b8ff0081882187119bbce31b533d2829  skills/vercel-create-a-backend/SKILL.md
+323204673545bdac1926d47fcab4ea37df7b3ab6  skills/vercel-custom-metrics/SKILL.md
+c3f344f27176fd8ddb7f59e190c0ace1000a7699  skills/vercel-deployments-cicd/SKILL.md
+a9d74887e2c44b7c6ae2d345dfee7bdbc98d04de  skills/vercel-domains/SKILL.md
+11cacf33630bb7fb5a972e27fbc3707e1ff95083  skills/vercel-env-vars/SKILL.md
+aba47ce3e2413c42a7ae782ddd79ddb099be7a4d  skills/vercel-eve/SKILL.md
+ec470e2d5061307d9440f17cecac382c4f9458ee  skills/vercel-flags-sdk/SKILL.md
+dc8d0eb996d2bd67cd3fc09b3aef11bf565d9d1c  skills/vercel-is-agentic/SKILL.md
 0ecd03365b681aca5225c6377f88b7bd70696e0d  skills/vibecoder-ai-coding-tools-guide/SKILL.md
 f1c609dbe0de74c036d7c72ee46458d89bb61fd5  skills/vibecoder-ai-features-builder/SKILL.md
 8f68ef3037a95ce71743d597240b35b2e5e28b0d  skills/vibecoder-app-safety-and-speed/SKILL.md
