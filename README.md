@@ -58,7 +58,7 @@ python3 scripts/validate_workflow_security.py
 python3 scripts/validate_skill_evaluations.py
 ```
 
-The latest GitHub Actions result for the final restoration commit has not been independently confirmed in this session. Do not treat the local validation commands above as already executed.
+GitHub Actions run [#43825916875](https://github.com/snowgemm/AI-Skill-Library/actions/runs/43825916875) passed on commit `0559e66a5119ef01f7b6af2846d1713e492b8e9c`: 52 unit tests, Agent Skills validation, repository/checksum validation, routing-fixture validation, and workflow-security invariants passed on Python 3.12 and 3.13; the zizmor workflow audit also passed. This is static/CI evidence only, not host-runtime compatibility or skill-effectiveness evidence.
 
 ## Licensing and release limits
 
