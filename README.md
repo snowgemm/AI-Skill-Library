@@ -28,7 +28,7 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 | `supabase-engineering` | Supabase Auth, Storage, Edge Functions, migrations, RLS, and application integration |
 | `supabase-postgres-best-practices` | PostgreSQL query plans, schema, indexing, connections, concurrency, and database security |
 
-These are independently authored guides, not recovered copies of host-managed skill bodies. The 23 new Auth0/Render guides are explicitly UNLICENSED and are not approved for redistribution. Source revisions and component license notices are recorded in `catalog/portable-skills-phase-1.json`.
+These are independently authored guides, not recovered copies of host-managed skill bodies. Two Supabase entries have license-reviewed equivalents; 23 Auth0/Render guides are explicitly UNLICENSED and are not approved for redistribution. The other 123 installed entries remain metadata-only pending restoration. Source revisions and component license notices are recorded in `catalog/portable-skills-phase-1.json`.
 
 ## Important limitations
 
