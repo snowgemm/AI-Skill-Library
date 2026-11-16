@@ -16,10 +16,13 @@ REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 SKILLS_ROOT = REPOSITORY_ROOT / "skills"
 SKILL_IDS = (
     "android-compose-engineering",
+    "android-intent-security",
     "minecraft-bedrock-addon",
     "threejs-game-engineering",
+    "threejs-qa-release",
     "superpowers-engineering-workflow",
     "supabase-engineering",
+    "supabase-postgres-best-practices",
 )
 HOST_DIRECTORIES = {
     "codex": ".agents/skills",
