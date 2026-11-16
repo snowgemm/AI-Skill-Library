@@ -89,12 +89,13 @@
       "status": "portable_adaptation",
       "license": "Apache-2.0",
       "upstream": "android/skills",
-      "upstream_commit": "c72942584fff970dac86ced78b367fce0c441e52",
+      "upstream_commit": "bf68e2d66a992a1e6aeb7e9263293cc23fcbf475",
       "upstream_skill_examples": [
         "security/android-intent-security/SKILL.md"
       ],
       "license_file": "licenses/upstream/android-LICENSE.txt",
-      "notes": "Independently authored defensive adaptation for Intent, deep-link, PendingIntent, component, provider and IPC trust boundaries; no upstream scripts imported."
+      "notes": "Independently authored defensive adaptation for Intent, deep-link, PendingIntent, component, provider and IPC trust boundaries; no upstream scripts imported.",
+      "reviewed_upstream_head": "c72942584fff970dac86ced78b367fce0c441e52"
     },
     {
       "id": "threejs-qa-release",
