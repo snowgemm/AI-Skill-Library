@@ -1,6 +1,6 @@
 # AI-Skill-Library
 
-**Snapshot:** 2026-11-16 · **Version:** 0.6.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
+**Snapshot:** 2026-11-16 · **Version:** 0.7.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
 
 A provenance-first registry and governance scaffold for portable AI agent skills. The project separates the historical ChatGPT-installed skill inventory from public upstream repositories and independently authored portable adaptations.
 
@@ -8,9 +8,9 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 
 - 148 currently installed skill identifiers inventoried. The previous 125-item snapshot is preserved as a historical catalog. Internal plugin URIs and private skill bodies are not redistributed.
 - 11 external repositories registered with commit pins and source/license metadata.
-- 77 independently authored portable guides: eight initial engineering guides, 23 Auth0/Render guides, 21 Data guides, and 25 Vibe Coder guides.
+- 77 independently authored portable guides: 154 independently authored or license-reviewed guides across Android, Biohub ESM, Codex, CodeRabbit/GitHub, Data, Game Development, plugin management, Render, Supabase, Three.js, Usage/Cost, Vibe Coder, and Vercel.
 - Project-scope discovery adapters documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI and Grok Build.
-- A project-scope installer for all 77 skills, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
+- A project-scope installer for all 154 skills, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
 - Upstream monitoring is read-only: it compares pinned sources with current upstream HEAD and reports drift in a GitHub issue. It does not create branches/PRs or update source pins.
 - Quality CI passed on the earlier integration commit `e98f79c74d96a4dd871f91e8e7451e369f3deeb6`; the latest skill expansion and workflow-hardening commits still require a fresh CI result.
 
@@ -51,16 +51,16 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 | `threejs-game-engineering` | Three.js browser game architecture, rendering, gameplay, and profiling |
 | `threejs-qa-release` | Real gameplay QA, responsive checks, browser evidence, performance measurement, and release verification |
 
-The 69 Auth0/Render/Data/Vibe Coder guides are independently authored and explicitly marked **UNLICENSED**. They are not recovered host-managed bodies and are not approved for redistribution. Two Supabase catalog entries have license-reviewed independent equivalents. The restoration map currently contains 71 independent equivalents across the 148-item inventory; 77 entries remain metadata-only. Original host-managed skill bodies remain unexported.
+The 146 independent guides are independently authored and explicitly marked **UNLICENSED**. They are not recovered host-managed bodies and are not approved for redistribution. Two Supabase catalog entries have license-reviewed independent equivalents. The restoration map contains 148 independent equivalents across the 148-item inventory; zero entries remain metadata-only. Original host-managed skill bodies remain unexported.
 
 
 ### Additional guide groups
 
-The full 77-guide inventory is in [`catalog/portable-skills-phase-1.json`](catalog/portable-skills-phase-1.json). Beyond the first set listed above, it includes 21 Data workflows (`data-*`) and 25 Vibe Coder workflows (`vibecoder-*`). The 69 new Auth0/Render/Data/Vibe Coder guides are UNLICENSED and remain for private evaluation only.
+The full 77-guide inventory is in [`catalog/portable-skills-phase-1.json`](catalog/portable-skills-phase-1.json). Beyond the first set listed above, it includes 21 Data workflows (`data-*`), 25 Vibe Coder workflows (`vibecoder-*`), plus Biohub ESM, Codex, GitHub/CodeRabbit, game-development, usage/cost, plugin-management, and Vercel guides. The 69 new Auth0/Render/Data/Vibe Coder guides are UNLICENSED and remain for private evaluation only.
 
 ## Important limitations
 
-- The five host runtimes have not yet been discovery-, invocation- or evaluation-tested in this project. Format/path documentation and routing seed fixtures are not runtime proof. The original 125 host-managed bodies remain unavailable for export/licensed redistribution; the repo contains independent alternatives, not exact recovery.
+- The five host runtimes have not yet been discovery-, invocation- or evaluation-tested in this project. The 1,540 routing cases are seed fixtures only, not runtime evidence. The original 125 host-managed bodies remain unavailable for export/licensed redistribution; the repo contains independent alternatives, not exact recovery.
 - The project has no root-level license. The 69 Auth0/Render/Data/Vibe Coder guides are UNLICENSED; do not redistribute them until a project/content license is formally chosen. Per-skill notices do not license the installer, catalogue, tests, documentation or repository as a whole.
 - Minecraft vanilla assets covered by the Minecraft EULA are excluded. The project does not accept an EULA on a user's behalf.
 - The repository is not a model-training package. Installing a skill adds instructions to an agent context; it does not change model weights.
@@ -81,7 +81,7 @@ The full 77-guide inventory is in [`catalog/portable-skills-phase-1.json`](catal
 - `scripts/validate_skills.py` — Agent Skills format validator.
 - `scripts/validate_repository.py` — catalogue, provenance, workflow and checksum validator.
 - `scripts/validate_workflow_security.py` — permission, action-pin and automation hand-off invariant checks.
-- `evaluations/skill-routing-cases.json` — 770 positive/negative trigger seed cases across the 77 portable skills.
+- `evaluations/skill-routing-cases.json` — 770 positive/negative trigger seed cases across the 154 portable guides.
 - `scripts/validate_skill_evaluations.py` — offline schema and coverage validator for the routing dataset.
 - `scripts/update_checksums.py` — Git blob SHA-1 inventory generator.
 - `tests/` — unit and failure-path regression tests.
