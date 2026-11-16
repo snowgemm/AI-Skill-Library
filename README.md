@@ -1,6 +1,6 @@
 # AI-Skill-Library
 
-**Snapshot:** 2026-11-16 · **Version:** 0.3.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
+**Snapshot:** 2026-11-16 · **Version:** 0.4.0-pre-release · **Status:** pre-release; not approved for commercial distribution.
 
 A provenance-first registry and governance scaffold for portable AI agent skills. The project separates the historical ChatGPT-installed skill inventory from public upstream repositories and independently authored portable adaptations.
 
@@ -8,10 +8,27 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 
 - 125 host-managed skill identifiers inventoried as metadata only. Internal plugin URIs and private skill bodies are not redistributed.
 - 11 external repositories registered with commit pins and source/license metadata.
-- Five portable skill adaptations for Android Compose, Minecraft Bedrock, Three.js, software engineering methodology and Supabase.
+- Eight portable skill adaptations covering Android Compose and Intent security, Minecraft Bedrock, Three.js game engineering and QA, software engineering methodology, and Supabase/PostgreSQL.
 - Project-scope discovery adapters documented for Codex, Claude Code, Gemini CLI, GitHub Copilot CLI and Grok Build.
-- A project-scope installer, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
-- Quality CI passed on commit `e98f79c74d96a4dd871f91e8e7451e369f3deeb6`, including Python 3.12/3.13 validation and the zizmor workflow audit.
+- A project-scope installer for all eight skills, Agent Skills format validator, repository-integrity checks, workflow-security audit and commercial release gates are included on `main`.
+- Upstream monitoring is read-only: it compares pinned sources with current upstream HEAD and reports drift in a GitHub issue. It does not create branches/PRs or update source pins.
+- Quality CI passed on the earlier integration commit `e98f79c74d96a4dd871f91e8e7451e369f3deeb6`; the latest skill expansion and workflow-hardening commits still require a fresh CI result.
+
+
+## Portable skills
+
+| Skill | Intended trigger |
+|---|---|
+| `android-compose-engineering` | Android app architecture, Compose state/lifecycle, testing, and measured performance |
+| `android-intent-security` | Defensive review of Android Intents, deep links, PendingIntents, exported components, providers, and IPC |
+| `minecraft-bedrock-addon` | Bedrock behavior/resource packs, Creator Tools, validation, and packaging |
+| `threejs-game-engineering` | Three.js browser game architecture, rendering, gameplay, and profiling |
+| `threejs-qa-release` | Real gameplay QA, responsive checks, browser evidence, performance measurement, and release verification |
+| `superpowers-engineering-workflow` | Task-appropriate planning, TDD, systematic debugging, and evidence-based verification |
+| `supabase-engineering` | Supabase Auth, Storage, Edge Functions, migrations, RLS, and application integration |
+| `supabase-postgres-best-practices` | PostgreSQL query plans, schema, indexing, connections, concurrency, and database security |
+
+These are eight independently authored adaptations, not recovered copies of the 125 host-managed ChatGPT skill bodies. Source revisions and component license notices are recorded in `catalog/portable-skills-phase-1.json`.
 
 ## Important limitations
 
@@ -24,7 +41,7 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 ## Key files
 
 - `MANIFEST.json` — project status, scope and inventory counts.
-- `skills/` — five independently edited portable skill adaptations.
+- `skills/` — eight independently edited portable skill adaptations.
 - `catalog/chatgpt-installed-skills-125.json` and `.csv` — 125-item metadata inventory, not recovered proprietary skill bodies.
 - `catalog/portable-skills-phase-1.json` — skill IDs, source pins and license notices.
 - `catalog/external-sources.json` — external repository registry and provenance metadata.
@@ -36,7 +53,7 @@ A provenance-first registry and governance scaffold for portable AI agent skills
 - `scripts/update_checksums.py` — Git blob SHA-1 inventory generator.
 - `tests/` — unit and failure-path regression tests.
 - `.github/workflows/quality.yml` — test matrix and pinned zizmor workflow security analysis.
-- `.github/workflows/upstream-registry.yml` — fail-closed upstream metadata monitor with checksum refresh and explicit quality dispatch.
+- `.github/workflows/upstream-registry.yml` — fail-closed, read-only drift monitor with issue-only notification; no branch/PR or source mutation.
 - `LICENSING.md`, `SECURITY.md`, `COMMERCIAL-READINESS.md` — rights, security and release gates.
 
 ## Local validation
